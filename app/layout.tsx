@@ -16,9 +16,34 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "holÀ! — Vos démarches en Espagne",
+  metadataBase: new URL("https://www.holaespagne.fr"),
+
+  title: {
+    default: "holÀ! | Assistance administrative en Espagne",
+    template: "%s | holÀ!",
+  },
+
   description:
-    "Accompagnement administratif en Espagne, simplement et en français.",
+    "Vos démarches administratives en Espagne, simplement et en français. NIE, immatriculation de véhicule, installation en Espagne et démarches sur mesure.",
+
+  alternates: {
+    canonical: "/",
+  },
+
+  openGraph: {
+    title: "holÀ! | L’Espagne, sans la complexité administrative",
+    description:
+      "Nous préparons et suivons vos démarches administratives en Espagne, simplement et en français.",
+    url: "https://www.holaespagne.fr",
+    siteName: "holÀ!",
+    locale: "fr_FR",
+    type: "website",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
