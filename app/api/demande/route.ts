@@ -56,7 +56,7 @@ if (raison.length > 5000) {
   );
 }
     const { error } = await resend.emails.send({
-      from: "holÀ! <onboarding@resend.dev>",
+      from: "holÀ! <bonjour@holaespagne.fr>",
       to: ["elenahcerra@gmail.com"],
       replyTo: email,
       subject: `Nouvelle demande holÀ! — ${demarche}`,
