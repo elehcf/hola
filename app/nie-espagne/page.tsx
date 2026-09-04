@@ -308,7 +308,19 @@ export default function NieEspagne() {
           votre situation concrète.
         </p>
       </div>
+<div className="mt-16 border-t border-navy/20 pt-8">
+  <p className="text-xs uppercase tracking-[0.25em] text-blood">
+    Pour aller plus loin
+  </p>
 
+  <a
+    href="/guides/obtenir-nie-espagne"
+    className="mt-5 inline-block text-2xl transition-colors hover:text-blood"
+    style={{ fontFamily: "var(--font-editorial)" }}
+  >
+    Lire notre guide complet sur le NIE en Espagne →
+  </a>
+</div>
     </div>
   </div>
 </section>

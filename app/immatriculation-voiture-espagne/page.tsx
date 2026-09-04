@@ -373,6 +373,19 @@ export default function ImmatriculationVoiture() {
       </div>
 
     </div>
+    <div className="mt-16 border-t border-navy/20 pt-8">
+  <p className="text-xs uppercase tracking-[0.25em] text-blood">
+    Pour aller plus loin
+  </p>
+
+  <a
+    href="/guides/immatriculer-voiture-francaise-espagne"
+    className="mt-5 inline-block text-2xl transition-colors hover:text-blood"
+    style={{ fontFamily: "var(--font-editorial)" }}
+  >
+    Lire notre guide complet sur l’immatriculation en Espagne →
+  </a>
+</div>
   </div>
 </section>
 

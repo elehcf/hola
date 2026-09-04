@@ -1,9 +1,10 @@
 import type { MetadataRoute } from "next";
+import { guides } from "./guides/guides-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.holaespagne.fr";
 
-  return [
+  const mainPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       changeFrequency: "weekly",
@@ -29,5 +30,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.6,
     },
+    {
+      url: `${baseUrl}/guides`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
   ];
+
+  const guidePages: MetadataRoute.Sitemap = guides.map((guide) => ({
+    url: `${baseUrl}/guides/${guide.slug}`,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  return [...mainPages, ...guidePages];
 }

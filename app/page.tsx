@@ -58,7 +58,12 @@ return (
   >
     Services
   </a>
-
+  <a
+    href="/guides"
+    className="text-xl transition-colors duration-300 hover:text-blood"
+  >
+    Guides
+  </a>
   <a
     href="#comment-ca-marche"
     className="text-xl transition-colors duration-300 hover:text-blood"
