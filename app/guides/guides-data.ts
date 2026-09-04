@@ -16,6 +16,7 @@ export type Guide = {
   related: string[];
   serviceHref: string;
   serviceLabel: string;
+    sources?: { label: string; href: string }[];
 };
 
 export const guides: Guide[] = [
@@ -762,9 +763,54 @@ export const guides: Guide[] = [
     serviceLabel: "Identifier mes démarches",
   },
 ];
+const sourcesByCategory: Record<
+  Guide["category"],
+  { label: string; href: string }[]
+> = {
+  NIE: [
+    {
+      label: "Ministerio del Interior — Número de Identidad de Extranjero (NIE)",
+      href: "https://www.interior.gob.es/opencms/es/servicios-al-ciudadano/tramites-y-gestiones/extranjeria/ciudadanos-de-la-union-europea/numero-de-Identidad-de-extranjero-nie/",
+    },
+    {
+      label: "Consulat général d’Espagne à Paris — NIE",
+      href: "https://www.exteriores.gob.es/Consulados/paris/fr/ServiciosConsulares/Paginas/Consular/NIE.aspx",
+    },
+  ],
 
+  Voiture: [
+    {
+      label: "DGT — Immatriculer un véhicule provenant de l’Union européenne",
+      href: "https://www.dgt.es/nuestros-servicios/tu-vehiculo/quieres-traer-o-llevarte-un-vehiculo-del-extranjero/matricular-un-vehiculo-proveniente-de-la-ue/",
+    },
+    {
+      label: "Agencia Tributaria — Première immatriculation d’un véhicule",
+      href: "https://sede.agenciatributaria.gob.es/Sede/vehiculos-embarcaciones/primera-matriculacion-medios-transporte.html",
+    },
+  ],
+
+  Installation: [
+    {
+      label: "Administración General del Estado — Résidence en Espagne",
+      href: "https://administracion.gob.es/pag_Home/Tu-espacio-europeo/derechos-obligaciones/ciudadanos/residencia/obtencion-residencia/info-general.html",
+    },
+    {
+      label: "Administración General del Estado — Certificat d’enregistrement de citoyen de l’Union",
+      href: "https://administracion.gob.es/pagFront/buscadoractuaciones/detalleActuacion.htm?codSia=994234&retorno=true",
+    },
+  ],
+};
 export function getGuide(slug: string) {
-  return guides.find((guide) => guide.slug === slug);
+  const guide = guides.find((guide) => guide.slug === slug);
+
+  if (!guide) {
+    return undefined;
+  }
+
+  return {
+    ...guide,
+    sources: guide.sources ?? sourcesByCategory[guide.category],
+  };
 }
 
 export function getRelatedGuides(slugs: string[]) {

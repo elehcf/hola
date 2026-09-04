@@ -187,6 +187,35 @@ export default async function GuidePage({ params }: Props) {
                 </div>
               </section>
             ))}
+            {/* OFFICIAL SOURCES */}
+            {guide.sources && guide.sources.length > 0 && (
+              <section className="mt-6 border-t border-navy/15 pt-10">
+                <p className="text-xs uppercase tracking-[0.25em] text-blood">
+                  Sources officielles
+                </p>
+
+                <div className="mt-6 space-y-3">
+                  {guide.sources.map((source) => (
+                    <a
+                      key={source.href}
+                      href={source.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-start justify-between gap-6 border-b border-navy/10 pb-3 text-sm leading-relaxed text-navy/55 transition-colors hover:text-blood"
+                    >
+                      <span>{source.label}</span>
+                      <span
+                        className="shrink-0 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                        aria-hidden="true"
+                      >
+                        ↗
+                      </span>
+                    </a>
+                  ))}
+                </div>
+              </section>
+            )}
+
 
             {/* SERVICE CTA */}
             <section className="mt-8 bg-navy px-8 py-12 text-ivory md:px-12 md:py-16">
