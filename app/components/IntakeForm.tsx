@@ -118,23 +118,26 @@ function next() {
   }
   async function submitForm() {
   if (!form.prenom.trim() || !form.email.trim()) {
-    const emailValide = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(
-  form.email.trim()
-);
-
-if (!emailValide) {
-  setError("Merci d’indiquer une adresse e-mail valide.");
-  return;
-}
     setError("Merci de renseigner votre prénom et votre e-mail.");
     return;
   }
-if (!form.consentement) {
-  setError(
-    "Merci d’accepter l’utilisation de vos informations pour traiter votre demande."
+
+  const emailValide = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(
+    form.email.trim()
   );
-  return;
-}
+
+  if (!emailValide) {
+    setError("Merci d’indiquer une adresse e-mail valide.");
+    return;
+  }
+
+  if (!form.consentement) {
+    setError(
+      "Merci d’accepter l’utilisation de vos informations pour traiter votre demande."
+    );
+    return;
+  }
+
   setSending(true);
   setError("");
 
