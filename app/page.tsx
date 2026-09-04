@@ -1,8 +1,27 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Assistance administrative en Espagne pour les Français",
+
+  description:
+    "holÀ! vous accompagne dans vos démarches administratives en Espagne : NIE, immatriculation de véhicule, installation et démarches France–Espagne.",
+
+  alternates: {
+    canonical: "/",
+  },
+
+  openGraph: {
+    title: "holÀ! | Assistance administrative en Espagne",
+    description:
+      "Vos démarches administratives en Espagne, simplement et en français.",
+    url: "/",
+  },
+};
 export default function Home() {
 return (
   <main className="min-h-screen px-8 py-8 md:px-16 md:py-10">
     <header className="flex items-center justify-between">
-      <h1 className="flex items-baseline">
+      <div className="flex items-baseline">
         <span
           className="text-navy"
           style={{
@@ -27,7 +46,7 @@ return (
         >
           À!
         </span>
-      </h1>
+      </div>
 
       <nav
   className="hidden md:flex items-center gap-10 text-navy"
@@ -58,14 +77,14 @@ return (
 
     <section className="grid items-center gap-16 pt-20 md:grid-cols-[1.1fr_0.9fr] md:pt-16">
      <div className="md:pl-28">
-        <h2
-          className="max-w-4xl text-5xl md:text-7xl leading-[0.95]"
-          style={{ fontFamily: "var(--font-editorial)" }}
-        >
-          Un problème administratif
-          <br />
-          en Espagne ?
-        </h2>
+        <h1
+  className="max-w-4xl text-5xl md:text-7xl leading-[0.95]"
+  style={{ fontFamily: "var(--font-editorial)" }}
+>
+  Un problème administratif
+  <br />
+  en Espagne ?
+</h1>
 
         <p
           className="mt-6 text-4xl md:text-5xl italic text-blood"
@@ -105,12 +124,10 @@ return (
           Services
         </p>
 
-        <h2
-          className="mt-4 text-5xl md:text-6xl"
-          style={{ fontFamily: "var(--font-editorial)" }}
-        >
-          Votre démarche
-        </h2>
+        <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-navy/65">
+  Les démarches administratives les plus fréquentes pour vivre,
+  s&apos;installer ou gérer une situation en Espagne depuis la France.
+</p>
       </div>
       <div className="mx-auto mt-20 max-w-6xl border-t border-navy/20">
 
@@ -288,10 +305,13 @@ return (
       </h2>
 
       <p className="mt-10 max-w-xl text-lg leading-relaxed text-navy/70">
-        holÀ! est né pour simplifier ce qui devient vite compliqué :
-        comprendre une administration différente, savoir par où commencer
-        et avancer sans se perdre entre deux pays.
-      </p>
+  holÀ! est un service d&apos;assistance administrative entre la France
+  et l&apos;Espagne, pensé pour les francophones qui doivent effectuer
+  des démarches administratives en Espagne. NIE, installation,
+  immatriculation d&apos;un véhicule ou situation plus particulière :
+  nous vous aidons à comprendre par où commencer et à avancer sans
+  vous perdre entre deux administrations.
+</p>
       <div className="mt-10 flex items-center gap-4">
   <span
     className="text-2xl italic text-blood"

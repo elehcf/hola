@@ -45,7 +45,35 @@ export const metadata: Metadata = {
     follow: true,
   },
 };
-
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.holaespagne.fr/#organization",
+      name: "holÀ!",
+      url: "https://www.holaespagne.fr/",
+      email: "bonjour@holaespagne.fr",
+      description:
+        "Service d’assistance administrative entre la France et l’Espagne pour les francophones.",
+      areaServed: {
+        "@type": "Country",
+        name: "Spain",
+      },
+      knowsLanguage: ["fr", "es"],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.holaespagne.fr/#website",
+      url: "https://www.holaespagne.fr/",
+      name: "holÀ!",
+      publisher: {
+        "@id": "https://www.holaespagne.fr/#organization",
+      },
+      inLanguage: "fr-FR",
+    },
+  ],
+};
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -57,6 +85,13 @@ export default function RootLayout({
       className={`${caveat.variable} ${cormorant.variable}`}
     >
       <body>
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+    }}
+  />
+
   {children}
   <Footer />
 </body>

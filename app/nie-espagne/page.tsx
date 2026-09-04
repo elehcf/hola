@@ -1,3 +1,22 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "NIE Espagne : obtenir votre NIE simplement",
+
+  description:
+    "Besoin d’obtenir un NIE en Espagne ? Nous préparons votre dossier, le formulaire EX-15 et vos justificatifs, avec un accompagnement en français.",
+
+  alternates: {
+    canonical: "/nie-espagne",
+  },
+
+  openGraph: {
+    title: "NIE Espagne : obtenir votre NIE | holÀ!",
+    description:
+      "Votre demande de NIE en Espagne préparée de A à Z, simplement et en français.",
+    url: "/nie-espagne",
+  },
+};
 export default function NieEspagne() {
   return (
     <main className="min-h-screen bg-ivory text-navy">
@@ -53,11 +72,11 @@ export default function NieEspagne() {
             className="mt-6 max-w-5xl text-6xl leading-[0.9] md:text-8xl"
             style={{ fontFamily: "var(--font-editorial)" }}
           >
-            Votre NIE.
-            <br />
-            <span className="italic text-blood">
-              Sans vous perdre dans l’administration espagnole.
-            </span>
+            Obtenir votre NIE en Espagne.
+<br />
+<span className="italic text-blood">
+  Sans vous perdre dans l’administration.
+</span>
           </h1>
 
           <div className="mt-12 grid gap-10 md:grid-cols-2">
@@ -180,10 +199,119 @@ export default function NieEspagne() {
               être déléguée.
             </p>
           </div>
+          <p className="mt-8 max-w-2xl text-navy/60">
+  Vous préparez votre départ ?
+  {" "}
+  <a
+    href="/installation-espagne"
+    className="border-b border-navy/30 pb-1 transition-colors hover:text-blood"
+  >
+    Découvrez les démarches pour vous installer en Espagne →
+  </a>
+</p>
 
         </div>
       </section>
+{/* COMPRENDRE LE NIE */}
+<section className="bg-[#EEE8DE] px-8 py-28 md:px-16 md:py-36">
+  <div className="mx-auto max-w-6xl">
 
+    <div className="grid gap-16 md:grid-cols-[0.7fr_1.3fr]">
+      <p className="text-xs uppercase tracking-[0.25em] text-blood">
+        Comprendre
+      </p>
+
+      <div>
+        <h2
+          className="text-5xl leading-[0.95] md:text-6xl"
+          style={{ fontFamily: "var(--font-editorial)" }}
+        >
+          Comment obtenir un NIE
+          <br />
+          <span className="italic text-blood">
+            en Espagne ?
+          </span>
+        </h2>
+
+        <p className="mt-10 max-w-2xl text-lg leading-relaxed text-navy/70">
+          La demande de NIE dépend de votre situation, de votre lieu de
+          résidence et de la raison pour laquelle vous avez besoin de ce
+          numéro en Espagne. Le dossier comprend notamment le formulaire
+          EX-15 ainsi que les justificatifs correspondant au motif de votre
+          demande.
+        </p>
+
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy/70">
+          Avant de commencer, nous identifions la procédure adaptée à votre
+          situation, puis nous préparons avec vous les documents nécessaires
+          afin d’éviter les dossiers incomplets et les démarches inutiles.
+        </p>
+      </div>
+    </div>
+
+
+    <div className="mt-24 grid gap-x-16 gap-y-12 md:grid-cols-2">
+
+      <div className="border-t border-navy/20 pt-6">
+        <h3
+          className="text-2xl"
+          style={{ fontFamily: "var(--font-editorial)" }}
+        >
+          Quels documents faut-il pour demander un NIE ?
+        </h3>
+        <p className="mt-4 leading-relaxed text-navy/65">
+          Les documents nécessaires varient selon votre situation et le motif
+          de la demande. Nous vous transmettons une liste personnalisée et
+          vérifions votre dossier avant sa présentation.
+        </p>
+      </div>
+
+      <div className="border-t border-navy/20 pt-6">
+        <h3
+          className="text-2xl"
+          style={{ fontFamily: "var(--font-editorial)" }}
+        >
+          Peut-on demander un NIE depuis la France ?
+        </h3>
+        <p className="mt-4 leading-relaxed text-navy/65">
+          Selon votre situation, différentes voies peuvent être envisagées
+          pour demander un NIE. Nous déterminons avec vous la procédure
+          adaptée selon votre lieu de résidence et votre besoin en Espagne.
+        </p>
+      </div>
+
+      <div className="border-t border-navy/20 pt-6">
+        <h3
+          className="text-2xl"
+          style={{ fontFamily: "var(--font-editorial)" }}
+        >
+          Le NIE permet-il de résider en Espagne ?
+        </h3>
+        <p className="mt-4 leading-relaxed text-navy/65">
+          Non. Le NIE est un numéro d’identification attribué aux étrangers.
+          Il ne constitue pas, à lui seul, un titre ou une autorisation de
+          résidence en Espagne.
+        </p>
+      </div>
+
+      <div className="border-t border-navy/20 pt-6">
+        <h3
+          className="text-2xl"
+          style={{ fontFamily: "var(--font-editorial)" }}
+        >
+          Dans quels cas a-t-on besoin d’un NIE ?
+        </h3>
+        <p className="mt-4 leading-relaxed text-navy/65">
+          Un NIE peut notamment être nécessaire dans le cadre de certaines
+          opérations administratives, professionnelles, patrimoniales ou
+          immobilières en Espagne. La démarche appropriée dépend toujours de
+          votre situation concrète.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* PRIX */}
       <section

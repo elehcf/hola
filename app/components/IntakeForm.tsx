@@ -65,12 +65,45 @@ nieMotif: "",
     }));
   }
 
-  function next() {
-  const completed =
-    (step === 0 && form.demarche) ||
-    (step === 1 && form.localisation) ||
-    (step === 2 && form.raison.trim()) ||
-    (step === 3 && form.avancement);
+function next() {
+  let completed = false;
+
+  if (step === 0) {
+    completed = Boolean(form.demarche);
+  }
+
+  if (step === 1) {
+    completed = Boolean(form.localisation);
+  }
+
+  if (step === 2) {
+    completed = Boolean(form.raison.trim());
+
+    if (form.demarche === "Je m’installe en Espagne") {
+      completed =
+        completed &&
+        Boolean(form.installationStatut) &&
+        Boolean(form.province);
+    }
+
+    if (form.demarche === "Immatriculer mon véhicule") {
+      completed =
+        completed &&
+        Boolean(form.vehiculeSituation) &&
+        Boolean(form.province);
+    }
+
+    if (form.demarche === "Obtenir mon NIE") {
+      completed =
+        completed &&
+        Boolean(form.nieMotif) &&
+        Boolean(form.province);
+    }
+  }
+
+  if (step === 3) {
+    completed = Boolean(form.avancement);
+  }
 
   if (!completed) return;
 

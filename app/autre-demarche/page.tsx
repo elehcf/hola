@@ -1,4 +1,22 @@
-export default function AutreDemarche() {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Démarche administrative en Espagne : besoin d’aide ?",
+
+  description:
+    "Une démarche administrative en Espagne vous bloque ? Expliquez-nous votre situation. Nous identifions la démarche et vous indiquons comment avancer, en français.",
+
+  alternates: {
+    canonical: "/autre-demarche",
+  },
+
+  openGraph: {
+    title: "Une démarche en Espagne vous bloque ? | holÀ!",
+    description:
+      "Expliquez-nous votre situation administrative en Espagne. Nous identifions la démarche et la façon d’avancer.",
+    url: "/autre-demarche",
+  },
+};export default function AutreDemarche() {
   return (
     <main className="min-h-screen bg-ivory text-navy">
 
@@ -143,9 +161,10 @@ export default function AutreDemarche() {
             </h2>
 
             <p className="mt-10 max-w-2xl text-lg leading-relaxed text-navy/70">
-              Nous étudions votre situation, identifions la démarche
-              concernée et déterminons ce qui peut être pris en charge.
-            </p>
+  Nous étudions votre situation, identifions la démarche
+  administrative concernée en Espagne et déterminons ce qui peut
+  être préparé ou pris en charge à distance.
+</p>
 
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy/70">
               Si votre demande nécessite l’intervention d’un professionnel

@@ -1,3 +1,22 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Immatriculer une voiture française en Espagne",
+
+  description:
+    "Vous vous installez en Espagne avec une voiture immatriculée en France ? Nous préparons et coordonnons les démarches pour son immatriculation espagnole.",
+
+  alternates: {
+    canonical: "/immatriculation-voiture-espagne",
+  },
+
+  openGraph: {
+    title: "Immatriculer une voiture française en Espagne | holÀ!",
+    description:
+      "Les démarches pour passer de votre immatriculation française à une immatriculation espagnole, accompagnées en français.",
+    url: "/immatriculation-voiture-espagne",
+  },
+};
 export default function ImmatriculationVoiture() {
   return (
     <main className="min-h-screen bg-ivory text-navy">
@@ -62,11 +81,11 @@ export default function ImmatriculationVoiture() {
           </h1>
 
           <div className="mt-12 grid gap-10 md:grid-cols-2">
-            <p className="max-w-xl text-lg leading-relaxed text-navy/70">
-              Vous vous installez en Espagne avec un véhicule déjà
-              immatriculé en France ? Nous organisons les démarches
-              nécessaires pour obtenir son immatriculation espagnole.
-            </p>
+           <p className="max-w-xl text-lg leading-relaxed text-navy/70">
+  Vous vous installez en Espagne avec un véhicule déjà
+  immatriculé en France ? Nous préparons et coordonnons les démarches
+  pour immatriculer votre voiture française en Espagne.
+</p>
 
             <div className="md:flex md:justify-end">
               <a
@@ -215,6 +234,16 @@ export default function ImmatriculationVoiture() {
               un véhicule immatriculé en France et souhaitent l’emmener
               avec elles lors de leur installation en Espagne.
             </p>
+            <p className="mt-8 max-w-2xl text-navy/60">
+  Votre déménagement implique d’autres formalités ?
+  {" "}
+  <a
+    href="/installation-espagne"
+    className="border-b border-navy/30 pb-1 transition-colors hover:text-blood"
+  >
+    Voir les démarches pour s’installer en Espagne →
+  </a>
+</p>
 
             <div className="mt-12 border-l-2 border-blood pl-6">
               <p
@@ -235,7 +264,117 @@ export default function ImmatriculationVoiture() {
 
         </div>
       </section>
+{/* COMPRENDRE L'IMMATRICULATION */}
+<section className="bg-[#EEE8DE] px-8 py-28 md:px-16 md:py-36">
+  <div className="mx-auto max-w-6xl">
 
+    <div className="grid gap-16 md:grid-cols-[0.7fr_1.3fr]">
+
+      <p className="text-xs uppercase tracking-[0.25em] text-blood">
+        Comprendre
+      </p>
+
+      <div>
+        <h2
+          className="text-5xl leading-[0.95] md:text-6xl"
+          style={{ fontFamily: "var(--font-editorial)" }}
+        >
+          Comment immatriculer une voiture française
+          <br />
+          <span className="italic text-blood">
+            en Espagne ?
+          </span>
+        </h2>
+
+        <p className="mt-10 max-w-2xl text-lg leading-relaxed text-navy/70">
+          Lorsqu’un véhicule déjà immatriculé en France est transféré
+          en Espagne, plusieurs démarches peuvent être nécessaires avant
+          d’obtenir son immatriculation espagnole : vérification des
+          documents du véhicule, contrôle technique en Espagne,
+          formalités fiscales et demande d’immatriculation.
+        </p>
+
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy/70">
+          Les formalités exactes dépendent notamment du véhicule et de
+          votre situation. Nous vérifions votre dossier en amont et
+          organisons les différentes étapes dans le bon ordre.
+        </p>
+      </div>
+
+    </div>
+
+
+    <div className="mt-24 grid gap-x-16 gap-y-12 md:grid-cols-2">
+
+      <div className="border-t border-navy/20 pt-6">
+        <h3
+          className="text-2xl"
+          style={{ fontFamily: "var(--font-editorial)" }}
+        >
+          Quels documents faut-il pour immatriculer sa voiture en Espagne ?
+        </h3>
+
+        <p className="mt-4 leading-relaxed text-navy/65">
+          Les documents dépendent du véhicule et de votre situation.
+          La documentation française du véhicule ainsi que les éléments
+          permettant de justifier ses caractéristiques techniques font
+          notamment partie des pièces à vérifier avant de commencer.
+        </p>
+      </div>
+
+
+      <div className="border-t border-navy/20 pt-6">
+        <h3
+          className="text-2xl"
+          style={{ fontFamily: "var(--font-editorial)" }}
+        >
+          Faut-il passer l’ITV en Espagne ?
+        </h3>
+
+        <p className="mt-4 leading-relaxed text-navy/65">
+          Dans le cadre de l’immatriculation espagnole d’un véhicule
+          provenant de France, un passage auprès d’une station ITV en
+          Espagne peut être nécessaire afin d’obtenir la documentation
+          technique requise pour poursuivre la procédure.
+        </p>
+      </div>
+
+
+      <div className="border-t border-navy/20 pt-6">
+        <h3
+          className="text-2xl"
+          style={{ fontFamily: "var(--font-editorial)" }}
+        >
+          Quelles taxes faut-il prévoir ?
+        </h3>
+
+        <p className="mt-4 leading-relaxed text-navy/65">
+          La fiscalité applicable varie selon la situation du propriétaire,
+          le véhicule et les circonstances de son transfert en Espagne.
+          Nous identifions les formalités correspondant à votre dossier
+          avant la demande d’immatriculation.
+        </p>
+      </div>
+
+
+      <div className="border-t border-navy/20 pt-6">
+        <h3
+          className="text-2xl"
+          style={{ fontFamily: "var(--font-editorial)" }}
+        >
+          Peut-on préparer les démarches avant de quitter la France ?
+        </h3>
+
+        <p className="mt-4 leading-relaxed text-navy/65">
+          Oui, une partie importante du dossier peut être vérifiée et
+          préparée en amont. Cela permet notamment d’identifier les
+          documents manquants avant votre installation en Espagne.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* CE QU'ON VOUS ÉVITE */}
       <section className="px-8 pb-28 md:px-16 md:pb-36">
