@@ -5,7 +5,7 @@ import { guides } from "./guides-data";
 export const metadata: Metadata = {
   title: "Guides pratiques pour vos démarches en Espagne",
   description:
-    "NIE, installation, voiture et démarches administratives : les guides holÀ! pour comprendre l’administration espagnole simplement et en français.",
+    "NIE, installation, voiture et démarches administratives : les guides holÀ! pour comprendre quoi faire en Espagne, simplement et en français.",
   alternates: {
     canonical: "/guides",
   },
@@ -23,30 +23,32 @@ const categories = [
     number: "01",
     title: "Votre NIE",
     description:
-      "Comprendre le NIE, préparer les documents et savoir par où commencer.",
+      "À quoi il sert, comment le demander et quels documents préparer.",
   },
   {
     name: "Voiture",
     number: "02",
     title: "Votre voiture",
     description:
-      "Immatriculation, ITV, taxes et changement de résidence depuis la France.",
+      "ITV, taxes, immatriculation : ce qu’il faut prévoir pour emmener votre voiture en Espagne.",
   },
   {
     name: "Installation",
     number: "03",
     title: "Votre installation",
     description:
-      "Les démarches essentielles pour construire votre nouvelle vie en Espagne.",
+      "NIE, résidence, empadronamiento, santé : ce qui vous attend quand vous partez vivre en Espagne.",
   },
 ] as const;
 
 export default function GuidesPage() {
   return (
     <main className="bg-ivory text-navy">
+
       {/* HERO */}
       <section className="px-8 pb-24 pt-16 md:px-16 md:pb-32 md:pt-24">
         <div className="mx-auto max-w-6xl">
+
           <div className="flex items-center justify-between">
             <Link
               href="/"
@@ -79,16 +81,20 @@ export default function GuidesPage() {
             </h1>
 
             <p className="mt-10 max-w-2xl text-lg leading-relaxed text-navy/65 md:text-xl">
-              NIE, voiture, installation… Des explications claires pour
-              comprendre vos démarches en Espagne avant de vous lancer.
+              NIE, voiture, résidence, santé… On vous explique ce qu’il faut
+              faire, dans quel ordre et pourquoi. Sans vous obliger à parler
+              couramment l’administration espagnole.
             </p>
           </div>
+
         </div>
       </section>
+
 
       {/* CATEGORIES */}
       <section className="border-t border-navy/15">
         <div className="mx-auto max-w-6xl px-8 md:px-16">
+
           {categories.map((category) => {
             const categoryGuides = guides.filter(
               (guide) => guide.category === category.name
@@ -151,23 +157,28 @@ export default function GuidesPage() {
               </section>
             );
           })}
+
         </div>
       </section>
+
 
       {/* FINAL CTA */}
       <section className="bg-blood px-8 py-24 text-ivory md:px-16 md:py-32">
         <div className="mx-auto max-w-6xl">
+
           <p className="text-xs uppercase tracking-[0.25em] text-ivory/60">
-            Votre situation n’entre dans aucune case ?
+            Vous ne trouvez pas votre cas ?
           </p>
 
           <h2
             className="mt-6 max-w-4xl text-5xl leading-[0.95] md:text-7xl"
             style={{ fontFamily: "var(--font-editorial)" }}
           >
-            Expliquez-nous.
+            Racontez-nous.
             <br />
-            <span className="italic">On trouvera par où commencer.</span>
+            <span className="italic">
+              On commencera par démêler tout ça.
+            </span>
           </h2>
 
           <Link
@@ -175,10 +186,12 @@ export default function GuidesPage() {
             className="mt-12 inline-block border-b border-ivory pb-2 text-xl"
             style={{ fontFamily: "var(--font-editorial)" }}
           >
-            Parler de ma démarche →
+            Expliquer ma situation →
           </Link>
+
         </div>
       </section>
+
     </main>
   );
 }

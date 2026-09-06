@@ -16,7 +16,7 @@ export type Guide = {
   related: string[];
   serviceHref: string;
   serviceLabel: string;
-    sources?: { label: string; href: string }[];
+  sources?: { label: string; href: string }[];
 };
 
 export const guides: Guide[] = [
@@ -33,46 +33,46 @@ export const guides: Guide[] = [
       "Comment obtenir un NIE en Espagne ? Documents, formulaire EX-15, taxe, demande depuis la France et différence avec la résidence.",
     eyebrow: "NIE · Guide",
     intro:
-      "Le NIE est souvent l’une des premières démarches auxquelles un Français est confronté en Espagne. Achat immobilier, activité professionnelle, formalités fiscales ou installation : voici ce qu’il faut comprendre avant de commencer.",
+      "Achat immobilier, travail, fiscalité… Le NIE apparaît très vite dès que l’on a quelque chose à faire en Espagne. À quoi sert-il, où le demander et quels documents préparer ? On reprend tout depuis le début.",
     sections: [
       {
-        title: "Qu’est-ce que le NIE ?",
+        title: "Le NIE, c’est quoi exactement ?",
         paragraphs: [
-          "Le NIE, Número de Identidad de Extranjero, est un numéro personnel attribué aux étrangers qui ont des intérêts économiques, professionnels ou sociaux en Espagne.",
-          "Il sert à vous identifier dans de nombreuses démarches espagnoles. Obtenir un NIE ne signifie toutefois pas, à lui seul, devenir résident en Espagne.",
+          "Le NIE, ou Número de Identidad de Extranjero, est un numéro personnel attribué aux étrangers qui ont des intérêts économiques, professionnels ou sociaux en Espagne.",
+          "Il permet de vous identifier dans de nombreuses démarches espagnoles. En revanche, avoir un NIE ne signifie pas que vous êtes résident en Espagne.",
         ],
       },
       {
-        title: "Dans quels cas peut-on avoir besoin d’un NIE ?",
+        title: "Quand a-t-on besoin d’un NIE ?",
         paragraphs: [
-          "Le NIE peut notamment être demandé dans le cadre d’un achat immobilier, de certaines démarches fiscales ou professionnelles et de nombreuses opérations administratives en Espagne.",
-          "Le motif de la demande est important : il doit pouvoir être expliqué et, selon la situation, justifié.",
+          "Un NIE peut notamment être nécessaire pour acheter un bien immobilier, effectuer certaines démarches fiscales ou professionnelles ou réaliser différentes formalités en Espagne.",
+          "La raison pour laquelle vous le demandez compte : elle doit pouvoir être expliquée et, selon votre cas, justifiée par des documents.",
         ],
       },
       {
-        title: "Quels documents préparer ?",
+        title: "Quels documents faut-il préparer ?",
         paragraphs: [
-          "La composition exacte du dossier dépend de votre situation et du lieu où la demande est déposée.",
+          "Il n’existe pas un dossier absolument identique pour tout le monde. Les pièces à fournir dépendent notamment du motif de votre demande et de l’endroit où vous la déposez.",
         ],
         bullets: [
-          "Le formulaire EX-15 correctement complété.",
+          "Le formulaire EX-15 correctement rempli.",
           "Un document d’identité en cours de validité.",
-          "Les justificatifs correspondant au motif de la demande.",
-          "Le justificatif de paiement de la taxe applicable lorsque celui-ci est requis.",
+          "Les justificatifs correspondant à la raison de votre demande.",
+          "Le justificatif de paiement de la taxe, lorsqu’il est demandé.",
         ],
       },
       {
         title: "Où demander son NIE ?",
         paragraphs: [
-          "Selon votre situation, la demande peut être effectuée en Espagne auprès de l’autorité compétente ou, dans certains cas, depuis l’étranger par l’intermédiaire d’un consulat espagnol.",
-          "Les modalités pratiques et les rendez-vous disponibles peuvent varier. Il est donc utile de déterminer le bon circuit avant de constituer le dossier.",
+          "La demande peut se faire en Espagne auprès de l’autorité compétente. Dans certains cas, elle peut aussi passer par un consulat espagnol à l’étranger.",
+          "Si vous êtes encore en France, mieux vaut vérifier d’abord quelle solution est possible dans votre cas et si le consulat compétent propose actuellement ce service. Cela évite de préparer le bon dossier pour le mauvais endroit.",
         ],
       },
       {
-        title: "NIE et résidence : attention à la confusion",
+        title: "NIE et résidence : ce n’est pas la même chose",
         paragraphs: [
-          "Le NIE est un numéro d’identification. Il ne constitue pas, à lui seul, une autorisation ou une preuve de résidence.",
-          "Si vous vous installez durablement en Espagne, d’autres formalités peuvent s’ajouter en fonction de votre situation.",
+          "Le NIE est un numéro d’identification. À lui seul, il ne vous donne pas le statut de résident en Espagne.",
+          "Si vous partez vivre en Espagne, d’autres démarches peuvent donc être nécessaires en fonction de la durée de votre séjour et de votre situation.",
         ],
       },
     ],
@@ -82,7 +82,7 @@ export const guides: Guide[] = [
       "nie-ou-residence-espagne",
     ],
     serviceHref: "/nie-espagne",
-    serviceLabel: "Nous confier mon NIE",
+    serviceLabel: "Me faire accompagner pour mon NIE",
   },
 
   {
@@ -91,30 +91,30 @@ export const guides: Guide[] = [
     title: "Peut-on obtenir un NIE depuis la France ?",
     seoTitle: "Obtenir un NIE depuis la France : comment faire ?",
     description:
-      "Peut-on demander un NIE sans être déjà installé en Espagne ? Découvrez les possibilités pour préparer ou effectuer la démarche depuis la France.",
+      "Peut-on demander un NIE sans être déjà installé en Espagne ? Les possibilités pour préparer ou effectuer la démarche depuis la France.",
     eyebrow: "NIE · France → Espagne",
     intro:
-      "Vous avez besoin d’un NIE mais vous vivez encore en France ? Il n’est pas toujours nécessaire d’attendre votre installation en Espagne pour commencer à organiser la démarche.",
+      "Vous avez besoin d’un NIE mais vous êtes encore en France ? Bonne nouvelle : selon votre situation, vous n’avez pas forcément besoin d’attendre d’être en Espagne pour commencer.",
     sections: [
       {
-        title: "Une demande peut-elle être faite depuis la France ?",
+        title: "Peut-on demander un NIE depuis la France ?",
         paragraphs: [
-          "Dans certaines situations, une demande de NIE peut être présentée par l’intermédiaire d’un consulat espagnol compétent en France.",
-          "La possibilité concrète, les modalités de rendez-vous et les justificatifs demandés doivent être vérifiés en fonction de votre situation et de votre circonscription consulaire.",
+          "Oui, dans certains cas. Une demande peut notamment passer par le consulat espagnol compétent en France, lorsque ce service y est proposé.",
+          "Avant de préparer le dossier, vérifiez donc les modalités du consulat dont vous dépendez : les possibilités de dépôt et de rendez-vous peuvent varier.",
         ],
       },
       {
-        title: "Pourquoi préparer le dossier avant le départ ?",
+        title: "Pourquoi s’y prendre avant de partir ?",
         paragraphs: [
-          "Identifier le motif du NIE et réunir les documents en amont peut éviter de découvrir une pièce manquante au moment où une autre démarche espagnole en dépend.",
-          "Même lorsqu’une étape doit finalement être accomplie en Espagne, une grande partie du travail préparatoire peut souvent être organisée depuis la France.",
+          "Si une autre démarche dépend de votre NIE, découvrir au dernier moment qu’il manque un document peut vite retarder le reste.",
+          "Même lorsqu’une étape doit finalement être faite en Espagne, vous pouvez déjà vérifier le motif de votre demande et réunir une bonne partie des documents depuis la France.",
         ],
       },
       {
-        title: "Faut-il se déplacer personnellement ?",
+        title: "Faudra-t-il vous déplacer ?",
         paragraphs: [
-          "Cela dépend du circuit utilisé et de la situation. Certaines procédures exigent une comparution ou des formalités personnelles, tandis que certaines démarches peuvent admettre une représentation lorsqu’elle est juridiquement et matériellement possible.",
-          "Il faut donc vérifier ce point avant de prévoir un déplacement ou de donner procuration.",
+          "Cela dépend de la façon dont la demande est faite. Certaines étapes peuvent nécessiter votre présence ; dans d’autres cas, une représentation peut être possible avec les documents nécessaires.",
+          "Le bon réflexe est donc de vérifier ce point avant de réserver un trajet ou de préparer une procuration.",
         ],
       },
     ],
@@ -136,32 +136,32 @@ export const guides: Guide[] = [
       "Quels documents faut-il pour demander un NIE en Espagne ? EX-15, identité, motif et préparation du dossier expliqués en français.",
     eyebrow: "NIE · Documents",
     intro:
-      "Un dossier de NIE n’est pas compliqué lorsqu’on sait exactement quoi préparer. Le problème vient souvent d’un formulaire mal complété, d’un motif insuffisamment documenté ou d’un mauvais circuit administratif.",
+      "Le dossier de NIE n’a rien d’insurmontable une fois que l’on sait quoi préparer. Les problèmes commencent surtout lorsqu’un formulaire est mal rempli, qu’un justificatif manque ou que la demande part au mauvais endroit.",
     sections: [
       {
         title: "Le formulaire EX-15",
         paragraphs: [
-          "Le formulaire EX-15 est utilisé pour certaines demandes de NIE. Il doit correspondre à la situation réelle du demandeur et être complété avec précision.",
-          "Avant de le remplir, il est utile de déterminer pourquoi le NIE est demandé et auprès de quelle autorité le dossier sera présenté.",
+          "Le formulaire EX-15 est utilisé pour la demande de NIE. Il doit refléter votre situation et la raison réelle de votre demande.",
+          "Avant de le remplir, mieux vaut donc savoir pourquoi vous demandez le NIE et où le dossier sera déposé.",
         ],
       },
       {
-        title: "Le document d’identité",
+        title: "Votre pièce d’identité",
         paragraphs: [
-          "Un passeport ou document d’identité valable doit généralement accompagner le dossier. Les modalités de présentation de l’original et des copies dépendent du canal utilisé.",
+          "Une pièce d’identité en cours de validité doit accompagner le dossier. Selon la façon dont vous faites la demande, les règles de présentation de l’original et des copies peuvent différer.",
         ],
       },
       {
-        title: "Justifier la raison de la demande",
+        title: "La raison de votre demande",
         paragraphs: [
-          "Le NIE est lié à l’existence d’intérêts économiques, professionnels ou sociaux en Espagne. Selon le cas, des documents permettant d’établir le motif invoqué peuvent être nécessaires.",
+          "Le NIE est attribué lorsqu’il existe des intérêts économiques, professionnels ou sociaux en Espagne. Il faut donc pouvoir expliquer pourquoi vous en avez besoin et fournir, lorsque c’est nécessaire, un document qui le montre.",
         ],
       },
       {
-        title: "La taxe administrative",
+        title: "Et la taxe ?",
         paragraphs: [
-          "Une taxe administrative peut être associée à la démarche. Le formulaire et les modalités de paiement doivent correspondre à la procédure effectuée.",
-          "Il est préférable de vérifier la version et les modalités applicables au moment du dépôt plutôt que de préparer le paiement trop longtemps à l’avance.",
+          "Une taxe administrative est liée à la démarche. Le formulaire de paiement et la façon de la régler doivent correspondre à la procédure que vous suivez.",
+          "Mieux vaut vérifier les modalités au moment de préparer le dossier plutôt que de se fier à un ancien montant ou à un formulaire trouvé en ligne plusieurs mois auparavant.",
         ],
       },
     ],
@@ -183,27 +183,27 @@ export const guides: Guide[] = [
       "NIE, certificat d’enregistrement et résidence en Espagne : comprendre les différences avant de commencer vos démarches.",
     eyebrow: "NIE · Comprendre",
     intro:
-      "C’est probablement l’une des confusions les plus fréquentes : avoir un NIE et être enregistré comme résident en Espagne ne sont pas la même chose.",
+      "C’est une confusion très fréquente : avoir un NIE et être enregistré comme résident en Espagne, ce n’est pas la même chose. Et l’empadronamiento est encore autre chose.",
     sections: [
       {
-        title: "Le NIE est avant tout un numéro",
+        title: "Le NIE est d’abord un numéro",
         paragraphs: [
-          "Le NIE est le numéro d’identité attribué à un étranger pour ses relations avec l’administration espagnole.",
-          "Il peut donc être nécessaire à une personne qui possède des intérêts en Espagne sans pour autant y transférer sa résidence.",
+          "Le NIE est le numéro qui permet d’identifier un étranger dans ses relations avec l’administration espagnole.",
+          "Vous pouvez donc avoir besoin d’un NIE sans pour autant partir vivre en Espagne : pour un achat immobilier, par exemple.",
         ],
       },
       {
-        title: "S’installer en Espagne implique d’autres démarches",
+        title: "Si vous partez vivre en Espagne",
         paragraphs: [
-          "Un citoyen de l’Union européenne qui séjourne en Espagne au-delà de la période prévue par la réglementation européenne peut être soumis à une formalité d’enregistrement.",
-          "Les conditions et justificatifs varient notamment selon la situation professionnelle et les ressources de la personne.",
+          "Pour un citoyen de l’Union européenne qui s’installe en Espagne plus de trois mois, une démarche d’enregistrement peut être nécessaire.",
+          "Les documents à présenter ne sont pas les mêmes pour tout le monde : ils dépendent notamment de votre activité, de vos ressources et de votre couverture santé.",
         ],
       },
       {
-        title: "Et l’empadronamiento ?",
+        title: "Et l’empadronamiento dans tout ça ?",
         paragraphs: [
-          "L’empadronamiento correspond à l’inscription au registre municipal des habitants de la commune où vous résidez.",
-          "Il s’agit encore d’une formalité différente du NIE et de l’enregistrement comme citoyen de l’Union.",
+          "L’empadronamiento est votre inscription auprès de la commune espagnole où vous résidez.",
+          "Vous avez donc trois notions différentes : un numéro d’identification, une inscription municipale et, lorsque votre situation l’exige, une démarche liée à votre résidence en Espagne.",
         ],
       },
     ],
@@ -229,40 +229,40 @@ export const guides: Guide[] = [
       "Toutes les étapes pour immatriculer une voiture française en Espagne : documents, ITV, fiscalité, DGT et plaques espagnoles.",
     eyebrow: "Voiture · France → Espagne",
     intro:
-      "Vous vous installez en Espagne avec une voiture déjà immatriculée en France ? L’immatriculation espagnole combine plusieurs démarches techniques, fiscales et administratives. Voici l’ordre à comprendre.",
+      "Vous partez vivre en Espagne et votre voiture française vient avec vous ? Pour obtenir des plaques espagnoles, plusieurs étapes s’enchaînent : documents, ITV, fiscalité puis DGT. Voici dans quel ordre les aborder.",
     sections: [
       {
-        title: "1. Vérifier les documents du véhicule",
+        title: "1. Faire le point sur les papiers de la voiture",
         paragraphs: [
-          "Avant de commencer, il faut vérifier les documents français du véhicule, la preuve de propriété et les éléments techniques disponibles.",
-          "La situation d’une voiture que vous possédez déjà n’est pas nécessairement identique à celle d’un véhicule récemment acheté à l’étranger.",
+          "Commencez par vérifier les documents français du véhicule, la preuve que vous en êtes propriétaire et la documentation technique dont vous disposez.",
+          "Un détail important : une voiture que vous possédez déjà depuis quelque temps n’est pas forcément traitée de la même manière qu’un véhicule que vous venez d’acheter à l’étranger.",
         ],
       },
       {
-        title: "2. Préparer la documentation technique",
+        title: "2. Réunir la documentation technique",
         paragraphs: [
-          "Le certificat de conformité européen, lorsqu’il existe et correspond au véhicule, peut faire partie de la documentation utilisée. Selon le cas, une documentation technique complémentaire peut être nécessaire.",
+          "Le certificat de conformité européen, lorsqu’il existe et correspond au véhicule, peut faire partie des documents utiles. Selon la voiture, une documentation technique complémentaire peut aussi être nécessaire.",
         ],
       },
       {
         title: "3. Passer l’ITV en Espagne",
         paragraphs: [
-          "Dans le processus d’immatriculation d’un véhicule provenant d’un autre pays de l’Union européenne, une inspection en Espagne permet notamment d’établir la documentation technique espagnole nécessaire.",
-          "Cette étape implique la présentation physique du véhicule.",
+          "Pour immatriculer en Espagne une voiture provenant d’un autre pays de l’Union européenne, le véhicule passe par une station ITV espagnole afin d’obtenir la documentation technique nécessaire à l’immatriculation.",
+          "Pour cette étape, pas de raccourci à distance : la voiture doit être présente.",
         ],
       },
       {
-        title: "4. Traiter les formalités fiscales",
+        title: "4. Régler la partie fiscale",
         paragraphs: [
-          "Plusieurs obligations fiscales peuvent intervenir selon le véhicule, ses caractéristiques et votre situation.",
-          "Le traitement doit être adapté au dossier : un transfert de résidence peut, sous certaines conditions, être traité différemment d’une acquisition classique.",
+          "Les taxes à prévoir dépendent du véhicule et de votre situation. Il faut donc déterminer ce qui s’applique à votre cas avant de payer quoi que ce soit.",
+          "Si vous déménagez en Espagne avec une voiture que vous possédiez et utilisiez déjà, certaines règles spécifiques peuvent entrer en jeu lorsque les conditions sont remplies.",
         ],
       },
       {
-        title: "5. Finaliser l’immatriculation",
+        title: "5. Finaliser l’immatriculation auprès de la DGT",
         paragraphs: [
-          "Une fois les prérequis réunis, le dossier d’immatriculation peut être présenté à la DGT. Après attribution de l’immatriculation, les plaques correspondantes peuvent être fabriquées.",
-          "Le véhicule doit également disposer de l’assurance obligatoire pour circuler.",
+          "Une fois les étapes précédentes terminées, le dossier peut être présenté à la DGT pour obtenir l’immatriculation espagnole.",
+          "Il reste ensuite à faire fabriquer les plaques et à disposer de l’assurance nécessaire pour circuler.",
         ],
       },
     ],
@@ -273,7 +273,7 @@ export const guides: Guide[] = [
       "taxes-immatriculation-voiture-espagne",
     ],
     serviceHref: "/immatriculation-voiture-espagne",
-    serviceLabel: "Nous confier mon immatriculation",
+    serviceLabel: "Me faire accompagner",
   },
 
   {
@@ -285,40 +285,40 @@ export const guides: Guide[] = [
       "ITV, DGT, taxes et documents : comprendre les différents coûts pour immatriculer une voiture française en Espagne.",
     eyebrow: "Voiture · Coût",
     intro:
-      "Il n’existe pas un prix unique pour immatriculer une voiture française en Espagne. Le montant final dépend du véhicule, de sa situation et des formalités applicables.",
+      "Il n’y a pas un tarif unique pour immatriculer une voiture française en Espagne. Entre l’ITV, les taxes, la DGT et les éventuels documents techniques, le total dépend réellement de votre véhicule et de votre situation.",
     sections: [
       {
-        title: "Pourquoi le prix varie-t-il ?",
+        title: "Pourquoi le prix change d’une voiture à l’autre ?",
         paragraphs: [
-          "Deux véhicules français peuvent entraîner des coûts différents. Les caractéristiques techniques, les émissions, la situation fiscale, la commune et la documentation disponible peuvent modifier le total.",
+          "Deux voitures françaises peuvent coûter des montants très différents à immatriculer. Les caractéristiques du véhicule, ses émissions, la fiscalité applicable, la commune et les documents déjà disponibles peuvent faire varier le total.",
         ],
       },
       {
-        title: "Les principaux postes de coût",
+        title: "Ce qu’il faut prévoir dans le budget",
         paragraphs: [
-          "Un budget d’immatriculation peut comprendre plusieurs catégories de dépenses.",
+          "Selon votre dossier, plusieurs dépenses peuvent s’additionner :",
         ],
         bullets: [
-          "L’inspection technique ITV.",
+          "Le passage à l’ITV.",
           "La documentation technique éventuellement nécessaire.",
-          "Les taxes applicables selon la situation.",
-          "La taxe ou redevance administrative de la DGT.",
-          "L’impôt municipal sur les véhicules lorsqu’il est applicable.",
+          "Les taxes qui s’appliquent à votre situation.",
+          "La redevance de la DGT.",
+          "L’impôt municipal sur les véhicules, lorsqu’il s’applique.",
           "La fabrication des plaques.",
           "Les éventuels frais d’accompagnement ou de représentation.",
         ],
       },
       {
-        title: "Et en cas de déménagement en Espagne ?",
+        title: "Vous déménagez en Espagne avec votre voiture ?",
         paragraphs: [
-          "Lors d’un transfert de résidence vers l’Espagne avec un véhicule déjà possédé et utilisé auparavant, certaines règles fiscales spécifiques ou exonérations peuvent être envisageables si toutes les conditions légales sont réunies.",
-          "Il faut donc analyser la situation avant de calculer le coût total.",
+          "Si vous transférez votre résidence en Espagne avec une voiture que vous possédez et utilisez déjà, certaines règles fiscales spécifiques peuvent s’appliquer. Une exonération peut notamment être possible si toutes les conditions prévues sont remplies.",
+          "C’est donc un point à vérifier avant de calculer le coût total.",
         ],
       },
       {
-        title: "Pourquoi éviter les estimations universelles ?",
+        title: "Méfiez-vous des prix universels",
         paragraphs: [
-          "Un prix annoncé sans connaître le véhicule et la situation du propriétaire peut être trompeur. La bonne méthode consiste à identifier les étapes réellement applicables puis à chiffrer chaque poste.",
+          "Un montant annoncé sans connaître la voiture ni la situation de son propriétaire ne raconte qu’une partie de l’histoire. Pour obtenir une estimation utile, il faut d’abord savoir quelles étapes et quelles taxes concernent réellement votre dossier.",
         ],
       },
     ],
@@ -340,30 +340,30 @@ export const guides: Guide[] = [
       "Votre voiture est immatriculée en France et doit passer l’ITV en Espagne ? Découvrez son rôle dans une immatriculation espagnole.",
     eyebrow: "Voiture · ITV",
     intro:
-      "L’ITV est l’équivalent espagnol du contrôle technique, mais dans une procédure d’immatriculation d’un véhicule français, son rôle ne se limite pas à vérifier que la voiture peut circuler.",
+      "L’ITV est souvent présentée comme l’équivalent espagnol du contrôle technique. Mais lorsqu’on immatricule une voiture française en Espagne, elle a aussi un rôle dans la constitution du dossier technique espagnol.",
     sections: [
       {
-        title: "Pourquoi passer par une ITV espagnole ?",
+        title: "Pourquoi faut-il passer par une ITV espagnole ?",
         paragraphs: [
-          "Pour immatriculer en Espagne un véhicule provenant d’un autre pays de l’Union européenne, une inspection espagnole intervient dans la constitution de la documentation technique nécessaire à l’immatriculation.",
+          "Lors de l’immatriculation en Espagne d’un véhicule provenant d’un autre pays de l’Union européenne, le passage par l’ITV permet notamment d’établir la documentation technique espagnole nécessaire pour poursuivre la procédure.",
         ],
       },
       {
-        title: "La voiture doit-elle être présente ?",
+        title: "La voiture doit-elle être sur place ?",
         paragraphs: [
-          "Oui. Une inspection technique porte sur le véhicule lui-même : la voiture doit donc être présentée physiquement à la station ITV pour cette étape.",
+          "Oui. L’inspection porte sur le véhicule lui-même : votre voiture doit donc être présentée physiquement à la station ITV.",
         ],
       },
       {
-        title: "Quels documents préparer ?",
+        title: "Quels papiers faut-il apporter ?",
         paragraphs: [
-          "Les documents nécessaires dépendent du véhicule et de son dossier technique. La documentation française, la preuve de propriété et les éléments permettant d’identifier les caractéristiques du véhicule sont particulièrement importants.",
+          "Cela dépend du véhicule. Les documents français, la preuve de propriété et les éléments permettant d’établir ses caractéristiques techniques font partie des pièces importantes à vérifier avant le rendez-vous.",
         ],
       },
       {
-        title: "ITV et contrôle technique français",
+        title: "Et si le contrôle technique français est encore valable ?",
         paragraphs: [
-          "Un contrôle technique français valide ne dispense pas nécessairement des formalités techniques nécessaires à l’établissement de la documentation espagnole pour une première immatriculation en Espagne.",
+          "Un contrôle technique français encore valable ne remplace pas nécessairement les formalités techniques requises pour établir les documents nécessaires à une première immatriculation espagnole.",
         ],
       },
     ],
@@ -385,31 +385,31 @@ export const guides: Guide[] = [
       "Vous transférez votre résidence de France en Espagne avec votre voiture ? ITV, immatriculation, fiscalité et documents à anticiper.",
     eyebrow: "Voiture · Déménagement",
     intro:
-      "Emporter sa propre voiture lorsque l’on déménage en Espagne paraît naturel. Administrativement, le changement de pays implique pourtant plusieurs vérifications qu’il vaut mieux anticiper.",
+      "Vous déménagez en Espagne et la voiture vient avec les cartons. Rien de plus logique. Côté administratif, en revanche, mieux vaut préparer quelques éléments avant de quitter la France.",
     sections: [
       {
-        title: "Commencer avant de quitter la France",
+        title: "Avant de partir, vérifiez vos papiers",
         paragraphs: [
-          "Avant le déménagement, vérifiez que vous disposez des documents originaux du véhicule et de la documentation technique disponible. Certaines pièces sont beaucoup plus simples à retrouver avant le départ.",
+          "Assurez-vous d’avoir les documents originaux du véhicule et la documentation technique disponible. S’il manque quelque chose, il est souvent beaucoup plus simple de le récupérer pendant que vous êtes encore en France.",
         ],
       },
       {
-        title: "Votre cas n’est pas celui d’un simple achat à l’étranger",
+        title: "Vous n’êtes pas simplement en train d’importer une voiture achetée",
         paragraphs: [
-          "Si vous possédez et utilisez déjà votre voiture en France puis transférez votre résidence en Espagne, votre situation peut relever de règles différentes de celles applicables à une personne qui vient d’acheter une voiture française pour l’importer.",
+          "Si cette voiture vous appartient déjà, que vous l’utilisez en France et que vous l’emportez parce que vous transférez votre résidence en Espagne, votre situation peut être différente de celle d’une personne qui vient d’acheter un véhicule à l’étranger.",
         ],
       },
       {
-        title: "Vérifier une éventuelle exonération",
+        title: "Vérifiez les règles liées au transfert de résidence",
         paragraphs: [
-          "La réglementation fiscale espagnole prévoit des situations d’exonération liées au transfert de résidence lorsque plusieurs conditions sont remplies.",
-          "Il est important de vérifier ces conditions avant d’accomplir les formalités fiscales afin de ne pas traiter le dossier comme une importation ordinaire par erreur.",
+          "La fiscalité espagnole prévoit, sous certaines conditions, une exonération liée au transfert de résidence.",
+          "Ces conditions doivent être vérifiées avant de traiter la partie fiscale. Autrement dit : ne partez pas du principe que vous devez payer comme pour n’importe quelle importation, mais ne partez pas non plus du principe que vous êtes automatiquement exonéré.",
         ],
       },
       {
-        title: "Organiser l’ordre des démarches",
+        title: "Dans quel ordre faire les démarches ?",
         paragraphs: [
-          "Installation personnelle, adresse en Espagne, ITV, fiscalité et DGT peuvent être interdépendantes. Préparer l’ordre des démarches évite les rendez-vous inutiles et les dossiers incomplets.",
+          "Votre installation, votre adresse en Espagne, l’ITV, les formalités fiscales et la DGT peuvent se croiser. Mettre les étapes dans le bon ordre évite surtout les rendez-vous pris trop tôt et les dossiers auxquels il manque encore une pièce.",
         ],
       },
     ],
@@ -419,7 +419,7 @@ export const guides: Guide[] = [
       "s-installer-espagne-depuis-france",
     ],
     serviceHref: "/immatriculation-voiture-espagne",
-    serviceLabel: "Organiser mon changement d’immatriculation",
+    serviceLabel: "Organiser mon immatriculation",
   },
 
   {
@@ -431,32 +431,32 @@ export const guides: Guide[] = [
       "Impôt d’immatriculation, taxe municipale et transfert de résidence : comprendre la fiscalité d’une voiture française immatriculée en Espagne.",
     eyebrow: "Voiture · Fiscalité",
     intro:
-      "La partie fiscale est souvent celle qui crée le plus de confusion dans une immatriculation espagnole. Il n’existe pas une taxe unique applicable de la même façon à tous les véhicules.",
+      "C’est souvent la partie qui inquiète le plus : combien faut-il payer pour passer une voiture française en plaques espagnoles ? La réponse dépend du véhicule et de votre situation, car plusieurs taxes et frais différents peuvent entrer en jeu.",
     sections: [
       {
-        title: "L’impôt lié à la première immatriculation en Espagne",
+        title: "L’impôt de première immatriculation",
         paragraphs: [
-          "Selon le véhicule et la situation, l’impôt spécial espagnol applicable à certains moyens de transport peut intervenir lors de la première immatriculation définitive en Espagne.",
-          "Son traitement dépend notamment des caractéristiques du véhicule et des éventuelles situations d’exonération ou de non-assujettissement prévues par la réglementation.",
+          "Lors de la première immatriculation définitive d’un véhicule en Espagne, l’impôt spécial sur certains moyens de transport peut s’appliquer selon le véhicule et la situation.",
+          "Le montant ou l’éventuelle exonération dépend notamment des caractéristiques de la voiture et des conditions prévues par la réglementation.",
         ],
       },
       {
-        title: "L’impôt municipal sur les véhicules",
+        title: "L’IVTM, l’impôt municipal",
         paragraphs: [
-          "L’IVTM est un impôt municipal lié aux véhicules. Son montant et sa gestion dépendent de la commune compétente.",
+          "L’IVTM est l’impôt municipal sur les véhicules. Comme son nom l’indique, il dépend de la commune concernée, notamment pour son montant et ses modalités.",
         ],
       },
       {
-        title: "Transfert de résidence : un cas à vérifier",
+        title: "Vous transférez votre résidence en Espagne ?",
         paragraphs: [
-          "Une personne qui transfère sa résidence habituelle en Espagne avec un véhicule qu’elle possédait et utilisait déjà à l’étranger peut, sous conditions, relever d’un régime fiscal spécifique.",
-          "Les conditions doivent être vérifiées individuellement avant de considérer qu’une exonération s’applique.",
+          "Si vous arrivez en Espagne avec une voiture que vous possédiez et utilisiez déjà à l’étranger, un régime spécifique peut s’appliquer sous certaines conditions.",
+          "Il faut vérifier que vous remplissez bien ces conditions avant de considérer la voiture comme exonérée.",
         ],
       },
       {
-        title: "Ne pas confondre taxes et frais administratifs",
+        title: "Taxes, ITV, DGT : ne mélangeons pas tout",
         paragraphs: [
-          "Aux impôts peuvent s’ajouter les frais d’ITV, de documentation technique, les redevances administratives et les plaques. Le coût total d’une immatriculation ne correspond donc pas à une seule taxe.",
+          "Le prix total ne correspond pas à une seule taxe. Aux éventuels impôts peuvent s’ajouter l’ITV, la documentation technique, les frais administratifs de la DGT et les plaques.",
         ],
       },
     ],
@@ -479,41 +479,42 @@ export const guides: Guide[] = [
     title: "S’installer en Espagne : toutes les démarches pour un Français",
     seoTitle: "S’installer en Espagne : démarches pour les Français",
     description:
-      "NIE, enregistrement, empadronamiento, santé et voiture : les principales démarches pour un Français qui souhaite s’installer en Espagne.",
+      "NIE, résidence, empadronamiento, santé et voiture : les principales démarches pour un Français qui souhaite s’installer en Espagne.",
     eyebrow: "Installation · Guide",
     intro:
-      "S’installer en Espagne ne se résume pas à obtenir un NIE. Les démarches dépendent de la durée du séjour, de votre activité, de votre couverture santé et de votre situation personnelle.",
+      "S’installer en Espagne ne consiste pas simplement à obtenir un NIE et à faire ses valises. Résidence, padrón, santé, voiture… Les démarches dépendent surtout de votre situation. Voici comment y voir plus clair.",
     sections: [
       {
-        title: "Avant le départ : identifier votre situation",
+        title: "Avant de partir : commencez par votre situation",
         paragraphs: [
-          "Salarié, indépendant, retraité, étudiant ou personne sans activité professionnelle : votre situation influence les justificatifs et formalités nécessaires.",
-          "Avant de remplir des formulaires, il est donc préférable de construire un parcours adapté à votre cas.",
+          "Vous partez comme salarié, indépendant, retraité, étudiant ou sans activité professionnelle ? La réponse change une partie des documents et des démarches dont vous aurez besoin.",
+          "Avant de remplir quoi que ce soit, commencez donc par déterminer ce qui correspond réellement à votre cas.",
         ],
       },
       {
         title: "Le NIE",
         paragraphs: [
-          "Le NIE sert de numéro d’identification dans vos relations avec l’administration espagnole. Il intervient dans de nombreuses démarches mais ne doit pas être confondu avec l’enregistrement de résidence.",
+          "Le NIE est votre numéro d’identification en Espagne. Vous le retrouverez dans de nombreuses démarches administratives, mais il ne faut pas le confondre avec votre enregistrement comme résident.",
         ],
       },
       {
-        title: "L’enregistrement pour un séjour durable",
+        title: "Si vous restez plus de trois mois",
         paragraphs: [
-          "Les citoyens de l’Union européenne qui s’installent en Espagne au-delà de la période prévue par les règles de libre circulation peuvent être soumis à une obligation d’enregistrement.",
-          "Les justificatifs demandés dépendent notamment de la situation professionnelle, des ressources et de la couverture santé.",
+          "Pour un citoyen de l’Union européenne qui s’installe en Espagne plus de trois mois, une démarche d’enregistrement peut être nécessaire.",
+          "Les documents à fournir dépendent notamment de votre activité, de vos ressources et de votre couverture santé.",
         ],
       },
       {
         title: "L’empadronamiento",
         paragraphs: [
-          "L’inscription au padrón municipal permet d’enregistrer votre résidence dans une commune espagnole. Elle intervient ensuite dans de nombreuses démarches locales ou administratives.",
+          "L’empadronamiento est votre inscription auprès de la commune dans laquelle vous habitez. Il permet d’enregistrer votre adresse dans le padrón municipal et intervient ensuite dans différentes démarches.",
         ],
       },
       {
-        title: "Santé, véhicule et autres démarches",
+        title: "Et le reste ?",
         paragraphs: [
-          "Selon votre situation, il faudra également organiser votre couverture santé, éventuellement l’immatriculation de votre voiture et d’autres formalités administratives liées à votre installation.",
+          "Selon votre situation, il faudra également régler la question de votre couverture santé, de votre voiture si vous l’emportez avec vous et d’autres formalités liées à votre installation.",
+          "Le plus important n’est pas de tout faire en même temps, mais de savoir ce qui vous concerne et dans quel ordre le faire.",
         ],
       },
     ],
@@ -533,34 +534,35 @@ export const guides: Guide[] = [
     title: "Empadronamiento en Espagne : à quoi sert-il et comment l’obtenir ?",
     seoTitle: "Empadronamiento Espagne : guide pour les Français",
     description:
-      "Qu’est-ce que l’empadronamiento en Espagne ? Découvrez à quoi sert le padrón municipal et comment préparer cette démarche.",
+      "Qu’est-ce que l’empadronamiento en Espagne ? À quoi sert le padrón municipal, où s’inscrire et quels documents préparer.",
     eyebrow: "Installation · Padrón",
     intro:
-      "Le mot revient rapidement lorsqu’on s’installe en Espagne : empadronamiento. Il s’agit de l’inscription au registre des habitants de la commune dans laquelle vous résidez.",
+      "Vous venez d’arriver en Espagne et tout le monde vous parle d’empadronamiento ? Derrière ce mot un peu intimidant se cache quelque chose d’assez simple : votre inscription auprès de la commune où vous habitez.",
     sections: [
       {
         title: "À quoi sert l’empadronamiento ?",
         paragraphs: [
-          "Le padrón municipal permet à la commune d’enregistrer les personnes qui résident sur son territoire.",
-          "Le justificatif d’inscription peut ensuite être demandé dans différentes démarches administratives.",
+          "Le padrón municipal est le registre dans lequel la commune inscrit les personnes qui habitent sur son territoire.",
+          "Une fois inscrit, vous pouvez obtenir un justificatif qui vous sera demandé dans différentes démarches administratives.",
         ],
       },
       {
-        title: "Où effectuer la démarche ?",
+        title: "Où faut-il s’inscrire ?",
         paragraphs: [
-          "L’empadronamiento relève de la commune de résidence. Les modalités pratiques, rendez-vous et documents demandés peuvent donc varier d’un ayuntamiento à l’autre.",
+          "Auprès de la commune où vous résidez. Et c’est important, car les modalités de rendez-vous et les documents acceptés peuvent varier d’un ayuntamiento à l’autre.",
         ],
       },
       {
-        title: "Quels justificatifs peuvent être nécessaires ?",
+        title: "Quels documents faut-il prévoir ?",
         paragraphs: [
-          "Il faut généralement pouvoir justifier son identité ainsi que son lien avec le logement dans lequel on réside. Les documents précis acceptés sont déterminés par la commune.",
+          "Vous devrez notamment pouvoir prouver votre identité et votre lien avec le logement dans lequel vous habitez. La liste précise des documents acceptés dépend de la commune.",
         ],
       },
       {
-        title: "Empadronamiento, NIE et résidence",
+        title: "Padrón, NIE, résidence : trois choses différentes",
         paragraphs: [
-          "Ces trois notions ne sont pas interchangeables. Le padrón concerne l’inscription municipale, le NIE est un numéro d’identification et les formalités de résidence répondent à un autre cadre.",
+          "L’empadronamiento concerne votre inscription dans la commune. Le NIE est votre numéro d’identification. Et les démarches liées à votre résidence en Espagne répondent encore à d’autres règles.",
+          "Les trois peuvent se retrouver dans votre installation, mais ils ne se remplacent pas les uns les autres.",
         ],
       },
     ],
@@ -579,35 +581,35 @@ export const guides: Guide[] = [
     title: "Vivre en Espagne plus de 3 mois : quelles démarches ?",
     seoTitle: "Vivre en Espagne plus de 3 mois : démarches",
     description:
-      "Vous êtes Français et souhaitez vivre en Espagne plus de trois mois ? Enregistrement, NIE, ressources, santé et empadronamiento.",
+      "Vous êtes Français et souhaitez vivre en Espagne plus de trois mois ? Résidence, NIE, ressources, santé et empadronamiento.",
     eyebrow: "Installation · + de 3 mois",
     intro:
-      "En tant que citoyen français, vous bénéficiez de la libre circulation dans l’Union européenne. Une installation de plus longue durée implique néanmoins des formalités spécifiques en Espagne.",
+      "Un Français peut bien sûr partir vivre en Espagne grâce à la libre circulation au sein de l’Union européenne. Mais au-delà de trois mois, s’installer implique certaines démarches supplémentaires.",
     sections: [
       {
-        title: "Le principe pour les citoyens de l’Union européenne",
+        title: "Que se passe-t-il après trois mois ?",
         paragraphs: [
-          "Pour un séjour supérieur à trois mois, les citoyens de l’Union peuvent être tenus de s’enregistrer auprès des autorités espagnoles compétentes.",
-          "Cette formalité ne doit pas être confondue avec la simple attribution d’un NIE.",
+          "Si vous êtes citoyen de l’Union européenne et que vous vivez en Espagne plus de trois mois, vous pouvez être tenu de vous enregistrer auprès des autorités espagnoles compétentes.",
+          "Cette démarche est différente du simple fait d’obtenir un NIE.",
         ],
       },
       {
-        title: "Les conditions dépendent de votre situation",
+        title: "Tout dépend ensuite de votre situation",
         paragraphs: [
-          "Les justificatifs ne sont pas identiques pour un salarié, un indépendant, un étudiant, un retraité ou une personne disposant de ressources propres.",
-          "La couverture santé et, dans certaines situations, la preuve de ressources suffisantes peuvent notamment intervenir.",
+          "Un salarié, un indépendant, un étudiant, un retraité et une personne sans activité ne présentent pas nécessairement les mêmes justificatifs.",
+          "Selon votre cas, votre couverture santé et la preuve de ressources suffisantes peuvent notamment faire partie des éléments à prévoir.",
         ],
       },
       {
-        title: "L’adresse en Espagne",
+        title: "Et votre adresse en Espagne ?",
         paragraphs: [
-          "L’installation implique également des démarches liées à votre commune de résidence, notamment l’inscription au padrón lorsque les conditions sont réunies.",
+          "Votre installation passe également par votre commune de résidence. L’inscription au padrón fait donc partie des démarches à regarder une fois votre adresse en Espagne établie.",
         ],
       },
       {
-        title: "Préparer le parcours dans le bon ordre",
+        title: "Le bon ordre vous évitera bien des allers-retours",
         paragraphs: [
-          "Plusieurs démarches peuvent dépendre les unes des autres. Identifier les justificatifs dont vous disposez avant de demander des rendez-vous permet d’éviter une grande partie des blocages.",
+          "Certaines démarches dépendent de documents obtenus à une étape précédente. Avant de multiplier les rendez-vous, vérifiez donc ce que vous avez déjà, ce qu’il vous manque et ce qui doit être fait en premier.",
         ],
       },
     ],
@@ -626,33 +628,35 @@ export const guides: Guide[] = [
     title: "S’installer en Espagne depuis la France : par où commencer ?",
     seoTitle: "S’installer en Espagne depuis la France : démarches",
     description:
-      "Vous préparez votre déménagement en Espagne depuis la France ? Découvrez quelles démarches anticiper avant votre départ.",
+      "Vous préparez votre déménagement en Espagne depuis la France ? Les démarches et documents à anticiper avant votre départ.",
     eyebrow: "Installation · France → Espagne",
     intro:
-      "Le meilleur moment pour organiser une installation en Espagne n’est pas nécessairement après avoir posé ses valises. Plusieurs vérifications peuvent être faites depuis la France.",
+      "Le meilleur moment pour commencer les démarches d’une installation en Espagne ? Souvent, avant même d’avoir fait les cartons. Plusieurs vérifications et documents peuvent être préparés pendant que vous êtes encore en France.",
     sections: [
       {
-        title: "1. Définir votre statut en Espagne",
+        title: "1. Sachez sous quel statut vous partez",
         paragraphs: [
-          "Votre parcours administratif dépend d’abord de votre situation : emploi, activité indépendante, retraite, études ou absence d’activité professionnelle.",
+          "Salarié, indépendant, retraité, étudiant ou sans activité professionnelle : votre situation détermine une partie des démarches et des justificatifs dont vous aurez besoin en Espagne.",
         ],
       },
       {
-        title: "2. Identifier les documents à récupérer en France",
+        title: "2. Récupérez en France ce qui sera pénible à chercher après",
         paragraphs: [
-          "Certaines pièces liées à votre situation professionnelle, à votre couverture sociale, à votre véhicule ou à votre état civil sont plus simples à obtenir avant le départ.",
+          "Certains documents liés à votre travail, à votre protection sociale, à votre voiture ou à votre état civil sont plus faciles à obtenir avant le déménagement.",
+          "Faire cette vérification avant de partir peut vous éviter quelques appels transfrontaliers une fois installé.",
         ],
       },
       {
-        title: "3. Préparer le NIE si nécessaire",
+        title: "3. Voyez si votre NIE peut déjà être préparé",
         paragraphs: [
-          "Selon la raison pour laquelle vous avez besoin d’un NIE et le circuit disponible, il peut être pertinent d’en préparer la demande avant l’installation.",
+          "Selon la raison pour laquelle vous avez besoin d’un NIE et la façon dont vous pouvez déposer la demande, il peut être utile de commencer à préparer le dossier depuis la France.",
         ],
       },
       {
-        title: "4. Organiser les démarches à l’arrivée",
+        title: "4. Gardez pour l’arrivée ce qui doit attendre l’Espagne",
         paragraphs: [
-          "Adresse, padrón, éventuel enregistrement de résidence, couverture santé et démarches liées au véhicule doivent être organisés en fonction de votre situation réelle.",
+          "Votre adresse, l’empadronamiento, votre éventuel enregistrement comme résident, la santé ou encore votre voiture devront ensuite être organisés selon votre situation.",
+          "L’objectif n’est donc pas de tout terminer avant le départ. C’est d’arriver en sachant exactement ce qui vous attend.",
         ],
       },
     ],
@@ -674,31 +678,33 @@ export const guides: Guide[] = [
       "Vous vous installez en Espagne depuis la France ? Comprendre les principales questions de couverture santé selon votre situation.",
     eyebrow: "Installation · Santé",
     intro:
-      "La carte européenne d’assurance maladie est très utile lors d’un séjour temporaire, mais une installation durable soulève d’autres questions. La bonne démarche dépend surtout de votre statut.",
+      "La carte européenne d’assurance maladie est bien connue pour les vacances. Pour une véritable installation en Espagne, c’est différent : votre couverture santé dépend avant tout de votre situation.",
     sections: [
       {
-        title: "Séjour temporaire ou installation ?",
+        title: "Vous partez quelques semaines ou vous vous installez ?",
         paragraphs: [
-          "La couverture applicable lors d’un séjour temporaire ne doit pas être automatiquement assimilée à celle d’une personne qui transfère sa résidence habituelle en Espagne.",
+          "La couverture prévue pour un séjour temporaire ne doit pas être confondue avec celle d’une personne qui transfère sa résidence habituelle en Espagne.",
+          "Avant de partir, commencez donc par déterminer dans quelle situation vous vous trouvez.",
         ],
       },
       {
-        title: "Salarié ou indépendant en Espagne",
+        title: "Vous allez travailler en Espagne",
         paragraphs: [
-          "Une activité professionnelle en Espagne peut entraîner une affiliation au système espagnol selon les règles applicables à votre situation.",
+          "Si vous exercez une activité salariée ou indépendante en Espagne, votre activité peut entraîner votre affiliation au système espagnol selon les règles qui s’appliquent à votre situation.",
         ],
       },
       {
-        title: "Retraité ou situation transfrontalière",
+        title: "Vous êtes retraité ou dans une situation transfrontalière",
         paragraphs: [
-          "Certaines personnes relevant d’un autre État européen peuvent disposer de mécanismes de coordination spécifiques, notamment selon leur situation de pension ou d’assurance.",
-          "Les documents nécessaires doivent être vérifiés auprès des organismes compétents avant l’installation.",
+          "Les règles européennes prévoient des mécanismes de coordination entre les systèmes de protection sociale. Pour certains retraités ou certaines situations transfrontalières, des documents spécifiques peuvent donc entrer en jeu.",
+          "Mieux vaut vérifier lesquels auprès des organismes compétents avant votre installation.",
         ],
       },
       {
-        title: "Pourquoi traiter la santé avec le reste du dossier ?",
+        title: "Pourquoi régler la question de la santé assez tôt ?",
         paragraphs: [
-          "La couverture santé peut également intervenir dans certaines formalités de séjour. Elle doit donc être examinée en même temps que votre statut et non comme une démarche isolée.",
+          "Votre couverture santé n’est pas seulement une question de soins. Elle peut aussi faire partie des justificatifs nécessaires pour certaines démarches liées à votre installation.",
+          "C’est donc un sujet à traiter avec votre statut de résidence, et non une fois tout le reste terminé.",
         ],
       },
     ],
@@ -717,40 +723,42 @@ export const guides: Guide[] = [
     title: "Salarié, indépendant ou retraité : quelles démarches pour vivre en Espagne ?",
     seoTitle: "Vivre en Espagne : salarié, indépendant ou retraité",
     description:
-      "Les démarches pour s’installer en Espagne varient selon votre statut. Découvrez les principales différences pour un Français.",
+      "Les démarches pour s’installer en Espagne varient selon votre statut : salarié, indépendant, retraité ou sans activité.",
     eyebrow: "Installation · Votre situation",
     intro:
-      "Deux Français qui déménagent le même jour dans la même ville espagnole peuvent avoir des dossiers administratifs différents. Le statut de chacun détermine une partie des justificatifs à présenter.",
+      "Deux Français peuvent déménager le même jour dans la même rue de Madrid et ne pas avoir exactement les mêmes papiers à préparer. La raison est simple : les démarches dépendent en partie de votre situation.",
     sections: [
       {
         title: "Vous êtes salarié",
         paragraphs: [
-          "Une activité salariée en Espagne permet généralement de justifier votre situation professionnelle dans les formalités où celle-ci doit être établie.",
-          "Les démarches sociales et administratives doivent être coordonnées avec votre prise d’emploi.",
+          "Si vous travaillez comme salarié en Espagne, votre emploi permet de justifier votre situation professionnelle dans les démarches où cette information est nécessaire.",
+          "Il faut également coordonner votre installation avec les démarches sociales liées à votre prise de poste.",
         ],
       },
       {
         title: "Vous êtes indépendant",
         paragraphs: [
-          "Une activité indépendante implique ses propres formalités professionnelles et sociales. La preuve de votre situation peut également intervenir dans votre parcours de résidence.",
+          "Si vous exercez à votre compte en Espagne, votre activité entraîne ses propres démarches professionnelles et sociales.",
+          "Votre statut d’indépendant intervient aussi dans les documents permettant de justifier votre situation lors de certaines démarches de résidence.",
         ],
       },
       {
         title: "Vous êtes retraité",
         paragraphs: [
-          "Pour un retraité venant de France, les questions de ressources et de couverture santé doivent être examinées avec attention, notamment dans le cadre de la coordination européenne.",
+          "Si vous venez passer votre retraite en Espagne, deux sujets méritent une attention particulière : vos ressources et votre couverture santé.",
+          "Les règles européennes de coordination peuvent également avoir une incidence sur les documents à préparer.",
         ],
       },
       {
-        title: "Vous n’exercez pas d’activité",
+        title: "Vous n’avez pas d’activité professionnelle",
         paragraphs: [
-          "Une personne sans activité professionnelle peut devoir démontrer qu’elle remplit les conditions applicables à son séjour, notamment concernant les ressources et la couverture santé.",
+          "Vous pouvez également vous installer en Espagne sans y exercer d’activité. Dans ce cas, il peut notamment être nécessaire de justifier de ressources suffisantes et d’une couverture santé répondant aux conditions applicables.",
         ],
       },
       {
-        title: "La bonne démarche commence par le bon statut",
+        title: "Avant les formulaires, votre situation",
         paragraphs: [
-          "Avant de réserver des rendez-vous ou de remplir des formulaires, il faut donc identifier le cadre qui correspond réellement à votre situation.",
+          "Le plus simple est donc de commencer par une question : sous quel statut vous installez-vous en Espagne ? Une fois cette réponse claire, il devient beaucoup plus facile de savoir quels documents préparer et quelles démarches vous concernent.",
         ],
       },
     ],
@@ -763,13 +771,15 @@ export const guides: Guide[] = [
     serviceLabel: "Identifier mes démarches",
   },
 ];
+
 const sourcesByCategory: Record<
   Guide["category"],
   { label: string; href: string }[]
 > = {
   NIE: [
     {
-      label: "Ministerio del Interior — Número de Identidad de Extranjero (NIE)",
+      label:
+        "Ministerio del Interior — Número de Identidad de Extranjero (NIE)",
       href: "https://www.interior.gob.es/opencms/es/servicios-al-ciudadano/tramites-y-gestiones/extranjeria/ciudadanos-de-la-union-europea/numero-de-Identidad-de-extranjero-nie/",
     },
     {
@@ -780,7 +790,8 @@ const sourcesByCategory: Record<
 
   Voiture: [
     {
-      label: "DGT — Immatriculer un véhicule provenant de l’Union européenne",
+      label:
+        "DGT — Immatriculer un véhicule provenant de l’Union européenne",
       href: "https://www.dgt.es/nuestros-servicios/tu-vehiculo/quieres-traer-o-llevarte-un-vehiculo-del-extranjero/matricular-un-vehiculo-proveniente-de-la-ue/",
     },
     {
@@ -795,11 +806,13 @@ const sourcesByCategory: Record<
       href: "https://administracion.gob.es/pag_Home/Tu-espacio-europeo/derechos-obligaciones/ciudadanos/residencia/obtencion-residencia/info-general.html",
     },
     {
-      label: "Administración General del Estado — Certificat d’enregistrement de citoyen de l’Union",
+      label:
+        "Administración General del Estado — Certificat d’enregistrement de citoyen de l’Union",
       href: "https://administracion.gob.es/pagFront/buscadoractuaciones/detalleActuacion.htm?codSia=994234&retorno=true",
     },
   ],
 };
+
 export function getGuide(slug: string) {
   const guide = guides.find((guide) => guide.slug === slug);
 

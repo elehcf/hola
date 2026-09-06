@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "Démarche administrative en Espagne : besoin d’aide ?",
 
   description:
-    "Une démarche administrative en Espagne vous bloque ? Expliquez-nous votre situation. Nous identifions la démarche et vous indiquons comment avancer, en français.",
+    "Une démarche administrative en Espagne vous bloque ? Expliquez-nous ce qui se passe. Nous identifions la démarche et vous aidons à avancer, en français.",
 
   alternates: {
     canonical: "/autre-demarche",
@@ -13,10 +13,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Une démarche en Espagne vous bloque ? | holÀ!",
     description:
-      "Expliquez-nous votre situation administrative en Espagne. Nous identifions la démarche et la façon d’avancer.",
+      "Un problème administratif en Espagne ? Expliquez-nous ce qui se passe. Nous cherchons avec vous la bonne façon d’avancer.",
     url: "/autre-demarche",
   },
-};export default function AutreDemarche() {
+};
+
+export default function AutreDemarche() {
   return (
     <main className="min-h-screen bg-ivory text-navy">
 
@@ -82,10 +84,10 @@ export const metadata: Metadata = {
           </h1>
 
           <p className="mt-12 max-w-2xl text-lg leading-relaxed text-navy/70">
-            Une administration espagnole vous demande un document.
-            Une démarche reste bloquée. Vous ne savez pas à qui vous
-            adresser — ni même exactement ce que vous devez faire.
-            Commencez simplement par nous expliquer la situation.
+            Un document espagnol qu’on vous réclame. Un dossier qui n’avance
+            plus. Une administration à laquelle vous ne savez pas comment
+            répondre. Vous n’avez pas besoin de connaître le nom exact de la
+            démarche : commencez simplement par nous raconter ce qui se passe.
           </p>
 
         </div>
@@ -106,17 +108,17 @@ export const metadata: Metadata = {
           >
             « Je ne sais même pas
             <br />
-            <span className="italic">comment s’appelle la démarche. »</span>
+            <span className="italic">comment ça s’appelle. »</span>
           </h2>
 
           <div className="mt-20 border-t border-ivory/25">
 
             {[
               "Un document espagnol à obtenir",
-              "Une démarche déjà commencée mais bloquée",
-              "Une administration qui vous demande un justificatif",
+              "Un dossier qui n’avance plus",
+              "Une administration qui vous réclame un justificatif",
               "Une formalité entre la France et l’Espagne",
-              "Un dossier dont vous ne savez plus quoi faire",
+              "Des papiers dont vous ne savez plus quoi faire",
             ].map((item, index) => (
               <div
                 key={item}
@@ -161,15 +163,16 @@ export const metadata: Metadata = {
             </h2>
 
             <p className="mt-10 max-w-2xl text-lg leading-relaxed text-navy/70">
-  Nous étudions votre situation, identifions la démarche
-  administrative concernée en Espagne et déterminons ce qui peut
-  être préparé ou pris en charge à distance.
-</p>
+              Vous nous racontez ce qui se passe et nous remettons les choses
+              à plat : quelle administration est concernée, ce qu’elle vous
+              demande et ce qu’il faut faire pour avancer.
+            </p>
 
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy/70">
-              Si votre demande nécessite l’intervention d’un professionnel
-              réglementé, nous vous l’indiquons et vous orientons vers
-              l’interlocuteur approprié.
+              Si nous pouvons nous en charger, nous vous expliquons comment.
+              Et si votre demande relève d’un avocat, d’un fiscaliste ou d’un
+              autre professionnel réglementé, nous vous le disons clairement
+              et vous orientons vers le bon interlocuteur.
             </p>
           </div>
 

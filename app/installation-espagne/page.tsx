@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "S’installer en Espagne : démarches pour les Français",
 
   description:
-    "Vous souhaitez vous installer en Espagne depuis la France ? NIE, enregistrement, empadronamiento, santé et démarches administratives : nous organisons votre parcours en français.",
+    "Vous souhaitez vous installer en Espagne depuis la France ? NIE, empadronamiento, résidence, santé : nous organisons vos démarches dans le bon ordre, en français.",
 
   alternates: {
     canonical: "/installation-espagne",
@@ -13,10 +13,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "S’installer en Espagne : vos démarches | holÀ!",
     description:
-      "Vos démarches essentielles pour vous installer en Espagne, organisées dans le bon ordre et accompagnées en français.",
+      "NIE, résidence, empadronamiento, santé : préparez votre installation en Espagne dans le bon ordre, avec un accompagnement en français.",
     url: "/installation-espagne",
   },
 };
+
 export default function InstallationEspagne() {
   return (
     <main className="min-h-screen bg-ivory text-navy">
@@ -81,10 +82,11 @@ export default function InstallationEspagne() {
 
           <div className="mt-12 grid gap-10 md:grid-cols-2">
             <p className="max-w-xl text-lg leading-relaxed text-navy/70">
-  S’installer en Espagne implique plusieurs démarches qui
-  dépendent de votre situation. Nous les remettons dans le bon
-  ordre et vous accompagnons dans leur préparation.
-</p>
+              NIE, résidence, empadronamiento, santé… Quand on s’installe en
+              Espagne, une démarche en entraîne vite une autre. Nous faisons
+              le tri avec vous, préparons ce qui peut l’être et vous indiquons
+              dans quel ordre avancer.
+            </p>
 
             <div className="md:flex md:justify-end">
               <a
@@ -125,11 +127,11 @@ export default function InstallationEspagne() {
                 className="mt-3 text-3xl"
                 style={{ fontFamily: "var(--font-editorial)" }}
               >
-                Votre situation
+                On commence par vous
               </h3>
               <p className="mt-3 max-w-md text-ivory/60">
-                Nous identifions les démarches qui correspondent à votre
-                profil et à votre projet d’installation.
+                Salarié, indépendant, retraité, étudiant… On regarde d’abord
+                votre situation pour savoir quelles démarches vous concernent.
               </p>
             </div>
 
@@ -142,8 +144,8 @@ export default function InstallationEspagne() {
                 NIE
               </h3>
               <p className="mt-3 max-w-md text-ivory/60">
-                Nous vérifions si vous disposez déjà d’un NIE et préparons
-                la démarche lorsqu’elle est nécessaire.
+                Vous en avez déjà un ? Parfait. Sinon, nous vérifions quand
+                et comment le demander et préparons le dossier avec vous.
               </p>
             </div>
 
@@ -153,11 +155,12 @@ export default function InstallationEspagne() {
                 className="mt-3 text-3xl"
                 style={{ fontFamily: "var(--font-editorial)" }}
               >
-                Enregistrement
+                Résidence
               </h3>
               <p className="mt-3 max-w-md text-ivory/60">
-                Nous vous guidons dans les formalités liées à votre
-                installation et à votre situation de citoyen européen.
+                Si vous restez plus de trois mois en Espagne, votre statut de
+                citoyen européen implique une démarche d’enregistrement.
+                Nous vous aidons à préparer les pièces nécessaires.
               </p>
             </div>
 
@@ -170,8 +173,9 @@ export default function InstallationEspagne() {
                 Empadronamiento
               </h3>
               <p className="mt-3 max-w-md text-ivory/60">
-                Nous vous indiquons comment préparer votre inscription
-                auprès de votre commune de résidence.
+                C’est l’inscription auprès de la commune où vous vivez en
+                Espagne. Nous vous indiquons quand la faire et quels
+                documents préparer.
               </p>
             </div>
 
@@ -184,8 +188,9 @@ export default function InstallationEspagne() {
                 Santé
               </h3>
               <p className="mt-3 max-w-md text-ivory/60">
-                Nous identifions les démarches administratives à prévoir
-                selon votre situation de couverture.
+                Les démarches ne sont pas les mêmes selon que vous travaillez,
+                êtes retraité ou dépendez encore d’un régime français. Nous
+                faisons le point avant votre départ.
               </p>
             </div>
 
@@ -198,8 +203,9 @@ export default function InstallationEspagne() {
                 Cl@ve & démarches en ligne
               </h3>
               <p className="mt-3 max-w-md text-ivory/60">
-                Nous vous aidons à préparer les outils qui simplifieront
-                vos futures relations avec l’administration espagnole.
+                Une fois installé, une partie de l’administration espagnole
+                se gère en ligne. Nous vous aidons à mettre en place les
+                accès qui vous serviront au quotidien.
               </p>
             </div>
 
@@ -226,156 +232,166 @@ export default function InstallationEspagne() {
               retraité, étudiant…
               <br />
               <span className="italic text-blood">
-                votre parcours change.
+                les démarches changent.
               </span>
             </h2>
 
             <p className="mt-10 max-w-2xl text-lg leading-relaxed text-navy/70">
-              Il n’existe pas une liste universelle de démarches pour
-              s’installer en Espagne. Votre activité, vos ressources, votre
-              couverture sociale et votre situation familiale peuvent
-              modifier les formalités à accomplir.
+              Il n’existe pas une seule checklist valable pour tous les
+              Français qui s’installent en Espagne. Un salarié, un indépendant
+              et un retraité n’auront tout simplement pas les mêmes documents
+              à fournir ni les mêmes démarches à effectuer.
             </p>
 
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy/70">
-              C’est pourquoi nous commençons par comprendre votre situation
-              avant de construire votre parcours administratif.
+              C’est pour cela que nous commençons par votre situation, et non
+              par une liste toute faite. On détermine ce qui vous concerne,
+              ce qui peut être préparé depuis la France et ce qui devra
+              attendre votre arrivée en Espagne.
             </p>
           </div>
 
         </div>
       </section>
 
-{/* COMPRENDRE L'INSTALLATION */}
-<section className="bg-[#EEE8DE] px-8 py-28 md:px-16 md:py-36">
-  <div className="mx-auto max-w-6xl">
 
-    <div className="grid gap-16 md:grid-cols-[0.7fr_1.3fr]">
+      {/* COMPRENDRE L'INSTALLATION */}
+      <section className="bg-[#EEE8DE] px-8 py-28 md:px-16 md:py-36">
+        <div className="mx-auto max-w-6xl">
 
-      <p className="text-xs uppercase tracking-[0.25em] text-blood">
-        Comprendre
-      </p>
+          <div className="grid gap-16 md:grid-cols-[0.7fr_1.3fr]">
 
-      <div>
-        <h2
-          className="text-5xl leading-[0.95] md:text-6xl"
-          style={{ fontFamily: "var(--font-editorial)" }}
-        >
-          Quelles démarches pour
-          <br />
-          <span className="italic text-blood">
-            s’installer en Espagne ?
-          </span>
-        </h2>
+            <p className="text-xs uppercase tracking-[0.25em] text-blood">
+              Comprendre
+            </p>
 
-        <p className="mt-10 max-w-2xl text-lg leading-relaxed text-navy/70">
-          Pour un Français ou un autre citoyen de l’Union européenne,
-          s’installer durablement en Espagne implique plusieurs formalités.
-          Leur ordre et les justificatifs nécessaires dépendent notamment
-          de votre activité, de votre couverture sociale et de la durée
-          de votre séjour.
-        </p>
+            <div>
+              <h2
+                className="text-5xl leading-[0.95] md:text-6xl"
+                style={{ fontFamily: "var(--font-editorial)" }}
+              >
+                Quelles démarches pour
+                <br />
+                <span className="italic text-blood">
+                  s’installer en Espagne ?
+                </span>
+              </h2>
 
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy/70">
-          Nous construisons votre parcours administratif selon votre
-          situation afin que vous sachiez quelles démarches effectuer,
-          quels documents préparer et dans quel ordre avancer.
-        </p>
-      </div>
+              <p className="mt-10 max-w-2xl text-lg leading-relaxed text-navy/70">
+                Pour un Français qui part vivre en Espagne, le NIE n’est qu’une
+                pièce du puzzle. Selon votre projet, il faudra aussi penser à
+                votre enregistrement comme résident, à l’empadronamiento, à
+                votre couverture santé et à différents accès administratifs.
+              </p>
 
-    </div>
+              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy/70">
+                Le plus important n’est donc pas d’accumuler les démarches,
+                mais de savoir lesquelles vous concernent et quand les faire.
+                Nous vous donnons cette feuille de route avant de préparer
+                les dossiers avec vous.
+              </p>
+            </div>
 
-    <div className="mt-24 grid gap-x-16 gap-y-12 md:grid-cols-2">
-
-      <div className="border-t border-navy/20 pt-6">
-        <h3
-          className="text-2xl"
-          style={{ fontFamily: "var(--font-editorial)" }}
-        >
-          Faut-il un NIE pour vivre en Espagne ?
-        </h3>
-
-        <p className="mt-4 leading-relaxed text-navy/65">
-          Le NIE est un numéro d’identification utilisé dans de nombreuses
-          démarches en Espagne, mais il ne constitue pas à lui seul un
-          titre de résidence. Les formalités à accomplir dépendent de votre
-          situation et de la durée de votre installation.
-        </p>
-
-        <a
-          href="/nie-espagne"
-          className="mt-5 inline-block border-b border-navy/30 pb-1 transition-colors hover:text-blood"
-        >
-          Comprendre la démarche NIE →
-        </a>
-      </div>
+          </div>
 
 
-      <div className="border-t border-navy/20 pt-6">
-        <h3
-          className="text-2xl"
-          style={{ fontFamily: "var(--font-editorial)" }}
-        >
-          Qu’est-ce que l’empadronamiento ?
-        </h3>
+          <div className="mt-24 grid gap-x-16 gap-y-12 md:grid-cols-2">
 
-        <p className="mt-4 leading-relaxed text-navy/65">
-          L’empadronamiento correspond à l’inscription auprès de la commune
-          espagnole dans laquelle vous résidez. Il intervient dans de
-          nombreuses démarches liées à votre installation en Espagne.
-        </p>
-      </div>
+            <div className="border-t border-navy/20 pt-6">
+              <h3
+                className="text-2xl"
+                style={{ fontFamily: "var(--font-editorial)" }}
+              >
+                Faut-il un NIE pour vivre en Espagne ?
+              </h3>
 
+              <p className="mt-4 leading-relaxed text-navy/65">
+                Le NIE est un numéro d’identification utilisé dans de
+                nombreuses démarches en Espagne. Mais attention : avoir un NIE
+                ne signifie pas être résident. Si vous vous installez en
+                Espagne, d’autres démarches peuvent être nécessaires.
+              </p>
 
-      <div className="border-t border-navy/20 pt-6">
-        <h3
-          className="text-2xl"
-          style={{ fontFamily: "var(--font-editorial)" }}
-        >
-          Quelles démarches pour un Français qui s’installe en Espagne ?
-        </h3>
-
-        <p className="mt-4 leading-relaxed text-navy/65">
-          Le parcours peut notamment concerner l’identification,
-          l’enregistrement administratif, la commune de résidence,
-          la couverture santé ou encore l’accès aux services administratifs
-          en ligne. Il doit être adapté à votre profil.
-        </p>
-      </div>
+              <a
+                href="/nie-espagne"
+                className="mt-5 inline-block border-b border-navy/30 pb-1 transition-colors hover:text-blood"
+              >
+                Comprendre la démarche NIE →
+              </a>
+            </div>
 
 
-      <div className="border-t border-navy/20 pt-6">
-        <h3
-          className="text-2xl"
-          style={{ fontFamily: "var(--font-editorial)" }}
-        >
-          Puis-je préparer mon installation depuis la France ?
-        </h3>
+            <div className="border-t border-navy/20 pt-6">
+              <h3
+                className="text-2xl"
+                style={{ fontFamily: "var(--font-editorial)" }}
+              >
+                Qu’est-ce que l’empadronamiento ?
+              </h3>
 
-        <p className="mt-4 leading-relaxed text-navy/65">
-          Oui. Plusieurs éléments peuvent être anticipés avant votre départ :
-          comprendre les formalités applicables, réunir les justificatifs
-          nécessaires et organiser les démarches qui devront être réalisées
-          une fois en Espagne.
-        </p>
-      </div>
+              <p className="mt-4 leading-relaxed text-navy/65">
+                C’est votre inscription auprès de la commune espagnole où
+                vous résidez. Elle permet d’attester votre adresse dans la
+                commune et vous sera demandée pour différentes démarches
+                une fois installé.
+              </p>
+            </div>
 
-    </div>
-    <div className="mt-16 border-t border-navy/20 pt-8">
-  <p className="text-xs uppercase tracking-[0.25em] text-blood">
-    Pour aller plus loin
-  </p>
 
-  <a
-    href="/guides/s-installer-en-espagne"
-    className="mt-5 inline-block text-2xl transition-colors hover:text-blood"
-    style={{ fontFamily: "var(--font-editorial)" }}
-  >
-    Lire notre guide complet pour s’installer en Espagne →
-  </a>
-</div>
-  </div>
-</section>
+            <div className="border-t border-navy/20 pt-6">
+              <h3
+                className="text-2xl"
+                style={{ fontFamily: "var(--font-editorial)" }}
+              >
+                Quelles démarches pour un Français qui s’installe en Espagne ?
+              </h3>
+
+              <p className="mt-4 leading-relaxed text-navy/65">
+                NIE, enregistrement comme résident, empadronamiento, santé,
+                accès aux services administratifs en ligne… La liste varie
+                selon votre situation. L’objectif est justement de savoir
+                ce qui vous concerne avant de commencer.
+              </p>
+            </div>
+
+
+            <div className="border-t border-navy/20 pt-6">
+              <h3
+                className="text-2xl"
+                style={{ fontFamily: "var(--font-editorial)" }}
+              >
+                Puis-je préparer mon installation depuis la France ?
+              </h3>
+
+              <p className="mt-4 leading-relaxed text-navy/65">
+                Oui, en partie. Vous pouvez déjà vérifier les démarches qui
+                vous concernent, réunir certains documents et préparer ce qui
+                peut l’être. Vous arriverez ainsi en Espagne en sachant ce
+                qu’il reste à faire sur place.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div className="mt-16 border-t border-navy/20 pt-8">
+            <p className="text-xs uppercase tracking-[0.25em] text-blood">
+              Pour aller plus loin
+            </p>
+
+            <a
+              href="/guides/s-installer-en-espagne"
+              className="mt-5 inline-block text-2xl transition-colors hover:text-blood"
+              style={{ fontFamily: "var(--font-editorial)" }}
+            >
+              Lire notre guide complet pour s’installer en Espagne →
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+
       {/* PHRASE */}
       <section className="px-8 pb-28 md:px-16 md:pb-36">
         <div className="mx-auto max-w-6xl border-y border-navy/20 py-16">
@@ -391,7 +407,7 @@ export default function InstallationEspagne() {
             Pas une checklist trouvée sur Internet.
             <br />
             <span className="italic text-blood">
-              Votre checklist.
+              La vôtre.
             </span>
           </h2>
 
@@ -407,7 +423,7 @@ export default function InstallationEspagne() {
 
             <div>
               <p className="text-xs uppercase tracking-[0.25em] text-ivory/70">
-                Parcours Installation Espagne
+                Installation en Espagne
               </p>
 
               <h2
@@ -418,8 +434,8 @@ export default function InstallationEspagne() {
               </h2>
 
               <p className="mt-5 max-w-xl text-ivory/70">
-                Le périmètre et le tarif définitif dépendent des démarches
-                nécessaires à votre situation.
+                Le tarif dépend des démarches dont vous avez réellement besoin.
+                Nous définissons le périmètre avec vous avant de commencer.
               </p>
             </div>
 
