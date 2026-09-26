@@ -141,11 +141,15 @@ export default function InstallationEspagne() {
                 className="mt-3 text-3xl"
                 style={{ fontFamily: "var(--font-editorial)" }}
               >
-                NIE
+                NIE : en avez-vous déjà un ?
               </h3>
               <p className="mt-3 max-w-md text-ivory/60">
-                Vous en avez déjà un ? Parfait. Sinon, nous vérifions quand
-                et comment le demander et préparons le dossier avec vous.
+                <p className="mt-3 max-w-md text-ivory/60">
+  Si vous avez déjà un NIE, nous en tenons compte. Sinon, nous
+  vérifions si une demande distincte est utile dans votre situation :
+  le certificat d’enregistrement comme citoyen de l’Union comporte
+  lui aussi un NIE.
+</p>
               </p>
             </div>
 
@@ -157,11 +161,12 @@ export default function InstallationEspagne() {
               >
                 Résidence
               </h3>
-              <p className="mt-3 max-w-md text-ivory/60">
-                Si vous restez plus de trois mois en Espagne, votre statut de
-                citoyen européen implique une démarche d’enregistrement.
-                Nous vous aidons à préparer les pièces nécessaires.
-              </p>
+             <p className="mt-3 max-w-md text-ivory/60">
+  Si vous êtes citoyen de l’Union et prévoyez de vivre en Espagne
+  plus de trois mois, vous devez demander votre certificat
+  d’enregistrement dans les trois mois suivant votre arrivée.
+  Nous vous aidons à préparer les pièces adaptées à votre situation.
+</p>
             </div>
 
             <div className="border-t border-ivory/25 py-7">
@@ -306,11 +311,12 @@ export default function InstallationEspagne() {
               </h3>
 
               <p className="mt-4 leading-relaxed text-navy/65">
-                Le NIE est un numéro d’identification utilisé dans de
-                nombreuses démarches en Espagne. Mais attention : avoir un NIE
-                ne signifie pas être résident. Si vous vous installez en
-                Espagne, d’autres démarches peuvent être nécessaires.
-              </p>
+  Le NIE est un numéro d’identification, mais il ne suffit pas à
+  établir votre résidence. Si vous vous installez en Espagne,
+  votre certificat d’enregistrement comme citoyen de l’Union
+  comportera aussi un NIE : une demande séparée n’est donc
+  pas toujours nécessaire.
+</p>
 
               <a
                 href="/nie-espagne"
@@ -434,9 +440,11 @@ export default function InstallationEspagne() {
               </h2>
 
               <p className="mt-5 max-w-xl text-ivory/70">
-                Le tarif dépend des démarches dont vous avez réellement besoin.
-                Nous définissons le périmètre avec vous avant de commencer.
-              </p>
+  Nous déterminons avec vous les démarches nécessaires à votre
+  installation. Avant de commencer, vous recevez un devis précisant
+  les étapes comprises dans notre accompagnement et les éventuels
+  frais administratifs à régler séparément.
+</p>
             </div>
 
             <a
