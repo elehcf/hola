@@ -1,10 +1,12 @@
+import Link from "next/link";
+
 export default function PolitiqueConfidentialite() {
   return (
     <main className="min-h-screen bg-ivory px-8 py-16 text-navy md:px-16 md:py-24">
       <div className="mx-auto max-w-4xl">
-        <a href="/" className="text-sm text-blood">
+        <Link href="/" className="text-sm text-blood">
           ← holÀ!
-        </a>
+        </Link>
 
         <p className="mt-20 text-xs uppercase tracking-[0.25em] text-blood">
           Données personnelles
@@ -35,9 +37,9 @@ export default function PolitiqueConfidentialite() {
 
             <p className="mt-3">
               Ses coordonnées figurent dans les{" "}
-              <a href="/mentions-legales" className="underline">
+              <Link href="/mentions-legales" className="underline">
                 mentions légales
-              </a>{" "}
+              </Link>{" "}
               du site.
             </p>
           </section>
@@ -56,6 +58,13 @@ export default function PolitiqueConfidentialite() {
               votre numéro de téléphone ainsi que les informations que
               vous choisissez de nous communiquer concernant votre
               situation et votre démarche administrative.
+            </p>
+            <p className="mt-3">
+              Si vous choisissez de nous écrire par WhatsApp, nous recevons
+              également les informations associées à votre compte et le contenu
+              que vous décidez de transmettre dans la conversation. Évitez
+              d’envoyer des documents sensibles avant que nous ayons défini un
+              canal adapté.
             </p>
           </section>
 
@@ -101,6 +110,15 @@ export default function PolitiqueConfidentialite() {
               Ces prestataires interviennent dans le cadre du
               fonctionnement du service. Vos données ne sont pas vendues
               à des tiers.
+            </p>
+
+            <p className="mt-3">
+              Lorsque votre demande nécessite l’intervention d’un avocat,
+              d’un fiscaliste, d’un comptable ou d’un autre partenaire, vos
+              informations ne lui sont transmises qu’après vous en avoir informé
+              et avec votre accord. Si vous utilisez WhatsApp, ce service traite
+              également les données nécessaires à l’acheminement de vos messages
+              selon ses propres conditions.
             </p>
           </section>
 
