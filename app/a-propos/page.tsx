@@ -84,12 +84,15 @@ export default function APropos() {
             </h2>
 
             <p>
-              holÀ! apporte une assistance administrative. Si votre situation
-              nécessite un avis juridique, fiscal ou comptable, je vous
-              l’indique et vous oriente vers un professionnel habilité. Mon
-              rôle est de vous aider à comprendre les démarches et à préparer
-              leur suivi, sans promettre une décision qui dépend d’une
-              administration.
+              <p>
+  holÀ! vous accompagne dans l’organisation et le suivi de vos démarches
+  administratives. Si votre situation nécessite un avis juridique, fiscal
+  ou comptable, nous pouvons faire intervenir, avec votre accord, un
+  professionnel habilité. Nous restons votre interlocuteur pour coordonner
+  les échanges et le suivi du dossier ; chaque professionnel intervient
+  dans son domaine de compétence. Les décisions des administrations
+  restent indépendantes de notre accompagnement.
+</p>
             </p>
           </section>
         </div>
