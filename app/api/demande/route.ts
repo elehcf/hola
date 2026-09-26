@@ -1,9 +1,19 @@
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(request: Request) {
   try {
+    const apiKey = process.env.RESEND_API_KEY;
+
+    if (!apiKey) {
+      console.error("RESEND_API_KEY is not configured.");
+
+      return Response.json(
+        { error: "Le service d’envoi est momentanément indisponible." },
+        { status: 503 }
+      );
+    }
+
+    const resend = new Resend(apiKey);
     const form = await request.json();
 
     const {
