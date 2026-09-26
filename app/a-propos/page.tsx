@@ -32,7 +32,12 @@ export default function APropos() {
           quel document préparer, à qui s’adresser ? holÀ! vous aide à y voir
           clair et à avancer, en français, étape par étape.
         </p>
-
+<a
+  href="/a-propos"
+  className="mt-8 inline-block border-b border-blood pb-1 text-sm text-blood transition-opacity hover:opacity-70"
+>
+  Rencontrer Elena →
+</a>
         <div className="mt-20 space-y-16 text-base leading-relaxed text-navy/75">
           <section>
             <h2

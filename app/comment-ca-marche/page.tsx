@@ -66,7 +66,12 @@ export default function CommentCaMarche() {
               >
                 {etape.numero}
               </span>
-
+<a
+  href="/comment-ca-marche"
+  className="mt-12 inline-block border-b border-ivory/60 pb-1 text-sm text-ivory transition-colors hover:border-blood hover:text-blood"
+>
+  Voir l’accompagnement en détail →
+</a>
               <div>
                 <h2
                   className="text-3xl leading-tight md:text-4xl"
