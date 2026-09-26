@@ -1,10 +1,12 @@
+import Link from "next/link";
+
 export default function MentionsLegales() {
   return (
     <main className="min-h-screen bg-ivory px-8 py-16 text-navy md:px-16 md:py-24">
       <div className="mx-auto max-w-4xl">
-        <a href="/" className="text-sm text-blood">
+        <Link href="/" className="text-sm text-blood">
           ← holÀ!
-        </a>
+        </Link>
 
         <p className="mt-20 text-xs uppercase tracking-[0.25em] text-blood">
           Informations
@@ -93,8 +95,10 @@ export default function MentionsLegales() {
             <p className="mt-3">
               holÀ! ne fournit pas de consultation juridique et ne se
               substitue pas aux professionnels réglementés. Lorsque la
-              situation le nécessite, le client est orienté vers un
-              professionnel compétent.
+              situation le nécessite, holÀ! peut, avec l’accord du client,
+              organiser la mise en relation et la coordination avec un
+              professionnel compétent. La prestation réglementée est alors
+              réalisée sous la responsabilité de ce professionnel.
             </p>
           </section>
 

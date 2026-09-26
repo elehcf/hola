@@ -1,74 +1,93 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import PageHeader from "../components/PageHeader";
 
 export const metadata: Metadata = {
   title: "S’installer en Espagne : démarches pour les Français",
-
   description:
-    "Vous souhaitez vous installer en Espagne depuis la France ? NIE, empadronamiento, résidence, santé : nous organisons vos démarches dans le bon ordre, en français.",
-
+    "Résidence, empadronamiento, santé, logement, école et démarches du quotidien : organisez votre installation en Espagne depuis la France.",
   alternates: {
     canonical: "/installation-espagne",
   },
-
   openGraph: {
     title: "S’installer en Espagne : vos démarches | holÀ!",
     description:
-      "NIE, résidence, empadronamiento, santé : préparez votre installation en Espagne dans le bon ordre, avec un accompagnement en français.",
+      "Préparez votre installation en Espagne dans le bon ordre, avec un accompagnement en français adapté à votre situation.",
     url: "/installation-espagne",
   },
 };
 
+const essentialSteps = [
+  {
+    number: "01",
+    title: "On commence par vous",
+    text: "Salarié, indépendant, retraité, étudiant ou sans activité : votre statut détermine une partie des justificatifs et des démarches.",
+  },
+  {
+    number: "02",
+    title: "Résidence et NIE",
+    text: "Un citoyen de l’Union qui prévoit de vivre en Espagne plus de trois mois doit demander son certificat d’enregistrement dans les trois mois suivant son arrivée. Ce certificat comporte également un NIE.",
+  },
+  {
+    number: "03",
+    title: "Empadronamiento",
+    text: "L’inscription auprès de la commune atteste votre adresse locale et intervient ensuite dans différentes démarches. Les justificatifs dépendent de votre logement et de la mairie.",
+  },
+  {
+    number: "04",
+    title: "Protection sociale et santé",
+    text: "Les démarches diffèrent selon que vous travaillez en Espagne, êtes détaché, retraité, transfrontalier ou dépendez encore d’un régime français.",
+  },
+  {
+    number: "05",
+    title: "Accès administratifs",
+    text: "Cl@ve, certificat numérique et autres accès en ligne facilitent de nombreuses formalités une fois installé. Nous identifions ceux qui vous seront réellement utiles.",
+  },
+  {
+    number: "06",
+    title: "La suite de votre vie en Espagne",
+    text: "Logement, scolarité, banque, véhicule ou activité professionnelle : nous intégrons ces besoins dans une même feuille de route.",
+  },
+];
+
+const dailyLife = [
+  {
+    title: "Trouver un logement",
+    text: "Nous vous aidons à anticiper les justificatifs utiles et pouvons organiser une mise en relation avec des agences partenaires selon votre destination. La sélection du bien et le contrat restent distincts de notre accompagnement administratif.",
+  },
+  {
+    title: "Scolariser vos enfants",
+    text: "Public, privé ou international : nous vous aidons à identifier le premier interlocuteur et à préparer les documents demandés. Les règles et les places disponibles dépendent de la région et de l’établissement.",
+  },
+  {
+    title: "Ouvrir un compte bancaire",
+    text: "Nous vous indiquons les pièces généralement nécessaires et vous aidons à présenter une situation claire. Chaque établissement reste libre d’accepter l’ouverture du compte.",
+  },
+  {
+    title: "Coordonner votre couverture sociale",
+    text: "Nous faisons le point sur les organismes et formulaires susceptibles de vous concerner entre la France et l’Espagne. Le régime compétent dépend de votre situation réelle.",
+  },
+  {
+    title: "Comprendre votre situation fiscale",
+    text: "Nous repérons les questions à traiter et rassemblons les informations utiles. Lorsqu’une analyse de résidence fiscale ou de double imposition est nécessaire, elle est confiée à un professionnel habilité.",
+  },
+  {
+    title: "Commencer une activité",
+    text: "Autónomo ou société : nous coordonnons la feuille de route administrative et l’intervention des professionnels juridiques, fiscaux et comptables concernés.",
+    href: "/creer-activite-espagne",
+  },
+];
+
 export default function InstallationEspagne() {
   return (
     <main className="min-h-screen bg-ivory text-navy">
+      <PageHeader />
 
-      {/* HEADER */}
-      <header className="flex items-center justify-between px-8 py-8 md:px-16">
-        <a href="/" className="flex items-baseline">
-          <span
-            className="text-navy"
-            style={{
-              fontFamily: "var(--font-hand)",
-              fontSize: "4.2rem",
-              fontWeight: 500,
-              lineHeight: 1,
-            }}
-          >
-            hol
-          </span>
-
-          <span
-            className="text-blood"
-            style={{
-              fontFamily: "var(--font-editorial)",
-              fontSize: "4.6rem",
-              fontWeight: 600,
-              lineHeight: 0.8,
-              marginLeft: "-0.15rem",
-            }}
-          >
-            À!
-          </span>
-        </a>
-
-        <a
-          href="/"
-          className="text-lg transition-colors duration-300 hover:text-blood"
-          style={{ fontFamily: "var(--font-editorial)" }}
-        >
-          ← Retour
-        </a>
-      </header>
-
-
-      {/* HERO */}
       <section className="px-8 pb-28 pt-20 md:px-16 md:pb-36">
         <div className="mx-auto max-w-6xl">
-
           <p className="text-xs uppercase tracking-[0.25em] text-blood">
             Installation · Espagne
           </p>
-
           <h1
             className="mt-6 max-w-5xl text-6xl leading-[0.9] md:text-8xl"
             style={{ fontFamily: "var(--font-editorial)" }}
@@ -82,151 +101,64 @@ export default function InstallationEspagne() {
 
           <div className="mt-12 grid gap-10 md:grid-cols-2">
             <p className="max-w-xl text-lg leading-relaxed text-navy/70">
-              NIE, résidence, empadronamiento, santé… Quand on s’installe en
-              Espagne, une démarche en entraîne vite une autre. Nous faisons
-              le tri avec vous, préparons ce qui peut l’être et vous indiquons
-              dans quel ordre avancer.
+              S’installer en Espagne, ce n’est pas seulement obtenir un numéro
+              ou remplir un formulaire. Résidence, adresse, santé, logement,
+              école ou banque peuvent se croiser. Nous construisons avec vous
+              un parcours cohérent, depuis la France jusqu’à votre installation.
             </p>
-
             <div className="md:flex md:justify-end">
-              <a
+              <Link
                 href="/demande?service=installation"
                 className="inline-block bg-blood px-8 py-4 text-sm uppercase tracking-[0.12em] text-ivory"
               >
                 Préparer mon installation →
-              </a>
+              </Link>
             </div>
           </div>
-
         </div>
       </section>
 
-
-      {/* ORDRE */}
       <section className="bg-navy px-8 py-28 text-ivory md:px-16 md:py-36">
         <div className="mx-auto max-w-6xl">
-
           <p className="text-xs uppercase tracking-[0.25em] text-blood">
-            Votre parcours
+            Votre parcours administratif
           </p>
-
           <h2
             className="mt-5 max-w-4xl text-5xl leading-[0.95] md:text-6xl"
             style={{ fontFamily: "var(--font-editorial)" }}
           >
-            Vos démarches essentielles.
+            Les étapes essentielles.
             <br />
-            <span className="italic">Dans le bon ordre.</span>
+            <span className="italic">Dans votre ordre.</span>
           </h2>
 
           <div className="mt-20 grid gap-x-12 md:grid-cols-2">
-
-            <div className="border-t border-ivory/25 py-7">
-              <span className="text-sm text-blood">01</span>
-              <h3
-                className="mt-3 text-3xl"
-                style={{ fontFamily: "var(--font-editorial)" }}
+            {essentialSteps.map((step) => (
+              <article
+                key={step.number}
+                className="border-t border-ivory/25 py-7"
               >
-                On commence par vous
-              </h3>
-              <p className="mt-3 max-w-md text-ivory/60">
-                Salarié, indépendant, retraité, étudiant… On regarde d’abord
-                votre situation pour savoir quelles démarches vous concernent.
-              </p>
-            </div>
-
-            <div className="border-t border-ivory/25 py-7">
-              <span className="text-sm text-blood">02</span>
-              <h3
-                className="mt-3 text-3xl"
-                style={{ fontFamily: "var(--font-editorial)" }}
-              >
-                NIE : en avez-vous déjà un ?
-              </h3>
-              <p className="mt-3 max-w-md text-ivory/60">
-                <p className="mt-3 max-w-md text-ivory/60">
-  Si vous avez déjà un NIE, nous en tenons compte. Sinon, nous
-  vérifions si une demande distincte est utile dans votre situation :
-  le certificat d’enregistrement comme citoyen de l’Union comporte
-  lui aussi un NIE.
-</p>
-              </p>
-            </div>
-
-            <div className="border-t border-ivory/25 py-7">
-              <span className="text-sm text-blood">03</span>
-              <h3
-                className="mt-3 text-3xl"
-                style={{ fontFamily: "var(--font-editorial)" }}
-              >
-                Résidence
-              </h3>
-             <p className="mt-3 max-w-md text-ivory/60">
-  Si vous êtes citoyen de l’Union et prévoyez de vivre en Espagne
-  plus de trois mois, vous devez demander votre certificat
-  d’enregistrement dans les trois mois suivant votre arrivée.
-  Nous vous aidons à préparer les pièces adaptées à votre situation.
-</p>
-            </div>
-
-            <div className="border-t border-ivory/25 py-7">
-              <span className="text-sm text-blood">04</span>
-              <h3
-                className="mt-3 text-3xl"
-                style={{ fontFamily: "var(--font-editorial)" }}
-              >
-                Empadronamiento
-              </h3>
-              <p className="mt-3 max-w-md text-ivory/60">
-                C’est l’inscription auprès de la commune où vous vivez en
-                Espagne. Nous vous indiquons quand la faire et quels
-                documents préparer.
-              </p>
-            </div>
-
-            <div className="border-t border-ivory/25 py-7">
-              <span className="text-sm text-blood">05</span>
-              <h3
-                className="mt-3 text-3xl"
-                style={{ fontFamily: "var(--font-editorial)" }}
-              >
-                Santé
-              </h3>
-              <p className="mt-3 max-w-md text-ivory/60">
-                Les démarches ne sont pas les mêmes selon que vous travaillez,
-                êtes retraité ou dépendez encore d’un régime français. Nous
-                faisons le point avant votre départ.
-              </p>
-            </div>
-
-            <div className="border-t border-ivory/25 py-7">
-              <span className="text-sm text-blood">06</span>
-              <h3
-                className="mt-3 text-3xl"
-                style={{ fontFamily: "var(--font-editorial)" }}
-              >
-                Cl@ve & démarches en ligne
-              </h3>
-              <p className="mt-3 max-w-md text-ivory/60">
-                Une fois installé, une partie de l’administration espagnole
-                se gère en ligne. Nous vous aidons à mettre en place les
-                accès qui vous serviront au quotidien.
-              </p>
-            </div>
-
+                <span className="text-sm text-blood">{step.number}</span>
+                <h3
+                  className="mt-3 text-3xl"
+                  style={{ fontFamily: "var(--font-editorial)" }}
+                >
+                  {step.title}
+                </h3>
+                <p className="mt-3 max-w-md leading-relaxed text-ivory/60">
+                  {step.text}
+                </p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-
-      {/* PROFILS */}
       <section className="px-8 py-28 md:px-16 md:py-36">
         <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-[0.7fr_1.3fr]">
-
           <p className="text-xs uppercase tracking-[0.25em] text-blood">
             Chaque installation est différente
           </p>
-
           <div>
             <h2
               className="max-w-3xl text-5xl leading-[0.95] md:text-6xl"
@@ -240,228 +172,205 @@ export default function InstallationEspagne() {
                 les démarches changent.
               </span>
             </h2>
-
             <p className="mt-10 max-w-2xl text-lg leading-relaxed text-navy/70">
-              Il n’existe pas une seule checklist valable pour tous les
-              Français qui s’installent en Espagne. Un salarié, un indépendant
-              et un retraité n’auront tout simplement pas les mêmes documents
-              à fournir ni les mêmes démarches à effectuer.
+              Il n’existe pas une checklist unique pour tous les Français qui
+              s’installent en Espagne. Votre activité, vos ressources, votre
+              couverture santé, votre famille et la durée prévue de votre séjour
+              modifient les documents à fournir.
             </p>
-
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy/70">
-              C’est pour cela que nous commençons par votre situation, et non
-              par une liste toute faite. On détermine ce qui vous concerne,
-              ce qui peut être préparé depuis la France et ce qui devra
-              attendre votre arrivée en Espagne.
+              Nous distinguons ce qui peut être préparé depuis la France, ce qui
+              doit attendre votre arrivée et ce qui exige votre présence. Vous
+              savez ainsi quoi faire, quand et avec quel interlocuteur.
             </p>
           </div>
-
         </div>
       </section>
 
-
-      {/* COMPRENDRE L'INSTALLATION */}
       <section className="bg-[#EEE8DE] px-8 py-28 md:px-16 md:py-36">
         <div className="mx-auto max-w-6xl">
-
           <div className="grid gap-16 md:grid-cols-[0.7fr_1.3fr]">
+            <p className="text-xs uppercase tracking-[0.25em] text-blood">
+              Au-delà des formulaires
+            </p>
+            <div>
+              <h2
+                className="max-w-4xl text-5xl leading-[0.95] md:text-6xl"
+                style={{ fontFamily: "var(--font-editorial)" }}
+              >
+                Préparer votre arrivée.
+                <br />
+                <span className="italic text-blood">
+                  Puis votre quotidien.
+                </span>
+              </h2>
+              <p className="mt-9 max-w-2xl text-lg leading-relaxed text-navy/70">
+                Votre accompagnement peut intégrer les sujets qui conditionnent
+                concrètement votre installation. Le devis précise ceux que nous
+                prenons en charge, ceux que vous réalisez vous-même et ceux qui
+                nécessitent un partenaire spécialisé.
+              </p>
+            </div>
+          </div>
 
+          <div className="mt-20 grid gap-x-14 gap-y-12 md:grid-cols-2">
+            {dailyLife.map((item) => (
+              <article key={item.title} className="border-t border-navy/20 pt-6">
+                <h3
+                  className="text-3xl"
+                  style={{ fontFamily: "var(--font-editorial)" }}
+                >
+                  {item.title}
+                </h3>
+                <p className="mt-4 max-w-xl leading-relaxed text-navy/65">
+                  {item.text}
+                </p>
+                {item.href && (
+                  <Link
+                    href={item.href}
+                    className="mt-5 inline-block border-b border-navy/30 pb-1 text-sm transition-colors hover:border-blood hover:text-blood"
+                  >
+                    Découvrir cet accompagnement →
+                  </Link>
+                )}
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-8 py-28 md:px-16 md:py-36">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid gap-16 md:grid-cols-[0.7fr_1.3fr]">
             <p className="text-xs uppercase tracking-[0.25em] text-blood">
               Comprendre
             </p>
-
             <div>
               <h2
                 className="text-5xl leading-[0.95] md:text-6xl"
                 style={{ fontFamily: "var(--font-editorial)" }}
               >
-                Quelles démarches pour
+                Les questions qui reviennent
                 <br />
-                <span className="italic text-blood">
-                  s’installer en Espagne ?
-                </span>
+                <span className="italic text-blood">avant le départ.</span>
               </h2>
-
-              <p className="mt-10 max-w-2xl text-lg leading-relaxed text-navy/70">
-                Pour un Français qui part vivre en Espagne, le NIE n’est qu’une
-                pièce du puzzle. Selon votre projet, il faudra aussi penser à
-                votre enregistrement comme résident, à l’empadronamiento, à
-                votre couverture santé et à différents accès administratifs.
-              </p>
-
-              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy/70">
-                Le plus important n’est donc pas d’accumuler les démarches,
-                mais de savoir lesquelles vous concernent et quand les faire.
-                Nous vous donnons cette feuille de route avant de préparer
-                les dossiers avec vous.
-              </p>
             </div>
-
           </div>
 
-
-          <div className="mt-24 grid gap-x-16 gap-y-12 md:grid-cols-2">
-
-            <div className="border-t border-navy/20 pt-6">
+          <div className="mt-20 grid gap-x-16 gap-y-12 md:grid-cols-2">
+            <article className="border-t border-navy/20 pt-6">
               <h3
                 className="text-2xl"
                 style={{ fontFamily: "var(--font-editorial)" }}
               >
-                Faut-il un NIE pour vivre en Espagne ?
+                Faut-il demander un NIE séparément ?
               </h3>
-
               <p className="mt-4 leading-relaxed text-navy/65">
-  Le NIE est un numéro d’identification, mais il ne suffit pas à
-  établir votre résidence. Si vous vous installez en Espagne,
-  votre certificat d’enregistrement comme citoyen de l’Union
-  comportera aussi un NIE : une demande séparée n’est donc
-  pas toujours nécessaire.
-</p>
-
-              <a
+                Pas toujours. Le certificat d’enregistrement comme citoyen de
+                l’Union comporte lui-même un NIE. Nous vérifions donc l’objectif
+                et le calendrier avant de vous faire engager une démarche
+                distincte.
+              </p>
+              <Link
                 href="/nie-espagne"
                 className="mt-5 inline-block border-b border-navy/30 pb-1 transition-colors hover:text-blood"
               >
-                Comprendre la démarche NIE →
-              </a>
-            </div>
+                Comprendre le NIE →
+              </Link>
+            </article>
 
-
-            <div className="border-t border-navy/20 pt-6">
+            <article className="border-t border-navy/20 pt-6">
               <h3
                 className="text-2xl"
                 style={{ fontFamily: "var(--font-editorial)" }}
               >
-                Qu’est-ce que l’empadronamiento ?
+                Puis-je conserver ma couverture française ?
               </h3>
-
               <p className="mt-4 leading-relaxed text-navy/65">
-                C’est votre inscription auprès de la commune espagnole où
-                vous résidez. Elle permet d’attester votre adresse dans la
-                commune et vous sera demandée pour différentes démarches
-                une fois installé.
+                Cela dépend de votre statut. Un travailleur détaché, un
+                transfrontalier, un pensionné ou une personne qui commence à
+                travailler en Espagne ne relèvent pas nécessairement du même
+                régime ni des mêmes formulaires.
               </p>
-            </div>
+            </article>
 
-
-            <div className="border-t border-navy/20 pt-6">
+            <article className="border-t border-navy/20 pt-6">
               <h3
                 className="text-2xl"
                 style={{ fontFamily: "var(--font-editorial)" }}
               >
-                Quelles démarches pour un Français qui s’installe en Espagne ?
+                Puis-je tout préparer depuis la France ?
               </h3>
-
               <p className="mt-4 leading-relaxed text-navy/65">
-                NIE, enregistrement comme résident, empadronamiento, santé,
-                accès aux services administratifs en ligne… La liste varie
-                selon votre situation. L’objectif est justement de savoir
-                ce qui vous concerne avant de commencer.
+                Une partie, oui : analyse de votre situation, documents et
+                calendrier. D’autres étapes exigent une adresse locale, un
+                rendez-vous ou votre présence en Espagne. Nous les identifions
+                avant votre départ.
               </p>
-            </div>
+            </article>
 
-
-            <div className="border-t border-navy/20 pt-6">
+            <article className="border-t border-navy/20 pt-6">
               <h3
                 className="text-2xl"
                 style={{ fontFamily: "var(--font-editorial)" }}
               >
-                Puis-je préparer mon installation depuis la France ?
+                Et la fiscalité entre les deux pays ?
               </h3>
-
               <p className="mt-4 leading-relaxed text-navy/65">
-                Oui, en partie. Vous pouvez déjà vérifier les démarches qui
-                vous concernent, réunir certains documents et préparer ce qui
-                peut l’être. Vous arriverez ainsi en Espagne en sachant ce
-                qu’il reste à faire sur place.
+                Le changement de résidence, les revenus conservés en France ou
+                une activité entre les deux pays peuvent nécessiter une analyse
+                fiscale. Nous préparons le contexte et coordonnons un spécialiste
+                lorsque cet avis est nécessaire.
               </p>
-            </div>
-
+            </article>
           </div>
-
 
           <div className="mt-16 border-t border-navy/20 pt-8">
             <p className="text-xs uppercase tracking-[0.25em] text-blood">
               Pour aller plus loin
             </p>
-
-            <a
+            <Link
               href="/guides/s-installer-en-espagne"
               className="mt-5 inline-block text-2xl transition-colors hover:text-blood"
               style={{ fontFamily: "var(--font-editorial)" }}
             >
               Lire notre guide complet pour s’installer en Espagne →
-            </a>
+            </Link>
           </div>
-
         </div>
       </section>
 
-
-      {/* PHRASE */}
-      <section className="px-8 pb-28 md:px-16 md:pb-36">
-        <div className="mx-auto max-w-6xl border-y border-navy/20 py-16">
-
-          <p className="text-xs uppercase tracking-[0.25em] text-blood">
-            Le principe
-          </p>
-
-          <h2
-            className="mt-6 max-w-4xl text-5xl leading-[0.95] md:text-6xl"
-            style={{ fontFamily: "var(--font-editorial)" }}
-          >
-            Pas une checklist trouvée sur Internet.
-            <br />
-            <span className="italic text-blood">
-              La vôtre.
-            </span>
-          </h2>
-
-        </div>
-      </section>
-
-
-      {/* PRIX */}
       <section className="mx-8 mb-16 bg-blood px-8 py-16 text-ivory md:mx-16 md:px-16 md:py-20">
-        <div className="mx-auto max-w-6xl">
-
-          <div className="grid gap-12 md:grid-cols-[1fr_auto] md:items-end">
-
-            <div>
-              <p className="text-xs uppercase tracking-[0.25em] text-ivory/70">
-                Installation en Espagne
-              </p>
-
-              <h2
-                className="mt-5 text-5xl leading-none md:text-7xl"
-                style={{ fontFamily: "var(--font-editorial)" }}
-              >
-                À partir de 490 €
-              </h2>
-
-              <p className="mt-5 max-w-xl text-ivory/70">
-  Nous déterminons avec vous les démarches nécessaires à votre
-  installation. Avant de commencer, vous recevez un devis précisant
-  les étapes comprises dans notre accompagnement et les éventuels
-  frais administratifs à régler séparément.
-</p>
-            </div>
-
-            <a
-              href="/demande?service=installation"
-              className="group flex items-center gap-6 border-b border-ivory pb-2 text-xl"
+        <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-[1fr_auto] md:items-end">
+          <div>
+            <p className="text-xs uppercase tracking-[0.25em] text-ivory/70">
+              Installation en Espagne
+            </p>
+            <h2
+              className="mt-5 text-5xl leading-none md:text-7xl"
               style={{ fontFamily: "var(--font-editorial)" }}
             >
-              Commencer
-              <span className="transition-transform duration-300 group-hover:translate-x-2">
-                →
-              </span>
-            </a>
-
+              À partir de 490 €
+            </h2>
+            <p className="mt-5 max-w-xl text-ivory/70">
+              Nous déterminons avec vous les démarches nécessaires. Avant de
+              commencer, vous recevez un devis précisant les étapes comprises,
+              les interventions de partenaires et les éventuels frais
+              administratifs à régler séparément.
+            </p>
           </div>
+          <Link
+            href="/demande?service=installation"
+            className="group flex items-center gap-6 border-b border-ivory pb-2 text-xl"
+            style={{ fontFamily: "var(--font-editorial)" }}
+          >
+            Préparer mon installation
+            <span className="transition-transform duration-300 group-hover:translate-x-2">
+              →
+            </span>
+          </Link>
         </div>
       </section>
-
     </main>
   );
 }

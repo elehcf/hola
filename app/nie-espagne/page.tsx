@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "NIE Espagne : obtenir votre NIE simplement",
@@ -23,7 +24,7 @@ export default function NieEspagne() {
 
       {/* HEADER */}
       <header className="flex items-center justify-between px-8 py-8 md:px-16">
-        <a href="/" className="flex items-baseline">
+        <Link href="/" className="flex items-baseline">
           <span
             className="text-navy"
             style={{
@@ -48,15 +49,15 @@ export default function NieEspagne() {
           >
             À!
           </span>
-        </a>
+        </Link>
 
-        <a
+        <Link
           href="/"
           className="text-lg transition-colors duration-300 hover:text-blood"
           style={{ fontFamily: "var(--font-editorial)" }}
         >
           ← Retour
-        </a>
+        </Link>
       </header>
 
 
@@ -328,13 +329,13 @@ inadaptés et les déplacements inutiles.
                 Pour aller plus loin
               </p>
 
-              <a
+              <Link
                 href="/guides/obtenir-nie-espagne"
                 className="mt-5 inline-block text-2xl transition-colors hover:text-blood"
                 style={{ fontFamily: "var(--font-editorial)" }}
               >
                 Lire notre guide complet sur le NIE en Espagne →
-              </a>
+              </Link>
             </div>
 
           </div>

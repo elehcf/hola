@@ -195,7 +195,7 @@ export const guides: Guide[] = [
       {
         title: "Si vous partez vivre en Espagne",
         paragraphs: [
-          "Pour un citoyen de l’Union européenne qui s’installe en Espagne plus de trois mois, une démarche d’enregistrement peut être nécessaire.",
+          "Un citoyen de l’Union européenne qui prévoit de vivre en Espagne plus de trois mois doit demander son inscription au registre dans les trois mois suivant son arrivée.",
           "Les documents à présenter ne sont pas les mêmes pour tout le monde : ils dépendent notamment de votre activité, de vos ressources et de votre couverture santé.",
         ],
       },
@@ -500,7 +500,7 @@ export const guides: Guide[] = [
       {
         title: "Si vous restez plus de trois mois",
         paragraphs: [
-          "Pour un citoyen de l’Union européenne qui s’installe en Espagne plus de trois mois, une démarche d’enregistrement peut être nécessaire.",
+          "Un citoyen de l’Union européenne qui prévoit de vivre en Espagne plus de trois mois doit demander son inscription au registre dans les trois mois suivant son arrivée.",
           "Les documents à fournir dépendent notamment de votre activité, de vos ressources et de votre couverture santé.",
         ],
       },
@@ -589,7 +589,7 @@ export const guides: Guide[] = [
       {
         title: "Que se passe-t-il après trois mois ?",
         paragraphs: [
-          "Si vous êtes citoyen de l’Union européenne et que vous vivez en Espagne plus de trois mois, vous pouvez être tenu de vous enregistrer auprès des autorités espagnoles compétentes.",
+          "Si vous êtes citoyen de l’Union européenne et prévoyez de vivre en Espagne plus de trois mois, vous devez demander votre inscription au registre dans les trois mois suivant votre arrivée.",
           "Cette démarche est différente du simple fait d’obtenir un NIE.",
         ],
       },

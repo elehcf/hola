@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "À propos de holÀ! | Démarches en Espagne, accompagnement en français",
@@ -10,9 +11,9 @@ export default function APropos() {
   return (
     <main className="min-h-screen bg-ivory px-8 py-16 text-navy md:px-16 md:py-24">
       <div className="mx-auto max-w-4xl">
-        <a href="/" className="text-sm text-blood">
+        <Link href="/" className="text-sm text-blood">
           ← holÀ!
-        </a>
+        </Link>
 
         <p className="mt-20 text-xs uppercase tracking-[0.25em] text-blood">
           À propos
@@ -32,12 +33,6 @@ export default function APropos() {
           quel document préparer, à qui s’adresser ? holÀ! vous aide à y voir
           clair et à avancer, en français, étape par étape.
         </p>
-<a
-  href="/a-propos"
-  className="mt-8 inline-block border-b border-blood pb-1 text-sm text-blood transition-opacity hover:opacity-70"
->
-  Rencontrer Elena →
-</a>
         <div className="mt-20 space-y-16 text-base leading-relaxed text-navy/75">
           <section>
             <h2
@@ -72,11 +67,12 @@ export default function APropos() {
             </h2>
 
             <p>
-              Obtenir un NIE, préparer une démarche liée à un véhicule ou
-              organiser une installation : chaque situation a ses particularités.
-              Nous commençons par comprendre la vôtre, puis nous identifions
-              les étapes utiles, les documents à réunir et les interlocuteurs
-              concernés. Vous savez où vous en êtes et quelle est la suite.
+              Obtenir un NIE, préparer une démarche liée à un véhicule,
+              organiser une installation, faire reconnaître un diplôme ou
+              créer une activité : chaque situation a ses particularités. Nous
+              commençons par comprendre la vôtre, puis nous identifions les
+              étapes utiles, les documents à réunir et les interlocuteurs
+              concernés.
             </p>
           </section>
 
@@ -89,15 +85,14 @@ export default function APropos() {
             </h2>
 
             <p>
-              <p>
-  holÀ! vous accompagne dans l’organisation et le suivi de vos démarches
-  administratives. Si votre situation nécessite un avis juridique, fiscal
-  ou comptable, nous pouvons faire intervenir, avec votre accord, un
-  professionnel habilité. Nous restons votre interlocuteur pour coordonner
-  les échanges et le suivi du dossier ; chaque professionnel intervient
-  dans son domaine de compétence. Les décisions des administrations
-  restent indépendantes de notre accompagnement.
-</p>
+              holÀ! vous accompagne dans l’organisation et le suivi de vos
+              démarches administratives. Si votre situation nécessite un avis
+              juridique, fiscal ou comptable, nous pouvons faire intervenir,
+              avec votre accord, un professionnel habilité. Nous restons votre
+              interlocuteur pour coordonner les échanges et le suivi du dossier ;
+              chaque professionnel intervient dans son domaine de compétence.
+              Les décisions des administrations restent indépendantes de notre
+              accompagnement.
             </p>
           </section>
         </div>
@@ -110,12 +105,12 @@ export default function APropos() {
             Racontez-moi votre projet. Nous verrons ensemble par où commencer.
           </p>
 
-          <a
+          <Link
             href="/demande"
             className="mt-8 inline-block bg-blood px-7 py-4 text-sm text-ivory transition-opacity hover:opacity-85"
           >
             Expliquer ma situation →
-          </a>
+          </Link>
         </div>
       </div>
     </main>

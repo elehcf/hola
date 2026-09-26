@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
+import Link from "next/link";
 
 const steps = [
   {
@@ -44,6 +45,10 @@ export default function IntakeForm() {
         ? "Immatriculer mon véhicule"
         : service === "installation"
         ? "Je m’installe en Espagne"
+        : service === "diplome"
+        ? "Faire reconnaître mon diplôme"
+        : service === "activite"
+        ? "Créer mon activité en Espagne"
         : service === "autre"
         ? "Une autre démarche"
         : "",
@@ -194,13 +199,13 @@ export default function IntakeForm() {
             revenons vers vous par e-mail.
           </p>
 
-          <a
+          <Link
             href="/"
             className="mt-12 inline-block border-b border-ivory/40 pb-2 text-xl transition-colors hover:border-blood hover:text-blood"
             style={{ fontFamily: "var(--font-editorial)" }}
           >
             Retour à l’accueil →
-          </a>
+          </Link>
 
         </div>
       </section>
@@ -212,12 +217,12 @@ export default function IntakeForm() {
       <div className="mx-auto max-w-6xl">
 
         <div className="flex items-center justify-between">
-          <a
+          <Link
             href="/"
             className="text-sm text-ivory/60 transition-colors hover:text-ivory"
           >
             ← Retour
-          </a>
+          </Link>
 
           <span className="text-sm text-ivory/40">
             {step + 1} / {steps.length}
@@ -248,6 +253,8 @@ export default function IntakeForm() {
                     "Obtenir mon NIE",
                     "Immatriculer mon véhicule",
                     "Je m’installe en Espagne",
+                    "Faire reconnaître mon diplôme",
+                    "Créer mon activité en Espagne",
                     "Une autre démarche",
                   ].map((option) => (
                     <button
@@ -305,6 +312,10 @@ export default function IntakeForm() {
                         ? "Ex. Je pars vivre à Alicante avec ma voiture, actuellement immatriculée en France..."
                         : form.demarche === "Je m’installe en Espagne"
                         ? "Ex. Je pars vivre à Madrid pour travailler à partir du mois de novembre..."
+                        : form.demarche === "Faire reconnaître mon diplôme"
+                        ? "Ex. J’ai obtenu mon diplôme en France et j’en ai besoin pour exercer ou poursuivre mes études en Espagne..."
+                        : form.demarche === "Créer mon activité en Espagne"
+                        ? "Ex. Je souhaite exercer comme indépendant à Barcelone et je ne sais pas quelles formalités anticiper..."
                         : "Pas besoin de connaître le nom de la démarche. Expliquez-nous simplement ce qui se passe..."
                     }
                     className="min-h-[180px] w-full border border-ivory/20 bg-transparent p-6 text-lg text-ivory outline-none placeholder:text-ivory/30 focus:border-blood"
@@ -415,7 +426,7 @@ export default function IntakeForm() {
                     type="text"
                     value={form.province}
                     onChange={(e) => update("province", e.target.value)}
-                    placeholder="Dans quelle ville ou province d’Espagne ?"
+                    placeholder="Ville ou province concernée (si vous la connaissez)"
                     className="border-b border-ivory/30 bg-transparent py-4 text-xl outline-none placeholder:text-ivory/30 focus:border-blood"
                   />
 
@@ -536,14 +547,14 @@ export default function IntakeForm() {
 
                     <span className="max-w-xl text-sm leading-relaxed text-ivory/60">
   J’ai pris connaissance de la{" "}
-  <a
+  <Link
     href="/politique-confidentialite"
     target="_blank"
     rel="noopener noreferrer"
     className="border-b border-ivory/40 text-ivory transition-colors hover:border-blood hover:text-blood"
   >
     politique de confidentialité
-  </a>{" "}
+  </Link>{" "}
   et comprends que mes informations seront utilisées pour répondre à ma demande.
 </span>
                   </label>

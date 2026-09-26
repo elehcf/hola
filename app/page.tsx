@@ -1,336 +1,413 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import SiteLogo from "./components/SiteLogo";
 
 export const metadata: Metadata = {
   title: "Assistance administrative en Espagne pour les Français",
-
   description:
-    "holÀ! vous accompagne dans vos démarches administratives en Espagne : NIE, immatriculation de véhicule, installation et démarches France–Espagne.",
-
+    "holÀ! vous accompagne dans vos démarches en Espagne : NIE, véhicule, installation, reconnaissance de diplôme, création d’activité et dossiers France–Espagne.",
   alternates: {
     canonical: "/",
   },
-
   openGraph: {
     title: "holÀ! | Assistance administrative en Espagne",
     description:
-      "Vos démarches administratives en Espagne, simplement et en français.",
+      "Vos démarches personnelles et professionnelles en Espagne, organisées simplement et en français.",
     url: "/",
   },
 };
 
+const services = [
+  {
+    number: "01",
+    title: "Obtenir mon NIE",
+    description:
+      "Comprendre la bonne procédure, préparer les justificatifs et éviter les dossiers incomplets.",
+    href: "/nie-espagne",
+  },
+  {
+    number: "02",
+    title: "Immatriculer mon véhicule",
+    description:
+      "Organiser les documents, l’ITV, la fiscalité et les étapes auprès de la DGT.",
+    href: "/immatriculation-voiture-espagne",
+  },
+  {
+    number: "03",
+    title: "Je m’installe en Espagne",
+    description:
+      "Coordonner résidence, padrón, santé et les démarches liées à votre nouvelle vie.",
+    href: "/installation-espagne",
+  },
+  {
+    number: "04",
+    title: "Faire reconnaître mon diplôme",
+    description:
+      "Identifier la procédure adaptée et constituer un dossier clair pour l’administration espagnole.",
+    href: "/reconnaissance-diplome-espagne",
+  },
+  {
+    number: "05",
+    title: "Créer mon activité en Espagne",
+    description:
+      "Structurer les étapes administratives d’un projet d’indépendant ou de société.",
+    href: "/creer-activite-espagne",
+  },
+  {
+    number: "06",
+    title: "J’ai une autre démarche",
+    description:
+      "Un courrier, un dossier bloqué ou une situation qui ne rentre dans aucune case.",
+    href: "/autre-demarche",
+  },
+];
+
+const installationNeeds = [
+  {
+    title: "Logement",
+    text: "Nous vous aidons à préparer les justificatifs utiles et pouvons vous mettre en relation avec des agences partenaires selon votre destination.",
+  },
+  {
+    title: "Scolarité",
+    text: "Nous identifions les premières démarches et les documents à réunir pour inscrire vos enfants dans leur nouvel établissement.",
+  },
+  {
+    title: "Banque",
+    text: "Nous vous indiquons les pièces généralement demandées et la logique des démarches bancaires liées à votre installation.",
+  },
+  {
+    title: "Protection sociale",
+    text: "Nous faisons le point sur votre situation pour coordonner les interlocuteurs français et espagnols, sans promettre le maintien d’un régime qui dépend de votre statut.",
+  },
+];
+
 export default function Home() {
   return (
-    <main className="min-h-screen px-8 py-8 md:px-16 md:py-10">
+    <main className="min-h-screen overflow-hidden bg-ivory text-navy">
+      <div className="px-8 pt-8 md:px-16 md:pt-10">
+        <header className="flex items-center justify-between">
+          <SiteLogo />
 
-      {/* HEADER */}
-      <header className="flex items-center justify-between">
-        <div className="flex items-baseline">
-          <span
-            className="text-navy"
-            style={{
-              fontFamily: "var(--font-hand)",
-              fontSize: "4.2rem",
-              fontWeight: 500,
-              lineHeight: 1,
-            }}
+          <nav
+            className="hidden items-center gap-9 text-navy md:flex"
+            style={{ fontFamily: "var(--font-editorial)" }}
           >
-            hol
-          </span>
-
-          <span
-            className="text-blood"
-            style={{
-              fontFamily: "var(--font-editorial)",
-              fontSize: "4.6rem",
-              fontWeight: 600,
-              lineHeight: 0.8,
-              marginLeft: "-0.15rem",
-            }}
-          >
-            À!
-          </span>
-        </div>
+            <a
+              href="#services"
+              className="text-xl transition-colors duration-300 hover:text-blood"
+            >
+              Services
+            </a>
+            <Link
+              href="/guides"
+              className="text-xl transition-colors duration-300 hover:text-blood"
+            >
+              Guides
+            </Link>
+            <Link
+              href="/comment-ca-marche"
+              className="text-xl transition-colors duration-300 hover:text-blood"
+            >
+              Comment ça marche
+            </Link>
+            <Link
+              href="/a-propos"
+              className="text-xl transition-colors duration-300 hover:text-blood"
+            >
+              À propos
+            </Link>
+          </nav>
+        </header>
 
         <nav
-          className="hidden items-center gap-10 text-navy md:flex"
-          style={{ fontFamily: "var(--font-editorial)" }}
+          aria-label="Navigation mobile"
+          className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-sm text-navy md:hidden"
         >
-          <a
-            href="#services"
-            className="text-xl transition-colors duration-300 hover:text-blood"
-          >
+          <a href="#services" className="hover:text-blood">
             Services
           </a>
-
-          <a
-            href="/guides"
-            className="text-xl transition-colors duration-300 hover:text-blood"
-          >
+          <Link href="/guides" className="hover:text-blood">
             Guides
-          </a>
-
-          <a
-            href="/comment-ca-marche"
-            className="text-xl transition-colors duration-300 hover:text-blood"
-          >
+          </Link>
+          <Link href="/comment-ca-marche" className="hover:text-blood">
             Comment ça marche
-          </a>
-
-          <a
-            href="/a-propos"
-            className="text-xl transition-colors duration-300 hover:text-blood"
-          >
+          </Link>
+          <Link href="/a-propos" className="hover:text-blood">
             À propos
-          </a>
+          </Link>
         </nav>
-      </header>
-<nav
-  aria-label="Navigation mobile"
-  className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-sm text-navy md:hidden"
->
-  <a href="#services" className="hover:text-blood">
-    Services
-  </a>
-  <a href="/guides" className="hover:text-blood">
-    Guides
-  </a>
-  <a href="/comment-ca-marche" className="hover:text-blood">
-    Comment ça marche
-  </a>
-  <a href="/a-propos" className="hover:text-blood">
-    À propos
-  </a>
-</nav>
 
-      {/* HERO */}
-      <section className="grid items-center gap-16 pt-20 md:grid-cols-[1.1fr_0.9fr] md:pt-16">
-        <div className="md:pl-28">
-          <h1
-            className="max-w-4xl text-5xl leading-[0.95] md:text-7xl"
-            style={{ fontFamily: "var(--font-editorial)" }}
-          >
-            Un problème administratif
-            <br />
-            en Espagne ?
-          </h1>
+        <section className="grid items-center gap-14 pb-24 pt-16 md:grid-cols-[1.08fr_0.92fr] md:pb-32 md:pt-14">
+          <div className="md:pl-16 lg:pl-28">
+            <p className="text-xs uppercase tracking-[0.25em] text-blood">
+              France ↔ Espagne
+            </p>
+            <h1
+              className="mt-6 max-w-4xl text-5xl leading-[0.92] md:text-7xl"
+              style={{ fontFamily: "var(--font-editorial)" }}
+            >
+              Un projet en Espagne.
+              <br />
+              <span className="italic text-blood">
+                Beaucoup trop de démarches ?
+              </span>
+            </h1>
 
-          <p
-            className="mt-6 text-4xl italic text-blood md:text-5xl"
-            style={{ fontFamily: "var(--font-editorial)" }}
-          >
-            On s&apos;en occupe.
-          </p>
-
-          <div className="mt-10 max-w-xl">
-            <p className="text-base leading-relaxed opacity-80 md:text-lg">
-              Vous êtes encore en France ou déjà installé en Espagne ?
-              NIE, voiture, résidence ou autre démarche : nous vous aidons
-              à comprendre ce qu&apos;il faut faire, préparons les dossiers
-              et vous accompagnons dans les étapes qui suivent.
+            <p className="mt-9 max-w-xl text-base leading-relaxed text-navy/75 md:text-lg">
+              Que vous soyez encore en France ou déjà installé en Espagne,
+              holÀ! vous aide à comprendre les formalités, préparer les
+              dossiers et coordonner les étapes. Vous gardez un interlocuteur
+              francophone du début à la suite de votre projet.
             </p>
 
-            <a
-              href="/demande"
-              className="mt-8 inline-block bg-blood px-7 py-4 text-sm uppercase tracking-[0.12em] text-ivory"
-            >
-              Expliquer ma situation →
-            </a>
+            <div className="mt-9 flex flex-wrap items-center gap-5">
+              <Link
+                href="/demande"
+                className="inline-block bg-blood px-7 py-4 text-sm uppercase tracking-[0.12em] text-ivory transition-transform hover:-translate-y-0.5"
+              >
+                Expliquer ma situation →
+              </Link>
+              <a
+                href="#services"
+                className="border-b border-navy/30 pb-1 text-sm transition-colors hover:border-blood hover:text-blood"
+              >
+                Voir les accompagnements
+              </a>
+            </div>
+          </div>
+
+          <div className="hidden justify-center md:flex">
+            <Image
+              src="/porte-hola.png"
+              alt="Une porte ouverte entre la France et l’Espagne"
+              width={1024}
+              height={1536}
+              priority
+              sizes="(min-width: 768px) 42vw, 0px"
+              className="h-[70vh] max-h-[720px] w-auto object-contain opacity-95"
+            />
+          </div>
+        </section>
+      </div>
+
+      <section id="services" className="px-8 py-28 md:px-16 md:py-36">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid gap-10 md:grid-cols-[0.7fr_1.3fr] md:items-end">
+            <p className="text-xs uppercase tracking-[0.25em] text-blood">
+              Services
+            </p>
+            <div>
+              <h2
+                className="text-5xl leading-[0.95] md:text-6xl"
+                style={{ fontFamily: "var(--font-editorial)" }}
+              >
+                Une seule porte d’entrée.
+                <br />
+                <span className="italic text-blood">
+                  Votre situation d’abord.
+                </span>
+              </h2>
+              <p className="mt-7 max-w-2xl text-lg leading-relaxed text-navy/65">
+                Vous savez exactement ce qu’il vous faut ? Choisissez la
+                démarche. Sinon, racontez-nous votre projet : nous commencerons
+                par identifier les étapes qui vous concernent réellement.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-20 border-t border-navy/20">
+            {services.map((service) => (
+              <Link
+                key={service.href}
+                href={service.href}
+                className="group grid gap-4 border-b border-navy/20 px-4 py-8 transition-all duration-300 hover:bg-blood/[0.06] hover:px-7 md:grid-cols-[80px_1fr_1fr_auto] md:items-center"
+              >
+                <span className="text-sm text-blood">{service.number}</span>
+                <h3
+                  className="text-3xl transition-colors duration-300 group-hover:text-blood md:text-4xl"
+                  style={{ fontFamily: "var(--font-editorial)" }}
+                >
+                  {service.title}
+                </h3>
+                <p className="max-w-md text-sm leading-relaxed text-navy/55 md:text-base">
+                  {service.description}
+                </p>
+                <span className="text-2xl transition-transform duration-300 group-hover:translate-x-2">
+                  →
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
-
-        <div className="hidden justify-center md:flex">
-          <img
-            src="/porte-hola.png"
-            alt="Une porte ouverte sur l’Espagne"
-            className="h-[70vh] max-h-[720px] w-auto object-contain opacity-95"
-          />
-        </div>
       </section>
 
-
-      {/* SERVICES */}
-      <section id="services" className="py-28 md:py-36">
-        <div className="text-center">
-          <p className="text-xs uppercase tracking-[0.25em] text-blood">
-            Services
-          </p>
-
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-navy/65">
-            Vous savez exactement ce qu&apos;il vous faut ? Parfait.
-            Sinon, racontez-nous simplement ce qui vous amène.
-          </p>
-        </div>
-
-        <div className="mx-auto mt-20 max-w-6xl border-t border-navy/20">
-
-          <a
-            href="/nie-espagne"
-            className="group flex items-center justify-between border-b border-navy/20 px-4 py-8 transition-all duration-300 hover:bg-blood/[0.06] hover:px-7"
-          >
-            <div className="flex items-baseline gap-8">
-              <span className="text-sm text-blood">01</span>
-              <h3
-                className="text-3xl transition-colors duration-300 group-hover:text-blood md:text-4xl"
+      <section className="bg-[#EEE8DE] px-8 py-28 md:px-16 md:py-36">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid gap-14 md:grid-cols-[0.8fr_1.2fr] md:items-end">
+            <p className="text-xs uppercase tracking-[0.25em] text-blood">
+              S’installer pour de vrai
+            </p>
+            <div>
+              <h2
+                className="max-w-4xl text-5xl leading-[0.95] md:text-6xl"
                 style={{ fontFamily: "var(--font-editorial)" }}
               >
-                Obtenir mon NIE
-              </h3>
+                Une nouvelle vie ne tient pas
+                <br />
+                <span className="italic text-blood">dans un formulaire.</span>
+              </h2>
+              <p className="mt-8 max-w-2xl text-lg leading-relaxed text-navy/65">
+                L’adresse, l’école, la banque ou la protection sociale peuvent
+                vite se mêler aux formalités de résidence. Nous construisons
+                une feuille de route cohérente et faisons intervenir les bons
+                interlocuteurs lorsque votre situation le demande.
+              </p>
             </div>
+          </div>
 
-            <span className="text-2xl transition-transform duration-300 group-hover:translate-x-2">
-              →
-            </span>
-          </a>
+          <div className="mt-20 grid gap-x-12 gap-y-10 md:grid-cols-2">
+            {installationNeeds.map((need) => (
+              <article key={need.title} className="border-t border-navy/20 pt-6">
+                <h3
+                  className="text-3xl"
+                  style={{ fontFamily: "var(--font-editorial)" }}
+                >
+                  {need.title}
+                </h3>
+                <p className="mt-4 max-w-xl leading-relaxed text-navy/65">
+                  {need.text}
+                </p>
+              </article>
+            ))}
+          </div>
 
-          <a
-            href="/immatriculation-voiture-espagne"
-            className="group flex items-center justify-between border-b border-navy/20 px-4 py-8 transition-all duration-300 hover:bg-blood/[0.06] hover:px-7"
-          >
-            <div className="flex items-baseline gap-8">
-              <span className="text-sm text-blood">02</span>
-              <h3
-                className="text-3xl transition-colors duration-300 group-hover:text-blood md:text-4xl"
-                style={{ fontFamily: "var(--font-editorial)" }}
-              >
-                Immatriculer mon véhicule
-              </h3>
-            </div>
-
-            <span className="text-2xl transition-transform duration-300 group-hover:translate-x-2">
-              →
-            </span>
-          </a>
-
-          <a
+          <Link
             href="/installation-espagne"
-            className="group flex items-center justify-between border-b border-navy/20 px-4 py-8 transition-all duration-300 hover:bg-blood/[0.06] hover:px-7"
+            className="mt-12 inline-block border-b border-navy/30 pb-1 text-lg transition-colors hover:border-blood hover:text-blood"
           >
-            <div className="flex items-baseline gap-8">
-              <span className="text-sm text-blood">03</span>
-              <h3
-                className="text-3xl transition-colors duration-300 group-hover:text-blood md:text-4xl"
-                style={{ fontFamily: "var(--font-editorial)" }}
-              >
-                Je m&apos;installe en Espagne
-              </h3>
-            </div>
-
-            <span className="text-2xl transition-transform duration-300 group-hover:translate-x-2">
-              →
-            </span>
-          </a>
-
-          <a
-            href="/autre-demarche"
-            className="group flex items-center justify-between border-b border-navy/20 px-4 py-8 transition-all duration-300 hover:bg-blood/[0.06] hover:px-7"
-          >
-            <div className="flex items-baseline gap-8">
-              <span className="text-sm text-blood">04</span>
-              <h3
-                className="text-3xl transition-colors duration-300 group-hover:text-blood md:text-4xl"
-                style={{ fontFamily: "var(--font-editorial)" }}
-              >
-                J&apos;ai une autre démarche
-              </h3>
-            </div>
-
-            <span className="text-2xl transition-transform duration-300 group-hover:translate-x-2">
-              →
-            </span>
-          </a>
-
+            Préparer mon installation →
+          </Link>
         </div>
       </section>
 
+      <section className="bg-navy px-8 py-28 text-ivory md:px-16 md:py-36">
+        <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-[0.72fr_1.28fr]">
+          <p className="text-xs uppercase tracking-[0.25em] text-blood">
+            Un dossier, plusieurs compétences
+          </p>
+          <div>
+            <h2
+              className="max-w-4xl text-5xl leading-[0.95] md:text-6xl"
+              style={{ fontFamily: "var(--font-editorial)" }}
+            >
+              Le bon accompagnement,
+              <br />
+              <span className="italic text-blood">au bon endroit.</span>
+            </h2>
+            <p className="mt-9 max-w-2xl text-lg leading-relaxed text-ivory/70">
+              holÀ! prend en charge l’organisation et le suivi administratif.
+              Lorsqu’un choix exige un avis juridique, fiscal ou comptable,
+              nous pouvons coordonner l’intervention d’un professionnel
+              habilité, avec votre accord. Chacun intervient dans son domaine,
+              tandis que vous conservez un fil conducteur.
+            </p>
 
-      {/* COMMENT ÇA MARCHE */}
-      <section
-        id="comment-ca-marche"
-        className="mx-[-2rem] bg-navy px-8 py-28 text-ivory md:mx-[-4rem] md:px-16 md:py-36"
-      >
+            <div className="mt-12 grid gap-8 sm:grid-cols-3">
+              {["Juridique", "Fiscal", "Comptable"].map((area) => (
+                <div key={area} className="border-t border-ivory/25 pt-5">
+                  <p
+                    className="text-2xl"
+                    style={{ fontFamily: "var(--font-editorial)" }}
+                  >
+                    {area}
+                  </p>
+                  <p className="mt-2 text-sm text-ivory/55">
+                    Professionnel habilité si nécessaire
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <Link
+              href="/autre-demarche"
+              className="mt-12 inline-block border-b border-ivory/40 pb-1 transition-colors hover:border-blood hover:text-blood"
+            >
+              Parler d’une situation particulière →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-8 py-28 md:px-16 md:py-36">
         <div className="mx-auto max-w-6xl">
           <p className="text-xs uppercase tracking-[0.25em] text-blood">
             Comment ça marche
           </p>
-
           <h2
-            className="mt-4 max-w-3xl text-5xl leading-[0.95] md:text-6xl"
+            className="mt-5 max-w-3xl text-5xl leading-[0.95] md:text-6xl"
             style={{ fontFamily: "var(--font-editorial)" }}
           >
             Vous nous expliquez.
             <br />
-            On démêle le reste.
+            <span className="italic text-blood">On démêle le reste.</span>
           </h2>
 
           <div className="mt-20 grid gap-12 md:grid-cols-3 md:gap-8">
-
-            <div className="border-t border-ivory/30 pt-6">
-              <span className="text-sm text-blood">01</span>
-
-              <h3
-                className="mt-5 text-3xl"
-                style={{ fontFamily: "var(--font-editorial)" }}
-              >
-                Vous nous racontez.
-              </h3>
-
-              <p className="mt-4 max-w-xs leading-relaxed text-ivory/70">
-                Dites-nous ce qui se passe. Même si vous ne savez pas
-                comment s&apos;appelle la démarche ni par où commencer.
-              </p>
-            </div>
-
-            <div className="border-t border-ivory/30 pt-6">
-              <span className="text-sm text-blood">02</span>
-
-              <h3
-                className="mt-5 text-3xl"
-                style={{ fontFamily: "var(--font-editorial)" }}
-              >
-                On met de l’ordre.
-              </h3>
-
-              <p className="mt-4 max-w-xs leading-relaxed text-ivory/70">
-                On identifie ce qu&apos;il faut faire, les documents à
-                préparer et l&apos;ordre dans lequel avancer.
-              </p>
-            </div>
-
-            <div className="border-t border-ivory/30 pt-6">
-              <span className="text-sm text-blood">03</span>
-
-              <h3
-                className="mt-5 text-3xl"
-                style={{ fontFamily: "var(--font-editorial)" }}
-              >
-                On s’en occupe.
-              </h3>
-
-              <p className="mt-4 max-w-xs leading-relaxed text-ivory/70">
-                Nous préparons et suivons ce qui peut l&apos;être.
-                S&apos;il reste une étape à faire en personne, vous savez
-                exactement où aller et avec quoi.
-              </p>
-            </div>
-
+            {[
+              {
+                number: "01",
+                title: "Vous racontez.",
+                text: "Quelques informations suffisent, même si vous ne connaissez pas le nom exact de la démarche.",
+              },
+              {
+                number: "02",
+                title: "Nous cadrons.",
+                text: "Nous identifions les étapes, le périmètre de notre intervention et les éventuels professionnels à solliciter.",
+              },
+              {
+                number: "03",
+                title: "Nous avançons.",
+                text: "Vous recevez une proposition claire, puis nous préparons et suivons ce qui a été convenu.",
+              },
+            ].map((step) => (
+              <article key={step.number} className="border-t border-navy/20 pt-6">
+                <span className="text-sm text-blood">{step.number}</span>
+                <h3
+                  className="mt-5 text-3xl"
+                  style={{ fontFamily: "var(--font-editorial)" }}
+                >
+                  {step.title}
+                </h3>
+                <p className="mt-4 max-w-xs leading-relaxed text-navy/65">
+                  {step.text}
+                </p>
+              </article>
+            ))}
           </div>
+
+          <Link
+            href="/comment-ca-marche"
+            className="mt-12 inline-block border-b border-navy/30 pb-1 transition-colors hover:border-blood hover:text-blood"
+          >
+            Voir l’accompagnement en détail →
+          </Link>
         </div>
       </section>
 
-
-      {/* À PROPOS */}
-      <section id="a-propos" className="py-28 md:py-40">
-        <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-[0.8fr_1.2fr]">
-
+      <section className="px-8 pb-28 md:px-16 md:pb-40">
+        <div className="mx-auto grid max-w-6xl gap-14 md:grid-cols-[0.82fr_1.18fr] md:items-center">
           <div>
             <p className="text-xs uppercase tracking-[0.25em] text-blood">
               À propos
             </p>
-
-            <img
+            <Image
               src="/papiers-hola.png"
-              alt="Une montagne de démarches administratives"
-              className="mt-14 w-full max-w-[430px] object-contain"
+              alt="Des papiers administratifs remis en ordre"
+              width={1536}
+              height={1024}
+              sizes="(min-width: 768px) 38vw, 92vw"
+              className="mt-10 w-full max-w-[470px] object-contain"
             />
           </div>
 
@@ -339,68 +416,50 @@ export default function Home() {
               className="text-5xl leading-[0.95] md:text-6xl"
               style={{ fontFamily: "var(--font-editorial)" }}
             >
-              Entre la France
+              Entre deux pays,
               <br />
-              et l&apos;Espagne,
+              deux langues
               <br />
-              il y a parfois
-              <br />
-              <span className="italic text-blood">
-                un peu trop de papier.
-              </span>
+              <span className="italic text-blood">et deux administrations.</span>
             </h2>
-
-            <p className="mt-10 max-w-xl text-lg leading-relaxed text-navy/70">
-              holÀ! est né pour ceux qui ont quelque chose à régler en Espagne
-              sans forcément savoir par où commencer. Un NIE à demander, une
-              voiture française à immatriculer, une installation à préparer
-              ou simplement un courrier administratif auquel vous ne savez
-              pas quoi répondre : vous nous expliquez, nous mettons de
-              l&apos;ordre et vous aidons à avancer.
+            <p className="mt-9 max-w-xl text-lg leading-relaxed text-navy/70">
+              holÀ! est né de cette réalité quotidienne : comprendre ce que
+              demande chaque administration, traduire sa logique et conserver
+              une vision d’ensemble. Notre rôle est de rendre votre parcours
+              plus clair, pas de vous promettre une décision qui appartient à
+              l’administration.
             </p>
-
-            <div className="mt-10 flex items-center gap-4">
-              <span
-                className="text-2xl italic text-blood"
-                style={{ fontFamily: "var(--font-editorial)" }}
-              >
-                France ↔ Espagne
-              </span>
-
-              <span className="h-px w-10 bg-navy/20" />
-
-              <span className="text-sm text-navy/50">
-                Vos démarches, d&apos;un côté à l&apos;autre.
-              </span>
-            </div>
+            <Link
+              href="/a-propos"
+              className="mt-8 inline-block border-b border-navy/30 pb-1 transition-colors hover:border-blood hover:text-blood"
+            >
+              Découvrir holÀ! →
+            </Link>
           </div>
-
         </div>
       </section>
 
-
-      {/* CONTACT */}
-      <section id="contact" className="pb-16 pt-8 md:pb-24">
+      <section className="px-8 pb-16 md:px-16 md:pb-24">
         <div className="mx-auto max-w-6xl bg-blood px-8 py-16 text-ivory md:px-16 md:py-20">
-
           <p className="text-xs uppercase tracking-[0.25em] text-ivory/70">
             Votre situation
           </p>
-
           <div className="mt-6 flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
-
-            <h2
-              className="max-w-3xl text-5xl leading-[0.95] md:text-7xl"
-              style={{ fontFamily: "var(--font-editorial)" }}
-            >
-              Vous avez une démarche
-              <br />
-              en Espagne ?
-              <br />
-              <span className="italic">Racontez-nous.</span>
-            </h2>
-
-            <a
+            <div>
+              <h2
+                className="max-w-3xl text-5xl leading-[0.95] md:text-7xl"
+                style={{ fontFamily: "var(--font-editorial)" }}
+              >
+                Un projet en Espagne ?
+                <br />
+                <span className="italic">Commençons par vous.</span>
+              </h2>
+              <p className="mt-6 max-w-xl text-ivory/70">
+                Expliquez-nous où vous en êtes. Nous vous dirons clairement
+                ce que nous pouvons organiser et comment avancer.
+              </p>
+            </div>
+            <Link
               href="/demande"
               className="group flex shrink-0 items-center gap-5 border-b border-ivory pb-2 text-lg"
               style={{ fontFamily: "var(--font-editorial)" }}
@@ -409,12 +468,10 @@ export default function Home() {
               <span className="transition-transform duration-300 group-hover:translate-x-2">
                 →
               </span>
-            </a>
-
+            </Link>
           </div>
         </div>
       </section>
-
     </main>
   );
 }
