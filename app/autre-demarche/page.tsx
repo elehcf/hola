@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Démarche administrative en Espagne : besoin d’aide ?",
@@ -24,7 +25,7 @@ export default function AutreDemarche() {
 
       {/* HEADER */}
       <header className="flex items-center justify-between px-8 py-8 md:px-16">
-        <a href="/" className="flex items-baseline">
+        <Link href="/" className="flex items-baseline">
           <span
             className="text-navy"
             style={{
@@ -49,15 +50,15 @@ export default function AutreDemarche() {
           >
             À!
           </span>
-        </a>
+        </Link>
 
-        <a
+        <Link
           href="/"
           className="text-lg transition-colors duration-300 hover:text-blood"
           style={{ fontFamily: "var(--font-editorial)" }}
         >
           ← Retour
-        </a>
+        </Link>
       </header>
 
 
