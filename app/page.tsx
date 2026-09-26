@@ -84,7 +84,23 @@ export default function Home() {
           </a>
         </nav>
       </header>
-
+<nav
+  aria-label="Navigation mobile"
+  className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-sm text-navy md:hidden"
+>
+  <a href="#services" className="hover:text-blood">
+    Services
+  </a>
+  <a href="/guides" className="hover:text-blood">
+    Guides
+  </a>
+  <a href="/comment-ca-marche" className="hover:text-blood">
+    Comment ça marche
+  </a>
+  <a href="/a-propos" className="hover:text-blood">
+    À propos
+  </a>
+</nav>
 
       {/* HERO */}
       <section className="grid items-center gap-16 pt-20 md:grid-cols-[1.1fr_0.9fr] md:pt-16">
