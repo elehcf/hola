@@ -201,9 +201,10 @@ export default function ImmatriculationVoiture() {
                 Plaques espagnoles
               </h3>
               <p className="mt-3 max-w-md text-ivory/60">
-                L’immatriculation obtenue, il ne reste plus qu’à faire poser
-                les plaques espagnoles.
-              </p>
+  Une fois l’immatriculation obtenue, vous pouvez faire poser les
+  plaques espagnoles. Avant de circuler, veillez aussi à ce que
+  votre véhicule soit assuré sous sa nouvelle immatriculation.
+</p>
             </div>
 
           </div>
@@ -435,7 +436,7 @@ export default function ImmatriculationVoiture() {
 
             <div>
               <p className="text-xs uppercase tracking-[0.25em] text-ivory/70">
-                Immatriculation France → Espagne
+                Votre voiture française en Espagne
               </p>
 
               <h2
@@ -446,10 +447,13 @@ export default function ImmatriculationVoiture() {
               </h2>
 
               <p className="mt-5 max-w-xl text-ivory/70">
-                Préparation et suivi de votre dossier. Taxes, frais
-                administratifs, ITV et éventuelles prestations externes
-                en supplément.
-              </p>
+  Pour un véhicule déjà à votre nom, immatriculé en France, que vous
+  emportez lors de votre installation en Espagne : préparation du dossier
+  et suivi des étapes administratives. Taxes, frais de la DGT, ITV,
+  documents techniques, plaques et éventuelles prestations externes
+  en supplément. Nous confirmons le périmètre de l’accompagnement
+  après examen de votre situation.
+</p>
             </div>
 
             <a
