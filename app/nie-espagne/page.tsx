@@ -13,8 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "NIE Espagne : obtenir votre NIE | holÀ!",
     description:
-      "Votre demande de NIE en Espagne préparée de A à Z, simplement et en français.",
-    url: "/nie-espagne",
+"Un accompagnement en français pour préparer votre demande de NIE en Espagne et comprendre les étapes à suivre.",    url: "/nie-espagne",
   },
 };
 
@@ -82,11 +81,13 @@ export default function NieEspagne() {
 
           <div className="mt-12 grid gap-10 md:grid-cols-2">
             <p className="max-w-xl text-lg leading-relaxed text-navy/70">
-              Vous nous expliquez pourquoi vous avez besoin d’un NIE.
-              Nous préparons le dossier, le formulaire EX-15 et les justificatifs
-              à prévoir, puis nous vous indiquons exactement comment procéder.
-              Le tout, en français.
-            </p>
+  Vous nous expliquez votre projet. Nous vérifions d’abord si une
+  demande de NIE correspond à votre situation ou si vous devez
+  effectuer d’autres démarches liées à votre installation en Espagne.
+  Si la demande de NIE est adaptée, nous préparons le formulaire EX-15,
+  identifions les justificatifs à prévoir et vous expliquons comment
+  procéder. Le tout, en français.
+</p>
 
             <div className="md:flex md:justify-end">
               <a
@@ -248,8 +249,8 @@ export default function NieEspagne() {
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy/70">
                 C’est justement ce que nous vérifions avant de commencer :
                 où faire la demande, quels documents prévoir et dans quel ordre
-                avancer. Vous évitez ainsi les pièces manquantes, les mauvais
-                rendez-vous et les allers-retours inutiles.
+                avancer. L’objectif est de limiter les pièces manquantes, les rendez-vous
+inadaptés et les déplacements inutiles.
               </p>
             </div>
           </div>
@@ -281,12 +282,13 @@ export default function NieEspagne() {
                 Peut-on demander un NIE depuis la France ?
               </h3>
 
-              <p className="mt-4 leading-relaxed text-navy/65">
-                Oui, dans certains cas. Une demande peut notamment passer par
-                le consulat espagnol compétent en France. Nous vérifions avec
-                vous quelle solution correspond à votre situation avant de
-                préparer le dossier.
-              </p>
+            <p className="mt-4 leading-relaxed text-navy/65">
+  Oui, selon le motif de votre demande et votre lieu de résidence en
+  France, vous pouvez notamment vous adresser au consulat espagnol
+  compétent. Si votre projet est de vous installer en Espagne, la
+  démarche à effectuer peut être différente : nous vérifions ce point
+  avec vous avant de préparer le dossier.
+</p>
             </div>
 
             <div className="border-t border-navy/20 pt-6">
@@ -351,7 +353,7 @@ export default function NieEspagne() {
 
             <div>
               <p className="text-xs uppercase tracking-[0.25em] text-ivory/70">
-                Dossier NIE Espagne
+                Dossier NIE sans installation
               </p>
 
               <h2
@@ -362,8 +364,10 @@ export default function NieEspagne() {
               </h2>
 
               <p className="mt-5 text-ivory/70">
-                Votre dossier préparé et vérifié, avec la marche à suivre.
-              </p>
+  Préparation et vérification du dossier pour une demande ponctuelle
+  de NIE. Nous confirmons que ce forfait correspond à votre situation
+  et précisons les éventuels frais administratifs avant de commencer.
+</p>
             </div>
 
             <a
