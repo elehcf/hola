@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Comment ça marche | holÀ!",
@@ -25,15 +26,21 @@ const etapes = [
     texte:
       "Nous vous aidons à réunir les informations nécessaires, à organiser les étapes et à suivre le dossier. Si une démarche exige votre présence, vous savez quoi faire et quels documents apporter.",
   },
+  {
+    numero: "04",
+    titre: "Nous coordonnons les compétences utiles.",
+    texte:
+      "Si un avis juridique, fiscal ou comptable est nécessaire, nous vous l’indiquons et organisons, avec votre accord, l’intervention d’un professionnel habilité.",
+  },
 ];
 
 export default function CommentCaMarche() {
   return (
     <main className="min-h-screen bg-ivory px-8 py-16 text-navy md:px-16 md:py-24">
       <div className="mx-auto max-w-4xl">
-        <a href="/" className="text-sm text-blood">
+        <Link href="/" className="text-sm text-blood">
           ← holÀ!
-        </a>
+        </Link>
 
         <p className="mt-20 text-xs uppercase tracking-[0.25em] text-blood">
           Notre accompagnement
@@ -66,12 +73,6 @@ export default function CommentCaMarche() {
               >
                 {etape.numero}
               </span>
-<a
-  href="/comment-ca-marche"
-  className="mt-12 inline-block border-b border-ivory/60 pb-1 text-sm text-ivory transition-colors hover:border-blood hover:text-blood"
->
-  Voir l’accompagnement en détail →
-</a>
               <div>
                 <h2
                   className="text-3xl leading-tight md:text-4xl"
@@ -111,12 +112,12 @@ export default function CommentCaMarche() {
             On commence par votre situation ?
           </p>
 
-          <a
+          <Link
             href="/demande"
             className="mt-8 inline-block bg-blood px-7 py-4 text-sm text-ivory transition-opacity hover:opacity-85"
           >
             Expliquer ma situation →
-          </a>
+          </Link>
         </div>
       </div>
     </main>
