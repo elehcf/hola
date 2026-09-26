@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Caveat, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/Footer";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 const caveat = Caveat({
   variable: "--font-hand",
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Vos démarches administratives en Espagne, simplement et en français. NIE, immatriculation de véhicule, installation en Espagne et démarches sur mesure.",
+    "Vos démarches en Espagne, simplement et en français : NIE, véhicule, installation, reconnaissance de diplôme, création d’activité et dossiers sur mesure.",
 
   alternates: {
     canonical: "/",
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "holÀ! | L’Espagne, sans la complexité administrative",
     description:
-      "Nous préparons et suivons vos démarches administratives en Espagne, simplement et en français.",
+      "Nous organisons et suivons vos démarches personnelles et professionnelles en Espagne, simplement et en français.",
     url: "https://www.holaespagne.fr",
     siteName: "holÀ!",
     locale: "fr_FR",
@@ -55,7 +56,15 @@ const jsonLd = {
       url: "https://www.holaespagne.fr/",
       email: "bonjour@holaespagne.fr",
       description:
-        "Service d’assistance administrative entre la France et l’Espagne pour les francophones.",
+        "Service d’assistance administrative entre la France et l’Espagne pour les projets personnels et professionnels des francophones.",
+      telephone: "+34 681 803 938",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "9 rue Mercière",
+        postalCode: "33800",
+        addressLocality: "Bordeaux",
+        addressCountry: "FR",
+      },
       areaServed: {
         "@type": "Country",
         name: "Spain",
@@ -85,16 +94,17 @@ export default function RootLayout({
       className={`${caveat.variable} ${cormorant.variable}`}
     >
       <body>
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
-    }}
-  />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
 
-  {children}
-  <Footer />
-</body>
+        {children}
+        <Footer />
+        <WhatsAppButton />
+      </body>
     </html>
   );
 }

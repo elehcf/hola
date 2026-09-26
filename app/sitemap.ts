@@ -26,6 +26,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/reconnaissance-diplome-espagne`,
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/creer-activite-espagne`,
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
       url: `${baseUrl}/autre-demarche`,
       changeFrequency: "monthly",
       priority: 0.6,
@@ -34,6 +44,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/guides`,
       changeFrequency: "monthly",
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/a-propos`,
+      changeFrequency: "yearly",
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/comment-ca-marche`,
+      changeFrequency: "yearly",
+      priority: 0.5,
     },
   ];
 
