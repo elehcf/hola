@@ -16,9 +16,7 @@ export default function PolitiqueConfidentialite() {
         >
           Politique de
           <br />
-          <span className="italic text-blood">
-            confidentialité.
-          </span>
+          <span className="italic text-blood">confidentialité.</span>
         </h1>
 
         <div className="mt-16 space-y-12 text-base leading-relaxed text-navy/70">
@@ -32,12 +30,15 @@ export default function PolitiqueConfidentialite() {
 
             <p>
               Les données transmises par l’intermédiaire du site holÀ!
-              sont traitées par l’exploitant du service holÀ!.
+              sont traitées par Elena Huergo Cerra, entrepreneur individuel.
             </p>
 
             <p className="mt-3">
-              Les coordonnées complètes du responsable du traitement
-              figurent dans les mentions légales du site.
+              Ses coordonnées figurent dans les{" "}
+              <a href="/mentions-legales" className="underline">
+                mentions légales
+              </a>{" "}
+              du site.
             </p>
           </section>
 
@@ -66,12 +67,18 @@ export default function PolitiqueConfidentialite() {
               3. Pourquoi utilisons-nous ces données ?
             </h2>
 
-            <p>
-              Ces informations sont utilisées afin d’étudier votre
-              demande, déterminer si nous pouvons vous accompagner,
-              vous recontacter et, le cas échéant, préparer la prise
-              en charge de votre démarche.
-            </p>
+           <p>
+  Nous utilisons ces informations pour étudier votre demande, vous
+  répondre et, si vous le souhaitez, préparer une éventuelle prestation.
+  Ce traitement repose sur les mesures précontractuelles prises à
+  votre demande.
+</p>
+
+<p className="mt-3">
+  Votre prénom, votre adresse e-mail et les informations nécessaires
+  pour comprendre votre démarche sont indispensables pour pouvoir vous
+  répondre. Le numéro de téléphone est facultatif.
+</p>
           </section>
 
           <section>
@@ -83,14 +90,17 @@ export default function PolitiqueConfidentialite() {
             </h2>
 
             <p>
-              Vos informations sont accessibles uniquement aux personnes
-              qui en ont besoin pour traiter votre demande et aux
-              prestataires techniques nécessaires au fonctionnement du
-              service.
+              Les informations transmises par le formulaire sont reçues
+              par Elena Huergo Cerra à l’adresse bonjour@holaespagne.fr.
+              Leur transmission fait intervenir Vercel, qui héberge le
+              site, Resend, qui assure l’envoi du message, ainsi que le
+              fournisseur de notre messagerie.
             </p>
 
             <p className="mt-3">
-              Elles ne sont pas vendues à des tiers.
+              Ces prestataires interviennent dans le cadre du
+              fonctionnement du service. Vos données ne sont pas vendues
+              à des tiers.
             </p>
           </section>
 
@@ -103,10 +113,17 @@ export default function PolitiqueConfidentialite() {
             </h2>
 
             <p>
-              Les données sont conservées pendant la durée nécessaire au
-              traitement de votre demande, puis pendant la durée nécessaire
-              au respect de nos obligations légales ou à la défense de nos
-              droits, lorsqu’elles s’appliquent.
+              Si votre demande ne donne pas lieu à une prestation, les
+              informations échangées sont conservées pendant 12 mois à
+              compter de notre dernier échange, puis supprimées.
+            </p>
+
+            <p className="mt-3">
+              Si vous devenez client, les données nécessaires à la
+              réalisation de la prestation sont conservées pendant la
+              durée de notre relation. Certains documents peuvent ensuite
+              être conservés plus longtemps lorsque la loi l’exige,
+              notamment les documents comptables.
             </p>
           </section>
 
@@ -125,6 +142,17 @@ export default function PolitiqueConfidentialite() {
               ainsi que, lorsque les conditions sont réunies, leur
               limitation ou vous opposer à certains traitements.
             </p>
+
+            <p className="mt-3">
+              Vous pouvez également adresser une réclamation à la{" "}
+              <a
+                href="https://www.cnil.fr/fr/plaintes"
+                className="underline"
+              >
+                CNIL
+              </a>
+              .
+            </p>
           </section>
 
           <section>
@@ -136,8 +164,15 @@ export default function PolitiqueConfidentialite() {
             </h2>
 
             <p>
-              Une adresse de contact dédiée à l’exercice de vos droits
-              sera indiquée ici avant la mise en ligne publique du service.
+              Pour toute question relative à vos données personnelles ou
+              pour exercer vos droits, écrivez à{" "}
+              <a
+                href="mailto:bonjour@holaespagne.fr"
+                className="underline"
+              >
+                bonjour@holaespagne.fr
+              </a>
+              .
             </p>
           </section>
         </div>

@@ -29,12 +29,30 @@ export default function MentionsLegales() {
             </h2>
 
             <p>
-              holÀ! — Service d’assistance administrative France–Espagne.
+              holÀ! est un service proposé par Elena Huergo Cerra,
+              entrepreneur individuel.
             </p>
-
+            <p className="mt-3">SIREN : 990 159 360</p>
             <p className="mt-3">
-              Les informations d’identification de l’exploitant seront
-              complétées avant la mise en ligne publique du site.
+              Adresse : 9 rue Mercière, 33800 Bordeaux, France.
+            </p>
+            <p className="mt-3">
+              Courriel :{" "}
+              <a
+                href="mailto:bonjour@holaespagne.fr"
+                className="underline"
+              >
+                bonjour@holaespagne.fr
+              </a>
+            </p>
+            <p className="mt-3">
+              Téléphone :{" "}
+              <a href="tel:+34681803938" className="underline">
+                +34 681 803 938
+              </a>
+            </p>
+            <p className="mt-3">
+              Directrice de la publication : Elena Huergo Cerra.
             </p>
           </section>
 
@@ -46,9 +64,16 @@ export default function MentionsLegales() {
               Hébergement
             </h2>
 
-            <p>
-              Les informations relatives à l’hébergeur seront complétées
-              lors du déploiement définitif du site.
+            <p>Vercel Inc.</p>
+            <p className="mt-3">
+              440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis.
+            </p>
+            <p className="mt-3">Téléphone : +1 559 288 7060.</p>
+            <p className="mt-3">
+              Site :{" "}
+              <a href="https://vercel.com" className="underline">
+                vercel.com
+              </a>
             </p>
           </section>
 
@@ -61,17 +86,15 @@ export default function MentionsLegales() {
             </h2>
 
             <p>
-              holÀ! propose un service d’assistance dans la compréhension,
-              la préparation, l’organisation et le suivi de démarches
-              administratives entre la France et l’Espagne.
+              holÀ! propose un accompagnement dans la préparation,
+              l’organisation et le suivi de démarches administratives
+              en Espagne.
             </p>
-
             <p className="mt-3">
-              Le service ne se substitue pas aux professions réglementées.
-              Lorsqu’une situation nécessite l’intervention d’un avocat,
-              d’un professionnel du chiffre, d’un notaire ou de tout autre
-              professionnel habilité, le client en est informé et peut être
-              orienté vers l’interlocuteur approprié.
+              holÀ! ne fournit pas de consultation juridique et ne se
+              substitue pas aux professionnels réglementés. Lorsque la
+              situation le nécessite, le client est orienté vers un
+              professionnel compétent.
             </p>
           </section>
 
@@ -84,9 +107,10 @@ export default function MentionsLegales() {
             </h2>
 
             <p>
-              Les contenus, textes, éléments graphiques et identité
-              visuelle présents sur ce site sont protégés par les règles
-              applicables en matière de propriété intellectuelle.
+              Les textes, éléments graphiques et autres contenus de ce site
+              sont protégés par les règles applicables en matière de
+              propriété intellectuelle. Leur reproduction nécessite
+              l’autorisation préalable de leur titulaire.
             </p>
           </section>
         </div>

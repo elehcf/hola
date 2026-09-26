@@ -138,8 +138,8 @@ export default function IntakeForm() {
 
     if (!form.consentement) {
       setError(
-        "Merci d’accepter l’utilisation de vos informations pour que nous puissions traiter votre demande."
-      );
+  "Merci de prendre connaissance de la politique de confidentialité avant d’envoyer votre demande."
+);
       return;
     }
 
@@ -535,16 +535,17 @@ export default function IntakeForm() {
                     />
 
                     <span className="max-w-xl text-sm leading-relaxed text-ivory/60">
-                      J’accepte que mes informations soient utilisées pour
-                      traiter ma demande et me recontacter.{" "}
-                      <a
-                        href="/politique-confidentialite"
-                        target="_blank"
-                        className="border-b border-ivory/40 text-ivory transition-colors hover:border-blood hover:text-blood"
-                      >
-                        Politique de confidentialité
-                      </a>
-                    </span>
+  J’ai pris connaissance de la{" "}
+  <a
+    href="/politique-confidentialite"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="border-b border-ivory/40 text-ivory transition-colors hover:border-blood hover:text-blood"
+  >
+    politique de confidentialité
+  </a>{" "}
+  et comprends que mes informations seront utilisées pour répondre à ma demande.
+</span>
                   </label>
 
                 </div>
