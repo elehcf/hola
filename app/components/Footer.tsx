@@ -16,6 +16,12 @@ export default function Footer() {
             href="/mentions-legales"
             className="transition-colors hover:text-blood"
           >
+            <a
+  href="/comment-ca-marche"
+  className="transition-colors hover:text-blood"
+>
+  Comment ça marche
+</a>
             Mentions légales
           </a>
 

@@ -70,7 +70,7 @@ export default function Home() {
           </a>
 
           <a
-            href="#comment-ca-marche"
+            href="/comment-ca-marche"
             className="text-xl transition-colors duration-300 hover:text-blood"
           >
             Comment ça marche
