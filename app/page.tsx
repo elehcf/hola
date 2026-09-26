@@ -77,7 +77,7 @@ export default function Home() {
           </a>
 
           <a
-            href="#a-propos"
+            href="/a-propos"
             className="text-xl transition-colors duration-300 hover:text-blood"
           >
             À propos

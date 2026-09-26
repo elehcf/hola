@@ -6,6 +6,12 @@ export default function Footer() {
         <span>© {new Date().getFullYear()} holÀ!</span>
 
         <div className="flex flex-wrap gap-x-8 gap-y-3">
+        <a
+  href="/a-propos"
+  className="transition-colors hover:text-blood"
+>
+  À propos
+</a>  
           <a
             href="/mentions-legales"
             className="transition-colors hover:text-blood"
