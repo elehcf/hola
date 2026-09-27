@@ -35,15 +35,15 @@ export default function APropos() {
           clair et à avancer, en français, étape par étape.
         </p>
 
-        <LifestylePhoto
-          src="/a-propos-lifestyle-hola.webp"
-          alt="Une femme marche dans une ville espagnole avec son dossier administratif"
-          eyebrow="Entre la France et l’Espagne"
-          compact
-        />
-
-        <div className="mt-20 space-y-16 text-base leading-relaxed text-navy/75">
-          <section>
+        <div className="mt-16 space-y-16 text-base leading-relaxed text-navy/75">
+          <section className="grid gap-10 md:grid-cols-[0.8fr_1.2fr] md:items-start">
+            <LifestylePhoto
+              src="/a-propos-lifestyle-hola.webp"
+              alt="Une femme marche dans une ville espagnole avec son dossier administratif"
+              eyebrow="Entre la France et l’Espagne"
+              compact
+            />
+            <div>
             <h2
               className="mb-5 text-3xl text-navy md:text-4xl"
               style={{ fontFamily: "var(--font-editorial)" }}
@@ -65,6 +65,7 @@ export default function APropos() {
               projet en Espagne et qui ne savent pas toujours comment
               s’orienter dans les formalités.
             </p>
+            </div>
           </section>
 
           <section>
