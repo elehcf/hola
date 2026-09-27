@@ -177,19 +177,21 @@ export default function NieEspagne() {
         </div>
       </section>
 
-      <LifestylePhoto
-        src="/nie-lifestyle-hola.webp"
-        alt="Une femme vérifie les documents de sa demande de NIE"
-        eyebrow="Votre dossier, dans le bon ordre"
-      />
-
       {/* IMPORTANT */}
       <section className="px-8 py-28 md:px-16 md:py-36">
         <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-[0.7fr_1.3fr]">
 
-          <p className="text-xs uppercase tracking-[0.25em] text-blood">
-            Bon à savoir
-          </p>
+          <div>
+            <p className="text-xs uppercase tracking-[0.25em] text-blood">
+              Bon à savoir
+            </p>
+            <LifestylePhoto
+              src="/nie-lifestyle-hola.webp"
+              alt="Une femme vérifie les documents de sa demande de NIE"
+              eyebrow="Votre dossier, dans le bon ordre"
+              compact
+            />
+          </div>
 
           <div>
             <h2
