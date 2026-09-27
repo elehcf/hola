@@ -5,7 +5,7 @@ on:
     branches:
       - feature/fiscalite-residence
     paths:
-      - hola-feature.zip
+      - hola-feature.part-*
 
 permissions:
   contents: write
@@ -18,8 +18,9 @@ jobs:
 
       - name: Apply prepared website
         run: |
+          cat hola-feature.part-* > hola-feature.zip
           unzip -o hola-feature.zip
-          rm -f hola-feature.zip
+          rm -f hola-feature.zip hola-feature.part-*
           rm -f .github/workflows/apply-feature-upload.yml
           git config user.name "elehcf"
           git config user.email "elenahcerra@gmail.com"
