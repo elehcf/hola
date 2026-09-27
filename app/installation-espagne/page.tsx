@@ -163,17 +163,19 @@ export default function InstallationEspagne() {
         </div>
       </section>
 
-      <LifestylePhoto
-        src="/installation-lifestyle-hola.webp"
-        alt="Une femme découvre son nouveau logement en Espagne parmi les cartons"
-        eyebrow="Votre nouvelle vie commence ici"
-      />
-
       <section className="px-8 py-28 md:px-16 md:py-36">
         <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-[0.7fr_1.3fr]">
-          <p className="text-xs uppercase tracking-[0.25em] text-blood">
-            Chaque installation est différente
-          </p>
+          <div>
+            <p className="text-xs uppercase tracking-[0.25em] text-blood">
+              Chaque installation est différente
+            </p>
+            <LifestylePhoto
+              src="/installation-lifestyle-hola.webp"
+              alt="Une femme découvre son nouveau logement en Espagne parmi les cartons"
+              eyebrow="Votre nouvelle vie commence ici"
+              compact
+            />
+          </div>
           <div>
             <h2
               className="max-w-3xl text-5xl leading-[0.95] md:text-6xl"
