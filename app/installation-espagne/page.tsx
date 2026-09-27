@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import LifestylePhoto from "../components/LifestylePhoto";
 import PageHeader from "../components/PageHeader";
+import ServiceIllustration from "../components/ServiceIllustration";
 
 export const metadata: Metadata = {
   title: "S’installer en Espagne : démarches pour les Français",
@@ -70,6 +72,7 @@ const dailyLife = [
   {
     title: "Comprendre votre situation fiscale",
     text: "Nous repérons les questions à traiter et rassemblons les informations utiles. Lorsqu’une analyse de résidence fiscale ou de double imposition est nécessaire, elle est confiée à un professionnel habilité.",
+    href: "/fiscalite-residence-france-espagne",
   },
   {
     title: "Commencer une activité",
@@ -115,6 +118,12 @@ export default function InstallationEspagne() {
               </Link>
             </div>
           </div>
+
+          <ServiceIllustration
+            src="/installation-hola.webp"
+            alt="Valise, clé et documents pour une installation en Espagne"
+            portrait
+          />
         </div>
       </section>
 
@@ -153,6 +162,12 @@ export default function InstallationEspagne() {
           </div>
         </div>
       </section>
+
+      <LifestylePhoto
+        src="/installation-lifestyle-hola.webp"
+        alt="Une femme découvre son nouveau logement en Espagne parmi les cartons"
+        eyebrow="Votre nouvelle vie commence ici"
+      />
 
       <section className="px-8 py-28 md:px-16 md:py-36">
         <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-[0.7fr_1.3fr]">
@@ -322,6 +337,12 @@ export default function InstallationEspagne() {
                 fiscale. Nous préparons le contexte et coordonnons un spécialiste
                 lorsque cet avis est nécessaire.
               </p>
+              <Link
+                href="/fiscalite-residence-france-espagne"
+                className="mt-5 inline-block border-b border-navy/30 pb-1 transition-colors hover:text-blood"
+              >
+                Comprendre cet accompagnement →
+              </Link>
             </article>
           </div>
 

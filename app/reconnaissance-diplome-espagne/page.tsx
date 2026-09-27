@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import LifestylePhoto from "../components/LifestylePhoto";
 import PageHeader from "../components/PageHeader";
+import ServiceIllustration from "../components/ServiceIllustration";
 
 export const metadata: Metadata = {
   title: "Faire reconnaître un diplôme français en Espagne",
@@ -72,6 +74,12 @@ export default function ReconnaissanceDiplomeEspagne() {
               </Link>
             </div>
           </div>
+
+          <ServiceIllustration
+            src="/diplome-hola.webp"
+            alt="Diplôme et dossier de reconnaissance académique en Espagne"
+            portrait
+          />
         </div>
       </section>
 
@@ -110,6 +118,12 @@ export default function ReconnaissanceDiplomeEspagne() {
           </div>
         </div>
       </section>
+
+      <LifestylePhoto
+        src="/diplome-lifestyle-hola.webp"
+        alt="Une femme prépare son dossier de reconnaissance de diplôme dans une bibliothèque"
+        eyebrow="Donner une suite à votre parcours"
+      />
 
       <section className="px-8 py-28 md:px-16 md:py-36">
         <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-[0.68fr_1.32fr]">

@@ -36,6 +36,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
+      url: `${baseUrl}/fiscalite-residence-france-espagne`,
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
       url: `${baseUrl}/autre-demarche`,
       changeFrequency: "monthly",
       priority: 0.6,

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import LifestylePhoto from "../../components/LifestylePhoto";
 import {
   getGuide,
   getRelatedGuides,
@@ -123,6 +124,11 @@ export default async function GuidePage({ params }: Props) {
         </div>
       </section>
 
+      <LifestylePhoto
+        src="/guides-lifestyle-hola.webp"
+        alt="Carnet, carte et documents pour préparer des démarches entre la France et l’Espagne"
+        eyebrow="Comprendre avant d’agir"
+      />
 
       {/* ARTICLE */}
       <section className="border-t border-navy/15 px-8 py-20 md:px-16 md:py-28">

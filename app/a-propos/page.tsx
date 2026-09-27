@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import LifestylePhoto from "../components/LifestylePhoto";
 
 export const metadata: Metadata = {
   title: "À propos de holÀ! | Démarches en Espagne, accompagnement en français",
@@ -33,6 +34,14 @@ export default function APropos() {
           quel document préparer, à qui s’adresser ? holÀ! vous aide à y voir
           clair et à avancer, en français, étape par étape.
         </p>
+
+        <LifestylePhoto
+          src="/a-propos-lifestyle-hola.webp"
+          alt="Une femme marche dans une ville espagnole avec son dossier administratif"
+          eyebrow="Entre la France et l’Espagne"
+          compact
+        />
+
         <div className="mt-20 space-y-16 text-base leading-relaxed text-navy/75">
           <section>
             <h2

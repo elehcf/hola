@@ -49,6 +49,8 @@ export default function IntakeForm() {
         ? "Faire reconnaître mon diplôme"
         : service === "activite"
         ? "Créer mon activité en Espagne"
+        : service === "fiscalite"
+        ? "Fiscalité / résidence France–Espagne"
         : service === "autre"
         ? "Une autre démarche"
         : "",
@@ -60,6 +62,7 @@ export default function IntakeForm() {
     vehiculeSituation: "",
     installationStatut: "",
     nieMotif: "",
+    fiscalSituation: "",
     prenom: "",
     email: "",
     telephone: "",
@@ -106,6 +109,10 @@ export default function IntakeForm() {
           completed &&
           Boolean(form.nieMotif) &&
           Boolean(form.province);
+      }
+
+      if (form.demarche === "Fiscalité / résidence France–Espagne") {
+        completed = completed && Boolean(form.fiscalSituation);
       }
     }
 
@@ -255,6 +262,7 @@ export default function IntakeForm() {
                     "Je m’installe en Espagne",
                     "Faire reconnaître mon diplôme",
                     "Créer mon activité en Espagne",
+                    "Fiscalité / résidence France–Espagne",
                     "Une autre démarche",
                   ].map((option) => (
                     <button
@@ -316,6 +324,8 @@ export default function IntakeForm() {
                         ? "Ex. J’ai obtenu mon diplôme en France et j’en ai besoin pour exercer ou poursuivre mes études en Espagne..."
                         : form.demarche === "Créer mon activité en Espagne"
                         ? "Ex. Je souhaite exercer comme indépendant à Barcelone et je ne sais pas quelles formalités anticiper..."
+                        : form.demarche === "Fiscalité / résidence France–Espagne"
+                        ? "Ex. Je m’installe en Espagne, je conserve des revenus en France et je souhaite comprendre les points à vérifier..."
                         : "Pas besoin de connaître le nom de la démarche. Expliquez-nous simplement ce qui se passe..."
                     }
                     className="min-h-[180px] w-full border border-ivory/20 bg-transparent p-6 text-lg text-ivory outline-none placeholder:text-ivory/30 focus:border-blood"
@@ -410,6 +420,41 @@ export default function IntakeForm() {
                             onClick={() => update("installationStatut", option)}
                             className={`border px-5 py-4 text-left transition-all ${
                               form.installationStatut === option
+                                ? "border-blood bg-blood text-ivory"
+                                : "border-ivory/20 hover:border-ivory/60"
+                            }`}
+                          >
+                            {option}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+
+                  {/* QUESTION SPÉCIFIQUE FISCALITÉ */}
+                  {form.demarche ===
+                    "Fiscalité / résidence France–Espagne" && (
+                    <div>
+                      <p className="mb-4 text-sm uppercase tracking-[0.15em] text-ivory/40">
+                        Quel est votre sujet principal ?
+                      </p>
+
+                      <div className="grid gap-3 md:grid-cols-2">
+                        {[
+                          "Changement de résidence fiscale",
+                          "Revenus en France et en Espagne",
+                          "Bien immobilier",
+                          "Retraite ou pension",
+                          "Activité professionnelle",
+                          "Autre situation",
+                        ].map((option) => (
+                          <button
+                            key={option}
+                            type="button"
+                            onClick={() => update("fiscalSituation", option)}
+                            className={`border px-5 py-4 text-left transition-all ${
+                              form.fiscalSituation === option
                                 ? "border-blood bg-blood text-ivory"
                                 : "border-ivory/20 hover:border-ivory/60"
                             }`}

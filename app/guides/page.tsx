@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import LifestylePhoto from "../components/LifestylePhoto";
 import { guides } from "./guides-data";
 
 export const metadata: Metadata = {
@@ -90,6 +91,11 @@ export default function GuidesPage() {
         </div>
       </section>
 
+      <LifestylePhoto
+        src="/guides-lifestyle-hola.webp"
+        alt="Carnet, carte et documents pour préparer des démarches entre la France et l’Espagne"
+        eyebrow="Comprendre avant d’agir"
+      />
 
       {/* CATEGORIES */}
       <section className="border-t border-navy/15">

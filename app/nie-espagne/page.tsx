@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import LifestylePhoto from "../components/LifestylePhoto";
+import ServiceIllustration from "../components/ServiceIllustration";
 
 export const metadata: Metadata = {
   title: "NIE Espagne : obtenir votre NIE simplement",
@@ -100,6 +102,12 @@ export default function NieEspagne() {
             </div>
           </div>
 
+          <ServiceIllustration
+            src="/nie-hola.webp"
+            alt="Passeport et documents reliés par le fil rouge de holÀ!"
+            portrait
+          />
+
         </div>
       </section>
 
@@ -169,6 +177,11 @@ export default function NieEspagne() {
         </div>
       </section>
 
+      <LifestylePhoto
+        src="/nie-lifestyle-hola.webp"
+        alt="Une femme vérifie les documents de sa demande de NIE"
+        eyebrow="Votre dossier, dans le bon ordre"
+      />
 
       {/* IMPORTANT */}
       <section className="px-8 py-28 md:px-16 md:py-36">
