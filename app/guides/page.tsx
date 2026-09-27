@@ -86,16 +86,19 @@ export default function GuidesPage() {
               faire, dans quel ordre et pourquoi. Sans vous obliger à parler
               couramment l’administration espagnole.
             </p>
+
+            <div className="mt-12 max-w-xl md:ml-auto">
+              <LifestylePhoto
+                src="/guides-lifestyle-hola.webp"
+                alt="Carnet, carte et documents pour préparer des démarches entre la France et l’Espagne"
+                eyebrow="Comprendre avant d’agir"
+                compact
+              />
+            </div>
           </div>
 
         </div>
       </section>
-
-      <LifestylePhoto
-        src="/guides-lifestyle-hola.webp"
-        alt="Carnet, carte et documents pour préparer des démarches entre la France et l’Espagne"
-        eyebrow="Comprendre avant d’agir"
-      />
 
       {/* CATEGORIES */}
       <section className="border-t border-navy/15">
