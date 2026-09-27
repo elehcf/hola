@@ -219,19 +219,21 @@ export default function ImmatriculationVoiture() {
         </div>
       </section>
 
-      <LifestylePhoto
-        src="/vehicule-lifestyle-hola.webp"
-        alt="Une femme vérifie le dossier de sa voiture à son arrivée en Espagne"
-        eyebrow="De la route aux formalités"
-      />
-
       {/* POUR QUI */}
       <section className="px-8 py-28 md:px-16 md:py-36">
         <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-[0.7fr_1.3fr]">
 
-          <p className="text-xs uppercase tracking-[0.25em] text-blood">
-            Pour qui ?
-          </p>
+          <div>
+            <p className="text-xs uppercase tracking-[0.25em] text-blood">
+              Pour qui ?
+            </p>
+            <LifestylePhoto
+              src="/vehicule-lifestyle-hola.webp"
+              alt="Une femme vérifie le dossier de sa voiture à son arrivée en Espagne"
+              eyebrow="De la route aux formalités"
+              compact
+            />
+          </div>
 
           <div>
             <h2
