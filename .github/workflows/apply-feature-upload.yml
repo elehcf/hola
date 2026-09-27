@@ -1,0 +1,28 @@
+name: Apply uploaded feature
+
+on:
+  push:
+    branches:
+      - feature/fiscalite-residence
+    paths:
+      - hola-feature.zip
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply prepared website
+        run: |
+          unzip -o hola-feature.zip
+          rm -f hola-feature.zip
+          rm -f .github/workflows/apply-feature-upload.yml
+          git config user.name "elehcf"
+          git config user.email "elenahcerra@gmail.com"
+          git add -A
+          git commit -m "Ajouter la fiscalité et les visuels holÀ"
+          git push
