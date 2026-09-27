@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import LifestylePhoto from "./components/LifestylePhoto";
 import SiteLogo from "./components/SiteLogo";
 
 export const metadata: Metadata = {
@@ -199,13 +198,30 @@ export default function Home() {
         </section>
       </div>
 
-      <LifestylePhoto
-        src="/home-lifestyle-hola.webp"
-        alt="Une femme prépare son projet d’installation en Espagne depuis une terrasse"
-        eyebrow="Une nouvelle vie, avec un fil conducteur"
-      />
+      <section className="bg-ivory px-8 pb-12 md:px-16 md:pb-20">
+        <div className="mx-auto grid max-w-6xl md:grid-cols-12">
+          <figure className="md:col-span-7 md:col-start-5">
+            <div className="mb-5 flex items-center gap-5">
+              <p className="text-xs uppercase tracking-[0.25em] text-blood">
+                Une nouvelle vie, avec un fil conducteur
+              </p>
+              <span className="h-px flex-1 bg-navy/15" aria-hidden="true" />
+            </div>
+            <div className="overflow-hidden bg-[#EEE8DE]">
+              <Image
+                src="/home-lifestyle-hola.webp"
+                alt="Une femme prépare son projet d’installation en Espagne depuis une terrasse"
+                width={1536}
+                height={1024}
+                sizes="(min-width: 768px) 58vw, 92vw"
+                className="aspect-[3/2] h-auto w-full object-cover"
+              />
+            </div>
+          </figure>
+        </div>
+      </section>
 
-      <section id="services" className="px-8 py-28 md:px-16 md:py-36">
+      <section id="services" className="px-8 py-20 md:px-16 md:py-28">
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-10 md:grid-cols-[0.7fr_1.3fr] md:items-end">
             <p className="text-xs uppercase tracking-[0.25em] text-blood">
