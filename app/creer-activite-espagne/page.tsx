@@ -112,17 +112,19 @@ export default function CreerActiviteEspagne() {
         </div>
       </section>
 
-      <LifestylePhoto
-        src="/activite-lifestyle-hola.webp"
-        alt="Une porteuse de projet échange sur la création de son activité en Espagne"
-        eyebrow="Passer du projet à l’activité"
-      />
-
       <section className="px-8 py-28 md:px-16 md:py-36">
         <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-[0.7fr_1.3fr]">
-          <p className="text-xs uppercase tracking-[0.25em] text-blood">
-            La feuille de route
-          </p>
+          <div>
+            <p className="text-xs uppercase tracking-[0.25em] text-blood">
+              La feuille de route
+            </p>
+            <LifestylePhoto
+              src="/activite-lifestyle-hola.webp"
+              alt="Une porteuse de projet échange sur la création de son activité en Espagne"
+              eyebrow="Passer du projet à l’activité"
+              compact
+            />
+          </div>
           <div>
             <h2
               className="max-w-4xl text-5xl leading-[0.95] md:text-6xl"
