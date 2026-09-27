@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import LifestylePhoto from "../components/LifestylePhoto";
+import ServiceIllustration from "../components/ServiceIllustration";
 
 export const metadata: Metadata = {
   title: "Immatriculer une voiture française en Espagne",
@@ -98,6 +100,11 @@ export default function ImmatriculationVoiture() {
               </a>
             </div>
           </div>
+
+          <ServiceIllustration
+            src="/vehicule-hola.webp"
+            alt="Voiture et dossier d’immatriculation sur la route de l’Espagne"
+          />
 
         </div>
       </section>
@@ -212,6 +219,11 @@ export default function ImmatriculationVoiture() {
         </div>
       </section>
 
+      <LifestylePhoto
+        src="/vehicule-lifestyle-hola.webp"
+        alt="Une femme vérifie le dossier de sa voiture à son arrivée en Espagne"
+        eyebrow="De la route aux formalités"
+      />
 
       {/* POUR QUI */}
       <section className="px-8 py-28 md:px-16 md:py-36">

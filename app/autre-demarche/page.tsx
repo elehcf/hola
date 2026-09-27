@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import LifestylePhoto from "../components/LifestylePhoto";
+import ServiceIllustration from "../components/ServiceIllustration";
 
 export const metadata: Metadata = {
   title: "Démarche administrative en Espagne : besoin d’aide ?",
@@ -91,6 +93,11 @@ export default function AutreDemarche() {
             démarche : commencez simplement par nous raconter ce qui se passe.
           </p>
 
+          <ServiceIllustration
+            src="/autre-demarche-hola.webp"
+            alt="Dossiers administratifs organisés par le fil rouge de holÀ!"
+          />
+
         </div>
       </section>
 
@@ -142,6 +149,11 @@ export default function AutreDemarche() {
         </div>
       </section>
 
+      <LifestylePhoto
+        src="/autre-demarche-lifestyle-hola.webp"
+        alt="Une femme demande de l’aide pour comprendre un courrier administratif espagnol"
+        eyebrow="Même quand la démarche n’a pas encore de nom"
+      />
 
       {/* COMMENT */}
       <section className="px-8 py-28 md:px-16 md:py-36">

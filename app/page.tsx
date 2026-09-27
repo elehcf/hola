@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import LifestylePhoto from "./components/LifestylePhoto";
 import SiteLogo from "./components/SiteLogo";
 
 export const metadata: Metadata = {
   title: "Assistance administrative en Espagne pour les Français",
   description:
-    "holÀ! vous accompagne dans vos démarches en Espagne : NIE, véhicule, installation, reconnaissance de diplôme, création d’activité et dossiers France–Espagne.",
+    "holÀ! vous accompagne dans vos démarches en Espagne : NIE, véhicule, installation, diplôme, création d’activité, fiscalité et dossiers France–Espagne.",
   alternates: {
     canonical: "/",
   },
@@ -56,6 +57,13 @@ const services = [
   },
   {
     number: "06",
+    title: "Clarifier ma fiscalité France–Espagne",
+    description:
+      "Résidence fiscale, revenus, immobilier et coordination avec un professionnel habilité.",
+    href: "/fiscalite-residence-france-espagne",
+  },
+  {
+    number: "07",
     title: "J’ai une autre démarche",
     description:
       "Un courrier, un dossier bloqué ou une situation qui ne rentre dans aucune case.",
@@ -190,6 +198,12 @@ export default function Home() {
           </div>
         </section>
       </div>
+
+      <LifestylePhoto
+        src="/home-lifestyle-hola.webp"
+        alt="Une femme prépare son projet d’installation en Espagne depuis une terrasse"
+        eyebrow="Une nouvelle vie, avec un fil conducteur"
+      />
 
       <section id="services" className="px-8 py-28 md:px-16 md:py-36">
         <div className="mx-auto max-w-6xl">

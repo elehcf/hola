@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import LifestylePhoto from "../components/LifestylePhoto";
 import PageHeader from "../components/PageHeader";
+import ServiceIllustration from "../components/ServiceIllustration";
 
 export const metadata: Metadata = {
   title: "Créer son activité ou son entreprise en Espagne",
@@ -69,6 +71,11 @@ export default function CreerActiviteEspagne() {
               </Link>
             </div>
           </div>
+
+          <ServiceIllustration
+            src="/activite-hola.webp"
+            alt="Documents et outils pour créer une activité en Espagne"
+          />
         </div>
       </section>
 
@@ -104,6 +111,12 @@ export default function CreerActiviteEspagne() {
           </div>
         </div>
       </section>
+
+      <LifestylePhoto
+        src="/activite-lifestyle-hola.webp"
+        alt="Une porteuse de projet échange sur la création de son activité en Espagne"
+        eyebrow="Passer du projet à l’activité"
+      />
 
       <section className="px-8 py-28 md:px-16 md:py-36">
         <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-[0.7fr_1.3fr]">

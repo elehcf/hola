@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import LifestylePhoto from "../components/LifestylePhoto";
 
 export const metadata: Metadata = {
   title: "Comment ça marche | holÀ!",
@@ -87,6 +88,13 @@ export default function CommentCaMarche() {
             </section>
           ))}
         </div>
+
+        <LifestylePhoto
+          src="/comment-ca-marche-lifestyle-hola.webp"
+          alt="Transmission d’un dossier administratif lors d’un accompagnement personnalisé"
+          eyebrow="Un dossier. Un interlocuteur. Une suite."
+          compact
+        />
 
         <section className="mt-20">
           <h2

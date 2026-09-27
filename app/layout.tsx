@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Vos démarches en Espagne, simplement et en français : NIE, véhicule, installation, reconnaissance de diplôme, création d’activité et dossiers sur mesure.",
+    "Vos démarches en Espagne, simplement et en français : NIE, véhicule, installation, diplôme, activité, fiscalité France–Espagne et dossiers sur mesure.",
 
   alternates: {
     canonical: "/",

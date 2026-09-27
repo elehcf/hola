@@ -26,6 +26,7 @@ export async function POST(request: Request) {
       vehiculeSituation,
       installationStatut,
       nieMotif,
+      fiscalSituation,
       prenom,
       email,
       telephone,
@@ -215,7 +216,10 @@ export async function POST(request: Request) {
 
 
           ${
-            nieMotif || vehiculeSituation || installationStatut
+            nieMotif ||
+            vehiculeSituation ||
+            installationStatut ||
+            fiscalSituation
               ? `
                 <div
                   style="
@@ -257,6 +261,15 @@ export async function POST(request: Request) {
                       ? infoRow(
                           "Situation en Espagne",
                           installationStatut
+                        )
+                      : ""
+                  }
+
+                  ${
+                    fiscalSituation
+                      ? infoRow(
+                          "Sujet fiscal principal",
+                          fiscalSituation
                         )
                       : ""
                   }
