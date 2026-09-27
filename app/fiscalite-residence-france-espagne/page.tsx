@@ -142,17 +142,19 @@ export default function FiscaliteResidenceFranceEspagne() {
         </div>
       </section>
 
-      <LifestylePhoto
-        src="/fiscalite-lifestyle-hola.webp"
-        alt="Un couple examine sa situation fiscale France–Espagne avec une professionnelle"
-        eyebrow="Des faits clairs avant toute décision"
-      />
-
       <section className="px-8 py-28 md:px-16 md:py-36">
         <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-[0.68fr_1.32fr]">
-          <p className="text-xs uppercase tracking-[0.25em] text-blood">
-            Résidence fiscale
-          </p>
+          <div>
+            <p className="text-xs uppercase tracking-[0.25em] text-blood">
+              Résidence fiscale
+            </p>
+            <LifestylePhoto
+              src="/fiscalite-lifestyle-hola.webp"
+              alt="Un couple examine sa situation fiscale France–Espagne avec une professionnelle"
+              eyebrow="Des faits clairs avant toute décision"
+              compact
+            />
+          </div>
           <div>
             <h2
               className="max-w-4xl text-5xl leading-[0.95] md:text-6xl"
