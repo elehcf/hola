@@ -149,19 +149,21 @@ export default function AutreDemarche() {
         </div>
       </section>
 
-      <LifestylePhoto
-        src="/autre-demarche-lifestyle-hola.webp"
-        alt="Une femme demande de l’aide pour comprendre un courrier administratif espagnol"
-        eyebrow="Même quand la démarche n’a pas encore de nom"
-      />
-
       {/* COMMENT */}
       <section className="px-8 py-28 md:px-16 md:py-36">
         <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-[0.7fr_1.3fr]">
 
-          <p className="text-xs uppercase tracking-[0.25em] text-blood">
-            Et ensuite ?
-          </p>
+          <div>
+            <p className="text-xs uppercase tracking-[0.25em] text-blood">
+              Et ensuite ?
+            </p>
+            <LifestylePhoto
+              src="/autre-demarche-lifestyle-hola.webp"
+              alt="Une femme demande de l’aide pour comprendre un courrier administratif espagnol"
+              eyebrow="Même quand la démarche n’a pas encore de nom"
+              compact
+            />
+          </div>
 
           <div>
             <h2
