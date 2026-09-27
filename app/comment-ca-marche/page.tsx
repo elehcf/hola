@@ -89,14 +89,14 @@ export default function CommentCaMarche() {
           ))}
         </div>
 
-        <LifestylePhoto
-          src="/comment-ca-marche-lifestyle-hola.webp"
-          alt="Transmission d’un dossier administratif lors d’un accompagnement personnalisé"
-          eyebrow="Un dossier. Un interlocuteur. Une suite."
-          compact
-        />
-
-        <section className="mt-20">
+        <section className="mt-16 grid gap-10 md:grid-cols-[0.8fr_1.2fr] md:items-start">
+          <LifestylePhoto
+            src="/comment-ca-marche-lifestyle-hola.webp"
+            alt="Transmission d’un dossier administratif lors d’un accompagnement personnalisé"
+            eyebrow="Un dossier. Un interlocuteur. Une suite."
+            compact
+          />
+          <div>
           <h2
             className="text-3xl md:text-4xl"
             style={{ fontFamily: "var(--font-editorial)" }}
@@ -110,6 +110,7 @@ export default function CommentCaMarche() {
             un professionnel habilité. holÀ! reste votre interlocuteur pour
             coordonner les échanges et le suivi administratif.
           </p>
+          </div>
         </section>
 
         <div className="mt-20 border-t border-navy/20 pt-10">
