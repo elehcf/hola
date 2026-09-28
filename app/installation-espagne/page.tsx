@@ -189,6 +189,16 @@ export default function InstallationEspagne() {
             <p className="mt-5 max-w-[260px] text-sm leading-relaxed text-navy/55">
               Votre nouvelle vie commence ici — avec les démarches dans le bon ordre.
             </p>
+            <figure className="mt-8 max-w-[350px]">
+              <Image
+                src="/installation-parcours-personnalises.webp"
+                alt="Quatre parcours de vie et leurs dossiers se rejoignent devant une maison en Espagne"
+                width={900}
+                height={1350}
+                sizes="(min-width: 768px) 28vw, 85vw"
+                className="h-auto w-full"
+              />
+            </figure>
           </div>
           <div>
             <h2
