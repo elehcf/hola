@@ -42,10 +42,10 @@ export default function APropos() {
               </p>
               <figure className="mt-5">
                 <Image
-                  src="/elena-huergo-cerra-portrait-v2.webp"
+                  src="/elena-huergo-cerra-portrait-bureau.webp"
                   alt="Portrait d’Elena Huergo Cerra, fondatrice de holÀ!, dans un bureau"
-                  width={900}
-                  height={1350}
+                  width={850}
+                  height={1101}
                   sizes="(min-width: 768px) 330px, 88vw"
                   className="h-auto w-full"
                 />
