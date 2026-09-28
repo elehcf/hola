@@ -66,13 +66,13 @@ export default function FiscaliteResidenceFranceEspagne() {
     <main className="min-h-screen bg-ivory text-navy">
       <PageHeader />
 
-      <section className="px-8 pb-28 pt-20 md:px-16 md:pb-36">
+      <section className="px-6 pb-16 pt-12 sm:px-8 sm:pb-20 sm:pt-16 md:px-16 md:pb-36 md:pt-20">
         <div className="mx-auto max-w-6xl">
           <p className="text-xs uppercase tracking-[0.25em] text-blood">
             Fiscalité · France ↔ Espagne
           </p>
           <h1
-            className="mt-6 max-w-5xl text-6xl leading-[0.9] md:text-8xl"
+            className="mt-6 max-w-5xl text-5xl leading-[0.92] sm:text-6xl md:text-8xl"
             style={{ fontFamily: "var(--font-editorial)" }}
           >
             Votre vie change de pays.
@@ -112,7 +112,7 @@ export default function FiscaliteResidenceFranceEspagne() {
             Situations fréquentes
           </p>
           <h2
-            className="mt-5 max-w-4xl text-5xl leading-[0.95] md:text-6xl"
+            className="mt-5 max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
             style={{ fontFamily: "var(--font-editorial)" }}
           >
             Deux pays ne veulent pas dire
@@ -120,7 +120,7 @@ export default function FiscaliteResidenceFranceEspagne() {
             <span className="italic">deux fois la même réponse.</span>
           </h2>
 
-          <div className="mt-20 grid gap-x-12 gap-y-10 md:grid-cols-2">
+          <div className="mt-12 grid sm:mt-16 md:mt-20 gap-x-12 gap-y-10 md:grid-cols-2">
             {situations.map((situation, index) => (
               <article
                 key={situation.title}
@@ -142,8 +142,8 @@ export default function FiscaliteResidenceFranceEspagne() {
         </div>
       </section>
 
-      <section className="px-8 py-28 md:px-16 md:py-36">
-        <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-[0.68fr_1.32fr]">
+      <section className="px-6 py-16 sm:px-8 sm:py-20 md:px-16 md:py-36">
+        <div className="mx-auto grid max-w-6xl gap-10 md:gap-16 md:grid-cols-[0.68fr_1.32fr]">
           <div>
             <p className="text-xs uppercase tracking-[0.25em] text-blood">
               Résidence fiscale
@@ -157,7 +157,7 @@ export default function FiscaliteResidenceFranceEspagne() {
           </div>
           <div>
             <h2
-              className="max-w-4xl text-5xl leading-[0.95] md:text-6xl"
+              className="max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
               style={{ fontFamily: "var(--font-editorial)" }}
             >
               Plus qu’un nombre de jours.
@@ -190,15 +190,15 @@ export default function FiscaliteResidenceFranceEspagne() {
         </div>
       </section>
 
-      <section className="bg-[#EEE8DE] px-8 py-28 md:px-16 md:py-36">
+      <section className="bg-[#EEE8DE] px-6 py-16 sm:px-8 sm:py-20 md:px-16 md:py-36">
         <div className="mx-auto max-w-6xl">
-          <div className="grid gap-16 md:grid-cols-[0.68fr_1.32fr]">
+          <div className="grid gap-10 md:gap-16 md:grid-cols-[0.68fr_1.32fr]">
             <p className="text-xs uppercase tracking-[0.25em] text-blood">
               Notre méthode
             </p>
             <div>
               <h2
-                className="max-w-4xl text-5xl leading-[0.95] md:text-6xl"
+                className="max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
                 style={{ fontFamily: "var(--font-editorial)" }}
               >
                 Préparer avant de déclarer.
@@ -234,13 +234,13 @@ export default function FiscaliteResidenceFranceEspagne() {
         </div>
       </section>
 
-      <section className="px-8 py-28 md:px-16 md:py-36">
+      <section className="px-6 py-16 sm:px-8 sm:py-20 md:px-16 md:py-36">
         <div className="mx-auto max-w-6xl">
           <p className="text-xs uppercase tracking-[0.25em] text-blood">
             Des rôles clairs
           </p>
           <h2
-            className="mt-5 max-w-4xl text-5xl leading-[0.95] md:text-6xl"
+            className="mt-5 max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
             style={{ fontFamily: "var(--font-editorial)" }}
           >
             Vous gardez un interlocuteur.
@@ -318,14 +318,14 @@ export default function FiscaliteResidenceFranceEspagne() {
         </div>
       </section>
 
-      <section className="mx-8 mb-16 bg-blood px-8 py-16 text-ivory md:mx-16 md:px-16 md:py-20">
+      <section className="mx-0 mb-10 bg-blood sm:mx-8 sm:mb-16 px-8 py-16 text-ivory md:mx-16 md:px-16 md:py-20">
         <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-[1fr_auto] md:items-end">
           <div>
             <p className="text-xs uppercase tracking-[0.25em] text-ivory/70">
               Fiscalité France–Espagne
             </p>
             <h2
-              className="mt-5 text-5xl leading-[0.95] md:text-7xl"
+              className="mt-5 text-4xl leading-[0.98] sm:text-5xl md:text-7xl"
               style={{ fontFamily: "var(--font-editorial)" }}
             >
               Commençons par les faits.
