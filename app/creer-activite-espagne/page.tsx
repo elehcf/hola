@@ -140,6 +140,14 @@ export default function CreerActiviteEspagne() {
             <p className="mt-5 max-w-[260px] text-sm leading-relaxed text-navy/55">
               Passer du projet à l’activité, avec une feuille de route lisible.
             </p>
+            <Image
+              src="/activite-feuille-de-route.webp"
+              alt="Feuille de route et rôles pour créer une activité en Espagne"
+              width={1280}
+              height={853}
+              sizes="(min-width: 768px) 28vw, 88vw"
+              className="mt-7 h-auto w-full max-w-[340px] object-contain"
+            />
           </div>
           <div>
             <h2

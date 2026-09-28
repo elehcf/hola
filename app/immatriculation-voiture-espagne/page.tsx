@@ -98,7 +98,16 @@ export default function ImmatriculationVoiture() {
             <span className="italic">à la plaque espagnole.</span>
           </h2>
 
-          <div className="mt-10 grid gap-10 md:grid-cols-[1fr_280px] md:items-start">\n            <div className="grid gap-x-12 md:grid-cols-2">
+          <Image
+            src="/vehicule-hola.webp"
+            alt="Voiture et passage des plaques françaises aux plaques espagnoles"
+            width={650}
+            height={520}
+            sizes="(min-width: 768px) 320px, 80vw"
+            className="mt-8 h-auto w-full max-w-[320px] object-contain"
+          />
+
+          <div className="mt-10 grid gap-x-12 md:grid-cols-2">
 
             <div className="border-t border-ivory/25 py-7">
               <span className="text-sm text-blood">01</span>
@@ -185,18 +194,6 @@ export default function ImmatriculationVoiture() {
   votre véhicule soit assuré sous sa nouvelle immatriculation.
 </p>
             </div>
-            </div>
-
-            <div className="hidden md:flex md:justify-end">
-              <Image
-                src="/vehicule-hola.webp"
-                alt="Passage d’une immatriculation française à une immatriculation espagnole"
-                width={650}
-                height={520}
-                sizes="280px"
-                className="h-auto max-h-[260px] w-auto object-contain"
-              />
-            </div>
           </div>
         </div>
       </section>
@@ -212,6 +209,14 @@ export default function ImmatriculationVoiture() {
             <p className="mt-5 max-w-[260px] text-sm leading-relaxed text-navy/55">
               De la route aux formalités, sans perdre le fil entre les deux pays.
             </p>
+            <Image
+              src="/vehicule-depart.webp"
+              alt="Une voiture française prend la route vers l’Espagne"
+              width={1280}
+              height={853}
+              sizes="(min-width: 768px) 28vw, 88vw"
+              className="mt-7 h-auto w-full max-w-[340px] object-contain"
+            />
           </div>
 
           <div>
@@ -274,14 +279,14 @@ export default function ImmatriculationVoiture() {
               <p className="text-xs uppercase tracking-[0.25em] text-blood">
                 Comprendre
               </p>
-              <figure className="mt-8 max-w-[330px] overflow-hidden">
+              <figure className="mt-8 max-w-[350px]">
                 <Image
-                  src="/installation-lifestyle-hola.webp"
-                  alt="Préparer son arrivée en Espagne avec son véhicule"
-                  width={900}
-                  height={675}
+                  src="/vehicule-immatriculation.webp"
+                  alt="Passage d’une plaque française à une plaque espagnole et dossier d’immatriculation"
+                  width={1280}
+                  height={853}
                   sizes="(min-width: 768px) 28vw, 88vw"
-                  className="aspect-[4/3] h-auto w-full object-cover"
+                  className="h-auto w-full object-contain"
                 />
               </figure>
             </div>

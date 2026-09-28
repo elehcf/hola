@@ -87,16 +87,18 @@ export default function CommentCaMarche() {
           ))}
         </div>
 
-        <section className="mt-16 grid gap-10 md:grid-cols-[0.8fr_1.2fr] md:items-start">
-          <LifestylePhoto
-            src="/comment-ca-marche-lifestyle-hola.webp"
-            alt="Transmission d’un dossier administratif lors d’un accompagnement personnalisé"
-            eyebrow="Un dossier. Un interlocuteur. Une suite."
-            compact
-          />
-          <div>
+        <section className="mt-16 grid gap-10 md:grid-cols-[0.8fr_1.2fr] md:items-center md:gap-14">
+          <div className="min-w-0">
+            <LifestylePhoto
+              src="/comment-ca-marche-lifestyle-hola.webp"
+              alt="Transmission d’un dossier administratif lors d’un accompagnement personnalisé"
+              eyebrow="Un dossier. Un interlocuteur. Une suite."
+              compact
+            />
+          </div>
+          <div className="min-w-0">
           <h2
-            className="text-3xl md:text-4xl"
+            className="text-3xl leading-tight md:text-4xl"
             style={{ fontFamily: "var(--font-editorial)" }}
           >
             Et si ma situation est plus complexe ?

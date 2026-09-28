@@ -55,24 +55,11 @@ export default function Collaborateurs() {
             <br />
             <span className="italic text-blood">bien au-delà des démarches.</span>
           </h1>
-          <div className="mt-10 grid gap-10 md:mt-14 md:grid-cols-[0.7fr_1.3fr] md:items-start">
-            <div>
-              <p className="text-xs uppercase tracking-[0.25em] text-blood">
-                Un seul point d’entrée
-              </p>
-              <figure className="mt-8 max-w-[330px] overflow-hidden">
-                <Image
-                  src="/a-propos-lifestyle-hola.webp"
-                  alt="Un projet en Espagne accompagné par un réseau de professionnels"
-                  width={900}
-                  height={675}
-                  priority
-                  sizes="(min-width: 768px) 28vw, 88vw"
-                  className="aspect-[4/3] h-auto w-full object-cover"
-                />
-              </figure>
-            </div>
-            <p className="max-w-2xl text-lg leading-relaxed text-navy/70 md:text-xl">
+          <div className="mt-10 max-w-3xl md:mt-14">
+            <p className="text-xs uppercase tracking-[0.25em] text-blood">
+              Un seul point d’entrée
+            </p>
+            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-navy/70 md:text-xl">
               S’installer, acheter, rénover ou entreprendre en Espagne fait vite
               intervenir plusieurs métiers. holÀ! reste votre fil conducteur et
               vous ouvre l’accès à un réseau professionnel établi en Espagne pour

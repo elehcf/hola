@@ -139,17 +139,26 @@ export default function InstallationEspagne() {
           <p className="text-xs uppercase tracking-[0.25em] text-blood">
             Votre parcours administratif
           </p>
-          <h2
-            className="mt-5 max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
-            style={{ fontFamily: "var(--font-editorial)" }}
-          >
-            Les étapes essentielles.
-            <br />
-            <span className="italic">Dans votre ordre.</span>
-          </h2>
+          <div className="mt-5 grid gap-8 md:grid-cols-[1fr_270px] md:items-center">
+            <h2
+              className="max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
+              style={{ fontFamily: "var(--font-editorial)" }}
+            >
+              Les étapes essentielles.
+              <br />
+              <span className="italic">Dans votre ordre.</span>
+            </h2>
+            <Image
+              src="/installation-hola.webp"
+              alt="Valise, clé et documents pour une installation en Espagne"
+              width={500}
+              height={700}
+              sizes="(min-width: 768px) 270px, 70vw"
+              className="h-auto w-full max-w-[270px] object-contain md:justify-self-end"
+            />
+          </div>
 
-          <div className="mt-12 grid gap-10 sm:mt-16 md:mt-20 md:grid-cols-[1fr_270px] md:items-start">
-            <div className="grid gap-x-12 md:grid-cols-2">
+          <div className="mt-12 grid gap-x-12 sm:mt-16 md:mt-20 md:grid-cols-2">
               {essentialSteps.map((step) => (
               <article
                 key={step.number}
@@ -167,17 +176,6 @@ export default function InstallationEspagne() {
                 </p>
               </article>
             ))}
-            </div>
-            <div className="hidden md:flex md:justify-end">
-              <Image
-                src="/installation-hola.webp"
-                alt="Valise, clé et documents pour une installation en Espagne"
-                width={500}
-                height={700}
-                sizes="270px"
-                className="h-auto max-h-[300px] w-auto object-contain"
-              />
-            </div>
           </div>
         </div>
       </section>
@@ -291,14 +289,14 @@ export default function InstallationEspagne() {
               <p className="text-xs uppercase tracking-[0.25em] text-blood">
                 Comprendre
               </p>
-              <figure className="mt-8 max-w-[330px] overflow-hidden">
+              <figure className="mt-8 max-w-[350px]">
                 <Image
-                  src="/guides-lifestyle-hola.webp"
-                  alt="Anticiper les questions administratives avant un départ en Espagne"
-                  width={900}
-                  height={675}
+                  src="/installation-questions.webp"
+                  alt="Questions pratiques autour d’une installation de France en Espagne"
+                  width={1280}
+                  height={853}
                   sizes="(min-width: 768px) 28vw, 88vw"
-                  className="aspect-[4/3] h-auto w-full object-cover"
+                  className="h-auto w-full object-contain"
                 />
               </figure>
             </div>

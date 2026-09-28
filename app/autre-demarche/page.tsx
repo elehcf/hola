@@ -91,17 +91,26 @@ export default function AutreDemarche() {
             Par exemple
           </p>
 
-          <h2
-            className="mt-5 max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
-            style={{ fontFamily: "var(--font-editorial)" }}
-          >
-            « Je ne sais même pas
-            <br />
-            <span className="italic">comment ça s’appelle. »</span>
-          </h2>
+          <div className="mt-5 grid gap-8 md:grid-cols-[1fr_280px] md:items-center">
+            <h2
+              className="max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
+              style={{ fontFamily: "var(--font-editorial)" }}
+            >
+              « Je ne sais même pas
+              <br />
+              <span className="italic">comment ça s’appelle. »</span>
+            </h2>
+            <Image
+              src="/autre-demarche-hola.webp"
+              alt="Dossiers administratifs organisés par le fil rouge de holÀ!"
+              width={650}
+              height={520}
+              sizes="(min-width: 768px) 280px, 70vw"
+              className="h-auto w-full max-w-[280px] object-contain md:justify-self-end"
+            />
+          </div>
 
-          <div className="mt-12 grid gap-10 sm:mt-16 md:mt-20 md:grid-cols-[1fr_280px] md:items-start">
-            <div className="border border-ivory/25">
+          <div className="mt-12 border border-ivory/25 sm:mt-16 md:mt-20">
 
             {[
               "Un document espagnol à obtenir",
@@ -126,18 +135,6 @@ export default function AutreDemarche() {
                 </p>
               </div>
             ))}
-            </div>
-
-            <div className="hidden md:flex md:justify-end">
-              <Image
-                src="/autre-demarche-hola.webp"
-                alt="Dossiers administratifs organisés par le fil rouge de holÀ!"
-                width={650}
-                height={520}
-                sizes="280px"
-                className="h-auto max-h-[280px] w-auto object-contain"
-              />
-            </div>
           </div>
         </div>
       </section>
@@ -153,6 +150,14 @@ export default function AutreDemarche() {
             <p className="mt-5 max-w-[260px] text-sm leading-relaxed text-navy/55">
               Même quand la démarche n’a pas encore de nom, on peut commencer par la situation.
             </p>
+            <Image
+              src="/autre-demarche-evaluation.webp"
+              alt="Une demande examinée avant de proposer un accompagnement"
+              width={1280}
+              height={853}
+              sizes="(min-width: 768px) 28vw, 88vw"
+              className="mt-7 h-auto w-full max-w-[340px] object-contain"
+            />
           </div>
 
           <div>

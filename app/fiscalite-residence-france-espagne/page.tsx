@@ -118,17 +118,26 @@ export default function FiscaliteResidenceFranceEspagne() {
           <p className="text-xs uppercase tracking-[0.25em] text-blood">
             Situations fréquentes
           </p>
-          <h2
-            className="mt-5 max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
-            style={{ fontFamily: "var(--font-editorial)" }}
-          >
-            Deux pays ne veulent pas dire
-            <br />
-            <span className="italic">deux fois la même réponse.</span>
-          </h2>
+          <div className="mt-5 grid gap-8 md:grid-cols-[1fr_270px] md:items-center">
+            <h2
+              className="max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
+              style={{ fontFamily: "var(--font-editorial)" }}
+            >
+              Deux pays ne veulent pas dire
+              <br />
+              <span className="italic">deux fois la même réponse.</span>
+            </h2>
+            <Image
+              src="/fiscalite-hola.webp"
+              alt="Équilibre fiscal entre la France et l’Espagne"
+              width={650}
+              height={520}
+              sizes="(min-width: 768px) 270px, 70vw"
+              className="h-auto w-full max-w-[270px] object-contain md:justify-self-end"
+            />
+          </div>
 
-          <div className="mt-10 grid gap-10 md:grid-cols-[1fr_270px] md:items-start">
-            <div className="grid gap-x-12 gap-y-10 md:grid-cols-2">
+          <div className="mt-10 grid gap-x-12 gap-y-10 md:grid-cols-2">
               {situations.map((situation, index) => (
                 <article
                   key={situation.title}
@@ -146,17 +155,6 @@ export default function FiscaliteResidenceFranceEspagne() {
                   </p>
                 </article>
               ))}
-            </div>
-            <div className="hidden md:flex md:justify-end">
-              <Image
-                src="/fiscalite-hola.webp"
-                alt="Équilibre fiscal entre la France et l’Espagne"
-                width={650}
-                height={520}
-                sizes="270px"
-                className="h-auto max-h-[270px] w-auto object-contain"
-              />
-            </div>
           </div>
         </div>
       </section>
@@ -170,6 +168,14 @@ export default function FiscaliteResidenceFranceEspagne() {
             <p className="mt-5 max-w-[260px] text-sm leading-relaxed text-navy/55">
               Des faits clairs avant toute décision — et avant toute déclaration.
             </p>
+            <Image
+              src="/fiscalite-residence.webp"
+              alt="Calendrier et éléments de vie examinés ensemble pour la résidence fiscale"
+              width={1280}
+              height={853}
+              sizes="(min-width: 768px) 28vw, 88vw"
+              className="mt-7 h-auto w-full max-w-[340px] object-contain"
+            />
           </div>
           <div>
             <h2

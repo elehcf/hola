@@ -150,28 +150,26 @@ export default function Home() {
 
       <section id="services" className="px-6 py-14 sm:px-8 sm:py-20 md:px-16 md:py-28">
         <div className="mx-auto max-w-6xl">
-          <div className="grid gap-10 md:grid-cols-[0.7fr_1.3fr] md:items-end">
-            <div>
+          <div>
               <p className="text-xs uppercase tracking-[0.25em] text-blood">
                 Services
               </p>
-              <figure className="mt-8 max-w-[340px]">
+              <figure className="mt-8">
                 <div className="overflow-hidden bg-[#EEE8DE]">
                   <Image
                     src="/home-lifestyle-hola.webp"
                     alt="Une femme prépare son projet d’installation en Espagne depuis une terrasse"
                     width={1536}
                     height={1024}
-                    sizes="32vw"
-                    className="aspect-[4/3] h-auto w-full max-w-[340px] object-cover"
+                    sizes="(min-width: 768px) 90vw, 100vw"
+                    className="h-44 w-full object-cover object-center sm:h-56 md:h-72"
                   />
                 </div>
                 <p className="mt-3 max-w-[340px] text-[10px] uppercase tracking-[0.2em] text-blood/80">
                   Une nouvelle vie, avec un fil conducteur
                 </p>
               </figure>
-            </div>
-            <div>
+            <div className="mt-10 max-w-4xl md:ml-auto">
               <h2
                 className="text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
                 style={{ fontFamily: "var(--font-editorial)" }}
@@ -218,19 +216,19 @@ export default function Home() {
 
       <section className="border-y border-navy/15 px-6 py-16 sm:px-8 sm:py-20 md:px-16 md:py-28">
         <div className="mx-auto max-w-6xl">
-          <div className="grid gap-10 md:grid-cols-[0.7fr_1.3fr]">
+          <div className="grid gap-10 md:grid-cols-[0.7fr_1.3fr] md:items-center">
             <div>
               <p className="text-xs uppercase tracking-[0.25em] text-blood">
                 Et votre projet continue
               </p>
-              <figure className="mt-8 max-w-[330px] overflow-hidden">
+              <figure className="mt-8 max-w-[380px]">
                 <Image
-                  src="/activite-lifestyle-hola.webp"
-                  alt="Un projet professionnel accompagné en Espagne"
-                  width={900}
-                  height={675}
+                  src="/administratif-dessin.webp"
+                  alt="Documents et projets entre la France et l’Espagne"
+                  width={1280}
+                  height={640}
                   sizes="(min-width: 768px) 28vw, 88vw"
-                  className="aspect-[4/3] h-auto w-full object-cover"
+                  className="h-auto w-full object-contain"
                 />
               </figure>
             </div>
@@ -282,10 +280,20 @@ export default function Home() {
 
       <section className="bg-[#EEE8DE] px-6 py-16 sm:px-8 sm:py-20 md:px-16 md:py-36">
         <div className="mx-auto max-w-6xl">
-          <div className="grid gap-14 md:grid-cols-[0.8fr_1.2fr] md:items-end">
-            <p className="text-xs uppercase tracking-[0.25em] text-blood">
-              S’installer pour de vrai
-            </p>
+          <div className="grid gap-10 md:grid-cols-[0.8fr_1.2fr] md:items-center">
+            <div>
+              <p className="text-xs uppercase tracking-[0.25em] text-blood">
+                S’installer pour de vrai
+              </p>
+              <Image
+                src="/home-formulaire.webp"
+                alt="Un formulaire devient le chemin d’une nouvelle vie en Espagne"
+                width={1280}
+                height={853}
+                sizes="(min-width: 768px) 36vw, 88vw"
+                className="mt-7 h-auto w-full max-w-[410px] object-contain"
+              />
+            </div>
             <div>
               <h2
                 className="max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
@@ -335,14 +343,14 @@ export default function Home() {
             <p className="text-xs uppercase tracking-[0.25em] text-blood">
               Un dossier, plusieurs compétences
             </p>
-            <figure className="mt-8 max-w-[330px] overflow-hidden">
+            <figure className="mt-8 max-w-[370px]">
               <Image
-                src="/fiscalite-lifestyle-hola.webp"
-                alt="Un accompagnement coordonné entre la France et l’Espagne"
-                width={900}
-                height={675}
+                src="/home-accompagnement.webp"
+                alt="Un parcours accompagné entre deux pays"
+                width={1280}
+                height={640}
                 sizes="(min-width: 768px) 28vw, 88vw"
-                className="aspect-[4/3] h-auto w-full object-cover"
+                className="h-auto w-full object-contain"
               />
             </figure>
           </div>
@@ -396,14 +404,14 @@ export default function Home() {
               <p className="text-xs uppercase tracking-[0.25em] text-blood">
                 Comment ça marche
               </p>
-              <figure className="mt-8 max-w-[330px] overflow-hidden">
+              <figure className="mt-8 max-w-[370px]">
                 <Image
-                  src="/comment-ca-marche-lifestyle-hola.webp"
-                  alt="Un dossier transmis lors d’un accompagnement personnalisé"
-                  width={900}
-                  height={675}
+                  src="/home-demeler.webp"
+                  alt="Un fil démêle les papiers et trace une route claire"
+                  width={1280}
+                  height={640}
                   sizes="(min-width: 768px) 28vw, 88vw"
-                  className="aspect-[4/3] h-auto w-full object-cover"
+                  className="h-auto w-full object-contain"
                 />
               </figure>
             </div>

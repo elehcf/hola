@@ -171,6 +171,14 @@ export default function NieEspagne() {
             <p className="mt-5 max-w-[260px] text-sm leading-relaxed text-navy/55">
               Votre dossier, dans le bon ordre — avant de vous déplacer.
             </p>
+            <Image
+              src="/nie-document.webp"
+              alt="Illustration d’un certificat NIE distinct d’une carte de résidence"
+              width={1280}
+              height={853}
+              sizes="(min-width: 768px) 28vw, 88vw"
+              className="mt-7 h-auto w-full max-w-[330px] object-contain"
+            />
           </div>
 
           <div>
