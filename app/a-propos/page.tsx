@@ -21,7 +21,7 @@ export default function APropos() {
         </p>
 
         <h1
-          className="mt-6 text-5xl leading-[0.95] md:text-7xl"
+          className="mt-6 text-4xl leading-[0.98] sm:text-5xl md:text-7xl"
           style={{ fontFamily: "var(--font-editorial)" }}
         >
           L’Espagne vous appelle.
@@ -107,7 +107,7 @@ export default function APropos() {
           </section>
         </div>
 
-        <div className="mt-20 border-t border-navy/20 pt-10">
+        <div className="mt-12 border sm:mt-16 md:mt-20-t border-navy/20 pt-10">
           <p
             className="max-w-2xl text-3xl leading-tight md:text-4xl"
             style={{ fontFamily: "var(--font-editorial)" }}
