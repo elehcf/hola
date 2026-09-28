@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import LifestylePhoto from "../components/LifestylePhoto";
-import ServiceIllustration from "../components/ServiceIllustration";
+import PageHeader from "../components/PageHeader";
 
 export const metadata: Metadata = {
   title: "NIE Espagne : obtenir votre NIE simplement",
@@ -24,47 +25,10 @@ export default function NieEspagne() {
   return (
     <main className="min-h-screen bg-ivory text-navy">
 
-      {/* HEADER */}
-      <header className="flex items-center justify-between px-8 py-8 md:px-16">
-        <Link href="/" className="flex items-baseline">
-          <span
-            className="text-navy"
-            style={{
-              fontFamily: "var(--font-hand)",
-              fontSize: "4.2rem",
-              fontWeight: 500,
-              lineHeight: 1,
-            }}
-          >
-            hol
-          </span>
-
-          <span
-            className="text-blood"
-            style={{
-              fontFamily: "var(--font-editorial)",
-              fontSize: "4.6rem",
-              fontWeight: 600,
-              lineHeight: 0.8,
-              marginLeft: "-0.15rem",
-            }}
-          >
-            À!
-          </span>
-        </Link>
-
-        <Link
-          href="/"
-          className="text-lg transition-colors duration-300 hover:text-blood"
-          style={{ fontFamily: "var(--font-editorial)" }}
-        >
-          ← Retour
-        </Link>
-      </header>
-
+      <PageHeader />
 
       {/* HERO */}
-      <section className="px-8 pb-28 pt-20 md:px-16 md:pb-36">
+      <section className="px-6 pb-16 pt-12 sm:px-8 sm:pb-20 sm:pt-16 md:px-16 md:pb-36 md:pt-20">
         <div className="mx-auto max-w-6xl">
 
           <p className="text-xs uppercase tracking-[0.25em] text-blood">
@@ -72,7 +36,7 @@ export default function NieEspagne() {
           </p>
 
           <h1
-            className="mt-6 max-w-5xl text-6xl leading-[0.9] md:text-8xl"
+            className="mt-6 max-w-5xl text-5xl leading-[0.92] sm:text-6xl md:text-8xl"
             style={{ fontFamily: "var(--font-editorial)" }}
           >
             Obtenir votre NIE en Espagne.
@@ -82,31 +46,38 @@ export default function NieEspagne() {
             </span>
           </h1>
 
-          <div className="mt-12 grid gap-10 md:grid-cols-2">
-            <p className="max-w-xl text-lg leading-relaxed text-navy/70">
-  Vous nous expliquez votre projet. Nous vérifions d’abord si une
-  demande de NIE correspond à votre situation ou si vous devez
-  effectuer d’autres démarches liées à votre installation en Espagne.
-  Si la demande de NIE est adaptée, nous préparons le formulaire EX-15,
-  identifions les justificatifs à prévoir et vous expliquons comment
-  procéder. Le tout, en français.
-</p>
-
-            <div className="md:flex md:justify-end">
-              <a
+          <div className="mt-12 grid gap-10 md:grid-cols-[1.05fr_0.95fr] md:items-start">
+            <div>
+              <p className="max-w-xl text-lg leading-relaxed text-navy/70">
+                Vous nous expliquez votre projet. Nous vérifions d’abord si une
+                demande de NIE correspond à votre situation ou si vous devez
+                effectuer d’autres démarches liées à votre installation en Espagne.
+                Si la demande de NIE est adaptée, nous préparons le formulaire EX-15,
+                identifions les justificatifs à prévoir et vous expliquons comment
+                procéder. Le tout, en français.
+              </p>
+              <Link
                 href="/demande?service=nie"
-                className="inline-block bg-blood px-8 py-4 text-sm uppercase tracking-[0.12em] text-ivory"
+                className="mt-8 inline-block bg-blood px-6 py-3 text-xs uppercase tracking-[0.12em] text-ivory transition-transform hover:-translate-y-0.5"
               >
                 Commencer ma demande →
-              </a>
+              </Link>
             </div>
-          </div>
 
-          <ServiceIllustration
-            src="/nie-hola.webp"
-            alt="Passeport et documents reliés par le fil rouge de holÀ!"
-            portrait
-          />
+            <figure className="md:justify-self-end">
+              <div className="max-w-[430px] overflow-hidden">
+                <Image
+                  src="/nie-lifestyle-hola.webp"
+                  alt="Une femme prépare les documents de son projet en Espagne"
+                  width={1200}
+                  height={900}
+                  priority
+                  sizes="(min-width: 768px) 38vw, 92vw"
+                  className="aspect-[4/3] h-auto w-full object-cover"
+                />
+              </div>
+            </figure>
+          </div>
 
         </div>
       </section>
@@ -121,7 +92,7 @@ export default function NieEspagne() {
           </p>
 
           <h2
-            className="mt-5 max-w-3xl text-5xl leading-[0.95] md:text-6xl"
+            className="mt-5 max-w-3xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
             style={{ fontFamily: "var(--font-editorial)" }}
           >
             On prépare.
@@ -129,7 +100,8 @@ export default function NieEspagne() {
             Vous avancez.
           </h2>
 
-          <div className="mt-20 grid gap-10 md:grid-cols-2">
+          <div className="mt-10 grid gap-10 md:grid-cols-[1fr_250px] md:items-start">
+            <div className="grid gap-8 sm:grid-cols-2">
 
             <div className="border-t border-ivory/25 py-6">
               <span className="text-sm text-blood">01</span>
@@ -172,28 +144,46 @@ export default function NieEspagne() {
                 Vous savez où aller et quoi faire
               </p>
             </div>
+            </div>
 
+            <div className="hidden md:flex md:justify-end">
+              <Image
+                src="/nie-hola.webp"
+                alt="Passeport et documents reliés par le fil rouge de holÀ!"
+                width={500}
+                height={700}
+                sizes="250px"
+                className="h-auto max-h-[300px] w-auto object-contain"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      <LifestylePhoto
-        src="/nie-lifestyle-hola.webp"
-        alt="Une femme vérifie les documents de sa demande de NIE"
-        eyebrow="Votre dossier, dans le bon ordre"
-      />
-
       {/* IMPORTANT */}
-      <section className="px-8 py-28 md:px-16 md:py-36">
-        <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-[0.7fr_1.3fr]">
+      <section className="px-6 py-16 sm:px-8 sm:py-20 md:px-16 md:py-36">
+        <div className="mx-auto grid max-w-6xl gap-10 md:gap-16 md:grid-cols-[0.7fr_1.3fr]">
 
-          <p className="text-xs uppercase tracking-[0.25em] text-blood">
-            Bon à savoir
-          </p>
+          <div>
+            <p className="text-xs uppercase tracking-[0.25em] text-blood">
+              Bon à savoir
+            </p>
+            <p className="mt-5 max-w-[260px] text-sm leading-relaxed text-navy/55">
+              Votre dossier, dans le bon ordre — avant de vous déplacer.
+            </p>
+            <Image
+              src="/nie-document.webp"
+              alt="Illustration d’un certificat NIE distinct d’une carte de résidence"
+              width={1280}
+              height={853}
+              sizes="(min-width: 768px) 28vw, 88vw"
+              className="mt-7 h-auto w-full max-w-[330px] object-contain"
+            />
+          </div>
 
           <div>
             <h2
-              className="text-5xl leading-[0.95] md:text-6xl"
+              className="text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
               style={{ fontFamily: "var(--font-editorial)" }}
             >
               Le NIE n’est pas
@@ -232,17 +222,29 @@ export default function NieEspagne() {
 
 
       {/* COMPRENDRE LE NIE */}
-      <section className="bg-[#EEE8DE] px-8 py-28 md:px-16 md:py-36">
+      <section className="bg-[#EEE8DE] px-6 py-16 sm:px-8 sm:py-20 md:px-16 md:py-36">
         <div className="mx-auto max-w-6xl">
 
-          <div className="grid gap-16 md:grid-cols-[0.7fr_1.3fr]">
-            <p className="text-xs uppercase tracking-[0.25em] text-blood">
-              Comprendre
-            </p>
+          <div className="grid gap-10 md:gap-16 md:grid-cols-[0.7fr_1.3fr]">
+            <div>
+              <p className="text-xs uppercase tracking-[0.25em] text-blood">
+                Comprendre
+              </p>
+              <figure className="mt-8 max-w-[330px] overflow-hidden">
+                <Image
+                  src="/guides-lifestyle-hola.webp"
+                  alt="Préparer et comprendre une démarche administrative en Espagne"
+                  width={900}
+                  height={675}
+                  sizes="(min-width: 768px) 28vw, 88vw"
+                  className="aspect-[4/3] h-auto w-full object-cover"
+                />
+              </figure>
+            </div>
 
             <div>
               <h2
-                className="text-5xl leading-[0.95] md:text-6xl"
+                className="text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
                 style={{ fontFamily: "var(--font-editorial)" }}
               >
                 Comment obtenir un NIE
@@ -359,7 +361,7 @@ inadaptés et les déplacements inutiles.
       {/* PRIX */}
       <section
         id="commencer"
-        className="mx-8 mb-16 bg-blood px-8 py-16 text-ivory md:mx-16 md:px-16 md:py-20"
+        className="mx-0 mb-10 bg-blood px-6 py-10 text-ivory sm:mx-8 sm:mb-16 sm:px-8 md:mx-auto md:max-w-6xl md:px-12 md:py-12"
       >
         <div className="mx-auto max-w-6xl">
 
@@ -371,7 +373,7 @@ inadaptés et les déplacements inutiles.
               </p>
 
               <h2
-                className="mt-5 text-5xl leading-none md:text-7xl"
+                className="mt-4 text-4xl leading-[0.98] sm:text-5xl"
                 style={{ fontFamily: "var(--font-editorial)" }}
               >
                 149 €

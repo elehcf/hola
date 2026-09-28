@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import LifestylePhoto from "../components/LifestylePhoto";
-import ServiceIllustration from "../components/ServiceIllustration";
+import PageHeader from "../components/PageHeader";
 
 export const metadata: Metadata = {
   title: "Immatriculer une voiture française en Espagne",
@@ -25,47 +26,10 @@ export default function ImmatriculationVoiture() {
   return (
     <main className="min-h-screen bg-ivory text-navy">
 
-      {/* HEADER */}
-      <header className="flex items-center justify-between px-8 py-8 md:px-16">
-        <Link href="/" className="flex items-baseline">
-          <span
-            className="text-navy"
-            style={{
-              fontFamily: "var(--font-hand)",
-              fontSize: "4.2rem",
-              fontWeight: 500,
-              lineHeight: 1,
-            }}
-          >
-            hol
-          </span>
-
-          <span
-            className="text-blood"
-            style={{
-              fontFamily: "var(--font-editorial)",
-              fontSize: "4.6rem",
-              fontWeight: 600,
-              lineHeight: 0.8,
-              marginLeft: "-0.15rem",
-            }}
-          >
-            À!
-          </span>
-        </Link>
-
-        <Link
-          href="/"
-          className="text-lg transition-colors duration-300 hover:text-blood"
-          style={{ fontFamily: "var(--font-editorial)" }}
-        >
-          ← Retour
-        </Link>
-      </header>
-
+      <PageHeader />
 
       {/* HERO */}
-      <section className="px-8 pb-28 pt-20 md:px-16 md:pb-36">
+      <section className="px-6 pb-16 pt-12 sm:px-8 sm:pb-20 sm:pt-16 md:px-16 md:pb-36 md:pt-20">
         <div className="mx-auto max-w-6xl">
 
           <p className="text-xs uppercase tracking-[0.25em] text-blood">
@@ -73,7 +37,7 @@ export default function ImmatriculationVoiture() {
           </p>
 
           <h1
-            className="mt-6 max-w-5xl text-6xl leading-[0.9] md:text-8xl"
+            className="mt-6 max-w-5xl text-5xl leading-[0.92] sm:text-6xl md:text-8xl"
             style={{ fontFamily: "var(--font-editorial)" }}
           >
             Votre voiture française.
@@ -83,28 +47,35 @@ export default function ImmatriculationVoiture() {
             </span>
           </h1>
 
-          <div className="mt-12 grid gap-10 md:grid-cols-2">
-            <p className="max-w-xl text-lg leading-relaxed text-navy/70">
-              Vous partez vivre en Espagne et votre voiture vous suit ?
-              Nous vérifions ce qu’il faut prévoir, préparons le dossier et
-              organisons avec vous les différentes étapes jusqu’à
-              l’immatriculation espagnole.
-            </p>
-
-            <div className="md:flex md:justify-end">
-              <a
+          <div className="mt-12 grid gap-10 md:grid-cols-[1.05fr_0.95fr] md:items-start">
+            <div>
+              <p className="max-w-xl text-lg leading-relaxed text-navy/70">
+                Vous partez vivre en Espagne et votre voiture vous suit ?
+                Nous vérifions ce qu’il faut prévoir, préparons le dossier et
+                organisons avec vous les différentes étapes jusqu’à
+                l’immatriculation espagnole.
+              </p>
+              <Link
                 href="/demande?service=vehicule"
-                className="inline-block bg-blood px-8 py-4 text-sm uppercase tracking-[0.12em] text-ivory"
+                className="mt-8 inline-block bg-blood px-6 py-3 text-xs uppercase tracking-[0.12em] text-ivory transition-transform hover:-translate-y-0.5"
               >
                 Immatriculer mon véhicule →
-              </a>
+              </Link>
             </div>
+            <figure className="md:justify-self-end">
+              <div className="max-w-[430px] overflow-hidden">
+                <Image
+                  src="/vehicule-lifestyle-hola.webp"
+                  alt="Préparer le changement d’immatriculation d’une voiture entre la France et l’Espagne"
+                  width={1200}
+                  height={900}
+                  priority
+                  sizes="(min-width: 768px) 38vw, 92vw"
+                  className="aspect-[4/3] h-auto w-full object-cover"
+                />
+              </div>
+            </figure>
           </div>
-
-          <ServiceIllustration
-            src="/vehicule-hola.webp"
-            alt="Voiture et dossier d’immatriculation sur la route de l’Espagne"
-          />
 
         </div>
       </section>
@@ -119,7 +90,7 @@ export default function ImmatriculationVoiture() {
           </p>
 
           <h2
-            className="mt-5 max-w-4xl text-5xl leading-[0.95] md:text-6xl"
+            className="mt-5 max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
             style={{ fontFamily: "var(--font-editorial)" }}
           >
             De la plaque française
@@ -127,7 +98,16 @@ export default function ImmatriculationVoiture() {
             <span className="italic">à la plaque espagnole.</span>
           </h2>
 
-          <div className="mt-20 grid gap-x-12 md:grid-cols-2">
+          <Image
+            src="/vehicule-hola.webp"
+            alt="Voiture et passage des plaques françaises aux plaques espagnoles"
+            width={650}
+            height={520}
+            sizes="(min-width: 768px) 320px, 80vw"
+            className="mt-8 h-auto w-full max-w-[320px] object-contain"
+          />
+
+          <div className="mt-10 grid gap-x-12 md:grid-cols-2">
 
             <div className="border-t border-ivory/25 py-7">
               <span className="text-sm text-blood">01</span>
@@ -214,28 +194,34 @@ export default function ImmatriculationVoiture() {
   votre véhicule soit assuré sous sa nouvelle immatriculation.
 </p>
             </div>
-
           </div>
         </div>
       </section>
 
-      <LifestylePhoto
-        src="/vehicule-lifestyle-hola.webp"
-        alt="Une femme vérifie le dossier de sa voiture à son arrivée en Espagne"
-        eyebrow="De la route aux formalités"
-      />
-
       {/* POUR QUI */}
-      <section className="px-8 py-28 md:px-16 md:py-36">
-        <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-[0.7fr_1.3fr]">
+      <section className="px-6 py-16 sm:px-8 sm:py-20 md:px-16 md:py-36">
+        <div className="mx-auto grid max-w-6xl gap-10 md:gap-16 md:grid-cols-[0.7fr_1.3fr]">
 
-          <p className="text-xs uppercase tracking-[0.25em] text-blood">
-            Pour qui ?
-          </p>
+          <div>
+            <p className="text-xs uppercase tracking-[0.25em] text-blood">
+              Pour qui ?
+            </p>
+            <p className="mt-5 max-w-[260px] text-sm leading-relaxed text-navy/55">
+              De la route aux formalités, sans perdre le fil entre les deux pays.
+            </p>
+            <Image
+              src="/vehicule-depart.webp"
+              alt="Une voiture française prend la route vers l’Espagne"
+              width={1280}
+              height={853}
+              sizes="(min-width: 768px) 28vw, 88vw"
+              className="mt-7 h-auto w-full max-w-[340px] object-contain"
+            />
+          </div>
 
           <div>
             <h2
-              className="max-w-3xl text-5xl leading-[0.95] md:text-6xl"
+              className="max-w-3xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
               style={{ fontFamily: "var(--font-editorial)" }}
             >
               Vous partez vivre en Espagne.
@@ -284,18 +270,30 @@ export default function ImmatriculationVoiture() {
 
 
       {/* COMPRENDRE L'IMMATRICULATION */}
-      <section className="bg-[#EEE8DE] px-8 py-28 md:px-16 md:py-36">
+      <section className="bg-[#EEE8DE] px-6 py-16 sm:px-8 sm:py-20 md:px-16 md:py-36">
         <div className="mx-auto max-w-6xl">
 
-          <div className="grid gap-16 md:grid-cols-[0.7fr_1.3fr]">
+          <div className="grid gap-10 md:gap-16 md:grid-cols-[0.7fr_1.3fr]">
 
-            <p className="text-xs uppercase tracking-[0.25em] text-blood">
-              Comprendre
-            </p>
+            <div>
+              <p className="text-xs uppercase tracking-[0.25em] text-blood">
+                Comprendre
+              </p>
+              <figure className="mt-8 max-w-[350px]">
+                <Image
+                  src="/vehicule-immatriculation.webp"
+                  alt="Passage d’une plaque française à une plaque espagnole et dossier d’immatriculation"
+                  width={1280}
+                  height={853}
+                  sizes="(min-width: 768px) 28vw, 88vw"
+                  className="h-auto w-full object-contain"
+                />
+              </figure>
+            </div>
 
             <div>
               <h2
-                className="text-5xl leading-[0.95] md:text-6xl"
+                className="text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
                 style={{ fontFamily: "var(--font-editorial)" }}
               >
                 Comment immatriculer une voiture française
@@ -423,7 +421,7 @@ export default function ImmatriculationVoiture() {
           </p>
 
           <h2
-            className="mt-6 max-w-4xl text-5xl leading-[0.95] md:text-6xl"
+            className="mt-6 max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
             style={{ fontFamily: "var(--font-editorial)" }}
           >
             ITV. Documents. Taxes.
@@ -442,7 +440,7 @@ export default function ImmatriculationVoiture() {
 
 
       {/* PRIX */}
-      <section className="mx-8 mb-16 bg-blood px-8 py-16 text-ivory md:mx-16 md:px-16 md:py-20">
+      <section className="mx-0 mb-10 bg-blood px-6 py-10 text-ivory sm:mx-8 sm:mb-16 sm:px-8 md:mx-auto md:max-w-6xl md:px-12 md:py-12">
         <div className="mx-auto max-w-6xl">
 
           <div className="grid gap-12 md:grid-cols-[1fr_auto] md:items-end">
@@ -453,7 +451,7 @@ export default function ImmatriculationVoiture() {
               </p>
 
               <h2
-                className="mt-5 text-5xl leading-none md:text-7xl"
+                className="mt-4 text-4xl leading-[0.98] sm:text-5xl"
                 style={{ fontFamily: "var(--font-editorial)" }}
               >
                 449 €

@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import LifestylePhoto from "../components/LifestylePhoto";
+import Image from "next/image";
 import PageHeader from "../components/PageHeader";
-import ServiceIllustration from "../components/ServiceIllustration";
 
 export const metadata: Metadata = {
   title: "Créer son activité ou son entreprise en Espagne",
@@ -39,13 +38,13 @@ export default function CreerActiviteEspagne() {
     <main className="min-h-screen bg-ivory text-navy">
       <PageHeader />
 
-      <section className="px-8 pb-28 pt-20 md:px-16 md:pb-36">
+      <section className="px-6 pb-16 pt-12 sm:px-8 sm:pb-20 sm:pt-16 md:px-16 md:pb-36 md:pt-20">
         <div className="mx-auto max-w-6xl">
           <p className="text-xs uppercase tracking-[0.25em] text-blood">
             Activité professionnelle · Espagne
           </p>
           <h1
-            className="mt-6 max-w-5xl text-6xl leading-[0.9] md:text-8xl"
+            className="mt-6 max-w-5xl text-5xl leading-[0.92] sm:text-6xl md:text-8xl"
             style={{ fontFamily: "var(--font-editorial)" }}
           >
             Une idée à développer.
@@ -55,27 +54,35 @@ export default function CreerActiviteEspagne() {
             </span>
           </h1>
 
-          <div className="mt-12 grid gap-10 md:grid-cols-2">
-            <p className="max-w-xl text-lg leading-relaxed text-navy/70">
-              Créer une activité en Espagne ne commence pas par un formulaire,
-              mais par votre projet : où vous travaillerez, avec qui, sous
-              quelle forme et entre quels pays. holÀ! organise le parcours
-              administratif et coordonne les professionnels nécessaires.
-            </p>
-            <div className="md:flex md:justify-end">
+          <div className="mt-12 grid gap-10 md:grid-cols-[1.05fr_0.95fr] md:items-start">
+            <div>
+              <p className="max-w-xl text-lg leading-relaxed text-navy/70">
+                Créer une activité en Espagne ne commence pas par un formulaire,
+                mais par votre projet : où vous travaillerez, avec qui, sous
+                quelle forme et entre quels pays. holÀ! organise le parcours
+                administratif et coordonne les professionnels nécessaires.
+              </p>
               <Link
                 href="/demande?service=activite"
-                className="inline-block bg-blood px-8 py-4 text-sm uppercase tracking-[0.12em] text-ivory"
+                className="mt-8 inline-block bg-blood px-6 py-3 text-xs uppercase tracking-[0.12em] text-ivory transition-transform hover:-translate-y-0.5"
               >
                 Présenter mon projet →
               </Link>
             </div>
+            <figure className="md:justify-self-end">
+              <div className="max-w-[430px] overflow-hidden">
+                <Image
+                  src="/activite-lifestyle-hola.webp"
+                  alt="Échanger autour d’un projet de création d’activité en Espagne"
+                  width={1200}
+                  height={900}
+                  priority
+                  sizes="(min-width: 768px) 38vw, 92vw"
+                  className="aspect-[4/3] h-auto w-full object-cover"
+                />
+              </div>
+            </figure>
           </div>
-
-          <ServiceIllustration
-            src="/activite-hola.webp"
-            alt="Documents et outils pour créer une activité en Espagne"
-          />
         </div>
       </section>
 
@@ -85,7 +92,7 @@ export default function CreerActiviteEspagne() {
             Votre projet
           </p>
           <h2
-            className="mt-5 max-w-4xl text-5xl leading-[0.95] md:text-6xl"
+            className="mt-5 max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
             style={{ fontFamily: "var(--font-editorial)" }}
           >
             Indépendant, société
@@ -93,39 +100,58 @@ export default function CreerActiviteEspagne() {
             <span className="italic">ou activité entre deux pays.</span>
           </h2>
 
-          <div className="mt-20 grid gap-10 md:grid-cols-3">
-            {projectTypes.map((project, index) => (
-              <article key={project.title} className="border-t border-ivory/25 pt-6">
-                <span className="text-sm text-blood">0{index + 1}</span>
-                <h3
-                  className="mt-5 text-3xl"
-                  style={{ fontFamily: "var(--font-editorial)" }}
-                >
-                  {project.title}
-                </h3>
-                <p className="mt-4 leading-relaxed text-ivory/65">
-                  {project.text}
-                </p>
-              </article>
-            ))}
+          <div className="mt-10 grid gap-10 md:grid-cols-[1fr_260px] md:items-start">
+            <div className="grid gap-10 md:grid-cols-3">
+              {projectTypes.map((project, index) => (
+                <article key={project.title} className="border-t border-ivory/25 pt-6">
+                  <span className="text-sm text-blood">0{index + 1}</span>
+                  <h3
+                    className="mt-5 text-3xl"
+                    style={{ fontFamily: "var(--font-editorial)" }}
+                  >
+                    {project.title}
+                  </h3>
+                  <p className="mt-4 leading-relaxed text-ivory/65">
+                    {project.text}
+                  </p>
+                </article>
+              ))}
+            </div>
+            <div className="hidden md:flex md:justify-end">
+              <Image
+                src="/activite-hola.webp"
+                alt="Documents et outils pour créer une activité en Espagne"
+                width={650}
+                height={520}
+                sizes="260px"
+                className="h-auto max-h-[270px] w-auto object-contain"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      <LifestylePhoto
-        src="/activite-lifestyle-hola.webp"
-        alt="Une porteuse de projet échange sur la création de son activité en Espagne"
-        eyebrow="Passer du projet à l’activité"
-      />
-
-      <section className="px-8 py-28 md:px-16 md:py-36">
-        <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-[0.7fr_1.3fr]">
-          <p className="text-xs uppercase tracking-[0.25em] text-blood">
-            La feuille de route
-          </p>
+      <section className="px-6 py-16 sm:px-8 sm:py-20 md:px-16 md:py-36">
+        <div className="mx-auto grid max-w-6xl gap-10 md:gap-16 md:grid-cols-[0.7fr_1.3fr]">
+          <div>
+            <p className="text-xs uppercase tracking-[0.25em] text-blood">
+              La feuille de route
+            </p>
+            <p className="mt-5 max-w-[260px] text-sm leading-relaxed text-navy/55">
+              Passer du projet à l’activité, avec une feuille de route lisible.
+            </p>
+            <Image
+              src="/activite-feuille-de-route.webp"
+              alt="Feuille de route et rôles pour créer une activité en Espagne"
+              width={1280}
+              height={853}
+              sizes="(min-width: 768px) 28vw, 88vw"
+              className="mt-7 h-auto w-full max-w-[340px] object-contain"
+            />
+          </div>
           <div>
             <h2
-              className="max-w-4xl text-5xl leading-[0.95] md:text-6xl"
+              className="max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
               style={{ fontFamily: "var(--font-editorial)" }}
             >
               Savoir qui décide quoi.
@@ -175,15 +201,27 @@ export default function CreerActiviteEspagne() {
         </div>
       </section>
 
-      <section className="bg-[#EEE8DE] px-8 py-28 md:px-16 md:py-36">
+      <section className="bg-[#EEE8DE] px-6 py-16 sm:px-8 sm:py-20 md:px-16 md:py-36">
         <div className="mx-auto max-w-6xl">
-          <div className="grid gap-16 md:grid-cols-[0.72fr_1.28fr]">
-            <p className="text-xs uppercase tracking-[0.25em] text-blood">
-              Un accompagnement coordonné
-            </p>
+          <div className="grid gap-10 md:gap-16 md:grid-cols-[0.72fr_1.28fr]">
+            <div>
+              <p className="text-xs uppercase tracking-[0.25em] text-blood">
+                Un accompagnement coordonné
+              </p>
+              <figure className="mt-8 max-w-[330px] overflow-hidden">
+                <Image
+                  src="/a-propos-lifestyle-hola.webp"
+                  alt="Des professionnels coordonnés autour d’un projet en Espagne"
+                  width={900}
+                  height={675}
+                  sizes="(min-width: 768px) 28vw, 88vw"
+                  className="aspect-[4/3] h-auto w-full object-cover"
+                />
+              </figure>
+            </div>
             <div>
               <h2
-                className="max-w-4xl text-5xl leading-[0.95] md:text-6xl"
+                className="max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
                 style={{ fontFamily: "var(--font-editorial)" }}
               >
                 Administratif, juridique,
@@ -201,6 +239,24 @@ export default function CreerActiviteEspagne() {
                 inclus dans chaque intervention et qui en assume la
                 responsabilité professionnelle.
               </p>
+              <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3 text-sm">
+                <a
+                  href="https://defendum.es/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border-b border-navy/25 pb-1 transition-colors hover:text-blood"
+                >
+                  Defendum Abogados · accompagnement juridique ↗
+                </a>
+                <a
+                  href="https://decisionestrategica.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border-b border-navy/25 pb-1 transition-colors hover:text-blood"
+                >
+                  Decisión Estratégica · stratégie d’entreprise ↗
+                </a>
+              </div>
             </div>
           </div>
 
@@ -244,14 +300,14 @@ export default function CreerActiviteEspagne() {
         </div>
       </section>
 
-      <section className="mx-8 my-16 bg-blood px-8 py-16 text-ivory md:mx-16 md:px-16 md:py-20">
+      <section className="mx-0 my-10 bg-blood px-6 py-10 text-ivory sm:mx-8 sm:my-16 sm:px-8 md:mx-auto md:max-w-6xl md:px-12 md:py-12">
         <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-[1fr_auto] md:items-end">
           <div>
             <p className="text-xs uppercase tracking-[0.25em] text-ivory/70">
               Création d’activité en Espagne
             </p>
             <h2
-              className="mt-5 text-5xl leading-[0.95] md:text-7xl"
+              className="mt-4 text-4xl leading-[0.98] sm:text-5xl"
               style={{ fontFamily: "var(--font-editorial)" }}
             >
               Un projet cadré.

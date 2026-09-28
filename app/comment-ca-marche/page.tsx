@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import LifestylePhoto from "../components/LifestylePhoto";
+import PageHeader from "../components/PageHeader";
 
 export const metadata: Metadata = {
   title: "Comment ça marche | holÀ!",
@@ -37,18 +38,15 @@ const etapes = [
 
 export default function CommentCaMarche() {
   return (
-    <main className="min-h-screen bg-ivory px-8 py-16 text-navy md:px-16 md:py-24">
-      <div className="mx-auto max-w-4xl">
-        <Link href="/" className="text-sm text-blood">
-          ← holÀ!
-        </Link>
-
-        <p className="mt-20 text-xs uppercase tracking-[0.25em] text-blood">
+    <main className="min-h-screen bg-ivory text-navy">
+      <PageHeader />
+      <div className="mx-auto max-w-5xl px-6 pb-16 pt-12 sm:px-8 sm:pb-20 sm:pt-16 md:px-16 md:pb-24 md:pt-20">
+        <p className="text-xs uppercase tracking-[0.25em] text-blood">
           Notre accompagnement
         </p>
 
         <h1
-          className="mt-6 text-5xl leading-[0.95] md:text-7xl"
+          className="mt-6 text-4xl leading-[0.98] sm:text-5xl md:text-7xl"
           style={{ fontFamily: "var(--font-editorial)" }}
         >
           Comment
@@ -62,11 +60,11 @@ export default function CommentCaMarche() {
           prendre en charge.
         </p>
 
-        <div className="mt-20 border-t border-navy/20">
+        <div className="mt-12 border border-navy/20 sm:mt-16 md:mt-20">
           {etapes.map((etape) => (
             <section
               key={etape.numero}
-              className="grid gap-5 border-b border-navy/20 py-10 md:grid-cols-[100px_1fr] md:gap-10"
+              className="grid gap-5 border-b border-navy/20 px-6 py-9 sm:px-8 md:grid-cols-[90px_1fr] md:gap-8 md:px-10"
             >
               <span
                 className="text-4xl italic text-blood"
@@ -89,16 +87,18 @@ export default function CommentCaMarche() {
           ))}
         </div>
 
-        <LifestylePhoto
-          src="/comment-ca-marche-lifestyle-hola.webp"
-          alt="Transmission d’un dossier administratif lors d’un accompagnement personnalisé"
-          eyebrow="Un dossier. Un interlocuteur. Une suite."
-          compact
-        />
-
-        <section className="mt-20">
+        <section className="mt-16 grid gap-10 md:grid-cols-[0.8fr_1.2fr] md:items-center md:gap-14">
+          <div className="min-w-0">
+            <LifestylePhoto
+              src="/comment-ca-marche-lifestyle-hola.webp"
+              alt="Transmission d’un dossier administratif lors d’un accompagnement personnalisé"
+              eyebrow="Un dossier. Un interlocuteur. Une suite."
+              compact
+            />
+          </div>
+          <div className="min-w-0">
           <h2
-            className="text-3xl md:text-4xl"
+            className="text-3xl leading-tight md:text-4xl"
             style={{ fontFamily: "var(--font-editorial)" }}
           >
             Et si ma situation est plus complexe ?
@@ -110,11 +110,15 @@ export default function CommentCaMarche() {
             un professionnel habilité. holÀ! reste votre interlocuteur pour
             coordonner les échanges et le suivi administratif.
           </p>
+          </div>
         </section>
 
-        <div className="mt-20 border-t border-navy/20 pt-10">
+        <div className="mt-12 bg-navy px-7 py-8 text-ivory sm:mt-16 sm:px-9 sm:py-10 md:mt-20 md:max-w-3xl">
+          <p className="text-xs uppercase tracking-[0.22em] text-blood">
+            Votre point de départ
+          </p>
           <p
-            className="max-w-2xl text-3xl leading-tight md:text-4xl"
+            className="mt-4 max-w-2xl text-3xl leading-tight md:text-4xl"
             style={{ fontFamily: "var(--font-editorial)" }}
           >
             On commence par votre situation ?
@@ -122,7 +126,7 @@ export default function CommentCaMarche() {
 
           <Link
             href="/demande"
-            className="mt-8 inline-block bg-blood px-7 py-4 text-sm text-ivory transition-opacity hover:opacity-85"
+            className="mt-7 inline-block border-b border-ivory/70 pb-1 text-sm transition-opacity hover:opacity-80"
           >
             Expliquer ma situation →
           </Link>

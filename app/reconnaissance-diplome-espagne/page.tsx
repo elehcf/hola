@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import LifestylePhoto from "../components/LifestylePhoto";
+import Image from "next/image";
 import PageHeader from "../components/PageHeader";
-import ServiceIllustration from "../components/ServiceIllustration";
 
 export const metadata: Metadata = {
   title: "Faire reconnaître un diplôme français en Espagne",
@@ -42,13 +41,13 @@ export default function ReconnaissanceDiplomeEspagne() {
     <main className="min-h-screen bg-ivory text-navy">
       <PageHeader />
 
-      <section className="px-8 pb-28 pt-20 md:px-16 md:pb-36">
+      <section className="px-6 pb-16 pt-12 sm:px-8 sm:pb-20 sm:pt-16 md:px-16 md:pb-36 md:pt-20">
         <div className="mx-auto max-w-6xl">
           <p className="text-xs uppercase tracking-[0.25em] text-blood">
             Diplômes · France → Espagne
           </p>
           <h1
-            className="mt-6 max-w-5xl text-6xl leading-[0.9] md:text-8xl"
+            className="mt-6 max-w-5xl text-5xl leading-[0.92] sm:text-6xl md:text-8xl"
             style={{ fontFamily: "var(--font-editorial)" }}
           >
             Votre diplôme a traversé la frontière.
@@ -58,28 +57,35 @@ export default function ReconnaissanceDiplomeEspagne() {
             </span>
           </h1>
 
-          <div className="mt-12 grid gap-10 md:grid-cols-2">
-            <p className="max-w-xl text-lg leading-relaxed text-navy/70">
-              Homologation, équivalence, reconnaissance professionnelle… ces
-              démarches ne produisent pas le même effet. holÀ! commence par
-              votre objectif en Espagne, puis vous aide à préparer le dossier
-              correspondant et à suivre les étapes administratives.
-            </p>
-            <div className="md:flex md:justify-end">
+          <div className="mt-12 grid gap-10 md:grid-cols-[1.05fr_0.95fr] md:items-start">
+            <div>
+              <p className="max-w-xl text-lg leading-relaxed text-navy/70">
+                Homologation, équivalence, reconnaissance professionnelle… ces
+                démarches ne produisent pas le même effet. holÀ! commence par
+                votre objectif en Espagne, puis vous aide à préparer le dossier
+                correspondant et à suivre les étapes administratives.
+              </p>
               <Link
                 href="/demande?service=diplome"
-                className="inline-block bg-blood px-8 py-4 text-sm uppercase tracking-[0.12em] text-ivory"
+                className="mt-8 inline-block bg-blood px-6 py-3 text-xs uppercase tracking-[0.12em] text-ivory transition-transform hover:-translate-y-0.5"
               >
                 Parler de mon diplôme →
               </Link>
             </div>
+            <figure className="md:justify-self-end">
+              <div className="max-w-[430px] overflow-hidden">
+                <Image
+                  src="/diplome-lifestyle-hola.webp"
+                  alt="Préparer la reconnaissance de son diplôme pour un projet en Espagne"
+                  width={1200}
+                  height={900}
+                  priority
+                  sizes="(min-width: 768px) 38vw, 92vw"
+                  className="aspect-[4/3] h-auto w-full object-cover"
+                />
+              </div>
+            </figure>
           </div>
-
-          <ServiceIllustration
-            src="/diplome-hola.webp"
-            alt="Diplôme et dossier de reconnaissance académique en Espagne"
-            portrait
-          />
         </div>
       </section>
 
@@ -89,7 +95,7 @@ export default function ReconnaissanceDiplomeEspagne() {
             La première décision
           </p>
           <h2
-            className="mt-5 max-w-4xl text-5xl leading-[0.95] md:text-6xl"
+            className="mt-5 max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
             style={{ fontFamily: "var(--font-editorial)" }}
           >
             Le même diplôme.
@@ -97,42 +103,61 @@ export default function ReconnaissanceDiplomeEspagne() {
             <span className="italic">Trois questions différentes.</span>
           </h2>
 
-          <div className="mt-20 grid gap-10 md:grid-cols-3">
-            {procedures.map((procedure) => (
-              <article
-                key={procedure.number}
-                className="border-t border-ivory/25 pt-6"
-              >
-                <span className="text-sm text-blood">{procedure.number}</span>
-                <h3
-                  className="mt-5 text-3xl"
-                  style={{ fontFamily: "var(--font-editorial)" }}
+          <div className="mt-10 grid gap-10 md:grid-cols-[1fr_260px] md:items-start">
+            <div className="grid gap-10 md:grid-cols-3">
+              {procedures.map((procedure) => (
+                <article
+                  key={procedure.number}
+                  className="border-t border-ivory/25 pt-6"
                 >
-                  {procedure.title}
-                </h3>
-                <p className="mt-4 leading-relaxed text-ivory/65">
-                  {procedure.text}
-                </p>
-              </article>
-            ))}
+                  <span className="text-sm text-blood">{procedure.number}</span>
+                  <h3
+                    className="mt-5 text-3xl"
+                    style={{ fontFamily: "var(--font-editorial)" }}
+                  >
+                    {procedure.title}
+                  </h3>
+                  <p className="mt-4 leading-relaxed text-ivory/65">
+                    {procedure.text}
+                  </p>
+                </article>
+              ))}
+            </div>
+            <div className="hidden md:flex md:justify-end">
+              <Image
+                src="/diplome-hola.webp"
+                alt="Diplôme et dossier de reconnaissance académique en Espagne"
+                width={500}
+                height={700}
+                sizes="260px"
+                className="h-auto max-h-[290px] w-auto object-contain"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      <LifestylePhoto
-        src="/diplome-lifestyle-hola.webp"
-        alt="Une femme prépare son dossier de reconnaissance de diplôme dans une bibliothèque"
-        eyebrow="Donner une suite à votre parcours"
-      />
-
-      <section className="px-8 py-28 md:px-16 md:py-36">
-        <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-[0.68fr_1.32fr]">
-          <p className="text-xs uppercase tracking-[0.25em] text-blood">
-            Notre accompagnement
-          </p>
+      <section className="px-6 py-16 sm:px-8 sm:py-20 md:px-16 md:py-36">
+        <div className="mx-auto grid max-w-6xl gap-10 md:gap-16 md:grid-cols-[0.68fr_1.32fr]">
+          <div>
+            <p className="text-xs uppercase tracking-[0.25em] text-blood">
+              Notre accompagnement
+            </p>
+            <p className="mt-5 max-w-[260px] text-sm leading-relaxed text-navy/55">
+              Donner une suite à votre parcours, avec la procédure qui correspond réellement à votre objectif.
+            </p>
+            <Image
+              src="/diplome-dossier.webp"
+              alt="Diplôme et dossier préparés pour un objectif en Espagne"
+              width={1280}
+              height={853}
+              sizes="(min-width: 768px) 28vw, 88vw"
+              className="mt-7 h-auto w-full max-w-[340px] object-contain"
+            />
+          </div>
           <div>
             <h2
-              className="max-w-4xl text-5xl leading-[0.95] md:text-6xl"
+              className="max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
               style={{ fontFamily: "var(--font-editorial)" }}
             >
               Un dossier construit
@@ -182,18 +207,28 @@ export default function ReconnaissanceDiplomeEspagne() {
         </div>
       </section>
 
-      <section className="bg-[#EEE8DE] px-8 py-28 md:px-16 md:py-36">
-        <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-2">
+      <section className="bg-[#EEE8DE] px-6 py-16 sm:px-8 sm:py-20 md:px-16 md:py-36">
+        <div className="mx-auto grid max-w-6xl gap-10 md:gap-16 md:grid-cols-2">
           <div>
             <p className="text-xs uppercase tracking-[0.25em] text-blood">
               À savoir
             </p>
             <h2
-              className="mt-5 text-5xl leading-[0.95] md:text-6xl"
+              className="mt-5 text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
               style={{ fontFamily: "var(--font-editorial)" }}
             >
               Traduire ne suffit pas toujours.
             </h2>
+            <figure className="mt-8 max-w-[360px] overflow-hidden">
+              <Image
+                src="/guides-lifestyle-hola.webp"
+                alt="Documents préparés pour une démarche officielle en Espagne"
+                width={900}
+                height={675}
+                sizes="(min-width: 768px) 30vw, 88vw"
+                className="aspect-[4/3] h-auto w-full object-cover"
+              />
+            </figure>
           </div>
           <div className="space-y-6 text-lg leading-relaxed text-navy/70">
             <p>
@@ -233,14 +268,14 @@ export default function ReconnaissanceDiplomeEspagne() {
         </div>
       </section>
 
-      <section className="mx-8 my-16 bg-blood px-8 py-16 text-ivory md:mx-16 md:px-16 md:py-20">
+      <section className="mx-0 my-10 bg-blood px-6 py-10 text-ivory sm:mx-8 sm:my-16 sm:px-8 md:mx-auto md:max-w-6xl md:px-12 md:py-12">
         <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-[1fr_auto] md:items-end">
           <div>
             <p className="text-xs uppercase tracking-[0.25em] text-ivory/70">
               Reconnaissance de diplôme
             </p>
             <h2
-              className="mt-5 text-5xl leading-[0.95] md:text-7xl"
+              className="mt-4 text-4xl leading-[0.98] sm:text-5xl"
               style={{ fontFamily: "var(--font-editorial)" }}
             >
               Un accompagnement

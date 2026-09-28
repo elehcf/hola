@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import LifestylePhoto from "../components/LifestylePhoto";
+import Image from "next/image";
 import PageHeader from "../components/PageHeader";
-import ServiceIllustration from "../components/ServiceIllustration";
 
 export const metadata: Metadata = {
   title: "Fiscalité et résidence France–Espagne",
@@ -66,13 +65,13 @@ export default function FiscaliteResidenceFranceEspagne() {
     <main className="min-h-screen bg-ivory text-navy">
       <PageHeader />
 
-      <section className="px-8 pb-28 pt-20 md:px-16 md:pb-36">
+      <section className="px-6 pb-16 pt-12 sm:px-8 sm:pb-20 sm:pt-16 md:px-16 md:pb-36 md:pt-20">
         <div className="mx-auto max-w-6xl">
           <p className="text-xs uppercase tracking-[0.25em] text-blood">
             Fiscalité · France ↔ Espagne
           </p>
           <h1
-            className="mt-6 max-w-5xl text-6xl leading-[0.9] md:text-8xl"
+            className="mt-6 max-w-5xl text-5xl leading-[0.92] sm:text-6xl md:text-8xl"
             style={{ fontFamily: "var(--font-editorial)" }}
           >
             Votre vie change de pays.
@@ -82,27 +81,35 @@ export default function FiscaliteResidenceFranceEspagne() {
             </span>
           </h1>
 
-          <div className="mt-12 grid gap-10 md:grid-cols-2">
-            <p className="max-w-xl text-lg leading-relaxed text-navy/70">
-              Vivre, travailler, percevoir une retraite ou conserver un bien
-              de l’autre côté de la frontière peut soulever plusieurs
-              obligations. holÀ! vous aide à poser les faits, réunir les
-              documents et coordonner le professionnel compétent.
-            </p>
-            <div className="md:flex md:justify-end">
+          <div className="mt-12 grid gap-10 md:grid-cols-[1.05fr_0.95fr] md:items-start">
+            <div>
+              <p className="max-w-xl text-lg leading-relaxed text-navy/70">
+                Vivre, travailler, percevoir une retraite ou conserver un bien
+                de l’autre côté de la frontière peut soulever plusieurs
+                obligations. holÀ! vous aide à poser les faits, réunir les
+                documents et coordonner le professionnel compétent.
+              </p>
               <Link
                 href="/demande?service=fiscalite"
-                className="inline-block bg-blood px-8 py-4 text-sm uppercase tracking-[0.12em] text-ivory"
+                className="mt-8 inline-block bg-blood px-6 py-3 text-xs uppercase tracking-[0.12em] text-ivory transition-transform hover:-translate-y-0.5"
               >
                 Expliquer ma situation →
               </Link>
             </div>
+            <figure className="md:justify-self-end">
+              <div className="max-w-[430px] overflow-hidden">
+                <Image
+                  src="/fiscalite-lifestyle-hola.webp"
+                  alt="Préparer une situation fiscale entre la France et l’Espagne"
+                  width={1200}
+                  height={900}
+                  priority
+                  sizes="(min-width: 768px) 38vw, 92vw"
+                  className="aspect-[4/3] h-auto w-full object-cover"
+                />
+              </div>
+            </figure>
           </div>
-
-          <ServiceIllustration
-            src="/fiscalite-hola.webp"
-            alt="Équilibre fiscal entre la France et l’Espagne"
-          />
         </div>
       </section>
 
@@ -111,51 +118,68 @@ export default function FiscaliteResidenceFranceEspagne() {
           <p className="text-xs uppercase tracking-[0.25em] text-blood">
             Situations fréquentes
           </p>
-          <h2
-            className="mt-5 max-w-4xl text-5xl leading-[0.95] md:text-6xl"
-            style={{ fontFamily: "var(--font-editorial)" }}
-          >
-            Deux pays ne veulent pas dire
-            <br />
-            <span className="italic">deux fois la même réponse.</span>
-          </h2>
+          <div className="mt-5 grid gap-8 md:grid-cols-[1fr_270px] md:items-center">
+            <h2
+              className="max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
+              style={{ fontFamily: "var(--font-editorial)" }}
+            >
+              Deux pays ne veulent pas dire
+              <br />
+              <span className="italic">deux fois la même réponse.</span>
+            </h2>
+            <Image
+              src="/fiscalite-hola.webp"
+              alt="Équilibre fiscal entre la France et l’Espagne"
+              width={650}
+              height={520}
+              sizes="(min-width: 768px) 270px, 70vw"
+              className="h-auto w-full max-w-[270px] object-contain md:justify-self-end"
+            />
+          </div>
 
-          <div className="mt-20 grid gap-x-12 gap-y-10 md:grid-cols-2">
-            {situations.map((situation, index) => (
-              <article
-                key={situation.title}
-                className="border-t border-ivory/25 py-7"
-              >
-                <span className="text-sm text-blood">0{index + 1}</span>
-                <h3
-                  className="mt-3 text-3xl"
-                  style={{ fontFamily: "var(--font-editorial)" }}
+          <div className="mt-10 grid gap-x-12 gap-y-10 md:grid-cols-2">
+              {situations.map((situation, index) => (
+                <article
+                  key={situation.title}
+                  className="border-t border-ivory/25 py-7"
                 >
-                  {situation.title}
-                </h3>
-                <p className="mt-4 max-w-lg leading-relaxed text-ivory/65">
-                  {situation.text}
-                </p>
-              </article>
-            ))}
+                  <span className="text-sm text-blood">0{index + 1}</span>
+                  <h3
+                    className="mt-3 text-3xl"
+                    style={{ fontFamily: "var(--font-editorial)" }}
+                  >
+                    {situation.title}
+                  </h3>
+                  <p className="mt-4 max-w-lg leading-relaxed text-ivory/65">
+                    {situation.text}
+                  </p>
+                </article>
+              ))}
           </div>
         </div>
       </section>
 
-      <LifestylePhoto
-        src="/fiscalite-lifestyle-hola.webp"
-        alt="Un couple examine sa situation fiscale France–Espagne avec une professionnelle"
-        eyebrow="Des faits clairs avant toute décision"
-      />
-
-      <section className="px-8 py-28 md:px-16 md:py-36">
-        <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-[0.68fr_1.32fr]">
-          <p className="text-xs uppercase tracking-[0.25em] text-blood">
-            Résidence fiscale
-          </p>
+      <section className="px-6 py-16 sm:px-8 sm:py-20 md:px-16 md:py-36">
+        <div className="mx-auto grid max-w-6xl gap-10 md:gap-16 md:grid-cols-[0.68fr_1.32fr]">
+          <div>
+            <p className="text-xs uppercase tracking-[0.25em] text-blood">
+              Résidence fiscale
+            </p>
+            <p className="mt-5 max-w-[260px] text-sm leading-relaxed text-navy/55">
+              Des faits clairs avant toute décision — et avant toute déclaration.
+            </p>
+            <Image
+              src="/fiscalite-residence.webp"
+              alt="Calendrier et éléments de vie examinés ensemble pour la résidence fiscale"
+              width={1280}
+              height={853}
+              sizes="(min-width: 768px) 28vw, 88vw"
+              className="mt-7 h-auto w-full max-w-[340px] object-contain"
+            />
+          </div>
           <div>
             <h2
-              className="max-w-4xl text-5xl leading-[0.95] md:text-6xl"
+              className="max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
               style={{ fontFamily: "var(--font-editorial)" }}
             >
               Plus qu’un nombre de jours.
@@ -188,15 +212,27 @@ export default function FiscaliteResidenceFranceEspagne() {
         </div>
       </section>
 
-      <section className="bg-[#EEE8DE] px-8 py-28 md:px-16 md:py-36">
+      <section className="bg-[#EEE8DE] px-6 py-16 sm:px-8 sm:py-20 md:px-16 md:py-36">
         <div className="mx-auto max-w-6xl">
-          <div className="grid gap-16 md:grid-cols-[0.68fr_1.32fr]">
-            <p className="text-xs uppercase tracking-[0.25em] text-blood">
-              Notre méthode
-            </p>
+          <div className="grid gap-10 md:gap-16 md:grid-cols-[0.68fr_1.32fr]">
+            <div>
+              <p className="text-xs uppercase tracking-[0.25em] text-blood">
+                Notre méthode
+              </p>
+              <figure className="mt-8 max-w-[330px] overflow-hidden">
+                <Image
+                  src="/a-propos-lifestyle-hola.webp"
+                  alt="Préparer les informations avant de coordonner les professionnels compétents"
+                  width={900}
+                  height={675}
+                  sizes="(min-width: 768px) 28vw, 88vw"
+                  className="aspect-[4/3] h-auto w-full object-cover"
+                />
+              </figure>
+            </div>
             <div>
               <h2
-                className="max-w-4xl text-5xl leading-[0.95] md:text-6xl"
+                className="max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
                 style={{ fontFamily: "var(--font-editorial)" }}
               >
                 Préparer avant de déclarer.
@@ -232,13 +268,13 @@ export default function FiscaliteResidenceFranceEspagne() {
         </div>
       </section>
 
-      <section className="px-8 py-28 md:px-16 md:py-36">
+      <section className="px-6 py-16 sm:px-8 sm:py-20 md:px-16 md:py-36">
         <div className="mx-auto max-w-6xl">
           <p className="text-xs uppercase tracking-[0.25em] text-blood">
             Des rôles clairs
           </p>
           <h2
-            className="mt-5 max-w-4xl text-5xl leading-[0.95] md:text-6xl"
+            className="mt-5 max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
             style={{ fontFamily: "var(--font-editorial)" }}
           >
             Vous gardez un interlocuteur.
@@ -247,6 +283,18 @@ export default function FiscaliteResidenceFranceEspagne() {
               Chaque expert garde sa responsabilité.
             </span>
           </h2>
+          <p className="mt-7 max-w-2xl leading-relaxed text-navy/65">
+            Lorsque votre situation nécessite une analyse juridique en Espagne,
+            holÀ! peut notamment coordonner l’intervention de
+            <a
+              href="https://defendum.es/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-1 border-b border-navy/25 pb-0.5 transition-colors hover:text-blood"
+            >
+              Defendum Abogados ↗
+            </a>.
+          </p>
 
           <div className="mt-16 grid gap-8 md:grid-cols-2">
             <article className="border border-navy/15 p-8 md:p-10">
@@ -316,14 +364,14 @@ export default function FiscaliteResidenceFranceEspagne() {
         </div>
       </section>
 
-      <section className="mx-8 mb-16 bg-blood px-8 py-16 text-ivory md:mx-16 md:px-16 md:py-20">
+      <section className="mx-0 mb-10 bg-blood px-6 py-10 text-ivory sm:mx-8 sm:mb-16 sm:px-8 md:mx-auto md:max-w-6xl md:px-12 md:py-12">
         <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-[1fr_auto] md:items-end">
           <div>
             <p className="text-xs uppercase tracking-[0.25em] text-ivory/70">
               Fiscalité France–Espagne
             </p>
             <h2
-              className="mt-5 text-5xl leading-[0.95] md:text-7xl"
+              className="mt-4 text-4xl leading-[0.98] sm:text-5xl"
               style={{ fontFamily: "var(--font-editorial)" }}
             >
               Commençons par les faits.

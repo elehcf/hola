@@ -128,6 +128,7 @@ export default async function GuidePage({ params }: Props) {
         src="/guides-lifestyle-hola.webp"
         alt="Carnet, carte et documents pour préparer des démarches entre la France et l’Espagne"
         eyebrow="Comprendre avant d’agir"
+        wide
       />
 
       {/* ARTICLE */}

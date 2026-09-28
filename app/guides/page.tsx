@@ -69,7 +69,7 @@ export default function GuidesPage() {
             </p>
 
             <h1
-              className="mt-7 text-6xl leading-[0.9] md:text-8xl lg:text-9xl"
+              className="mt-7 text-5xl leading-[0.92] sm:text-6xl md:text-8xl lg:text-9xl"
               style={{ fontFamily: "var(--font-editorial)" }}
             >
               L’Espagne,
@@ -86,16 +86,21 @@ export default function GuidesPage() {
               faire, dans quel ordre et pourquoi. Sans vous obliger à parler
               couramment l’administration espagnole.
             </p>
+
+          </div>
+
+          <div className="mt-12">
+            <LifestylePhoto
+              src="/guides-lifestyle-hola.webp"
+              alt="Carnet, carte et documents pour préparer des démarches entre la France et l’Espagne"
+              eyebrow="Comprendre avant d’agir"
+              compact
+              wide
+            />
           </div>
 
         </div>
       </section>
-
-      <LifestylePhoto
-        src="/guides-lifestyle-hola.webp"
-        alt="Carnet, carte et documents pour préparer des démarches entre la France et l’Espagne"
-        eyebrow="Comprendre avant d’agir"
-      />
 
       {/* CATEGORIES */}
       <section className="border-t border-navy/15">
@@ -177,7 +182,7 @@ export default function GuidesPage() {
           </p>
 
           <h2
-            className="mt-6 max-w-4xl text-5xl leading-[0.95] md:text-7xl"
+            className="mt-6 max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-7xl"
             style={{ fontFamily: "var(--font-editorial)" }}
           >
             Racontez-nous.

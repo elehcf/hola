@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import LifestylePhoto from "./components/LifestylePhoto";
-import SiteLogo from "./components/SiteLogo";
+import PageHeader from "./components/PageHeader";
 
 export const metadata: Metadata = {
   title: "Assistance administrative en Espagne pour les Français",
@@ -93,66 +92,16 @@ const installationNeeds = [
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-ivory text-navy">
-      <div className="px-8 pt-8 md:px-16 md:pt-10">
-        <header className="flex items-center justify-between">
-          <SiteLogo />
+      <div>
+        <PageHeader />
 
-          <nav
-            className="hidden items-center gap-9 text-navy md:flex"
-            style={{ fontFamily: "var(--font-editorial)" }}
-          >
-            <a
-              href="#services"
-              className="text-xl transition-colors duration-300 hover:text-blood"
-            >
-              Services
-            </a>
-            <Link
-              href="/guides"
-              className="text-xl transition-colors duration-300 hover:text-blood"
-            >
-              Guides
-            </Link>
-            <Link
-              href="/comment-ca-marche"
-              className="text-xl transition-colors duration-300 hover:text-blood"
-            >
-              Comment ça marche
-            </Link>
-            <Link
-              href="/a-propos"
-              className="text-xl transition-colors duration-300 hover:text-blood"
-            >
-              À propos
-            </Link>
-          </nav>
-        </header>
-
-        <nav
-          aria-label="Navigation mobile"
-          className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-sm text-navy md:hidden"
-        >
-          <a href="#services" className="hover:text-blood">
-            Services
-          </a>
-          <Link href="/guides" className="hover:text-blood">
-            Guides
-          </Link>
-          <Link href="/comment-ca-marche" className="hover:text-blood">
-            Comment ça marche
-          </Link>
-          <Link href="/a-propos" className="hover:text-blood">
-            À propos
-          </Link>
-        </nav>
-
-        <section className="grid items-center gap-14 pb-24 pt-16 md:grid-cols-[1.08fr_0.92fr] md:pb-32 md:pt-14">
+        <section className="grid items-center gap-10 pb-14 pt-12 sm:pb-20 sm:pt-16 md:grid-cols-[1.08fr_0.92fr] md:pb-32 md:pt-14">
           <div className="md:pl-16 lg:pl-28">
             <p className="text-xs uppercase tracking-[0.25em] text-blood">
               France ↔ Espagne
             </p>
             <h1
-              className="mt-6 max-w-4xl text-5xl leading-[0.92] md:text-7xl"
+              className="mt-6 max-w-4xl text-4xl leading-[0.95] sm:text-5xl md:text-7xl"
               style={{ fontFamily: "var(--font-editorial)" }}
             >
               Un projet en Espagne.
@@ -199,21 +148,30 @@ export default function Home() {
         </section>
       </div>
 
-      <LifestylePhoto
-        src="/home-lifestyle-hola.webp"
-        alt="Une femme prépare son projet d’installation en Espagne depuis une terrasse"
-        eyebrow="Une nouvelle vie, avec un fil conducteur"
-      />
-
-      <section id="services" className="px-8 py-28 md:px-16 md:py-36">
+      <section id="services" className="px-6 py-14 sm:px-8 sm:py-20 md:px-16 md:py-28">
         <div className="mx-auto max-w-6xl">
-          <div className="grid gap-10 md:grid-cols-[0.7fr_1.3fr] md:items-end">
-            <p className="text-xs uppercase tracking-[0.25em] text-blood">
-              Services
-            </p>
-            <div>
+          <div>
+              <p className="text-xs uppercase tracking-[0.25em] text-blood">
+                Services
+              </p>
+              <figure className="mt-8">
+                <div className="overflow-hidden bg-[#EEE8DE]">
+                  <Image
+                    src="/home-lifestyle-hola.webp"
+                    alt="Une femme prépare son projet d’installation en Espagne depuis une terrasse"
+                    width={1536}
+                    height={1024}
+                    sizes="(min-width: 768px) 90vw, 100vw"
+                    className="h-44 w-full object-cover object-center sm:h-56 md:h-72"
+                  />
+                </div>
+                <p className="mt-3 max-w-[340px] text-[10px] uppercase tracking-[0.2em] text-blood/80">
+                  Une nouvelle vie, avec un fil conducteur
+                </p>
+              </figure>
+            <div className="mt-10 max-w-4xl md:ml-auto">
               <h2
-                className="text-5xl leading-[0.95] md:text-6xl"
+                className="text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
                 style={{ fontFamily: "var(--font-editorial)" }}
               >
                 Une seule porte d’entrée.
@@ -230,7 +188,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-20 border-t border-navy/20">
+          <div className="mt-12 border sm:mt-16 md:mt-20 border-navy/20">
             {services.map((service) => (
               <Link
                 key={service.href}
@@ -256,15 +214,89 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#EEE8DE] px-8 py-28 md:px-16 md:py-36">
+      <section className="border-y border-navy/15 px-6 py-16 sm:px-8 sm:py-20 md:px-16 md:py-28">
         <div className="mx-auto max-w-6xl">
-          <div className="grid gap-14 md:grid-cols-[0.8fr_1.2fr] md:items-end">
-            <p className="text-xs uppercase tracking-[0.25em] text-blood">
-              S’installer pour de vrai
-            </p>
+          <div className="grid gap-10 md:grid-cols-[0.7fr_1.3fr] md:items-center">
+            <div>
+              <p className="text-xs uppercase tracking-[0.25em] text-blood">
+                Et votre projet continue
+              </p>
+              <figure className="mt-8 max-w-[380px]">
+                <Image
+                  src="/administratif-dessin.webp"
+                  alt="Documents et projets entre la France et l’Espagne"
+                  width={1280}
+                  height={640}
+                  sizes="(min-width: 768px) 28vw, 88vw"
+                  className="h-auto w-full object-contain"
+                />
+              </figure>
+            </div>
             <div>
               <h2
-                className="max-w-4xl text-5xl leading-[0.95] md:text-6xl"
+                className="text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
+                style={{ fontFamily: "var(--font-editorial)" }}
+              >
+                L’administratif n’est parfois
+                <br />
+                <span className="italic text-blood">que le début.</span>
+              </h2>
+              <p className="mt-7 max-w-2xl text-lg leading-relaxed text-navy/65">
+                Droit, rénovation ou développement d’entreprise : holÀ! peut
+                donner une suite cohérente à votre projet grâce à son réseau
+                professionnel en Espagne.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-12 grid gap-8 sm:mt-16 md:grid-cols-3">
+            {[
+              ["Juridique en Espagne", "Avocats en Espagne lorsque votre situation nécessite un véritable conseil juridique."],
+              ["Rénovation & travaux", "Un relais pour transformer, rénover ou aménager votre bien ou votre local en Espagne."],
+              ["Entreprise & stratégie", "Conseil pour créer, structurer, développer ou implanter votre activité en Espagne."],
+            ].map(([title, text], index) => (
+              <article key={title} className="border-t border-navy/20 pt-6">
+                <span className="text-sm text-blood">0{index + 1}</span>
+                <h3
+                  className="mt-4 text-3xl"
+                  style={{ fontFamily: "var(--font-editorial)" }}
+                >
+                  {title}
+                </h3>
+                <p className="mt-4 leading-relaxed text-navy/60">{text}</p>
+              </article>
+            ))}
+          </div>
+
+          <Link
+            href="/collaborateurs"
+            className="mt-10 inline-block border-b border-navy/30 pb-1 text-lg transition-colors hover:border-blood hover:text-blood"
+            style={{ fontFamily: "var(--font-editorial)" }}
+          >
+            Découvrir l’écosystème holÀ! →
+          </Link>
+        </div>
+      </section>
+
+      <section className="bg-[#EEE8DE] px-6 py-16 sm:px-8 sm:py-20 md:px-16 md:py-36">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid gap-10 md:grid-cols-[0.8fr_1.2fr] md:items-center">
+            <div>
+              <p className="text-xs uppercase tracking-[0.25em] text-blood">
+                S’installer pour de vrai
+              </p>
+              <Image
+                src="/home-formulaire.webp"
+                alt="Un formulaire devient le chemin d’une nouvelle vie en Espagne"
+                width={1280}
+                height={853}
+                sizes="(min-width: 768px) 36vw, 88vw"
+                className="mt-7 h-auto w-full max-w-[410px] object-contain"
+              />
+            </div>
+            <div>
+              <h2
+                className="max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
                 style={{ fontFamily: "var(--font-editorial)" }}
               >
                 Une nouvelle vie ne tient pas
@@ -280,7 +312,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-20 grid gap-x-12 gap-y-10 md:grid-cols-2">
+          <div className="mt-12 grid sm:mt-16 md:mt-20 gap-x-12 gap-y-10 md:grid-cols-2">
             {installationNeeds.map((need) => (
               <article key={need.title} className="border-t border-navy/20 pt-6">
                 <h3
@@ -307,12 +339,24 @@ export default function Home() {
 
       <section className="bg-navy px-8 py-28 text-ivory md:px-16 md:py-36">
         <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-[0.72fr_1.28fr]">
-          <p className="text-xs uppercase tracking-[0.25em] text-blood">
-            Un dossier, plusieurs compétences
-          </p>
+          <div>
+            <p className="text-xs uppercase tracking-[0.25em] text-blood">
+              Un dossier, plusieurs compétences
+            </p>
+            <figure className="mt-8 max-w-[370px]">
+              <Image
+                src="/home-accompagnement.webp"
+                alt="Un parcours accompagné entre deux pays"
+                width={1280}
+                height={640}
+                sizes="(min-width: 768px) 28vw, 88vw"
+                className="h-auto w-full object-contain"
+              />
+            </figure>
+          </div>
           <div>
             <h2
-              className="max-w-4xl text-5xl leading-[0.95] md:text-6xl"
+              className="max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
               style={{ fontFamily: "var(--font-editorial)" }}
             >
               Le bon accompagnement,
@@ -353,21 +397,35 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-8 py-28 md:px-16 md:py-36">
+      <section className="px-6 py-16 sm:px-8 sm:py-20 md:px-16 md:py-36">
         <div className="mx-auto max-w-6xl">
-          <p className="text-xs uppercase tracking-[0.25em] text-blood">
-            Comment ça marche
-          </p>
-          <h2
-            className="mt-5 max-w-3xl text-5xl leading-[0.95] md:text-6xl"
-            style={{ fontFamily: "var(--font-editorial)" }}
-          >
-            Vous nous expliquez.
-            <br />
-            <span className="italic text-blood">On démêle le reste.</span>
-          </h2>
+          <div className="grid gap-10 md:grid-cols-[0.7fr_1.3fr] md:items-end">
+            <div>
+              <p className="text-xs uppercase tracking-[0.25em] text-blood">
+                Comment ça marche
+              </p>
+              <figure className="mt-8 max-w-[370px]">
+                <Image
+                  src="/home-demeler.webp"
+                  alt="Un fil démêle les papiers et trace une route claire"
+                  width={1280}
+                  height={640}
+                  sizes="(min-width: 768px) 28vw, 88vw"
+                  className="h-auto w-full object-contain"
+                />
+              </figure>
+            </div>
+            <h2
+              className="text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
+              style={{ fontFamily: "var(--font-editorial)" }}
+            >
+              Vous nous expliquez.
+              <br />
+              <span className="italic text-blood">On démêle le reste.</span>
+            </h2>
+          </div>
 
-          <div className="mt-20 grid gap-12 md:grid-cols-3 md:gap-8">
+          <div className="mt-12 grid sm:mt-16 md:mt-20 gap-12 md:grid-cols-3 md:gap-8">
             {[
               {
                 number: "01",
@@ -409,7 +467,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-8 pb-28 md:px-16 md:pb-40">
+      <section className="px-6 pb-16 sm:px-8 sm:pb-24 md:px-16 md:pb-40">
         <div className="mx-auto grid max-w-6xl gap-14 md:grid-cols-[0.82fr_1.18fr] md:items-center">
           <div>
             <p className="text-xs uppercase tracking-[0.25em] text-blood">
@@ -427,7 +485,7 @@ export default function Home() {
 
           <div>
             <h2
-              className="text-5xl leading-[0.95] md:text-6xl"
+              className="text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
               style={{ fontFamily: "var(--font-editorial)" }}
             >
               Entre deux pays,
@@ -453,15 +511,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-8 pb-16 md:px-16 md:pb-24">
-        <div className="mx-auto max-w-6xl bg-blood px-8 py-16 text-ivory md:px-16 md:py-20">
+      <section className="px-0 pb-10 sm:px-8 sm:pb-16 md:px-16 md:pb-24">
+        <div className="mx-auto max-w-6xl bg-blood px-6 py-12 text-ivory sm:px-8 sm:py-16 md:px-16 md:py-20">
           <p className="text-xs uppercase tracking-[0.25em] text-ivory/70">
             Votre situation
           </p>
           <div className="mt-6 flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
             <div>
               <h2
-                className="max-w-3xl text-5xl leading-[0.95] md:text-7xl"
+                className="max-w-3xl text-4xl leading-[0.98] sm:text-5xl md:text-7xl"
                 style={{ fontFamily: "var(--font-editorial)" }}
               >
                 Un projet en Espagne ?

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import LifestylePhoto from "../components/LifestylePhoto";
 import PageHeader from "../components/PageHeader";
-import ServiceIllustration from "../components/ServiceIllustration";
 
 export const metadata: Metadata = {
   title: "S’installer en Espagne : démarches pour les Français",
@@ -86,13 +86,13 @@ export default function InstallationEspagne() {
     <main className="min-h-screen bg-ivory text-navy">
       <PageHeader />
 
-      <section className="px-8 pb-28 pt-20 md:px-16 md:pb-36">
+      <section className="px-6 pb-16 pt-12 sm:px-8 sm:pb-20 sm:pt-16 md:px-16 md:pb-36 md:pt-20">
         <div className="mx-auto max-w-6xl">
           <p className="text-xs uppercase tracking-[0.25em] text-blood">
             Installation · Espagne
           </p>
           <h1
-            className="mt-6 max-w-5xl text-6xl leading-[0.9] md:text-8xl"
+            className="mt-6 max-w-5xl text-5xl leading-[0.92] sm:text-6xl md:text-8xl"
             style={{ fontFamily: "var(--font-editorial)" }}
           >
             Vous changez de pays.
@@ -102,28 +102,35 @@ export default function InstallationEspagne() {
             </span>
           </h1>
 
-          <div className="mt-12 grid gap-10 md:grid-cols-2">
-            <p className="max-w-xl text-lg leading-relaxed text-navy/70">
-              S’installer en Espagne, ce n’est pas seulement obtenir un numéro
-              ou remplir un formulaire. Résidence, adresse, santé, logement,
-              école ou banque peuvent se croiser. Nous construisons avec vous
-              un parcours cohérent, depuis la France jusqu’à votre installation.
-            </p>
-            <div className="md:flex md:justify-end">
+          <div className="mt-12 grid gap-10 md:grid-cols-[1.05fr_0.95fr] md:items-start">
+            <div>
+              <p className="max-w-xl text-lg leading-relaxed text-navy/70">
+                S’installer en Espagne, ce n’est pas seulement obtenir un numéro
+                ou remplir un formulaire. Résidence, adresse, santé, logement,
+                école ou banque peuvent se croiser. Nous construisons avec vous
+                un parcours cohérent, depuis la France jusqu’à votre installation.
+              </p>
               <Link
                 href="/demande?service=installation"
-                className="inline-block bg-blood px-8 py-4 text-sm uppercase tracking-[0.12em] text-ivory"
+                className="mt-8 inline-block bg-blood px-6 py-3 text-xs uppercase tracking-[0.12em] text-ivory transition-transform hover:-translate-y-0.5"
               >
                 Préparer mon installation →
               </Link>
             </div>
+            <figure className="md:justify-self-end">
+              <div className="max-w-[430px] overflow-hidden">
+                <Image
+                  src="/installation-lifestyle-hola.webp"
+                  alt="Préparer une nouvelle installation en Espagne"
+                  width={1200}
+                  height={900}
+                  priority
+                  sizes="(min-width: 768px) 38vw, 92vw"
+                  className="aspect-[4/3] h-auto w-full object-cover"
+                />
+              </div>
+            </figure>
           </div>
-
-          <ServiceIllustration
-            src="/installation-hola.webp"
-            alt="Valise, clé et documents pour une installation en Espagne"
-            portrait
-          />
         </div>
       </section>
 
@@ -132,17 +139,27 @@ export default function InstallationEspagne() {
           <p className="text-xs uppercase tracking-[0.25em] text-blood">
             Votre parcours administratif
           </p>
-          <h2
-            className="mt-5 max-w-4xl text-5xl leading-[0.95] md:text-6xl"
-            style={{ fontFamily: "var(--font-editorial)" }}
-          >
-            Les étapes essentielles.
-            <br />
-            <span className="italic">Dans votre ordre.</span>
-          </h2>
+          <div className="mt-5 grid gap-8 md:grid-cols-[1fr_270px] md:items-center">
+            <h2
+              className="max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
+              style={{ fontFamily: "var(--font-editorial)" }}
+            >
+              Les étapes essentielles.
+              <br />
+              <span className="italic">Dans votre ordre.</span>
+            </h2>
+            <Image
+              src="/installation-hola.webp"
+              alt="Valise, clé et documents pour une installation en Espagne"
+              width={500}
+              height={700}
+              sizes="(min-width: 768px) 270px, 70vw"
+              className="h-auto w-full max-w-[270px] object-contain md:justify-self-end"
+            />
+          </div>
 
-          <div className="mt-20 grid gap-x-12 md:grid-cols-2">
-            {essentialSteps.map((step) => (
+          <div className="mt-12 grid gap-x-12 sm:mt-16 md:mt-20 md:grid-cols-2">
+              {essentialSteps.map((step) => (
               <article
                 key={step.number}
                 className="border-t border-ivory/25 py-7"
@@ -163,20 +180,19 @@ export default function InstallationEspagne() {
         </div>
       </section>
 
-      <LifestylePhoto
-        src="/installation-lifestyle-hola.webp"
-        alt="Une femme découvre son nouveau logement en Espagne parmi les cartons"
-        eyebrow="Votre nouvelle vie commence ici"
-      />
-
-      <section className="px-8 py-28 md:px-16 md:py-36">
-        <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-[0.7fr_1.3fr]">
-          <p className="text-xs uppercase tracking-[0.25em] text-blood">
-            Chaque installation est différente
-          </p>
+      <section className="px-6 py-16 sm:px-8 sm:py-20 md:px-16 md:py-36">
+        <div className="mx-auto grid max-w-6xl gap-10 md:gap-16 md:grid-cols-[0.7fr_1.3fr]">
+          <div>
+            <p className="text-xs uppercase tracking-[0.25em] text-blood">
+              Chaque installation est différente
+            </p>
+            <p className="mt-5 max-w-[260px] text-sm leading-relaxed text-navy/55">
+              Votre nouvelle vie commence ici — avec les démarches dans le bon ordre.
+            </p>
+          </div>
           <div>
             <h2
-              className="max-w-3xl text-5xl leading-[0.95] md:text-6xl"
+              className="max-w-3xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
               style={{ fontFamily: "var(--font-editorial)" }}
             >
               Salarié, indépendant,
@@ -202,15 +218,27 @@ export default function InstallationEspagne() {
         </div>
       </section>
 
-      <section className="bg-[#EEE8DE] px-8 py-28 md:px-16 md:py-36">
+      <section className="bg-[#EEE8DE] px-6 py-16 sm:px-8 sm:py-20 md:px-16 md:py-36">
         <div className="mx-auto max-w-6xl">
-          <div className="grid gap-16 md:grid-cols-[0.7fr_1.3fr]">
-            <p className="text-xs uppercase tracking-[0.25em] text-blood">
-              Au-delà des formulaires
-            </p>
+          <div className="grid gap-10 md:gap-16 md:grid-cols-[0.7fr_1.3fr]">
+            <div>
+              <p className="text-xs uppercase tracking-[0.25em] text-blood">
+                Au-delà des formulaires
+              </p>
+              <figure className="mt-8 max-w-[330px] overflow-hidden">
+                <Image
+                  src="/home-lifestyle-hola.webp"
+                  alt="Préparer son quotidien et sa nouvelle vie en Espagne"
+                  width={900}
+                  height={675}
+                  sizes="(min-width: 768px) 28vw, 88vw"
+                  className="aspect-[4/3] h-auto w-full object-cover"
+                />
+              </figure>
+            </div>
             <div>
               <h2
-                className="max-w-4xl text-5xl leading-[0.95] md:text-6xl"
+                className="max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
                 style={{ fontFamily: "var(--font-editorial)" }}
               >
                 Préparer votre arrivée.
@@ -228,7 +256,7 @@ export default function InstallationEspagne() {
             </div>
           </div>
 
-          <div className="mt-20 grid gap-x-14 gap-y-12 md:grid-cols-2">
+          <div className="mt-12 grid sm:mt-16 md:mt-20 gap-x-14 gap-y-12 md:grid-cols-2">
             {dailyLife.map((item) => (
               <article key={item.title} className="border-t border-navy/20 pt-6">
                 <h3
@@ -254,15 +282,27 @@ export default function InstallationEspagne() {
         </div>
       </section>
 
-      <section className="px-8 py-28 md:px-16 md:py-36">
+      <section className="px-6 py-16 sm:px-8 sm:py-20 md:px-16 md:py-36">
         <div className="mx-auto max-w-6xl">
-          <div className="grid gap-16 md:grid-cols-[0.7fr_1.3fr]">
-            <p className="text-xs uppercase tracking-[0.25em] text-blood">
-              Comprendre
-            </p>
+          <div className="grid gap-10 md:gap-16 md:grid-cols-[0.7fr_1.3fr]">
+            <div>
+              <p className="text-xs uppercase tracking-[0.25em] text-blood">
+                Comprendre
+              </p>
+              <figure className="mt-8 max-w-[350px]">
+                <Image
+                  src="/installation-questions.webp"
+                  alt="Questions pratiques autour d’une installation de France en Espagne"
+                  width={1280}
+                  height={853}
+                  sizes="(min-width: 768px) 28vw, 88vw"
+                  className="h-auto w-full object-contain"
+                />
+              </figure>
+            </div>
             <div>
               <h2
-                className="text-5xl leading-[0.95] md:text-6xl"
+                className="text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
                 style={{ fontFamily: "var(--font-editorial)" }}
               >
                 Les questions qui reviennent
@@ -272,7 +312,7 @@ export default function InstallationEspagne() {
             </div>
           </div>
 
-          <div className="mt-20 grid gap-x-16 gap-y-12 md:grid-cols-2">
+          <div className="mt-12 grid sm:mt-16 md:mt-20 gap-x-16 gap-y-12 md:grid-cols-2">
             <article className="border-t border-navy/20 pt-6">
               <h3
                 className="text-2xl"
@@ -361,14 +401,14 @@ export default function InstallationEspagne() {
         </div>
       </section>
 
-      <section className="mx-8 mb-16 bg-blood px-8 py-16 text-ivory md:mx-16 md:px-16 md:py-20">
+      <section className="mx-0 mb-10 bg-blood px-6 py-10 text-ivory sm:mx-8 sm:mb-16 sm:px-8 md:mx-auto md:max-w-6xl md:px-12 md:py-12">
         <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-[1fr_auto] md:items-end">
           <div>
             <p className="text-xs uppercase tracking-[0.25em] text-ivory/70">
               Installation en Espagne
             </p>
             <h2
-              className="mt-5 text-5xl leading-none md:text-7xl"
+              className="mt-4 text-4xl leading-[0.98] sm:text-5xl"
               style={{ fontFamily: "var(--font-editorial)" }}
             >
               À partir de 490 €
