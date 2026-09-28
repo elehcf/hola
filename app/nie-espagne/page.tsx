@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import LifestylePhoto from "../components/LifestylePhoto";
 import PageHeader from "../components/PageHeader";
-import ServiceIllustration from "../components/ServiceIllustration";
 
 export const metadata: Metadata = {
   title: "NIE Espagne : obtenir votre NIE simplement",
@@ -46,31 +46,38 @@ export default function NieEspagne() {
             </span>
           </h1>
 
-          <div className="mt-12 grid gap-10 md:grid-cols-2">
-            <p className="max-w-xl text-lg leading-relaxed text-navy/70">
-  Vous nous expliquez votre projet. Nous vérifions d’abord si une
-  demande de NIE correspond à votre situation ou si vous devez
-  effectuer d’autres démarches liées à votre installation en Espagne.
-  Si la demande de NIE est adaptée, nous préparons le formulaire EX-15,
-  identifions les justificatifs à prévoir et vous expliquons comment
-  procéder. Le tout, en français.
-</p>
-
-            <div className="md:flex md:justify-end">
-              <a
+          <div className="mt-12 grid gap-10 md:grid-cols-[1.05fr_0.95fr] md:items-start">
+            <div>
+              <p className="max-w-xl text-lg leading-relaxed text-navy/70">
+                Vous nous expliquez votre projet. Nous vérifions d’abord si une
+                demande de NIE correspond à votre situation ou si vous devez
+                effectuer d’autres démarches liées à votre installation en Espagne.
+                Si la demande de NIE est adaptée, nous préparons le formulaire EX-15,
+                identifions les justificatifs à prévoir et vous expliquons comment
+                procéder. Le tout, en français.
+              </p>
+              <Link
                 href="/demande?service=nie"
-                className="inline-block bg-blood px-8 py-4 text-sm uppercase tracking-[0.12em] text-ivory"
+                className="mt-8 inline-block bg-blood px-6 py-3 text-xs uppercase tracking-[0.12em] text-ivory transition-transform hover:-translate-y-0.5"
               >
                 Commencer ma demande →
-              </a>
+              </Link>
             </div>
-          </div>
 
-          <ServiceIllustration
-            src="/nie-hola.webp"
-            alt="Passeport et documents reliés par le fil rouge de holÀ!"
-            portrait
-          />
+            <figure className="md:justify-self-end">
+              <div className="max-w-[430px] overflow-hidden">
+                <Image
+                  src="/nie-lifestyle-hola.webp"
+                  alt="Une femme prépare les documents de son projet en Espagne"
+                  width={1200}
+                  height={900}
+                  priority
+                  sizes="(min-width: 768px) 38vw, 92vw"
+                  className="aspect-[4/3] h-auto w-full object-cover"
+                />
+              </div>
+            </figure>
+          </div>
 
         </div>
       </section>
@@ -93,7 +100,8 @@ export default function NieEspagne() {
             Vous avancez.
           </h2>
 
-          <div className="mt-12 grid sm:mt-16 md:mt-20 gap-10 md:grid-cols-2">
+          <div className="mt-10 grid gap-10 md:grid-cols-[1fr_250px] md:items-start">
+            <div className="grid gap-8 sm:grid-cols-2">
 
             <div className="border-t border-ivory/25 py-6">
               <span className="text-sm text-blood">01</span>
@@ -136,7 +144,18 @@ export default function NieEspagne() {
                 Vous savez où aller et quoi faire
               </p>
             </div>
+            </div>
 
+            <div className="hidden md:flex md:justify-end">
+              <Image
+                src="/nie-hola.webp"
+                alt="Passeport et documents reliés par le fil rouge de holÀ!"
+                width={500}
+                height={700}
+                sizes="250px"
+                className="h-auto max-h-[300px] w-auto object-contain"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -149,12 +168,9 @@ export default function NieEspagne() {
             <p className="text-xs uppercase tracking-[0.25em] text-blood">
               Bon à savoir
             </p>
-            <LifestylePhoto
-              src="/nie-lifestyle-hola.webp"
-              alt="Une femme vérifie les documents de sa demande de NIE"
-              eyebrow="Votre dossier, dans le bon ordre"
-              compact
-            />
+            <p className="mt-5 max-w-[260px] text-sm leading-relaxed text-navy/55">
+              Votre dossier, dans le bon ordre — avant de vous déplacer.
+            </p>
           </div>
 
           <div>
@@ -202,9 +218,21 @@ export default function NieEspagne() {
         <div className="mx-auto max-w-6xl">
 
           <div className="grid gap-10 md:gap-16 md:grid-cols-[0.7fr_1.3fr]">
-            <p className="text-xs uppercase tracking-[0.25em] text-blood">
-              Comprendre
-            </p>
+            <div>
+              <p className="text-xs uppercase tracking-[0.25em] text-blood">
+                Comprendre
+              </p>
+              <figure className="mt-8 max-w-[330px] overflow-hidden">
+                <Image
+                  src="/guides-lifestyle-hola.webp"
+                  alt="Préparer et comprendre une démarche administrative en Espagne"
+                  width={900}
+                  height={675}
+                  sizes="(min-width: 768px) 28vw, 88vw"
+                  className="aspect-[4/3] h-auto w-full object-cover"
+                />
+              </figure>
+            </div>
 
             <div>
               <h2
@@ -325,7 +353,7 @@ inadaptés et les déplacements inutiles.
       {/* PRIX */}
       <section
         id="commencer"
-        className="mx-0 mb-10 bg-blood sm:mx-8 sm:mb-16 px-8 py-16 text-ivory md:mx-16 md:px-16 md:py-20"
+        className="mx-0 mb-10 bg-blood px-6 py-10 text-ivory sm:mx-8 sm:mb-16 sm:px-8 md:mx-auto md:max-w-6xl md:px-12 md:py-12"
       >
         <div className="mx-auto max-w-6xl">
 
@@ -337,7 +365,7 @@ inadaptés et les déplacements inutiles.
               </p>
 
               <h2
-                className="mt-5 text-4xl leading-[0.98] sm:text-5xl md:text-7xl"
+                className="mt-4 text-4xl leading-[0.98] sm:text-5xl"
                 style={{ fontFamily: "var(--font-editorial)" }}
               >
                 149 €
