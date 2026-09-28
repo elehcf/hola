@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import SiteLogo from "./components/SiteLogo";
+import PageHeader from "./components/PageHeader";
 
 export const metadata: Metadata = {
   title: "Assistance administrative en Espagne pour les Français",
@@ -92,67 +92,8 @@ const installationNeeds = [
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-ivory text-navy">
-      <div className="px-6 pt-6 sm:px-8 sm:pt-8 md:px-16 md:pt-10">
-        <header className="flex items-center justify-between">
-          <SiteLogo />
-
-          <nav
-            className="hidden items-center gap-9 text-navy md:flex"
-            style={{ fontFamily: "var(--font-editorial)" }}
-          >
-            <a
-              href="#services"
-              className="text-xl transition-colors duration-300 hover:text-blood"
-            >
-              Services
-            </a>
-            <Link
-              href="/guides"
-              className="text-xl transition-colors duration-300 hover:text-blood"
-            >
-              Guides
-            </Link>
-            <Link
-              href="/comment-ca-marche"
-              className="text-xl transition-colors duration-300 hover:text-blood"
-            >
-              Comment ça marche
-            </Link>
-            <Link
-              href="/a-propos"
-              className="text-xl transition-colors duration-300 hover:text-blood"
-            >
-              À propos
-            </Link>
-            <Link
-              href="/collaborateurs"
-              className="text-xl transition-colors duration-300 hover:text-blood"
-            >
-              Collaborateurs
-            </Link>
-          </nav>
-        </header>
-
-        <nav
-          aria-label="Navigation mobile"
-          className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-sm text-navy md:hidden"
-        >
-          <a href="#services" className="hover:text-blood">
-            Services
-          </a>
-          <Link href="/guides" className="hover:text-blood">
-            Guides
-          </Link>
-          <Link href="/comment-ca-marche" className="hover:text-blood">
-            Comment ça marche
-          </Link>
-          <Link href="/a-propos" className="hover:text-blood">
-            À propos
-          </Link>
-          <Link href="/collaborateurs" className="hover:text-blood">
-            Collaborateurs
-          </Link>
-        </nav>
+      <div>
+        <PageHeader />
 
         <section className="grid items-center gap-10 pb-14 pt-12 sm:pb-20 sm:pt-16 md:grid-cols-[1.08fr_0.92fr] md:pb-32 md:pt-14">
           <div className="md:pl-16 lg:pl-28">
