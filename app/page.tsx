@@ -155,7 +155,7 @@ export default function Home() {
               <p className="text-xs uppercase tracking-[0.25em] text-blood">
                 Services
               </p>
-              <figure className="mt-8 hidden md:block">
+              <figure className="mt-8 max-w-[340px]">
                 <div className="overflow-hidden bg-[#EEE8DE]">
                   <Image
                     src="/home-lifestyle-hola.webp"
@@ -219,9 +219,21 @@ export default function Home() {
       <section className="border-y border-navy/15 px-6 py-16 sm:px-8 sm:py-20 md:px-16 md:py-28">
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-10 md:grid-cols-[0.7fr_1.3fr]">
-            <p className="text-xs uppercase tracking-[0.25em] text-blood">
-              Et votre projet continue
-            </p>
+            <div>
+              <p className="text-xs uppercase tracking-[0.25em] text-blood">
+                Et votre projet continue
+              </p>
+              <figure className="mt-8 max-w-[330px] overflow-hidden">
+                <Image
+                  src="/activite-lifestyle-hola.webp"
+                  alt="Un projet professionnel accompagné en Espagne"
+                  width={900}
+                  height={675}
+                  sizes="(min-width: 768px) 28vw, 88vw"
+                  className="aspect-[4/3] h-auto w-full object-cover"
+                />
+              </figure>
+            </div>
             <div>
               <h2
                 className="text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
@@ -319,9 +331,21 @@ export default function Home() {
 
       <section className="bg-navy px-8 py-28 text-ivory md:px-16 md:py-36">
         <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-[0.72fr_1.28fr]">
-          <p className="text-xs uppercase tracking-[0.25em] text-blood">
-            Un dossier, plusieurs compétences
-          </p>
+          <div>
+            <p className="text-xs uppercase tracking-[0.25em] text-blood">
+              Un dossier, plusieurs compétences
+            </p>
+            <figure className="mt-8 max-w-[330px] overflow-hidden">
+              <Image
+                src="/fiscalite-lifestyle-hola.webp"
+                alt="Un accompagnement coordonné entre la France et l’Espagne"
+                width={900}
+                height={675}
+                sizes="(min-width: 768px) 28vw, 88vw"
+                className="aspect-[4/3] h-auto w-full object-cover"
+              />
+            </figure>
+          </div>
           <div>
             <h2
               className="max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
@@ -367,17 +391,31 @@ export default function Home() {
 
       <section className="px-6 py-16 sm:px-8 sm:py-20 md:px-16 md:py-36">
         <div className="mx-auto max-w-6xl">
-          <p className="text-xs uppercase tracking-[0.25em] text-blood">
-            Comment ça marche
-          </p>
-          <h2
-            className="mt-5 max-w-3xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
-            style={{ fontFamily: "var(--font-editorial)" }}
-          >
-            Vous nous expliquez.
-            <br />
-            <span className="italic text-blood">On démêle le reste.</span>
-          </h2>
+          <div className="grid gap-10 md:grid-cols-[0.7fr_1.3fr] md:items-end">
+            <div>
+              <p className="text-xs uppercase tracking-[0.25em] text-blood">
+                Comment ça marche
+              </p>
+              <figure className="mt-8 max-w-[330px] overflow-hidden">
+                <Image
+                  src="/comment-ca-marche-lifestyle-hola.webp"
+                  alt="Un dossier transmis lors d’un accompagnement personnalisé"
+                  width={900}
+                  height={675}
+                  sizes="(min-width: 768px) 28vw, 88vw"
+                  className="aspect-[4/3] h-auto w-full object-cover"
+                />
+              </figure>
+            </div>
+            <h2
+              className="text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
+              style={{ fontFamily: "var(--font-editorial)" }}
+            >
+              Vous nous expliquez.
+              <br />
+              <span className="italic text-blood">On démêle le reste.</span>
+            </h2>
+          </div>
 
           <div className="mt-12 grid sm:mt-16 md:mt-20 gap-12 md:grid-cols-3 md:gap-8">
             {[
