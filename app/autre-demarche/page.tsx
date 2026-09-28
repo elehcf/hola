@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import LifestylePhoto from "../components/LifestylePhoto";
 import PageHeader from "../components/PageHeader";
-import ServiceIllustration from "../components/ServiceIllustration";
 
 export const metadata: Metadata = {
   title: "Démarche administrative en Espagne : besoin d’aide ?",
@@ -50,17 +50,35 @@ export default function AutreDemarche() {
             </span>
           </h1>
 
-          <p className="mt-12 max-w-2xl text-lg leading-relaxed text-navy/70">
-            Un document espagnol qu’on vous réclame. Un dossier qui n’avance
-            plus. Une administration à laquelle vous ne savez pas comment
-            répondre. Vous n’avez pas besoin de connaître le nom exact de la
-            démarche : commencez simplement par nous raconter ce qui se passe.
-          </p>
-
-          <ServiceIllustration
-            src="/autre-demarche-hola.webp"
-            alt="Dossiers administratifs organisés par le fil rouge de holÀ!"
-          />
+          <div className="mt-12 grid gap-10 md:grid-cols-[1.05fr_0.95fr] md:items-start">
+            <div>
+              <p className="max-w-2xl text-lg leading-relaxed text-navy/70">
+                Un document espagnol qu’on vous réclame. Un dossier qui n’avance
+                plus. Une administration à laquelle vous ne savez pas comment
+                répondre. Vous n’avez pas besoin de connaître le nom exact de la
+                démarche : commencez simplement par nous raconter ce qui se passe.
+              </p>
+              <Link
+                href="/demande?service=autre"
+                className="mt-8 inline-block bg-blood px-6 py-3 text-xs uppercase tracking-[0.12em] text-ivory transition-transform hover:-translate-y-0.5"
+              >
+                Raconter ma situation →
+              </Link>
+            </div>
+            <figure className="md:justify-self-end">
+              <div className="max-w-[430px] overflow-hidden">
+                <Image
+                  src="/autre-demarche-lifestyle-hola.webp"
+                  alt="Demander de l’aide pour comprendre une démarche administrative espagnole"
+                  width={1200}
+                  height={900}
+                  priority
+                  sizes="(min-width: 768px) 38vw, 92vw"
+                  className="aspect-[4/3] h-auto w-full object-cover"
+                />
+              </div>
+            </figure>
+          </div>
 
         </div>
       </section>
@@ -83,7 +101,7 @@ export default function AutreDemarche() {
             <span className="italic">comment ça s’appelle. »</span>
           </h2>
 
-          <div className="mt-12 border sm:mt-16 md:mt-20-t border-ivory/25">
+          <div className="mt-12 grid gap-10 sm:mt-16 md:mt-20 md:grid-cols-[1fr_280px] md:items-start">\n            <div className="border border-ivory/25">
 
             {[
               "Un document espagnol à obtenir",
@@ -108,7 +126,18 @@ export default function AutreDemarche() {
                 </p>
               </div>
             ))}
+            </div>
 
+            <div className="hidden md:flex md:justify-end">
+              <Image
+                src="/autre-demarche-hola.webp"
+                alt="Dossiers administratifs organisés par le fil rouge de holÀ!"
+                width={650}
+                height={520}
+                sizes="280px"
+                className="h-auto max-h-[280px] w-auto object-contain"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -121,12 +150,9 @@ export default function AutreDemarche() {
             <p className="text-xs uppercase tracking-[0.25em] text-blood">
               Et ensuite ?
             </p>
-            <LifestylePhoto
-              src="/autre-demarche-lifestyle-hola.webp"
-              alt="Une femme demande de l’aide pour comprendre un courrier administratif espagnol"
-              eyebrow="Même quand la démarche n’a pas encore de nom"
-              compact
-            />
+            <p className="mt-5 max-w-[260px] text-sm leading-relaxed text-navy/55">
+              Même quand la démarche n’a pas encore de nom, on peut commencer par la situation.
+            </p>
           </div>
 
           <div>
@@ -153,6 +179,13 @@ export default function AutreDemarche() {
               autre professionnel réglementé, nous vous le disons clairement
               et vous orientons vers le bon interlocuteur.
             </p>
+            <Link
+              href="/demande?service=autre"
+              className="mt-8 inline-block border-b border-navy/30 pb-1 text-lg transition-colors hover:border-blood hover:text-blood"
+              style={{ fontFamily: "var(--font-editorial)" }}
+            >
+              Racontez-nous ce qui se passe →
+            </Link>
           </div>
 
         </div>
@@ -160,7 +193,7 @@ export default function AutreDemarche() {
 
 
       {/* CTA */}
-      <section className="mx-0 mb-10 bg-blood sm:mx-8 sm:mb-16 px-8 py-16 text-ivory md:mx-16 md:px-16 md:py-20">
+      <section className="mx-0 mb-10 bg-blood px-6 py-10 text-ivory sm:mx-8 sm:mb-16 sm:px-8 md:mx-auto md:max-w-6xl md:px-12 md:py-12">
         <div className="mx-auto max-w-6xl">
 
           <p className="text-xs uppercase tracking-[0.25em] text-ivory/70">
@@ -171,7 +204,7 @@ export default function AutreDemarche() {
 
             <div>
               <h2
-                className="max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-7xl"
+                className="max-w-4xl text-4xl leading-[0.98] sm:text-5xl"
                 style={{ fontFamily: "var(--font-editorial)" }}
               >
                 Pas besoin de connaître
