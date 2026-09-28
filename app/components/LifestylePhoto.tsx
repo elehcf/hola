@@ -14,7 +14,7 @@ export default function LifestylePhoto({
   compact = false,
 }: LifestylePhotoProps) {
   const photo = (
-    <figure className={compact ? "mt-12 max-w-xl md:ml-auto" : "mx-auto max-w-6xl"}>
+    <figure className={compact ? "mt-8 max-w-xl sm:mt-10 md:ml-auto md:mt-12" : "mx-auto max-w-6xl"}>
       <div className="mb-6 flex items-center gap-5">
         <p className="text-xs uppercase tracking-[0.25em] text-blood">
           {eyebrow}
@@ -40,7 +40,7 @@ export default function LifestylePhoto({
   }
 
   return (
-    <section className="bg-ivory px-8 py-10 md:px-16 md:py-14">
+    <section className="bg-ivory px-6 py-8 sm:px-8 sm:py-10 md:px-16 md:py-14">
       <div className="mx-auto max-w-6xl md:grid md:grid-cols-12">
         <div className="md:col-span-7 md:col-start-6">{photo}</div>
       </div>
