@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import SiteLogo from "../components/SiteLogo";
+import PageHeader from "../components/PageHeader";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Notre réseau en Espagne",
@@ -39,15 +40,7 @@ const collaborators = [
 export default function Collaborateurs() {
   return (
     <main className="min-h-screen bg-ivory text-navy">
-      <header className="flex items-center justify-between px-6 py-6 sm:px-8 sm:py-8 md:px-16">
-        <SiteLogo />
-        <Link
-          href="/"
-          className="border-b border-navy/25 pb-1 text-sm transition-colors hover:border-blood hover:text-blood"
-        >
-          Retour à l’accueil
-        </Link>
-      </header>
+      <PageHeader />
 
       <section className="px-6 pb-16 pt-12 sm:px-8 sm:pb-20 sm:pt-16 md:px-16 md:pb-32 md:pt-20">
         <div className="mx-auto max-w-6xl">
@@ -62,10 +55,23 @@ export default function Collaborateurs() {
             <br />
             <span className="italic text-blood">bien au-delà des démarches.</span>
           </h1>
-          <div className="mt-10 grid gap-8 md:mt-14 md:grid-cols-[0.7fr_1.3fr]">
-            <p className="text-xs uppercase tracking-[0.25em] text-blood">
-              Un seul point d’entrée
-            </p>
+          <div className="mt-10 grid gap-10 md:mt-14 md:grid-cols-[0.7fr_1.3fr] md:items-start">
+            <div>
+              <p className="text-xs uppercase tracking-[0.25em] text-blood">
+                Un seul point d’entrée
+              </p>
+              <figure className="mt-8 max-w-[330px] overflow-hidden">
+                <Image
+                  src="/a-propos-lifestyle-hola.webp"
+                  alt="Un projet en Espagne accompagné par un réseau de professionnels"
+                  width={900}
+                  height={675}
+                  priority
+                  sizes="(min-width: 768px) 28vw, 88vw"
+                  className="aspect-[4/3] h-auto w-full object-cover"
+                />
+              </figure>
+            </div>
             <p className="max-w-2xl text-lg leading-relaxed text-navy/70 md:text-xl">
               S’installer, acheter, rénover ou entreprendre en Espagne fait vite
               intervenir plusieurs métiers. holÀ! reste votre fil conducteur et
@@ -89,6 +95,13 @@ export default function Collaborateurs() {
               >
                 <span className="text-sm text-blood">{collaborator.number}</span>
                 <div>
+                  <div
+                    className="mb-6 flex h-14 w-14 items-center justify-center border border-ivory/25 text-xl italic text-blood"
+                    style={{ fontFamily: "var(--font-editorial)" }}
+                    aria-hidden="true"
+                  >
+                    {collaborator.name.split(" ").map((word) => word[0]).join("").slice(0, 2)}
+                  </div>
                   <p className="text-xs uppercase tracking-[0.2em] text-ivory/45">
                     {collaborator.area}
                   </p>
@@ -128,9 +141,21 @@ export default function Collaborateurs() {
 
       <section className="px-6 py-16 sm:px-8 sm:py-20 md:px-16 md:py-32">
         <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[0.7fr_1.3fr] md:gap-16">
-          <p className="text-xs uppercase tracking-[0.25em] text-blood">
-            Une continuité
-          </p>
+          <div>
+            <p className="text-xs uppercase tracking-[0.25em] text-blood">
+              Une continuité
+            </p>
+            <figure className="mt-8 max-w-[330px] overflow-hidden">
+              <Image
+                src="/activite-lifestyle-hola.webp"
+                alt="Un projet qui se poursuit avec les professionnels adaptés"
+                width={900}
+                height={675}
+                sizes="(min-width: 768px) 28vw, 88vw"
+                className="aspect-[4/3] h-auto w-full object-cover"
+              />
+            </figure>
+          </div>
           <div>
             <h2
               className="text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
@@ -153,14 +178,14 @@ export default function Collaborateurs() {
       </section>
 
       <section className="px-0 pb-10 sm:px-8 sm:pb-16 md:px-16 md:pb-24">
-        <div className="mx-auto max-w-6xl bg-blood px-6 py-12 text-ivory sm:px-8 sm:py-16 md:px-16 md:py-20">
+        <div className="mx-auto max-w-5xl bg-blood px-6 py-9 text-ivory sm:px-8 sm:py-11 md:px-12 md:py-12">
           <div className="grid gap-10 md:grid-cols-[1fr_auto] md:items-end">
             <div>
               <p className="text-xs uppercase tracking-[0.25em] text-ivory/65">
                 Votre projet
               </p>
               <h2
-                className="mt-5 max-w-3xl text-4xl leading-[0.98] sm:text-5xl md:text-7xl"
+                className="mt-4 max-w-3xl text-4xl leading-[0.98] sm:text-5xl"
                 style={{ fontFamily: "var(--font-editorial)" }}
               >
                 Plusieurs besoins ?
