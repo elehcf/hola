@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import LifestylePhoto from "../components/LifestylePhoto";
 import PageHeader from "../components/PageHeader";
 
 export const metadata: Metadata = {
@@ -101,7 +100,8 @@ export default function AutreDemarche() {
             <span className="italic">comment ça s’appelle. »</span>
           </h2>
 
-          <div className="mt-12 grid gap-10 sm:mt-16 md:mt-20 md:grid-cols-[1fr_280px] md:items-start">\n            <div className="border border-ivory/25">
+          <div className="mt-12 grid gap-10 sm:mt-16 md:mt-20 md:grid-cols-[1fr_280px] md:items-start">
+            <div className="border border-ivory/25">
 
             {[
               "Un document espagnol à obtenir",
