@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import LifestylePhoto from "../components/LifestylePhoto";
+import PageHeader from "../components/PageHeader";
 
 export const metadata: Metadata = {
   title: "À propos de holÀ! | Démarches en Espagne, accompagnement en français",
@@ -10,13 +11,10 @@ export const metadata: Metadata = {
 
 export default function APropos() {
   return (
-    <main className="min-h-screen bg-ivory px-8 py-16 text-navy md:px-16 md:py-24">
-      <div className="mx-auto max-w-4xl">
-        <Link href="/" className="text-sm text-blood">
-          ← holÀ!
-        </Link>
-
-        <p className="mt-20 text-xs uppercase tracking-[0.25em] text-blood">
+    <main className="min-h-screen bg-ivory text-navy">
+      <PageHeader />
+      <div className="mx-auto max-w-5xl px-6 pb-16 pt-12 sm:px-8 sm:pb-20 sm:pt-16 md:px-16 md:pb-24 md:pt-20">
+        <p className="text-xs uppercase tracking-[0.25em] text-blood">
           À propos
         </p>
 
@@ -37,12 +35,26 @@ export default function APropos() {
 
         <div className="mt-16 space-y-16 text-base leading-relaxed text-navy/75">
           <section className="grid gap-10 md:grid-cols-[0.8fr_1.2fr] md:items-start">
-            <LifestylePhoto
-              src="/a-propos-lifestyle-hola.webp"
-              alt="Une femme marche dans une ville espagnole avec son dossier administratif"
-              eyebrow="Entre la France et l’Espagne"
-              compact
-            />
+            <div className="max-w-[330px]">
+              <p className="text-xs uppercase tracking-[0.22em] text-blood">
+                Entre la France et l’Espagne
+              </p>
+              <div className="mt-5 aspect-[4/5] border border-navy/15 bg-[#EEE8DE] p-6">
+                <div className="flex h-full items-end border-l border-blood pl-5">
+                  <p
+                    className="max-w-[190px] text-2xl leading-tight"
+                    style={{ fontFamily: "var(--font-editorial)" }}
+                  >
+                    Elena Huergo Cerra
+                    <br />
+                    <span className="italic text-blood">fondatrice de holÀ!</span>
+                  </p>
+                </div>
+              </div>
+              <p className="mt-3 text-xs leading-relaxed text-navy/45">
+                Portrait à intégrer
+              </p>
+            </div>
             <div>
             <h2
               className="mb-5 text-3xl text-navy md:text-4xl"
@@ -68,22 +80,30 @@ export default function APropos() {
             </div>
           </section>
 
-          <section>
-            <h2
-              className="mb-5 text-3xl text-navy md:text-4xl"
-              style={{ fontFamily: "var(--font-editorial)" }}
-            >
-              Une aide concrète, à chaque étape.
-            </h2>
+          <section className="grid gap-10 md:grid-cols-[1.2fr_0.8fr] md:items-center">
+            <div>
+              <h2
+                className="mb-5 text-3xl text-navy md:text-4xl"
+                style={{ fontFamily: "var(--font-editorial)" }}
+              >
+                Une aide concrète, à chaque étape.
+              </h2>
 
-            <p>
-              Obtenir un NIE, préparer une démarche liée à un véhicule,
-              organiser une installation, faire reconnaître un diplôme ou
-              créer une activité : chaque situation a ses particularités. Nous
-              commençons par comprendre la vôtre, puis nous identifions les
-              étapes utiles, les documents à réunir et les interlocuteurs
-              concernés.
-            </p>
+              <p>
+                Obtenir un NIE, préparer une démarche liée à un véhicule,
+                organiser une installation, faire reconnaître un diplôme ou
+                créer une activité : chaque situation a ses particularités. Nous
+                commençons par comprendre la vôtre, puis nous identifions les
+                étapes utiles, les documents à réunir et les interlocuteurs
+                concernés.
+              </p>
+            </div>
+            <LifestylePhoto
+              src="/a-propos-lifestyle-hola.webp"
+              alt="Un projet en Espagne accompagné étape par étape"
+              eyebrow="Un fil conducteur"
+              compact
+            />
           </section>
 
           <section>
@@ -107,17 +127,19 @@ export default function APropos() {
           </section>
         </div>
 
-        <div className="mt-12 border sm:mt-16 md:mt-20-t border-navy/20 pt-10">
+        <div className="mt-12 bg-blood px-7 py-8 text-ivory sm:mt-16 sm:px-9 sm:py-10 md:mt-20 md:max-w-3xl">
           <p
             className="max-w-2xl text-3xl leading-tight md:text-4xl"
             style={{ fontFamily: "var(--font-editorial)" }}
           >
-            Racontez-moi votre projet. Nous verrons ensemble par où commencer.
+            Racontez-moi votre projet.
+            <br />
+            <span className="italic">Nous verrons ensemble par où commencer.</span>
           </p>
 
           <Link
             href="/demande"
-            className="mt-8 inline-block bg-blood px-7 py-4 text-sm text-ivory transition-opacity hover:opacity-85"
+            className="mt-7 inline-block border-b border-ivory/70 pb-1 text-sm transition-opacity hover:opacity-80"
           >
             Expliquer ma situation →
           </Link>
