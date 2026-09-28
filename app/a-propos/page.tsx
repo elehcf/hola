@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import LifestylePhoto from "../components/LifestylePhoto";
 import PageHeader from "../components/PageHeader";
 
@@ -39,21 +40,23 @@ export default function APropos() {
               <p className="text-xs uppercase tracking-[0.22em] text-blood">
                 Entre la France et l’Espagne
               </p>
-              <div className="mt-5 aspect-[4/5] border border-navy/15 bg-[#EEE8DE] p-6">
-                <div className="flex h-full items-end border-l border-blood pl-5">
-                  <p
-                    className="max-w-[190px] text-2xl leading-tight"
-                    style={{ fontFamily: "var(--font-editorial)" }}
-                  >
-                    Elena Huergo Cerra
-                    <br />
-                    <span className="italic text-blood">fondatrice de holÀ!</span>
-                  </p>
-                </div>
-              </div>
-              <p className="mt-3 text-xs leading-relaxed text-navy/45">
-                Portrait à intégrer
-              </p>
+              <figure className="mt-5">
+                <Image
+                  src="/elena-huergo-cerra-portrait-sourire.webp"
+                  alt="Portrait d’Elena Huergo Cerra, fondatrice de holÀ!, dans un bureau"
+                  width={850}
+                  height={1101}
+                  sizes="(min-width: 768px) 330px, 88vw"
+                  className="h-auto w-full"
+                />
+                <figcaption
+                  className="mt-4 text-2xl leading-tight text-navy"
+                  style={{ fontFamily: "var(--font-editorial)" }}
+                >
+                  Elena Huergo Cerra
+                  <span className="block italic text-blood">fondatrice de holÀ!</span>
+                </figcaption>
+              </figure>
             </div>
             <div>
             <h2

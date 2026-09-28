@@ -14,6 +14,9 @@ const collaborators = [
   {
     number: "01",
     name: "Innova y Mejora",
+    logo: "/logo-innova-y-mejora.webp",
+    logoWidth: 1341,
+    logoHeight: 1341,
     area: "Rénovation & aménagement",
     text: "Pour les projets immobiliers qui dépassent les démarches administratives : rénovation intégrale de logements et de locaux, réhabilitation et projets clé en main en Asturies.",
     when: "Achat d’un bien à rénover, installation, local professionnel ou projet nécessitant des travaux.",
@@ -22,6 +25,9 @@ const collaborators = [
   {
     number: "02",
     name: "Defendum Abogados",
+    logo: "/logo-defendum.webp",
+    logoWidth: 240,
+    logoHeight: 150,
     area: "Conseil juridique en Espagne",
     text: "Cabinet d’avocats et d’économistes basé à Gijón, intervenant auprès des particuliers, des familles et des entreprises dans différentes branches du droit espagnol.",
     when: "Lorsqu’une démarche nécessite un véritable conseil juridique, une analyse contractuelle ou la défense de vos intérêts en Espagne.",
@@ -30,10 +36,23 @@ const collaborators = [
   {
     number: "03",
     name: "Decisión Estratégica",
+    logo: "/logo-decision-estrategica.webp",
+    logoWidth: 729,
+    logoHeight: 162,
     area: "Conseil aux entreprises",
     text: "Cabinet de conseil spécialisé en stratégie, organisation, commercialisation, marketing et gestion, avec une expertise particulière dans l’accompagnement des entreprises.",
     when: "Création ou développement d’une activité, structuration d’un projet, organisation, stratégie commerciale ou développement en Espagne.",
     href: "https://decisionestrategica.com/",
+  },
+  {
+    number: "04",
+    name: "Mathis",
+    logo: "/logo-mathis-md.webp",
+    logoWidth: 315,
+    logoHeight: 240,
+    area: "Consultant gastronomique",
+    text: "Pour les projets liés à la gastronomie, son regard de consultant peut compléter l’accompagnement administratif de holÀ! lorsque le projet le demande.",
+    when: "Projet gastronomique ou activité de restauration nécessitant un regard spécialisé.",
   },
 ];
 
@@ -82,12 +101,15 @@ export default function Collaborateurs() {
               >
                 <span className="text-sm text-blood">{collaborator.number}</span>
                 <div>
-                  <div
-                    className="mb-6 flex h-14 w-14 items-center justify-center border border-ivory/25 text-xl italic text-blood"
-                    style={{ fontFamily: "var(--font-editorial)" }}
-                    aria-hidden="true"
-                  >
-                    {collaborator.name.split(" ").map((word) => word[0]).join("").slice(0, 2)}
+                  <div className="mb-6 flex h-28 w-44 items-center justify-center bg-white p-3">
+                    <Image
+                      src={collaborator.logo}
+                      alt={`Logo de ${collaborator.name}`}
+                      width={collaborator.logoWidth}
+                      height={collaborator.logoHeight}
+                      sizes="176px"
+                      className="max-h-full max-w-full object-contain"
+                    />
                   </div>
                   <p className="text-xs uppercase tracking-[0.2em] text-ivory/45">
                     {collaborator.area}
@@ -111,14 +133,16 @@ export default function Collaborateurs() {
                       {collaborator.when}
                     </p>
                   </div>
-                  <a
-                    href={collaborator.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mt-7 inline-block border-b border-ivory/35 pb-1 transition-colors hover:border-blood hover:text-blood"
-                  >
-                    En savoir plus →
-                  </a>
+                  {"href" in collaborator && collaborator.href && (
+                    <a
+                      href={collaborator.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-7 inline-block border-b border-ivory/35 pb-1 transition-colors hover:border-blood hover:text-blood"
+                    >
+                      En savoir plus →
+                    </a>
+                  )}
                 </div>
               </article>
             ))}
