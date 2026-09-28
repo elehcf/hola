@@ -249,7 +249,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-12 border sm:mt-16 md:mt-20-t border-navy/20">
+          <div className="mt-12 border sm:mt-16 md:mt-20 border-navy/20">
             {services.map((service) => (
               <Link
                 key={service.href}
@@ -272,6 +272,58 @@ export default function Home() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="border-y border-navy/15 px-6 py-16 sm:px-8 sm:py-20 md:px-16 md:py-28">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid gap-10 md:grid-cols-[0.7fr_1.3fr]">
+            <p className="text-xs uppercase tracking-[0.25em] text-blood">
+              Et votre projet continue
+            </p>
+            <div>
+              <h2
+                className="text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
+                style={{ fontFamily: "var(--font-editorial)" }}
+              >
+                L’administratif n’est parfois
+                <br />
+                <span className="italic text-blood">que le début.</span>
+              </h2>
+              <p className="mt-7 max-w-2xl text-lg leading-relaxed text-navy/65">
+                Droit, rénovation ou développement d’entreprise : holÀ! peut
+                donner une suite cohérente à votre projet grâce à son réseau
+                professionnel en Espagne.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-12 grid gap-8 sm:mt-16 md:grid-cols-3">
+            {[
+              ["Juridique en Espagne", "Avocats en Espagne lorsque votre situation nécessite un véritable conseil juridique."],
+              ["Rénovation & travaux", "Un relais pour transformer, rénover ou aménager votre bien ou votre local en Espagne."],
+              ["Entreprise & stratégie", "Conseil pour créer, structurer, développer ou implanter votre activité en Espagne."],
+            ].map(([title, text], index) => (
+              <article key={title} className="border-t border-navy/20 pt-6">
+                <span className="text-sm text-blood">0{index + 1}</span>
+                <h3
+                  className="mt-4 text-3xl"
+                  style={{ fontFamily: "var(--font-editorial)" }}
+                >
+                  {title}
+                </h3>
+                <p className="mt-4 leading-relaxed text-navy/60">{text}</p>
+              </article>
+            ))}
+          </div>
+
+          <Link
+            href="/collaborateurs"
+            className="mt-10 inline-block border-b border-navy/30 pb-1 text-lg transition-colors hover:border-blood hover:text-blood"
+            style={{ fontFamily: "var(--font-editorial)" }}
+          >
+            Découvrir l’écosystème holÀ! →
+          </Link>
         </div>
       </section>
 
