@@ -92,7 +92,7 @@ const installationNeeds = [
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-ivory text-navy">
-      <div className="px-8 pt-8 md:px-16 md:pt-10">
+      <div className="px-6 pt-6 sm:px-8 sm:pt-8 md:px-16 md:pt-10">
         <header className="flex items-center justify-between">
           <SiteLogo />
 
@@ -145,13 +145,13 @@ export default function Home() {
           </Link>
         </nav>
 
-        <section className="grid items-center gap-14 pb-24 pt-16 md:grid-cols-[1.08fr_0.92fr] md:pb-32 md:pt-14">
+        <section className="grid items-center gap-10 pb-14 pt-12 sm:pb-20 sm:pt-16 md:grid-cols-[1.08fr_0.92fr] md:pb-32 md:pt-14">
           <div className="md:pl-16 lg:pl-28">
             <p className="text-xs uppercase tracking-[0.25em] text-blood">
               France ↔ Espagne
             </p>
             <h1
-              className="mt-6 max-w-4xl text-5xl leading-[0.92] md:text-7xl"
+              className="mt-6 max-w-4xl text-4xl leading-[0.95] sm:text-5xl md:text-7xl"
               style={{ fontFamily: "var(--font-editorial)" }}
             >
               Un projet en Espagne.
@@ -198,7 +198,7 @@ export default function Home() {
         </section>
       </div>
 
-      <section id="services" className="px-8 py-20 md:px-16 md:py-28">
+      <section id="services" className="px-6 py-14 sm:px-8 sm:py-20 md:px-16 md:py-28">
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-10 md:grid-cols-[0.7fr_1.3fr] md:items-end">
             <div>
@@ -223,7 +223,7 @@ export default function Home() {
             </div>
             <div>
               <h2
-                className="text-5xl leading-[0.95] md:text-6xl"
+                className="text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
                 style={{ fontFamily: "var(--font-editorial)" }}
               >
                 Une seule porte d’entrée.
@@ -240,7 +240,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-20 border-t border-navy/20">
+          <div className="mt-12 border sm:mt-16 md:mt-20-t border-navy/20">
             {services.map((service) => (
               <Link
                 key={service.href}
@@ -266,7 +266,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#EEE8DE] px-8 py-28 md:px-16 md:py-36">
+      <section className="bg-[#EEE8DE] px-6 py-16 sm:px-8 sm:py-20 md:px-16 md:py-36">
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-14 md:grid-cols-[0.8fr_1.2fr] md:items-end">
             <p className="text-xs uppercase tracking-[0.25em] text-blood">
@@ -274,7 +274,7 @@ export default function Home() {
             </p>
             <div>
               <h2
-                className="max-w-4xl text-5xl leading-[0.95] md:text-6xl"
+                className="max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
                 style={{ fontFamily: "var(--font-editorial)" }}
               >
                 Une nouvelle vie ne tient pas
@@ -290,7 +290,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-20 grid gap-x-12 gap-y-10 md:grid-cols-2">
+          <div className="mt-12 grid sm:mt-16 md:mt-20 gap-x-12 gap-y-10 md:grid-cols-2">
             {installationNeeds.map((need) => (
               <article key={need.title} className="border-t border-navy/20 pt-6">
                 <h3
@@ -322,7 +322,7 @@ export default function Home() {
           </p>
           <div>
             <h2
-              className="max-w-4xl text-5xl leading-[0.95] md:text-6xl"
+              className="max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
               style={{ fontFamily: "var(--font-editorial)" }}
             >
               Le bon accompagnement,
@@ -363,13 +363,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-8 py-28 md:px-16 md:py-36">
+      <section className="px-6 py-16 sm:px-8 sm:py-20 md:px-16 md:py-36">
         <div className="mx-auto max-w-6xl">
           <p className="text-xs uppercase tracking-[0.25em] text-blood">
             Comment ça marche
           </p>
           <h2
-            className="mt-5 max-w-3xl text-5xl leading-[0.95] md:text-6xl"
+            className="mt-5 max-w-3xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
             style={{ fontFamily: "var(--font-editorial)" }}
           >
             Vous nous expliquez.
@@ -377,7 +377,7 @@ export default function Home() {
             <span className="italic text-blood">On démêle le reste.</span>
           </h2>
 
-          <div className="mt-20 grid gap-12 md:grid-cols-3 md:gap-8">
+          <div className="mt-12 grid sm:mt-16 md:mt-20 gap-12 md:grid-cols-3 md:gap-8">
             {[
               {
                 number: "01",
@@ -419,7 +419,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-8 pb-28 md:px-16 md:pb-40">
+      <section className="px-6 pb-16 sm:px-8 sm:pb-24 md:px-16 md:pb-40">
         <div className="mx-auto grid max-w-6xl gap-14 md:grid-cols-[0.82fr_1.18fr] md:items-center">
           <div>
             <p className="text-xs uppercase tracking-[0.25em] text-blood">
@@ -437,7 +437,7 @@ export default function Home() {
 
           <div>
             <h2
-              className="text-5xl leading-[0.95] md:text-6xl"
+              className="text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
               style={{ fontFamily: "var(--font-editorial)" }}
             >
               Entre deux pays,
@@ -463,15 +463,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-8 pb-16 md:px-16 md:pb-24">
-        <div className="mx-auto max-w-6xl bg-blood px-8 py-16 text-ivory md:px-16 md:py-20">
+      <section className="px-0 pb-10 sm:px-8 sm:pb-16 md:px-16 md:pb-24">
+        <div className="mx-auto max-w-6xl bg-blood px-6 py-12 text-ivory sm:px-8 sm:py-16 md:px-16 md:py-20">
           <p className="text-xs uppercase tracking-[0.25em] text-ivory/70">
             Votre situation
           </p>
           <div className="mt-6 flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
             <div>
               <h2
-                className="max-w-3xl text-5xl leading-[0.95] md:text-7xl"
+                className="max-w-3xl text-4xl leading-[0.98] sm:text-5xl md:text-7xl"
                 style={{ fontFamily: "var(--font-editorial)" }}
               >
                 Un projet en Espagne ?
