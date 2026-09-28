@@ -3,9 +3,9 @@ import Link from "next/link";
 import SiteLogo from "../components/SiteLogo";
 
 export const metadata: Metadata = {
-  title: "Nos collaborateurs en Espagne",
+  title: "Notre réseau en Espagne",
   description:
-    "Découvrez le réseau de professionnels avec lequel holÀ! peut coordonner votre projet en Espagne : juridique, travaux et stratégie d’entreprise.",
+    "Un seul point d’entrée pour aller plus loin en Espagne : démarches administratives, accompagnement juridique, rénovation et stratégie d’entreprise.",
   alternates: { canonical: "/collaborateurs" },
 };
 
@@ -52,25 +52,25 @@ export default function Collaborateurs() {
       <section className="px-6 pb-16 pt-12 sm:px-8 sm:pb-20 sm:pt-16 md:px-16 md:pb-32 md:pt-20">
         <div className="mx-auto max-w-6xl">
           <p className="text-xs uppercase tracking-[0.25em] text-blood">
-            Notre réseau
+            L’écosystème holÀ!
           </p>
           <h1
             className="mt-6 max-w-5xl text-5xl leading-[0.92] sm:text-6xl md:text-8xl"
             style={{ fontFamily: "var(--font-editorial)" }}
           >
-            Vous n’avez pas besoin
+            Votre projet en Espagne,
             <br />
-            <span className="italic text-blood">de tout faire seul.</span>
+            <span className="italic text-blood">bien au-delà des démarches.</span>
           </h1>
           <div className="mt-10 grid gap-8 md:mt-14 md:grid-cols-[0.7fr_1.3fr]">
             <p className="text-xs uppercase tracking-[0.25em] text-blood">
-              Un projet, plusieurs métiers
+              Un seul point d’entrée
             </p>
             <p className="max-w-2xl text-lg leading-relaxed text-navy/70 md:text-xl">
-              Certaines situations demandent plus qu’une démarche administrative.
-              holÀ! peut alors coordonner votre parcours avec des professionnels
-              spécialisés, tout en vous permettant de conserver un fil conducteur
-              entre les différentes étapes de votre projet.
+              S’installer, acheter, rénover ou entreprendre en Espagne fait vite
+              intervenir plusieurs métiers. holÀ! reste votre fil conducteur et
+              vous ouvre l’accès à un réseau professionnel établi en Espagne pour
+              poursuivre le projet, sans repartir de zéro à chaque nouvelle étape.
             </p>
           </div>
         </div>
@@ -79,7 +79,7 @@ export default function Collaborateurs() {
       <section className="bg-navy px-6 py-16 text-ivory sm:px-8 sm:py-20 md:px-16 md:py-28">
         <div className="mx-auto max-w-6xl">
           <p className="text-xs uppercase tracking-[0.25em] text-blood">
-            Les collaborateurs
+            Aller plus loin avec holÀ!
           </p>
           <div className="mt-12 border-t border-ivory/20 sm:mt-16">
             {collaborators.map((collaborator) => (
@@ -105,7 +105,7 @@ export default function Collaborateurs() {
                   </p>
                   <div className="mt-6 border-t border-ivory/15 pt-5">
                     <p className="text-xs uppercase tracking-[0.2em] text-blood">
-                      Quand intervient-il ?
+                      Pour quels projets ?
                     </p>
                     <p className="mt-3 max-w-xl leading-relaxed text-ivory/60">
                       {collaborator.when}
@@ -117,7 +117,7 @@ export default function Collaborateurs() {
                     rel="noreferrer"
                     className="mt-7 inline-block border-b border-ivory/35 pb-1 transition-colors hover:border-blood hover:text-blood"
                   >
-                    Découvrir {collaborator.name} →
+                    En savoir plus →
                   </a>
                 </div>
               </article>
@@ -129,22 +129,24 @@ export default function Collaborateurs() {
       <section className="px-6 py-16 sm:px-8 sm:py-20 md:px-16 md:py-32">
         <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[0.7fr_1.3fr] md:gap-16">
           <p className="text-xs uppercase tracking-[0.25em] text-blood">
-            Le rôle de holÀ!
+            Une continuité
           </p>
           <div>
             <h2
               className="text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
               style={{ fontFamily: "var(--font-editorial)" }}
             >
-              Le bon professionnel,
+              Un projet.
               <br />
-              <span className="italic text-blood">au bon moment.</span>
+              <span className="italic text-blood">Un réseau qui suit.</span>
             </h2>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-navy/70">
-              Nous identifions d’abord ce dont votre situation a réellement
-              besoin. Si une compétence spécialisée est nécessaire, nous pouvons
-              faciliter la mise en relation et coordonner les informations utiles.
-              Le professionnel concerné reste responsable de sa propre prestation.
+              Vous commencez avec holÀ! et, lorsque votre projet nécessite une
+              expertise complémentaire, nous organisons la continuité avec le
+              professionnel adapté. Vous gardez un interlocuteur qui comprend le
+              contexte et évitez de reconstruire votre dossier à chaque étape.
+              Les prestations spécialisées sont réalisées par les professionnels
+              concernés, chacun dans son domaine d’expertise.
             </p>
           </div>
         </div>
