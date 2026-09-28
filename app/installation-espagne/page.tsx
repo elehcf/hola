@@ -148,8 +148,9 @@ export default function InstallationEspagne() {
             <span className="italic">Dans votre ordre.</span>
           </h2>
 
-          <div className="mt-12 grid sm:mt-16 md:mt-20 gap-x-12 md:grid-cols-2">
-            {essentialSteps.map((step) => (
+          <div className="mt-12 grid gap-10 sm:mt-16 md:mt-20 md:grid-cols-[1fr_270px] md:items-start">
+            <div className="grid gap-x-12 md:grid-cols-2">
+              {essentialSteps.map((step) => (
               <article
                 key={step.number}
                 className="border-t border-ivory/25 py-7"
