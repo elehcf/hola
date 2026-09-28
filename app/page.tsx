@@ -124,6 +124,12 @@ export default function Home() {
             >
               À propos
             </Link>
+            <Link
+              href="/collaborateurs"
+              className="text-xl transition-colors duration-300 hover:text-blood"
+            >
+              Collaborateurs
+            </Link>
           </nav>
         </header>
 
@@ -142,6 +148,9 @@ export default function Home() {
           </Link>
           <Link href="/a-propos" className="hover:text-blood">
             À propos
+          </Link>
+          <Link href="/collaborateurs" className="hover:text-blood">
+            Collaborateurs
           </Link>
         </nav>
 
