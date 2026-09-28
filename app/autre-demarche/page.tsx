@@ -65,7 +65,7 @@ export default function AutreDemarche() {
 
 
       {/* HERO */}
-      <section className="px-8 pb-28 pt-20 md:px-16 md:pb-36">
+      <section className="px-6 pb-16 pt-12 sm:px-8 sm:pb-20 sm:pt-16 md:px-16 md:pb-36 md:pt-20">
         <div className="mx-auto max-w-6xl">
 
           <p className="text-xs uppercase tracking-[0.25em] text-blood">
@@ -73,7 +73,7 @@ export default function AutreDemarche() {
           </p>
 
           <h1
-            className="mt-6 max-w-5xl text-6xl leading-[0.9] md:text-8xl"
+            className="mt-6 max-w-5xl text-5xl leading-[0.92] sm:text-6xl md:text-8xl"
             style={{ fontFamily: "var(--font-editorial)" }}
           >
             Votre problème ne rentre
@@ -111,7 +111,7 @@ export default function AutreDemarche() {
           </p>
 
           <h2
-            className="mt-5 max-w-4xl text-5xl leading-[0.95] md:text-6xl"
+            className="mt-5 max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
             style={{ fontFamily: "var(--font-editorial)" }}
           >
             « Je ne sais même pas
@@ -119,7 +119,7 @@ export default function AutreDemarche() {
             <span className="italic">comment ça s’appelle. »</span>
           </h2>
 
-          <div className="mt-20 border-t border-ivory/25">
+          <div className="mt-12 border sm:mt-16 md:mt-20-t border-ivory/25">
 
             {[
               "Un document espagnol à obtenir",
@@ -150,8 +150,8 @@ export default function AutreDemarche() {
       </section>
 
       {/* COMMENT */}
-      <section className="px-8 py-28 md:px-16 md:py-36">
-        <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-[0.7fr_1.3fr]">
+      <section className="px-6 py-16 sm:px-8 sm:py-20 md:px-16 md:py-36">
+        <div className="mx-auto grid max-w-6xl gap-10 md:gap-16 md:grid-cols-[0.7fr_1.3fr]">
 
           <div>
             <p className="text-xs uppercase tracking-[0.25em] text-blood">
@@ -167,7 +167,7 @@ export default function AutreDemarche() {
 
           <div>
             <h2
-              className="max-w-3xl text-5xl leading-[0.95] md:text-6xl"
+              className="max-w-3xl text-4xl leading-[0.98] sm:text-5xl md:text-6xl"
               style={{ fontFamily: "var(--font-editorial)" }}
             >
               On regarde d’abord
@@ -196,7 +196,7 @@ export default function AutreDemarche() {
 
 
       {/* CTA */}
-      <section className="mx-8 mb-16 bg-blood px-8 py-16 text-ivory md:mx-16 md:px-16 md:py-20">
+      <section className="mx-0 mb-10 bg-blood sm:mx-8 sm:mb-16 px-8 py-16 text-ivory md:mx-16 md:px-16 md:py-20">
         <div className="mx-auto max-w-6xl">
 
           <p className="text-xs uppercase tracking-[0.25em] text-ivory/70">
@@ -207,7 +207,7 @@ export default function AutreDemarche() {
 
             <div>
               <h2
-                className="max-w-4xl text-5xl leading-[0.95] md:text-7xl"
+                className="max-w-4xl text-4xl leading-[0.98] sm:text-5xl md:text-7xl"
                 style={{ fontFamily: "var(--font-editorial)" }}
               >
                 Pas besoin de connaître
