@@ -49,6 +49,38 @@ export async function POST(request: Request) {
       );
     }
 
+    // Lead partiel : envoyé dès l'étape 1 (démarche + prénom + e-mail),
+    // pour pouvoir relancer les personnes qui n'iront pas au bout.
+    if (form.etape === "partiel") {
+      const { error: partielError } = await resend.emails.send({
+        from: "holÀ! <bonjour@holaespagne.fr>",
+        to: ["bonjour@holaespagne.fr"],
+        replyTo: emailNettoye,
+        subject: `[PARTIEL] ${String(demarche || "Démarche")} · ${String(prenom || "")}`,
+        html: `
+          <div style="max-width: 680px; margin: 0 auto; padding: 32px 24px; font-family: Arial, sans-serif; color: #152238; line-height: 1.6;">
+            <p style="margin: 0 0 12px; color: #8F1D2C; font-size: 12px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase;">
+              Demande commencée (étape 1)
+            </p>
+            ${infoRow("Démarche", demarche)}
+            ${infoRow("Prénom", prenom)}
+            ${infoRow("E-mail", emailNettoye)}
+            ${infoRow("Référence", form.leadId)}
+            <p style="margin-top: 24px; font-size: 14px; color: #15223899;">
+              Si la demande complète avec la même référence n’arrive pas dans les 24 h,
+              une relance courte par e-mail suffit souvent.
+            </p>
+          </div>
+        `,
+      });
+
+      if (partielError) {
+        console.error(partielError);
+      }
+
+      return Response.json({ success: true });
+    }
+
     if (
       !demarche ||
       !localisation ||
@@ -80,9 +112,9 @@ export async function POST(request: Request) {
       to: ["bonjour@holaespagne.fr"],
       replyTo: emailNettoye,
 
-      subject: `${demarche} — ${prenom}${
+      subject: `${demarche} · ${prenom}${
         urgence ? ` · ${urgence}` : ""
-      }`,
+      }${form.leadId ? ` · réf. ${form.leadId}` : ""}`,
 
       html: `
         <div
