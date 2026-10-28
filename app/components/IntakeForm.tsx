@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 
@@ -23,7 +23,7 @@ const steps = [
   },
   {
     number: "05",
-    title: "À qui répond-on ?",
+    title: "Une dernière chose.",
   },
 ];
 
@@ -35,6 +35,10 @@ export default function IntakeForm() {
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
   const [error, setError] = useState("");
+  const leadId = useRef(
+    `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`
+  );
+  const partielEnvoye = useRef(false);
 
   const [form, setForm] = useState({
     website: "",
@@ -76,51 +80,77 @@ export default function IntakeForm() {
     }));
   }
 
-  function next() {
-    let completed = false;
+  const emailValide = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim());
 
+  function stepError(): string {
     if (step === 0) {
-      completed = Boolean(form.demarche);
+      if (!form.demarche) return "Choisissez la démarche qui vous concerne.";
+      if (!form.prenom.trim()) return "Indiquez votre prénom.";
+      if (!emailValide)
+        return "Indiquez une adresse e-mail valide : c’est là que nous vous répondrons.";
     }
 
-    if (step === 1) {
-      completed = Boolean(form.localisation);
+    if (step === 1 && !form.localisation) {
+      return "Dites-nous où vous en êtes aujourd’hui.";
     }
 
     if (step === 2) {
-      completed = Boolean(form.raison.trim());
-
-      if (form.demarche === "Je m’installe en Espagne") {
-        completed =
-          completed &&
-          Boolean(form.installationStatut) &&
-          Boolean(form.province);
-      }
-
-      if (form.demarche === "Immatriculer mon véhicule") {
-        completed =
-          completed &&
-          Boolean(form.vehiculeSituation) &&
-          Boolean(form.province);
-      }
-
-      if (form.demarche === "Obtenir mon NIE") {
-        completed =
-          completed &&
-          Boolean(form.nieMotif) &&
-          Boolean(form.province);
-      }
-
-      if (form.demarche === "Fiscalité / résidence France–Espagne") {
-        completed = completed && Boolean(form.fiscalSituation);
-      }
+      if (!form.raison.trim())
+        return "Quelques mots suffisent, même approximatifs.";
+      if (form.demarche === "Je m’installe en Espagne" && !form.installationStatut)
+        return "Précisez votre situation en Espagne.";
+      if (form.demarche === "Immatriculer mon véhicule" && !form.vehiculeSituation)
+        return "Précisez la situation de la voiture.";
+      if (form.demarche === "Obtenir mon NIE" && !form.nieMotif)
+        return "Précisez à quoi servira votre NIE.";
+      if (
+        form.demarche === "Fiscalité / résidence France–Espagne" &&
+        !form.fiscalSituation
+      )
+        return "Précisez votre sujet principal.";
     }
 
-    if (step === 3) {
-      completed = Boolean(form.avancement);
+    if (step === 3 && !form.avancement) {
+      return "Indiquez où vous en êtes.";
     }
 
-    if (!completed) return;
+    return "";
+  }
+
+  function envoyerPartiel() {
+    if (partielEnvoye.current || form.website) return;
+    partielEnvoye.current = true;
+
+    fetch("/api/demande", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        etape: "partiel",
+        leadId: leadId.current,
+        demarche: form.demarche,
+        prenom: form.prenom,
+        email: form.email,
+        website: form.website,
+      }),
+      keepalive: true,
+    }).catch(() => {
+      partielEnvoye.current = false;
+    });
+  }
+
+  function next() {
+    const message = stepError();
+
+    if (message) {
+      setError(message);
+      return;
+    }
+
+    setError("");
+
+    if (step === 0) {
+      envoyerPartiel();
+    }
 
     if (step < steps.length - 1) {
       setStep(step + 1);
@@ -129,22 +159,15 @@ export default function IntakeForm() {
 
   function previous() {
     if (step > 0) {
+      setError("");
       setStep(step - 1);
     }
   }
 
   async function submitForm() {
-    if (!form.prenom.trim() || !form.email.trim()) {
-      setError("Indiquez simplement votre prénom et votre e-mail.");
-      return;
-    }
-
-    const emailValide = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(
-      form.email.trim()
-    );
-
-    if (!emailValide) {
-      setError("Cette adresse e-mail ne semble pas valide.");
+    if (!form.prenom.trim() || !emailValide) {
+      setStep(0);
+      setError("Indiquez votre prénom et une adresse e-mail valide.");
       return;
     }
 
@@ -164,7 +187,11 @@ export default function IntakeForm() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          ...form,
+          etape: "complet",
+          leadId: leadId.current,
+        }),
       });
 
       if (!response.ok) {
@@ -202,17 +229,32 @@ export default function IntakeForm() {
           </h1>
 
           <p className="mt-10 max-w-xl text-lg leading-relaxed text-ivory/60">
-            Votre demande est bien arrivée. Nous regardons tout ça et
-            revenons vers vous par e-mail.
+            Votre demande est bien arrivée. Vous recevez notre réponse par
+            e-mail sous 24 h ouvrées, avec les étapes qui vous concernent et
+            le prix de l’accompagnement. Rien n’est engagé tant que vous
+            n’avez pas validé la proposition.
           </p>
 
-          <Link
-            href="/"
-            className="mt-12 inline-block border-b border-ivory/40 pb-2 text-xl transition-colors hover:border-blood hover:text-blood"
-            style={{ fontFamily: "var(--font-editorial)" }}
-          >
-            Retour à l’accueil →
-          </Link>
+          <div className="mt-12 flex flex-col items-start gap-6">
+            <a
+              href={`https://wa.me/34681803938?text=${encodeURIComponent(
+                `Bonjour holÀ!, je suis ${form.prenom} et je viens d’envoyer une demande (${form.demarche}).`
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blood px-8 py-4 text-sm uppercase tracking-[0.12em]"
+            >
+              C’est urgent ? Écrivez-nous sur WhatsApp →
+            </a>
+
+            <Link
+              href="/guides"
+              className="inline-block border-b border-ivory/40 pb-2 text-xl transition-colors hover:border-blood hover:text-blood"
+              style={{ fontFamily: "var(--font-editorial)" }}
+            >
+              En attendant, nos guides pratiques →
+            </Link>
+          </div>
 
         </div>
       </section>
@@ -278,6 +320,27 @@ export default function IntakeForm() {
                       {option}
                     </button>
                   ))}
+
+                  <div className="mt-8 grid gap-5 md:grid-cols-2">
+                    <input
+                      type="text"
+                      autoComplete="given-name"
+                      value={form.prenom}
+                      onChange={(e) => update("prenom", e.target.value)}
+                      placeholder="Votre prénom"
+                      className="border-b border-ivory/30 bg-transparent py-4 text-xl outline-none placeholder:text-ivory/30 focus:border-blood"
+                    />
+
+                    <input
+                      type="email"
+                      inputMode="email"
+                      autoComplete="email"
+                      value={form.email}
+                      onChange={(e) => update("email", e.target.value)}
+                      placeholder="Votre e-mail (pour vous répondre)"
+                      className="border-b border-ivory/30 bg-transparent py-4 text-xl outline-none placeholder:text-ivory/30 focus:border-blood"
+                    />
+                  </div>
                 </div>
               )}
 
@@ -471,7 +534,7 @@ export default function IntakeForm() {
                     type="text"
                     value={form.province}
                     onChange={(e) => update("province", e.target.value)}
-                    placeholder="Ville ou province concernée (si vous la connaissez)"
+                    placeholder="Ville ou province concernée (facultatif)"
                     className="border-b border-ivory/30 bg-transparent py-4 text-xl outline-none placeholder:text-ivory/30 focus:border-blood"
                   />
 
@@ -556,24 +619,14 @@ export default function IntakeForm() {
 />
                   </div>
 
-                  <input
-                    type="text"
-                    value={form.prenom}
-                    onChange={(e) => update("prenom", e.target.value)}
-                    placeholder="Prénom"
-                    className="border-b border-ivory/30 bg-transparent py-4 text-xl outline-none placeholder:text-ivory/30 focus:border-blood"
-                  />
-
-                  <input
-                    type="email"
-                    value={form.email}
-                    onChange={(e) => update("email", e.target.value)}
-                    placeholder="E-mail"
-                    className="border-b border-ivory/30 bg-transparent py-4 text-xl outline-none placeholder:text-ivory/30 focus:border-blood"
-                  />
+                  <p className="max-w-xl text-lg leading-relaxed text-ivory/60">
+                    Si c’est urgent, laissez-nous un numéro : nous pourrons
+                    vous appeler ou vous écrire sur WhatsApp.
+                  </p>
 
                   <input
                     type="tel"
+                    autoComplete="tel"
                     value={form.telephone}
                     onChange={(e) => update("telephone", e.target.value)}
                     placeholder="Téléphone (facultatif)"
@@ -611,7 +664,7 @@ export default function IntakeForm() {
 
 
             {error && (
-              <p className="mt-8 text-sm text-blood">
+              <p role="alert" className="mt-8 text-sm text-blood">
                 {error}
               </p>
             )}
@@ -651,6 +704,13 @@ export default function IntakeForm() {
               )}
 
             </div>
+
+            <ul className="mt-10 flex flex-wrap gap-x-8 gap-y-2 border-t border-ivory/15 pt-6 text-sm text-ivory/50">
+              <li>Réponse sous 24 h ouvrées</li>
+              <li>Gratuit et sans engagement</li>
+              <li>Prix annoncé avant de commencer</li>
+              <li>100 % en français</li>
+            </ul>
 
           </div>
         </div>
