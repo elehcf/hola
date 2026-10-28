@@ -39,6 +39,8 @@ export default function IntakeForm() {
     `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`
   );
   const partielEnvoye = useRef(false);
+  const relance = useRef<Promise<string> | null>(null);
+  const bookingUrl = process.env.NEXT_PUBLIC_BOOKING_URL || "";
 
   const [form, setForm] = useState({
     website: "",
@@ -121,7 +123,7 @@ export default function IntakeForm() {
     if (partielEnvoye.current || form.website) return;
     partielEnvoye.current = true;
 
-    fetch("/api/demande", {
+    relance.current = fetch("/api/demande", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -133,9 +135,13 @@ export default function IntakeForm() {
         website: form.website,
       }),
       keepalive: true,
-    }).catch(() => {
-      partielEnvoye.current = false;
-    });
+    })
+      .then((response) => response.json())
+      .then((data) => String(data?.relanceId ?? ""))
+      .catch(() => {
+        partielEnvoye.current = false;
+        return "";
+      });
   }
 
   function next() {
@@ -181,6 +187,14 @@ export default function IntakeForm() {
     setSending(true);
     setError("");
 
+    // Identifiant de la relance programmée à l'étape 1, pour l'annuler.
+    const relanceId = relance.current
+      ? await Promise.race([
+          relance.current,
+          new Promise<string>((resolve) => setTimeout(() => resolve(""), 4000)),
+        ])
+      : "";
+
     try {
       const response = await fetch("/api/demande", {
         method: "POST",
@@ -191,6 +205,7 @@ export default function IntakeForm() {
           ...form,
           etape: "complet",
           leadId: leadId.current,
+          relanceId,
         }),
       });
 
@@ -246,6 +261,17 @@ export default function IntakeForm() {
             >
               C’est urgent ? Écrivez-nous sur WhatsApp →
             </a>
+
+            {bookingUrl && (
+              <a
+                href={bookingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-ivory/60 px-8 py-4 text-sm uppercase tracking-[0.12em] transition-colors hover:border-blood hover:text-blood"
+              >
+                Réserver un appel de 15 min →
+              </a>
+            )}
 
             <Link
               href="/guides"
@@ -341,6 +367,11 @@ export default function IntakeForm() {
                       className="border-b border-ivory/30 bg-transparent py-4 text-xl outline-none placeholder:text-ivory/30 focus:border-blood"
                     />
                   </div>
+
+                  <p className="text-sm text-ivory/40">
+                    Votre e-mail sert uniquement à vous répondre au sujet de
+                    cette demande.
+                  </p>
                 </div>
               )}
 

@@ -88,6 +88,16 @@ export default function PolitiqueConfidentialite() {
   pour comprendre votre démarche sont indispensables pour pouvoir vous
   répondre. Le numéro de téléphone est facultatif.
 </p>
+
+<p className="mt-3">
+  Lorsque vous envoyez une demande, vous recevez automatiquement un
+  e-mail de confirmation. Si vous commencez une demande sans la
+  terminer, l’adresse e-mail indiquée à la première étape peut recevoir
+  un seul message de relance, 24 heures plus tard, au sujet de cette
+  demande uniquement. Si vous téléchargez notre checklist, nous vous
+  l’envoyons également par e-mail. Nous ne vous inscrivons à aucune
+  liste de diffusion sans votre accord.
+</p>
           </section>
 
           <section>
@@ -119,6 +129,13 @@ export default function PolitiqueConfidentialite() {
               et avec votre accord. Si vous utilisez WhatsApp, ce service traite
               également les données nécessaires à l’acheminement de vos messages
               selon ses propres conditions.
+            </p>
+
+            <p className="mt-3">
+              Si vous réservez un appel, la prise de rendez-vous est
+              assurée par Cal.com, qui traite les informations saisies
+              lors de la réservation. La mesure d’audience du site est
+              réalisée avec Vercel Web Analytics, sans cookies.
             </p>
           </section>
 

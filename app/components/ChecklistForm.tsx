@@ -32,6 +32,7 @@ export default function ChecklistForm({ source = "guide", tone = "light" }: Prop
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           etape: "partiel",
+          type: "checklist",
           leadId: `checklist-${Date.now().toString(36)}`,
           demarche: `Checklist installation (${source})`,
           prenom: prenom.trim(),
@@ -68,7 +69,7 @@ export default function ChecklistForm({ source = "guide", tone = "light" }: Prop
           Votre checklist s’ouvre dans un nouvel onglet.
         </p>
         <p className={`mt-4 leading-relaxed ${muted}`}>
-          Elle ne s’est pas ouverte ?{" "}
+          Nous vous l’envoyons aussi par e-mail. Elle ne s’est pas ouverte ?{" "}
           <a
             href="/checklist-installation-espagne.pdf"
             target="_blank"
