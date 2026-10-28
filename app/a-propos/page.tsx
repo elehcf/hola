@@ -5,9 +5,18 @@ import LifestylePhoto from "../components/LifestylePhoto";
 import PageHeader from "../components/PageHeader";
 
 export const metadata: Metadata = {
-  title: "À propos de holÀ! | Démarches en Espagne, accompagnement en français",
+  title: "À propos : Elena Huergo Cerra, vos démarches en Espagne en français",
   description:
     "Découvrez holÀ!, un accompagnement en français pour comprendre, préparer et suivre vos démarches administratives en Espagne.",
+  alternates: {
+    canonical: "/a-propos",
+  },
+  openGraph: {
+    title: "À propos de holÀ! | Démarches en Espagne, en français",
+    description:
+      "Elena Huergo Cerra, fondatrice de holÀ!, accompagne les francophones dans leurs démarches administratives en Espagne.",
+    url: "/a-propos",
+  },
 };
 
 export default function APropos() {
