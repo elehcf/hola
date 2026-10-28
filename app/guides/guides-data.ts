@@ -216,6 +216,66 @@ export const guides: Guide[] = [
     serviceLabel: "Organiser mon installation",
   },
 
+  {
+    slug: "nie-achat-immobilier-espagne",
+    category: "NIE",
+    title: "NIE pour acheter un bien immobilier en Espagne",
+    seoTitle: "NIE pour acheter en Espagne : quand et comment le demander",
+    description:
+      "Vous achetez un appartement ou une maison en Espagne ? Pourquoi le NIE est demandé, quand l’anticiper et comment éviter qu’il retarde la signature.",
+    eyebrow: "NIE · Achat immobilier",
+    intro:
+      "Vous avez trouvé le bien, le prix est négocié, la date chez le notaire approche… et l’on vous demande votre NIE. C’est l’une des situations les plus fréquentes chez les acheteurs français. Voici comment l’anticiper pour qu’il ne devienne pas le grain de sable du projet.",
+    sections: [
+      {
+        title: "Pourquoi le NIE est-il demandé pour acheter ?",
+        paragraphs: [
+          "Le NIE est le numéro qui vous identifie en tant qu’étranger dans les démarches espagnoles. Un achat immobilier fait intervenir plusieurs acteurs (notaire, registre de la propriété, administration fiscale, banque) qui ont besoin de vous identifier de façon fiable.",
+          "C’est pour cette raison que le NIE fait partie des premières questions posées dans un projet d’achat, que vous comptiez vivre en Espagne ou non.",
+        ],
+      },
+      {
+        title: "Quand faut-il s’en occuper ?",
+        paragraphs: [
+          "Le plus tôt possible. Les délais pour obtenir un rendez-vous et un numéro varient selon le lieu de la demande et la période. Attendre la dernière semaine avant la signature, c’est prendre le risque de devoir la décaler.",
+          "Le bon réflexe : lancer la démarche dès que le projet devient sérieux, avant même d’avoir définitivement choisi le bien.",
+        ],
+      },
+      {
+        title: "Depuis la France ou en Espagne ?",
+        paragraphs: [
+          "Selon votre situation, la demande peut se faire en Espagne auprès de l’autorité compétente ou, dans certains cas, auprès du consulat d’Espagne compétent pour votre lieu de résidence en France.",
+          "Chaque option a ses contraintes de rendez-vous et de déplacement. Mieux vaut vérifier laquelle est réellement possible dans votre cas avant de préparer le dossier.",
+        ],
+      },
+      {
+        title: "Les documents à prévoir",
+        paragraphs: [
+          "Le dossier repose généralement sur le formulaire EX-15, une pièce d’identité en cours de validité et un justificatif du motif de la demande. Pour un achat, ce motif doit pouvoir être expliqué et, selon les cas, documenté.",
+        ],
+        bullets: [
+          "Le formulaire EX-15 correctement rempli.",
+          "Votre pièce d’identité ou votre passeport en cours de validité.",
+          "Un élément qui justifie le projet d’achat, selon ce qui est demandé.",
+          "Le justificatif de paiement de la taxe, lorsqu’il est demandé.",
+        ],
+      },
+      {
+        title: "Et si vous achetez à deux ?",
+        paragraphs: [
+          "Chaque acquéreur est identifié individuellement. Si vous achetez en couple ou avec un proche, chacun aura besoin de son propre NIE : à anticiper dès le départ, pour ne pas découvrir la question au moment de fixer la date de signature.",
+        ],
+      },
+    ],
+    related: [
+      "obtenir-nie-espagne",
+      "nie-depuis-france",
+      "nie-documents-ex15",
+    ],
+    serviceHref: "/nie-espagne",
+    serviceLabel: "Préparer mon NIE avant la signature",
+  },
+
   // ─────────────────────────────────────────────
   // VOITURE
   // ─────────────────────────────────────────────
@@ -769,6 +829,65 @@ export const guides: Guide[] = [
     ],
     serviceHref: "/installation-espagne",
     serviceLabel: "Identifier mes démarches",
+  },
+  {
+    slug: "certificat-enregistrement-ue-espagne",
+    category: "Installation",
+    title: "Certificat d’enregistrement de citoyen de l’UE : la « carte verte » en Espagne",
+    seoTitle: "Certificat d’enregistrement UE en Espagne (carte verte) pour un Français",
+    description:
+      "Vous vous installez en Espagne pour plus de trois mois ? À quoi sert le certificat d’enregistrement, quand le demander, quels justificatifs prévoir.",
+    eyebrow: "Installation · Résidence",
+    intro:
+      "On l’appelle souvent la « carte verte ». Pour un Français qui s’installe en Espagne pour plus de trois mois, c’est la démarche de résidence centrale. Elle comporte aussi votre NIE. Voici comment l’aborder sans perdre de temps.",
+    sections: [
+      {
+        title: "À quoi sert ce certificat ?",
+        paragraphs: [
+          "Le certificat d’enregistrement atteste votre inscription au registre central des étrangers en tant que citoyen de l’Union européenne résidant en Espagne.",
+          "Il comporte votre NIE. Si vous vous installez durablement, il n’est donc généralement pas utile de demander un NIE séparément avant.",
+        ],
+      },
+      {
+        title: "Quand faut-il le demander ?",
+        paragraphs: [
+          "Un citoyen de l’Union qui prévoit de vivre en Espagne plus de trois mois doit demander son inscription dans les trois mois suivant son arrivée.",
+          "Les rendez-vous (cita previa) peuvent être difficiles à obtenir selon les villes. Préparer le dossier avant de réserver évite de perdre un créneau.",
+        ],
+      },
+      {
+        title: "Quels justificatifs selon votre situation ?",
+        paragraphs: [
+          "Les pièces demandées dépendent de votre statut. Un salarié, un indépendant, un étudiant, un retraité ou une personne sans activité ne présentent pas les mêmes justificatifs.",
+        ],
+        bullets: [
+          "Salarié ou indépendant : un document qui atteste votre activité en Espagne.",
+          "Retraité ou sans activité : des ressources suffisantes et une couverture santé.",
+          "Étudiant : l’inscription dans un établissement, une couverture santé et des ressources suffisantes.",
+          "Dans tous les cas : pièce d’identité en cours de validité, formulaire et paiement de la taxe lorsqu’il est demandé.",
+        ],
+      },
+      {
+        title: "Où et comment le demander ?",
+        paragraphs: [
+          "La demande se fait en personne en Espagne, sur rendez-vous, auprès du service compétent de votre province (oficina de extranjería ou commissariat selon les lieux).",
+          "Avoir déjà une adresse en Espagne aide à enchaîner les démarches : l’inscription au padrón municipal intervient souvent dans le même calendrier.",
+        ],
+      },
+      {
+        title: "Les erreurs les plus fréquentes",
+        paragraphs: [
+          "Arriver sans le bon justificatif de ressources ou de couverture santé, réserver un rendez-vous dans la mauvaise province, ou demander un NIE séparé inutilement : ce sont les causes de retard les plus courantes.",
+        ],
+      },
+    ],
+    related: [
+      "vivre-espagne-plus-trois-mois",
+      "nie-ou-residence-espagne",
+      "empadronamiento-espagne",
+    ],
+    serviceHref: "/installation-espagne",
+    serviceLabel: "Préparer mon dossier de résidence",
   },
 ];
 
