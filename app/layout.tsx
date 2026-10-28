@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Caveat, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/Footer";
@@ -26,10 +27,6 @@ export const metadata: Metadata = {
 
   description:
     "Vos démarches en Espagne, simplement et en français : NIE, véhicule, installation, diplôme, activité, fiscalité France–Espagne et dossiers sur mesure.",
-
-  alternates: {
-    canonical: "/",
-  },
 
   openGraph: {
     title: "holÀ! | L’Espagne, sans la complexité administrative",
@@ -104,6 +101,9 @@ export default function RootLayout({
         {children}
         <Footer />
         <WhatsAppButton />
+
+        {/* Vercel Web Analytics (sans cookies) : à activer dans Vercel > Analytics */}
+        <Script src="/_vercel/insights/script.js" strategy="afterInteractive" />
       </body>
     </html>
   );
