@@ -4,9 +4,12 @@ import IntakeForm from "../components/IntakeForm";
 
 export const metadata: Metadata = {
   title: "Votre demande",
+  alternates: {
+    canonical: "/demande",
+  },
   robots: {
     index: false,
-    follow: false,
+    follow: true,
   },
 };
 
