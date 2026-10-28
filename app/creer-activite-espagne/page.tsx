@@ -310,14 +310,14 @@ export default function CreerActiviteEspagne() {
               className="mt-4 text-4xl leading-[0.98] sm:text-5xl"
               style={{ fontFamily: "var(--font-editorial)" }}
             >
-              Un projet cadré.
-              <br />
-              <span className="italic">Un devis avant de commencer.</span>
+              À partir de 590 €
             </h2>
             <p className="mt-5 max-w-xl text-ivory/70">
-              Le périmètre varie selon votre activité, la structure retenue et
-              les professionnels à mobiliser. La proposition distingue chaque
-              intervention et les frais externes éventuels.
+              Feuille de route administrative et coordination des démarches
+              pour démarrer votre activité. Le prix exact dépend de votre
+              activité et de la structure retenue : la proposition distingue
+              chaque intervention et les frais externes éventuels, avant de
+              commencer.
             </p>
           </div>
           <Link
