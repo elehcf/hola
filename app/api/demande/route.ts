@@ -1,4 +1,8 @@
 import { Resend } from "resend";
+import { accuseReception, envoiChecklist, relancePartiel } from "./emails";
+
+const FROM = "holÀ! <bonjour@holaespagne.fr>";
+const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
 export async function POST(request: Request) {
   try {
@@ -50,25 +54,30 @@ export async function POST(request: Request) {
     }
 
     // Lead partiel : envoyé dès l'étape 1 (démarche + prénom + e-mail),
-    // pour pouvoir relancer les personnes qui n'iront pas au bout.
+    // ou téléchargement de la checklist (type "checklist").
     if (form.etape === "partiel") {
+      const isChecklist = form.type === "checklist";
+
       const { error: partielError } = await resend.emails.send({
-        from: "holÀ! <bonjour@holaespagne.fr>",
+        from: FROM,
         to: ["bonjour@holaespagne.fr"],
         replyTo: emailNettoye,
-        subject: `[PARTIEL] ${String(demarche || "Démarche")} · ${String(prenom || "")}`,
+        subject: `${isChecklist ? "[CHECKLIST]" : "[PARTIEL]"} ${String(demarche || "Démarche")} · ${String(prenom || "")}`,
         html: `
           <div style="max-width: 680px; margin: 0 auto; padding: 32px 24px; font-family: Arial, sans-serif; color: #152238; line-height: 1.6;">
             <p style="margin: 0 0 12px; color: #8F1D2C; font-size: 12px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase;">
-              Demande commencée (étape 1)
+              ${isChecklist ? "Checklist téléchargée" : "Demande commencée (étape 1)"}
             </p>
             ${infoRow("Démarche", demarche)}
             ${infoRow("Prénom", prenom)}
             ${infoRow("E-mail", emailNettoye)}
             ${infoRow("Référence", form.leadId)}
             <p style="margin-top: 24px; font-size: 14px; color: #15223899;">
-              Si la demande complète avec la même référence n’arrive pas dans les 24 h,
-              une relance courte par e-mail suffit souvent.
+              ${
+                isChecklist
+                  ? "La checklist lui a été envoyée automatiquement par e-mail."
+                  : "Une relance automatique partira dans 24 h si la demande n’est pas terminée d’ici là."
+              }
             </p>
           </div>
         `,
@@ -78,7 +87,33 @@ export async function POST(request: Request) {
         console.error(partielError);
       }
 
-      return Response.json({ success: true });
+      let relanceId = "";
+
+      if (isChecklist) {
+        const mail = envoiChecklist(prenom);
+        const { error: checklistError } = await resend.emails.send({
+          from: FROM,
+          to: [emailNettoye],
+          replyTo: "bonjour@holaespagne.fr",
+          subject: mail.subject,
+          html: mail.html,
+        });
+        if (checklistError) console.error(checklistError);
+      } else {
+        const mail = relancePartiel(prenom, demarche);
+        const { data, error: relanceError } = await resend.emails.send({
+          from: FROM,
+          to: [emailNettoye],
+          replyTo: "bonjour@holaespagne.fr",
+          subject: mail.subject,
+          html: mail.html,
+          scheduledAt: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(),
+        });
+        if (relanceError) console.error(relanceError);
+        relanceId = data?.id ?? "";
+      }
+
+      return Response.json({ success: true, relanceId });
     }
 
     if (
@@ -108,7 +143,7 @@ export async function POST(request: Request) {
       .join(" · ");
 
     const { error } = await resend.emails.send({
-      from: "holÀ! <bonjour@holaespagne.fr>",
+      from: FROM,
       to: ["bonjour@holaespagne.fr"],
       replyTo: emailNettoye,
 
@@ -375,6 +410,27 @@ export async function POST(request: Request) {
         { status: 500 }
       );
     }
+
+    // La demande est complète : on annule la relance programmée à l'étape 1.
+    const relanceId = String(form.relanceId ?? "");
+    if (UUID.test(relanceId)) {
+      try {
+        await resend.emails.cancel(relanceId);
+      } catch (cancelError) {
+        console.error(cancelError);
+      }
+    }
+
+    // Accusé de réception automatique pour la personne.
+    const accuse = accuseReception(prenom, demarche);
+    const { error: accuseError } = await resend.emails.send({
+      from: FROM,
+      to: [emailNettoye],
+      replyTo: "bonjour@holaespagne.fr",
+      subject: accuse.subject,
+      html: accuse.html,
+    });
+    if (accuseError) console.error(accuseError);
 
     return Response.json({ success: true });
   } catch (error) {
