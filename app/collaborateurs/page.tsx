@@ -8,6 +8,12 @@ export const metadata: Metadata = {
   description:
     "Un seul point d’entrée pour aller plus loin en Espagne : démarches administratives, accompagnement juridique, rénovation et stratégie d’entreprise.",
   alternates: { canonical: "/collaborateurs" },
+  openGraph: {
+    title: "Notre réseau en Espagne | holÀ!",
+    description:
+      "Avocats, rénovation, conseil aux entreprises : un seul point d’entrée pour poursuivre votre projet en Espagne.",
+    url: "/collaborateurs",
+  },
 };
 
 const collaborators = [

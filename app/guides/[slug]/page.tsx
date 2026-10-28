@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import LifestylePhoto from "../../components/LifestylePhoto";
+import ChecklistForm from "../../components/ChecklistForm";
 import {
   getGuide,
   getRelatedGuides,
@@ -262,8 +263,8 @@ export default async function GuidePage({ params }: Props) {
               <p className="mt-7 max-w-xl leading-relaxed text-ivory/65">
                 Si vous préférez éviter les formulaires, les vérifications
                 et les allers-retours, racontez-nous votre situation.
-                On vous dira ce qu’il faut faire — et ce que nous pouvons
-                faire pour vous.
+                On vous dira ce qu’il faut faire, et ce que nous pouvons
+                faire pour vous. Réponse sous 24 h, sans engagement.
               </p>
 
               <Link
@@ -275,6 +276,12 @@ export default async function GuidePage({ params }: Props) {
               </Link>
 
             </section>
+
+
+            {/* LEAD MAGNET */}
+            <div className="mt-8">
+              <ChecklistForm source={`guide-${guide.slug}`} />
+            </div>
 
           </article>
         </div>
