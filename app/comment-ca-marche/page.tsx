@@ -4,9 +4,18 @@ import LifestylePhoto from "../components/LifestylePhoto";
 import PageHeader from "../components/PageHeader";
 
 export const metadata: Metadata = {
-  title: "Comment ça marche | holÀ!",
+  title: "Comment ça marche : votre démarche en Espagne en 4 étapes",
   description:
     "Découvrez comment holÀ! vous accompagne dans vos démarches administratives en Espagne, de votre première demande au suivi du dossier.",
+  alternates: {
+    canonical: "/comment-ca-marche",
+  },
+  openGraph: {
+    title: "Comment ça marche | holÀ!",
+    description:
+      "Vous expliquez votre situation, nous définissons la marche à suivre et le prix, puis nous avançons avec vous.",
+    url: "/comment-ca-marche",
+  },
 };
 
 const etapes = [
