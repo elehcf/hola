@@ -1041,6 +1041,436 @@ export const guides: Guide[] = [
     serviceHref: "/installation-espagne",
     serviceLabel: "Préparer mon dossier de résidence",
   },
+
+  {
+    slug: "nie-carte-verte-alicante",
+    category: "Installation",
+    title: "NIE et carte verte à Alicante, Torrevieja, Benidorm et Dénia",
+    seoTitle: "NIE et carte verte à Alicante (Torrevieja, Benidorm, Dénia) : où les demander",
+    description: "Vous vous installez sur la Costa Blanca ? Quels bureaux de police traitent le NIE et la carte verte dans la province d’Alicante, comment prendre rendez-vous et s’inscrire au padrón.",
+    eyebrow: "Installation · Alicante",
+    intro: "La Costa Blanca est l’une des destinations préférées des Français, de Dénia à Torrevieja. Bonne nouvelle : la province compte plusieurs bureaux de police qui traitent les démarches des citoyens européens. Encore faut-il savoir lequel choisir et dans quel ordre avancer.",
+    sections: [
+      {
+        title: "Dans quel ordre faire les démarches ?",
+        paragraphs: [
+          "Pour un Français qui s’installe plus de trois mois, la démarche centrale est le certificat d’enregistrement de citoyen de l’UE (la « carte verte »), à demander dans les trois mois suivant l’arrivée. Il comporte votre NIE : inutile, en général, de demander un NIE séparé avant.",
+          "Le NIE seul (formulaire EX-15) sert surtout si vous achetez un bien ou avez une démarche ponctuelle sans vous installer.",
+        ],
+      },
+      {
+        title: "Où faire la démarche dans la province d’Alicante ?",
+        paragraphs: [
+          "Les démarches des citoyens européens se font auprès de la Policía Nacional, sur rendez-vous. D’après le localisateur officiel de la police, plusieurs bureaux de la province traitent le certificat d’enregistrement UE :",
+        ],
+        bullets: [
+          "Alicante ville : Brigada Provincial de Extranjería y Fronteras, C/ Ebanistería 6 (et non le commissariat provincial).",
+          "Torrevieja : commissariat, C/ Arquitecto Larramendi 3.",
+          "Benidorm : commissariat, C/ Apolo XI 36.",
+          "Dénia : commissariat, C/ Castell d’Olimbroi 5 (le plus proche pour Jávea).",
+          "Orihuela, Elche, Alcoy et Elda-Petrer disposent aussi d’un bureau qui traite le régime communautaire.",
+        ],
+      },
+      {
+        title: "Comment prendre rendez-vous ?",
+        paragraphs: [
+          "Le rendez-vous se prend sur le portail officiel de cita previa : choisissez la province d’Alicante, puis « Certificado de registro de ciudadano de la U.E. » pour la carte verte ou « Certificados y asignación de NIE » pour un NIE seul.",
+          "Tous les bureaux de la province sont possibles : si Torrevieja n’a pas de créneau, Orihuela ou Elche peuvent en avoir plus tôt. Vérifiez toujours l’adresse indiquée sur votre confirmation de rendez-vous.",
+        ],
+      },
+      {
+        title: "Le padrón à Alicante",
+        paragraphs: [
+          "À Alicante ville, l’inscription au padrón (alta) se fait en personne à l’Oficina de Atención Ciudadana, sur rendez-vous, à prendre par téléphone (010) ou en ligne. Dans les autres communes (Torrevieja, Benidorm, Dénia…), la démarche se fait auprès de la mairie concernée.",
+        ],
+      },
+      {
+        title: "Ce qu’il faut préparer avant",
+        paragraphs: [
+          "Avant de chercher un rendez-vous, préparez le dossier complet : formulaire EX-18, passeport ou carte d’identité, justificatif de votre situation (contrat de travail, ressources et assurance santé pour un retraité…) et taxe 790 code 012 payée. Arriver avec un dossier incomplet, c’est repartir chercher un nouveau créneau.",
+        ],
+      },
+    ],
+    related: [
+      "certificat-enregistrement-ue-espagne",
+      "rendez-vous-nie-cita-previa",
+      "taxe-790-012-nie",
+    ],
+    serviceHref: "/installation-espagne",
+    serviceLabel: "Préparer mes démarches à Alicante",
+    sources: [
+      {
+        label: "Policía Nacional · Localisateur des bureaux pour étrangers",
+        href: "https://sede.policia.gob.es/portalCiudadano/_es/dependencias_localizador_accesible.php",
+      },
+      {
+        label: "Ajuntament d’Alicante · Padrón municipal",
+        href: "https://www.alicante.es/es/tramites/altas-y-cambios-domicilio-padron-municipal-habitantes",
+      },
+      {
+        label: "Cita previa extranjería (portail officiel)",
+        href: "https://icp.administracionelectronica.gob.es/icpplus/index.html",
+      },
+    ],
+  },
+
+  {
+    slug: "nie-carte-verte-malaga",
+    category: "Installation",
+    title: "NIE et carte verte à Málaga, Marbella, Fuengirola et Estepona",
+    seoTitle: "NIE et carte verte sur la Costa del Sol (Málaga, Marbella, Fuengirola) : où les demander",
+    description: "Vous vous installez sur la Costa del Sol ? Les bureaux de police qui traitent le NIE et la carte verte dans la province de Málaga, la prise de rendez-vous et le padrón.",
+    eyebrow: "Installation · Málaga",
+    intro: "Málaga, Marbella, Fuengirola, Estepona : la Costa del Sol attire de plus en plus de Français. La province a l’avantage de compter de nombreux commissariats qui traitent les démarches des citoyens européens. Voici lesquels et comment s’organiser.",
+    sections: [
+      {
+        title: "Dans quel ordre faire les démarches ?",
+        paragraphs: [
+          "Pour un Français qui s’installe plus de trois mois, la démarche centrale est le certificat d’enregistrement de citoyen de l’UE (la « carte verte »), à demander dans les trois mois suivant l’arrivée. Il comporte votre NIE : inutile, en général, de demander un NIE séparé avant.",
+          "Le NIE seul (formulaire EX-15) sert surtout si vous achetez un bien ou avez une démarche ponctuelle sans vous installer.",
+        ],
+      },
+      {
+        title: "Où faire la démarche dans la province de Málaga ?",
+        paragraphs: [
+          "D’après le localisateur officiel de la Policía Nacional, ces bureaux traitent à la fois le NIE et le régime communautaire (carte verte) :",
+        ],
+        bullets: [
+          "Málaga ville : Brigada Provincial de Extranjería y Fronteras, Plaza Manuel Azaña 3.",
+          "Marbella : commissariat, Avda. Arias de Velasco 25.",
+          "Fuengirola : commissariat, Avda. Conde San Isidro 98.",
+          "Estepona : commissariat, C/ Valle Inclán 1.",
+          "Torremolinos-Benalmádena : commissariat, C/ Skal 12.",
+          "Vélez-Málaga, Ronda et Antequera disposent aussi d’un bureau.",
+        ],
+      },
+      {
+        title: "Comment prendre rendez-vous ?",
+        paragraphs: [
+          "Sur le portail officiel de cita previa, choisissez la province de Málaga, puis « Certificado de registro de ciudadano de la U.E. » ou « Certificados y asignación de NIE ».",
+          "Tous les bureaux de la province sont possibles : élargir la recherche à Fuengirola, Estepona ou Vélez-Málaga permet souvent de trouver une date plus proche. Les créneaux sont plus rares en haute saison et pendant les vacances.",
+        ],
+      },
+      {
+        title: "Le padrón à Málaga",
+        paragraphs: [
+          "À Málaga ville, le padrón est géré par GESTRISAM : l’accueil en personne se fait uniquement sur rendez-vous, au bureau de GESTRISAM ou dans les bureaux de district. Dans les autres communes, adressez-vous à la mairie concernée.",
+        ],
+      },
+      {
+        title: "Ce qu’il faut préparer avant",
+        paragraphs: [
+          "Dossier complet avant le rendez-vous : formulaire EX-18, pièce d’identité, justificatif de votre situation et taxe 790 code 012 payée. C’est ce qui fait la différence entre une démarche réglée en un rendez-vous et deux mois perdus.",
+        ],
+      },
+    ],
+    related: [
+      "certificat-enregistrement-ue-espagne",
+      "rendez-vous-nie-cita-previa",
+      "taxe-790-012-nie",
+    ],
+    serviceHref: "/installation-espagne",
+    serviceLabel: "Préparer mes démarches à Málaga",
+    sources: [
+      {
+        label: "Policía Nacional · Localisateur des bureaux pour étrangers",
+        href: "https://sede.policia.gob.es/portalCiudadano/_es/dependencias_localizador_accesible.php",
+      },
+      {
+        label: "GESTRISAM · Padrón de Málaga",
+        href: "https://gestrisam.malaga.eu/atencion-a-la-ciudadania/padron-de-habitantes/",
+      },
+      {
+        label: "Cita previa extranjería (portail officiel)",
+        href: "https://icp.administracionelectronica.gob.es/icpplus/index.html",
+      },
+    ],
+  },
+
+  {
+    slug: "nie-carte-verte-barcelone",
+    category: "Installation",
+    title: "NIE et carte verte à Barcelone : où et comment les demander",
+    seoTitle: "NIE et carte verte à Barcelone : bureaux, rendez-vous et padrón",
+    description: "Vous vous installez à Barcelone ? Où demander le NIE et le certificat d’enregistrement UE, pourquoi les rendez-vous sont si rares et comment s’inscrire au padrón.",
+    eyebrow: "Installation · Barcelone",
+    intro: "Avec près de 30 000 Français inscrits dans la province, Barcelone est la première destination française en Espagne. C’est aussi l’une des provinces où obtenir un rendez-vous pour la carte verte est le plus difficile. Voici comment s’y retrouver.",
+    sections: [
+      {
+        title: "Dans quel ordre faire les démarches ?",
+        paragraphs: [
+          "Pour un Français qui s’installe plus de trois mois, la démarche centrale est le certificat d’enregistrement de citoyen de l’UE (la « carte verte »), à demander dans les trois mois suivant l’arrivée. Il comporte votre NIE : inutile, en général, de demander un NIE séparé avant.",
+          "Le NIE seul (formulaire EX-15) sert surtout si vous achetez un bien ou avez une démarche ponctuelle sans vous installer.",
+        ],
+      },
+      {
+        title: "Où faire la démarche dans la province de Barcelone ?",
+        paragraphs: [
+          "Les démarches des citoyens européens relèvent de la Policía Nacional. À Barcelone ville, le bureau des citoyens communautaires a changé d’adresse début 2026 : vérifiez toujours le lieu indiqué sur votre confirmation de rendez-vous.",
+          "Hors de Barcelone ville, plusieurs commissariats traitent à la fois le NIE et la carte verte d’après le localisateur officiel :",
+        ],
+        bullets: [
+          "L’Hospitalet, Sabadell, Mataró, Granollers, Viladecans, Manresa.",
+          "Vilanova i la Geltrú, Sant Feliu, Vic, Castelldefels-Gavà, Cerdanyola.",
+          "Cornellà-Esplugues, Montcada, Ripollet, Sant Boi.",
+          "Attention : Badalona, Terrassa, Rubí, Sant Cugat, Santa Coloma et Sant Adrià traitent le NIE mais pas la carte verte.",
+        ],
+      },
+      {
+        title: "Pourquoi les rendez-vous sont si rares",
+        paragraphs: [
+          "Le problème est ancien : en 2022, le Defensor del Pueblo a lui-même constaté l’impossibilité d’obtenir un rendez-vous pour le certificat d’enregistrement UE à Barcelone. Les créneaux sont publiés par vagues et partent vite.",
+          "La parade : chercher dans tous les commissariats de la province qui traitent la carte verte, pas seulement à Barcelone ville, et revenir sur le portail plusieurs fois par jour.",
+        ],
+      },
+      {
+        title: "Le padrón à Barcelone",
+        paragraphs: [
+          "À Barcelone ville, l’inscription au padrón se fait en ligne via l’Oficina Virtual de Trámites (avec une identification électronique) ou en personne dans un bureau d’accueil (OAC) sur rendez-vous, à prendre notamment par le 010. Les démarches municipales sont disponibles en catalan et en espagnol.",
+        ],
+      },
+      {
+        title: "Ce qu’il faut préparer avant",
+        paragraphs: [
+          "Avec des créneaux aussi rares, un rendez-vous perdu coûte cher. Préparez le dossier complet avant de chercher la date : formulaire EX-18, pièce d’identité, justificatif de votre situation et taxe 790 code 012 payée.",
+        ],
+      },
+    ],
+    related: [
+      "certificat-enregistrement-ue-espagne",
+      "rendez-vous-nie-cita-previa",
+      "taxe-790-012-nie",
+    ],
+    serviceHref: "/installation-espagne",
+    serviceLabel: "Préparer mes démarches à Barcelone",
+    sources: [
+      {
+        label: "Policía Nacional · Localisateur des bureaux pour étrangers",
+        href: "https://sede.policia.gob.es/portalCiudadano/_es/dependencias_localizador_accesible.php",
+      },
+      {
+        label: "Defensor del Pueblo · Cita previa certificat UE (2022)",
+        href: "https://www.defensordelpueblo.es/resoluciones/cita-previa-para-realizar-el-tramite-de-certificado-de-registro-de-ciudadano-de-la-union",
+      },
+      {
+        label: "Ajuntament de Barcelona · Empadronament",
+        href: "https://ajuntament.barcelona.cat/novaciutadania/es/empadronamiento",
+      },
+      {
+        label: "Idescat · Population étrangère (province de Barcelone)",
+        href: "https://idescat.cat/poblacioestrangera/?geo=prov:08&nac=a&b=12",
+      },
+    ],
+  },
+
+  {
+    slug: "nie-carte-verte-valence",
+    category: "Installation",
+    title: "NIE et carte verte à Valence : où et comment les demander",
+    seoTitle: "NIE et carte verte à Valence : le bureau des citoyens UE et le padrón en ligne",
+    description: "Vous vous installez à Valence ? Le bureau dédié aux citoyens européens, les autres commissariats de la province, la prise de rendez-vous et le padrón en ligne.",
+    eyebrow: "Installation · Valence",
+    intro: "Valence attire chaque année plus de Français : la ville en comptait près de 4 000 en 2024, en hausse de 10 % sur un an. Bonne nouvelle, c’est aussi l’une des villes où les démarches sont les plus lisibles : un bureau dédié aux citoyens européens et un padrón qui se fait en ligne.",
+    sections: [
+      {
+        title: "Dans quel ordre faire les démarches ?",
+        paragraphs: [
+          "Pour un Français qui s’installe plus de trois mois, la démarche centrale est le certificat d’enregistrement de citoyen de l’UE (la « carte verte »), à demander dans les trois mois suivant l’arrivée. Il comporte votre NIE : inutile, en général, de demander un NIE séparé avant.",
+          "Le NIE seul (formulaire EX-15) sert surtout si vous achetez un bien ou avez une démarche ponctuelle sans vous installer.",
+        ],
+      },
+      {
+        title: "Où faire la démarche à Valence ?",
+        paragraphs: [
+          "La Policía Nacional dispose à Valence d’un bureau dédié : l’Oficina de Trámites de Comunitarios y Certificados, C/ Bailén 9. Dans la province, d’après le localisateur officiel, ces commissariats traitent aussi la carte verte :",
+        ],
+        bullets: [
+          "Valencia Patraix, Alzira-Algemesí, Gandia, Ontinyent.",
+          "Sagunto et Xirivella-Aldaia-Alaquàs.",
+          "Burjassot, Mislata, Paterna, Quart de Poblet, Torrent et Xàtiva traitent le NIE.",
+        ],
+      },
+      {
+        title: "Comment prendre rendez-vous ?",
+        paragraphs: [
+          "Sur le portail officiel de cita previa, choisissez la province de Valence, puis la démarche. Si Valence ville est saturée, Sagunto ou Gandia ont souvent des dates plus proches. Vérifiez l’adresse sur votre confirmation.",
+        ],
+      },
+      {
+        title: "Le padrón à Valence",
+        paragraphs: [
+          "À Valence ville, l’inscription ou le changement d’adresse au padrón peut se faire en ligne sur la sede électronique de la mairie, ou en personne à l’Oficina del Padrón, avec rendez-vous facultatif. La démarche est gratuite.",
+        ],
+      },
+      {
+        title: "Ce qu’il faut préparer avant",
+        paragraphs: [
+          "Formulaire EX-18, pièce d’identité, justificatif de votre situation et taxe 790 code 012 payée : avec un dossier complet, la démarche se règle en un seul rendez-vous.",
+        ],
+      },
+    ],
+    related: [
+      "certificat-enregistrement-ue-espagne",
+      "rendez-vous-nie-cita-previa",
+      "taxe-790-012-nie",
+    ],
+    serviceHref: "/installation-espagne",
+    serviceLabel: "Préparer mes démarches à Valence",
+    sources: [
+      {
+        label: "Policía Nacional · Localisateur des bureaux pour étrangers",
+        href: "https://sede.policia.gob.es/portalCiudadano/_es/dependencias_localizador_accesible.php",
+      },
+      {
+        label: "Ajuntament de València · Oficina del Padrón",
+        href: "https://www.valencia.es/cas/oficina-del-padron-municipal",
+      },
+      {
+        label: "Ajuntament de València · Population étrangère 2024",
+        href: "https://www.valencia.es/estadistica/Padron/2024/Pob_estrangera_2024_Cast.pdf",
+      },
+    ],
+  },
+
+  {
+    slug: "nie-carte-verte-madrid",
+    category: "Installation",
+    title: "NIE et carte verte à Madrid : où et comment les demander",
+    seoTitle: "NIE et carte verte à Madrid : bureaux de police, rendez-vous et padrón en ligne",
+    description: "Vous vous installez à Madrid ? Les bureaux de police qui traitent le NIE et la carte verte, comment trouver un rendez-vous plus vite et le padrón en ligne.",
+    eyebrow: "Installation · Madrid",
+    intro: "À Madrid, les démarches des citoyens européens se font auprès de la Policía Nacional, pas de l’Oficina de Extranjería. Le bureau central est très demandé, mais la région compte de nombreux commissariats qui traitent la carte verte. Voici comment en profiter.",
+    sections: [
+      {
+        title: "Dans quel ordre faire les démarches ?",
+        paragraphs: [
+          "Pour un Français qui s’installe plus de trois mois, la démarche centrale est le certificat d’enregistrement de citoyen de l’UE (la « carte verte »), à demander dans les trois mois suivant l’arrivée. Il comporte votre NIE : inutile, en général, de demander un NIE séparé avant.",
+          "Le NIE seul (formulaire EX-15) sert surtout si vous achetez un bien ou avez une démarche ponctuelle sans vous installer.",
+        ],
+      },
+      {
+        title: "Où faire la démarche dans la région de Madrid ?",
+        paragraphs: [
+          "D’après le localisateur officiel de la Policía Nacional, la Brigada Provincial de Extranjería y Fronteras (Avda. Padre Piquer 18) traite le certificat d’enregistrement UE. De nombreux commissariats traitent à la fois le NIE et la carte verte :",
+        ],
+        bullets: [
+          "Alcalá de Henares, Torrejón de Ardoz, Coslada-San Fernando.",
+          "Getafe, Leganés, Fuenlabrada, Parla.",
+          "Móstoles, Alcorcón, Pozuelo de Alarcón, Aranjuez.",
+        ],
+      },
+      {
+        title: "Comment trouver un rendez-vous plus vite ?",
+        paragraphs: [
+          "Sur le portail officiel de cita previa, choisissez la province de Madrid. Les bureaux centraux sont les plus demandés : élargir la recherche aux commissariats de la périphérie permet souvent de trouver une date bien plus proche. Vérifiez l’adresse sur votre confirmation.",
+        ],
+      },
+      {
+        title: "Le padrón à Madrid",
+        paragraphs: [
+          "À Madrid ville, l’inscription au padrón se fait dans les bureaux d’accueil (Oficinas de Atención a la Ciudadanía) sur rendez-vous, par téléphone au 010, ou en ligne sur la sede électronique de la mairie avec une identification électronique.",
+        ],
+      },
+      {
+        title: "Ce qu’il faut préparer avant",
+        paragraphs: [
+          "Formulaire EX-18, pièce d’identité, justificatif de votre situation et taxe 790 code 012 payée. Un dossier complet évite de devoir chercher un deuxième rendez-vous.",
+        ],
+      },
+    ],
+    related: [
+      "certificat-enregistrement-ue-espagne",
+      "rendez-vous-nie-cita-previa",
+      "taxe-790-012-nie",
+    ],
+    serviceHref: "/installation-espagne",
+    serviceLabel: "Préparer mes démarches à Madrid",
+    sources: [
+      {
+        label: "Policía Nacional · Localisateur des bureaux pour étrangers",
+        href: "https://sede.policia.gob.es/portalCiudadano/_es/dependencias_localizador_accesible.php",
+      },
+      {
+        label: "Ayuntamiento de Madrid · Carta de servicios Padrón 2026",
+        href: "https://transparencia.madrid.es/UnidadesDescentralizadas/Calidad/CARTAS%20SERVICIOS/SistemaCartasServicio/20%20CS_Padron/DEFINITIVA/Folleto-CS-Padron-2026.pdf",
+      },
+      {
+        label: "Cita previa extranjería (portail officiel)",
+        href: "https://icp.administracionelectronica.gob.es/icpplus/index.html",
+      },
+    ],
+  },
+
+  {
+    slug: "nie-carte-verte-gerone-costa-brava",
+    category: "Installation",
+    title: "NIE et carte verte à Gérone et sur la Costa Brava",
+    seoTitle: "NIE et carte verte sur la Costa Brava (Gérone) : où les demander",
+    description: "Vous vous installez sur la Costa Brava ? Pourquoi il faut aller à Gérone pour la carte verte, les bureaux NIE près de la frontière et les particularités du padró.",
+    eyebrow: "Installation · Gérone",
+    intro: "Plus de 6 600 Français vivent dans la province de Gérone. Particularité de la Costa Brava : les commissariats de la côte (Lloret, Sant Feliu de Guíxols) ne traitent ni le NIE ni la carte verte. Il faut donc savoir où aller, et dans quel ordre.",
+    sections: [
+      {
+        title: "Dans quel ordre faire les démarches ?",
+        paragraphs: [
+          "Pour un Français qui s’installe plus de trois mois, la démarche centrale est le certificat d’enregistrement de citoyen de l’UE (la « carte verte »), à demander dans les trois mois suivant l’arrivée. Il comporte votre NIE : inutile, en général, de demander un NIE séparé avant.",
+          "Le NIE seul (formulaire EX-15) sert surtout si vous achetez un bien ou avez une démarche ponctuelle sans vous installer.",
+        ],
+      },
+      {
+        title: "Où faire la démarche dans la province de Gérone ?",
+        paragraphs: [
+          "D’après le localisateur officiel de la Policía Nacional :",
+        ],
+        bullets: [
+          "Carte verte (régime communautaire) : Brigada Provincial de Extranjería y Fronteras, C/ Rajolers 7, à Gérone.",
+          "NIE : Brigada Provincial, C/ Cristòfol Grober 12, à Gérone.",
+          "NIE également aux unités de La Jonquera (C/ Major 136-138) et de Puigcerdà (Av. de França 2), pratiques depuis la France.",
+          "Les commissariats de Lloret de Mar, Sant Feliu de Guíxols et Figueres ne traitent pas ces démarches.",
+        ],
+      },
+      {
+        title: "Le padró à Gérone : attention à l’ordre",
+        paragraphs: [
+          "À Gérone ville, la mairie demande aux citoyens européens le NIE figurant sur leur certificat d’enregistrement UE pour l’inscription au padró. Concrètement, la carte verte vient souvent avant le padró.",
+          "L’inscription se fait en ligne (avec idCAT Mòbil, certificat numérique ou Cl@ve), en personne à l’Oficina d’Atenció Municipal (rendez-vous recommandé) ou par courrier. Depuis fin 2025, elle n’est plus immédiate : les dossiers sont examinés avant la délivrance du certificat.",
+        ],
+      },
+      {
+        title: "Comment prendre rendez-vous ?",
+        paragraphs: [
+          "Sur le portail officiel de cita previa, choisissez la province de Gérone, puis « Certificado de registro de ciudadano de la U.E. » ou « Certificados y asignación de NIE ». Vérifiez l’adresse sur votre confirmation.",
+        ],
+      },
+      {
+        title: "Ce qu’il faut préparer avant",
+        paragraphs: [
+          "Formulaire EX-18, pièce d’identité, justificatif de votre situation et taxe 790 code 012 payée. Depuis la côte, un aller-retour à Gérone pour un dossier incomplet, c’est une demi-journée perdue.",
+        ],
+      },
+    ],
+    related: [
+      "certificat-enregistrement-ue-espagne",
+      "rendez-vous-nie-cita-previa",
+      "taxe-790-012-nie",
+    ],
+    serviceHref: "/installation-espagne",
+    serviceLabel: "Préparer mes démarches à Gérone",
+    sources: [
+      {
+        label: "Policía Nacional · Localisateur des bureaux pour étrangers",
+        href: "https://sede.policia.gob.es/portalCiudadano/_es/dependencias_localizador_accesible.php",
+      },
+      {
+        label: "Ajuntament de Girona · Alta al padró",
+        href: "https://seu-e.cat/ca/web/girona/tramits-i-gestions/-/tramits/tramit/20867494",
+      },
+      {
+        label: "Idescat · Population étrangère (province de Gérone)",
+        href: "https://idescat.cat/poblacioestrangera/?geo=prov:17&nac=a&b=12",
+      },
+    ],
+  },
 ];
 
 const sourcesByCategory: Record<
