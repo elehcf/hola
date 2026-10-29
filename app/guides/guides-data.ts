@@ -680,6 +680,134 @@ export const guides: Guide[] = [
     serviceLabel: "Étudier ma situation",
   },
 
+  {
+    slug: "plaque-immatriculation-espagnole",
+    category: "Voiture",
+    title: "Plaque d’immatriculation espagnole : comment l’obtenir pour une voiture française",
+    seoTitle: "Plaque d’immatriculation espagnole : quand et comment l’obtenir",
+    description: "Format des plaques espagnoles, étapes avant de les commander, où les faire fabriquer, documents demandés et plaques vertes temporaires. Le guide pour une voiture française.",
+    eyebrow: "Voiture · Plaques",
+    intro: "Vous vous installez en Espagne avec votre voiture française et vous vous demandez quand vous pourrez poser des plaques espagnoles ? Les plaques sont la toute dernière étape : elles arrivent une fois l’immatriculation espagnole obtenue. Voici comment tout s’enchaîne, et ce qu’il faut apporter le jour où vous les faites fabriquer.",
+    sections: [
+      {
+        title: "À quoi ressemble une plaque espagnole ?",
+        paragraphs: [
+          "Les plaques espagnoles ordinaires comportent quatre chiffres suivis de trois lettres, en noir sur fond blanc, avec à gauche la bande bleue européenne et la lettre E. Il n’y a plus de code de province : le numéro ne dit rien de l’endroit où vous vivez, seulement de l’ordre d’attribution.",
+        ],
+      },
+      {
+        title: "Les plaques arrivent en dernier",
+        paragraphs: [
+          "On ne peut pas commander de plaques espagnoles tant que la voiture n’a pas de numéro d’immatriculation espagnol. Pour une voiture d’occasion venant d’un autre pays de l’UE, le parcours passe généralement par ces étapes :",
+        ],
+        bullets: [
+          "Le contrôle à l’ITV, qui délivre la fiche technique espagnole du véhicule.",
+          "L’impôt d’immatriculation (modèle 576), ou la justification d’une exonération ou d’un non-assujettissement.",
+          "La taxe de circulation (IVTM) payée à la mairie de votre domicile.",
+          "La demande d’immatriculation à la DGT (taxe de 99,77 € d’après la DGT), avec un passage à la Jefatura de Tráfico pour remettre la fiche technique et obtenir le numéro.",
+        ],
+      },
+      {
+        title: "Où faire fabriquer les plaques ?",
+        paragraphs: [
+          "Une fois le numéro attribué, les plaques se font dans un centre agréé de fabrication de plaques (beaucoup de garages et de centres auto le proposent). D’après la DGT, il faut apporter la documentation originale du véhicule : les photocopies ne sont pas acceptées. On vous demandera aussi votre pièce d’identité et votre adresse.",
+          "Les plaques doivent être posées avant de circuler avec la nouvelle immatriculation.",
+        ],
+      },
+      {
+        title: "Et pendant les démarches ?",
+        paragraphs: [
+          "Si vous avez besoin de rouler pendant que l’immatriculation est en cours, il existe des plaques temporaires (plaques vertes), qui se demandent à la DGT. Elles évitent de rester bloqué le temps que le dossier aboutisse.",
+        ],
+      },
+      {
+        title: "Les erreurs qui retardent tout",
+        paragraphs: [
+          "Arriver au centre de plaques avec une copie au lieu de l’original, commencer par la DGT avant d’avoir la fiche technique de l’ITV, ou oublier l’IVTM de la mairie : ce sont les causes de retard les plus fréquentes. L’ordre des étapes compte autant que les documents.",
+        ],
+      },
+    ],
+    related: [
+      "immatriculer-voiture-francaise-espagne",
+      "itv-voiture-francaise-espagne",
+      "taxes-immatriculation-voiture-espagne",
+    ],
+    serviceHref: "/immatriculation-voiture-espagne",
+    serviceLabel: "Faire immatriculer ma voiture en Espagne",
+    sources: [
+      {
+        label: "DGT · Immatriculation des véhicules neufs et venant de l’étranger",
+        href: "https://sede.dgt.gob.es/fr/vehiculos/matriculaciones-de-vehiculos/matriculacion-ordinaria/",
+      },
+      {
+        label: "DGT · La nouvelle plaque européenne",
+        href: "https://www.dgt.es/export/sites/web-DGT/.galleries/downloads/noticias/la_nueva_matricula_europea.pdf",
+      },
+    ],
+  },
+
+  {
+    slug: "carte-grise-espagnole",
+    category: "Voiture",
+    title: "Carte grise espagnole : permiso de circulación et carte ITV",
+    seoTitle: "Carte grise espagnole : à quoi correspond le permiso de circulación",
+    description: "En Espagne, la « carte grise » se partage entre le permiso de circulación et la carte ITV. Comment les obtenir pour une voiture française et quels documents garder dans la voiture.",
+    eyebrow: "Voiture · Documents",
+    intro: "En France, tout tient sur la carte grise. En Espagne, l’équivalent se répartit entre deux documents : le permiso de circulación, délivré par la DGT, et la carte ITV, qui décrit le véhicule. Comprendre ce partage évite bien des allers-retours quand on immatricule une voiture française.",
+    sections: [
+      {
+        title: "Le permiso de circulación : le titre au nom du propriétaire",
+        paragraphs: [
+          "C’est le document qui se rapproche le plus de la carte grise française : il est délivré par la DGT (la Dirección General de Tráfico) au moment de l’immatriculation et identifie le véhicule, son numéro et son titulaire.",
+        ],
+      },
+      {
+        title: "La carte ITV : la fiche technique du véhicule",
+        paragraphs: [
+          "La carte ITV (tarjeta de inspección técnica, ou ficha técnica) décrit les caractéristiques du véhicule et suit ses contrôles techniques. Pour une voiture française, c’est le passage à l’ITV qui permet d’obtenir cette fiche technique espagnole, indispensable avant de demander l’immatriculation.",
+        ],
+      },
+      {
+        title: "Comment obtenir ces documents pour une voiture française ?",
+        paragraphs: [
+          "Le permiso de circulación espagnol s’obtient à la fin de l’immatriculation en Espagne. D’après la DGT, pour une voiture d’occasion venant d’un autre pays de l’UE, il faut notamment :",
+        ],
+        bullets: [
+          "La documentation originale du véhicule (dont la carte grise française).",
+          "La fiche technique délivrée par l’ITV.",
+          "La preuve du paiement ou de l’exonération de l’impôt d’immatriculation (modèle 576).",
+          "La preuve du paiement de la taxe de circulation (IVTM) à la mairie de votre domicile.",
+          "Le paiement de la taxe DGT (99,77 € d’après la DGT).",
+        ],
+      },
+      {
+        title: "Ce qu’il faut garder dans la voiture",
+        paragraphs: [
+          "Avec une immatriculation espagnole, gardez le permiso de circulación et une carte ITV en cours de validité. La DGT propose aussi l’application miDGT, où l’on retrouve les documents de ses véhicules.",
+        ],
+      },
+      {
+        title: "Et la carte grise française ?",
+        paragraphs: [
+          "Elle fait partie de la documentation originale demandée pour immatriculer la voiture en Espagne. Ne vous en séparez pas avant d’avoir vérifié qu’elle n’est plus nécessaire à votre dossier.",
+        ],
+      },
+    ],
+    related: [
+      "immatriculer-voiture-francaise-espagne",
+      "plaque-immatriculation-espagnole",
+      "prix-immatriculation-voiture-espagne",
+    ],
+    serviceHref: "/immatriculation-voiture-espagne",
+    serviceLabel: "Faire immatriculer ma voiture en Espagne",
+    sources: [
+      {
+        label: "DGT · Immatriculation des véhicules neufs et venant de l’étranger",
+        href: "https://sede.dgt.gob.es/fr/vehiculos/matriculaciones-de-vehiculos/matriculacion-ordinaria/",
+      },
+    ],
+  },
+
   // ─────────────────────────────────────────────
   // INSTALLATION
   // ─────────────────────────────────────────────
