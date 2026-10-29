@@ -278,14 +278,13 @@ export default function ReconnaissanceDiplomeEspagne() {
               className="mt-4 text-4xl leading-[0.98] sm:text-5xl"
               style={{ fontFamily: "var(--font-editorial)" }}
             >
-              Un accompagnement
-              <br />
-              <span className="italic">adapté au dossier.</span>
+              À partir de 290 €
             </h2>
             <p className="mt-5 max-w-xl text-ivory/70">
-              Après un premier échange, vous recevez une proposition précisant
-              les étapes incluses, notre tarif et les frais administratifs à
-              régler séparément.
+              Identification de la bonne procédure, constitution et
+              vérification du dossier. Après un premier échange gratuit, vous
+              recevez une proposition précisant les étapes incluses, le prix
+              exact et les frais administratifs à régler séparément.
             </p>
           </div>
           <Link

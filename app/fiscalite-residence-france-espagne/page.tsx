@@ -374,14 +374,13 @@ export default function FiscaliteResidenceFranceEspagne() {
               className="mt-4 text-4xl leading-[0.98] sm:text-5xl"
               style={{ fontFamily: "var(--font-editorial)" }}
             >
-              Commençons par les faits.
-              <br />
-              <span className="italic">Puis mobilisons la bonne expertise.</span>
+              Diagnostic à partir de 190 €
             </h2>
             <p className="mt-5 max-w-xl text-ivory/70">
-              Après un premier examen, vous recevez un périmètre clair. Le
-              devis distingue l’accompagnement administratif des éventuelles
-              interventions fiscales, juridiques ou comptables.
+              Nous reconstituons votre situation et identifions les vraies
+              questions à traiter. Le devis distingue cet accompagnement des
+              éventuelles interventions fiscales, juridiques ou comptables
+              d’un professionnel habilité, chiffrées à part.
             </p>
           </div>
           <Link
