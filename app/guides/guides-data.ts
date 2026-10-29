@@ -79,7 +79,7 @@ export const guides: Guide[] = [
     related: [
       "nie-depuis-france",
       "nie-documents-ex15",
-      "nie-ou-residence-espagne",
+      "rendez-vous-nie-cita-previa",
     ],
     serviceHref: "/nie-espagne",
     serviceLabel: "Me faire accompagner pour mon NIE",
@@ -214,6 +214,157 @@ export const guides: Guide[] = [
     ],
     serviceHref: "/installation-espagne",
     serviceLabel: "Organiser mon installation",
+  },
+
+  {
+    slug: "rendez-vous-nie-cita-previa",
+    category: "NIE",
+    title: "Pas de rendez-vous pour le NIE (cita previa) : que faire ?",
+    seoTitle: "Pas de rendez-vous NIE (cita previa) : 7 solutions qui marchent",
+    description:
+      "« No hay citas disponibles » pour votre NIE ou votre carte verte ? Où réserver, quand les créneaux se libèrent, les erreurs à éviter et les vraies alternatives.",
+    eyebrow: "NIE · Rendez-vous",
+    intro:
+      "Vous avez tout préparé pour votre NIE, mais le site de la cita previa affiche « No hay citas disponibles » depuis des jours. C’est le blocage le plus fréquent en Espagne, surtout dans les grandes villes et sur la côte. Bonne nouvelle : il existe des solutions concrètes. Voici lesquelles, dans l’ordre.",
+    sections: [
+      {
+        title: "Où se réserve le rendez-vous ?",
+        paragraphs: [
+          "Le rendez-vous pour le NIE, le certificat d’enregistrement UE (la « carte verte ») ou les empreintes de la TIE se prend sur le portail officiel de cita previa de l’administration espagnole. On y choisit la province, puis la démarche, puis l’office.",
+          "La réservation est gratuite. Toute personne qui vous propose d’« acheter » un rendez-vous fait commerce d’un service public gratuit : passez votre chemin.",
+        ],
+      },
+      {
+        title: "Pourquoi il n’y a jamais de créneau",
+        paragraphs: [
+          "Dans les provinces très demandées (Barcelone, Madrid, Alicante, Málaga, Valence, Baléares…), les créneaux sont publiés par vagues et partent en quelques minutes. Le message « No hay citas disponibles » ne veut donc pas dire qu’il n’y en aura pas : il veut dire qu’il n’y en a pas à cet instant.",
+        ],
+      },
+      {
+        title: "Les 7 solutions, de la plus simple à la plus efficace",
+        paragraphs: [
+          "Avant toute chose, vérifiez que vous demandez la bonne démarche : si vous vous installez plus de trois mois, c’est le certificat d’enregistrement UE qu’il vous faut, et il comporte déjà votre NIE.",
+        ],
+        bullets: [
+          "Revenir souvent, à des heures différentes : tôt le matin et en début de semaine, de nouveaux créneaux et des annulations apparaissent régulièrement.",
+          "Ne pas se limiter à un seul bureau : dans votre province, tous les offices qui traitent votre démarche sont valables. Un office plus éloigné a souvent des dates plus proches.",
+          "Garder un rendez-vous lointain et continuer à chercher : si une date plus proche se libère, réservez-la puis annulez l’ancienne pour la laisser à quelqu’un d’autre.",
+          "Préparer ses informations à l’avance : numéro de passeport ou de carte d’identité, nom exact, nationalité, e-mail et téléphone. Quand un créneau apparaît, chaque seconde compte.",
+          "Vérifier si le NIE peut se faire depuis la France : selon votre motif, le consulat d’Espagne compétent peut traiter la demande, avec ses propres délais.",
+          "Se faire représenter quand c’est possible : pour certaines démarches, une personne mandatée peut déposer la demande à votre place avec une procuration.",
+          "Se faire accompagner : un professionnel qui connaît les offices de votre province vous fait gagner du temps et évite le rendez-vous perdu pour un document manquant.",
+        ],
+      },
+      {
+        title: "Le piège : obtenir le rendez-vous… et le perdre",
+        paragraphs: [
+          "Le pire scénario, c’est d’attendre trois semaines un créneau et de se présenter avec un dossier incomplet : formulaire mal rempli, taxe non payée ou mauvais justificatif. Il faut alors tout recommencer, y compris la recherche de rendez-vous.",
+          "Préparez donc le dossier complet avant même de chercher la date : formulaire EX-15 (ou EX-18 pour la carte verte), taxe 790 code 012 payée, pièce d’identité et justificatif du motif.",
+        ],
+      },
+      {
+        title: "Combien de temps faut-il prévoir ?",
+        paragraphs: [
+          "Cela varie énormément d’une province à l’autre et d’un mois à l’autre. Si votre NIE conditionne une signature chez le notaire ou une embauche, commencez la recherche de rendez-vous dès que la date de l’opération est connue, et pas une semaine avant.",
+        ],
+      },
+    ],
+    related: [
+      "obtenir-nie-espagne",
+      "taxe-790-012-nie",
+      "nie-depuis-france",
+    ],
+    serviceHref: "/nie-espagne",
+    serviceLabel: "Débloquer mon dossier NIE",
+    sources: [
+      {
+        label: "Administración Pública · Cita previa extranjería (portail officiel)",
+        href: "https://icp.administracionelectronica.gob.es/icpplus/index.html",
+      },
+      {
+        label: "Ministerio del Interior — Número de Identidad de Extranjero (NIE)",
+        href: "https://www.interior.gob.es/opencms/es/servicios-al-ciudadano/tramites-y-gestiones/extranjeria/ciudadanos-de-la-union-europea/numero-de-Identidad-de-extranjero-nie/",
+      },
+    ],
+  },
+
+  {
+    slug: "taxe-790-012-nie",
+    category: "NIE",
+    title: "Taxe 790 code 012 : montant, formulaire et paiement pour le NIE",
+    seoTitle: "Taxe 790 012 : montant 2026 et comment la payer (NIE, carte verte)",
+    description:
+      "Combien coûte la taxe 790 code 012 pour un NIE ou un certificat d’enregistrement UE, comment remplir le formulaire, où la payer et les erreurs qui font refuser le dossier.",
+    eyebrow: "NIE · Taxe",
+    intro:
+      "Pour votre NIE ou votre carte verte, l’administration espagnole vous demandera le justificatif de paiement de la « tasa 790 código 012 ». Un petit montant, mais une vraie source de rendez-vous ratés : mauvaise case, code-barres illisible, paiement introuvable. Voici comment la régler du premier coup.",
+    sections: [
+      {
+        title: "Combien coûte la taxe 790 012 ?",
+        paragraphs: [
+          "Le montant dépend du document demandé. Les tarifs en vigueur depuis juin 2025 sont les suivants (ils peuvent être révisés en début d’année : vérifiez toujours le montant affiché par le formulaire officiel au moment de payer).",
+        ],
+        bullets: [
+          "NIE à la demande de l’intéressé (formulaire EX-15) : 9,84 €.",
+          "Certificat d’enregistrement de citoyen de l’UE, la « carte verte » (formulaire EX-18) : 12,00 €.",
+        ],
+      },
+      {
+        title: "Où obtenir le formulaire ?",
+        paragraphs: [
+          "Le formulaire se remplit en ligne sur le site officiel de la Policía Nacional (sede électronique, rubrique « Tasa 790 código 012 »). Il génère un document avec code-barres, à imprimer en plusieurs exemplaires.",
+          "Ne téléchargez pas un modèle trouvé sur un forum : le formulaire officiel calcule automatiquement le bon montant.",
+        ],
+      },
+      {
+        title: "Comment le remplir sans erreur",
+        paragraphs: [
+          "Quelques champs suffisent, mais chacun compte.",
+        ],
+        bullets: [
+          "Vos données d’identité exactement comme sur votre passeport ou votre carte d’identité.",
+          "Le bon motif : « Asignación de NIE » pour un NIE seul, « Certificado de registro de residente comunitario » pour la carte verte.",
+          "La case « Principal » pour un premier paiement (pas « Complementaria »).",
+          "Une impression nette : un code-barres illisible peut faire refuser le paiement à la banque ou au guichet.",
+        ],
+      },
+      {
+        title: "Où et comment payer ?",
+        paragraphs: [
+          "Le moyen le plus courant reste le paiement dans une banque espagnole collaboratrice, au guichet ou au distributeur qui lit le code-barres. Les conditions (client ou non, horaires du guichet) varient selon les banques et les agences : renseignez-vous avant de vous déplacer.",
+          "Le paiement en ligne existe mais suppose en pratique un compte bancaire espagnol et une identification électronique (certificat numérique ou Cl@ve). Si vous payez en ligne, conservez le justificatif avec son numéro NRC : sans lui, le paiement ne peut pas être vérifié.",
+        ],
+      },
+      {
+        title: "Les erreurs qui font perdre le rendez-vous",
+        paragraphs: [
+          "La taxe se paie avant le rendez-vous et le justificatif tamponné ou le NRC doit être présenté le jour J.",
+        ],
+        bullets: [
+          "Confondre la 790 012 (délivrance de documents : NIE, carte verte, TIE) avec la 790 052 (autorisations de séjour).",
+          "Choisir le mauvais motif, et donc le mauvais montant.",
+          "Arriver sans la preuve de paiement, ou avec un exemplaire non validé par la banque.",
+          "Payer trop longtemps à l’avance sans avoir de rendez-vous en vue.",
+        ],
+      },
+    ],
+    related: [
+      "rendez-vous-nie-cita-previa",
+      "nie-documents-ex15",
+      "obtenir-nie-espagne",
+    ],
+    serviceHref: "/nie-espagne",
+    serviceLabel: "Préparer mon dossier NIE complet",
+    sources: [
+      {
+        label: "Policía Nacional · Tasa modelo 790 código 012",
+        href: "https://sede.policia.gob.es/Tasa790_012/",
+      },
+      {
+        label: "Ministerio del Interior — Número de Identidad de Extranjero (NIE)",
+        href: "https://www.interior.gob.es/opencms/es/servicios-al-ciudadano/tramites-y-gestiones/extranjeria/ciudadanos-de-la-union-europea/numero-de-Identidad-de-extranjero-nie/",
+      },
+    ],
   },
 
   // ─────────────────────────────────────────────
