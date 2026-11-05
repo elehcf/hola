@@ -5,10 +5,10 @@ import LifestylePhoto from "../components/LifestylePhoto";
 import PageHeader from "../components/PageHeader";
 
 export const metadata: Metadata = {
-  title: "Immatriculer une voiture française en Espagne",
+  title: "Immatriculation en Espagne d’une voiture française : 449 €",
 
   description:
-    "Vous vous installez en Espagne avec une voiture immatriculée en France ? Nous préparons et coordonnons les démarches pour son immatriculation espagnole.",
+    "Votre voiture française passe aux plaques espagnoles : nous préparons et suivons tout le dossier (ITV, impôt d’immatriculation, DGT) pour 449 €, taxes en sus. Accompagnement en français.",
 
   alternates: {
     canonical: "/immatriculation-voiture-espagne",

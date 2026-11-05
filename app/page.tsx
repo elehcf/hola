@@ -4,9 +4,9 @@ import Link from "next/link";
 import PageHeader from "./components/PageHeader";
 
 export const metadata: Metadata = {
-  title: "Assistance administrative en Espagne pour les Français",
+  title: "Démarches administratives en Espagne, en français",
   description:
-    "holÀ! vous accompagne dans vos démarches en Espagne : NIE, véhicule, installation, diplôme, création d’activité, fiscalité et dossiers France–Espagne.",
+    "NIE, carte verte, immatriculation de voiture, installation : holÀ! prépare vos démarches administratives en Espagne, en français, avec un prix annoncé avant de commencer.",
   alternates: {
     canonical: "/",
   },
