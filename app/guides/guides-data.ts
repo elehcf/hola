@@ -130,48 +130,97 @@ export const guides: Guide[] = [
   {
     slug: "nie-documents-ex15",
     category: "NIE",
-    title: "NIE Espagne : documents, formulaire EX-15 et préparation du dossier",
-    seoTitle: "NIE Espagne : documents et formulaire EX-15",
+    title: "Formulaire EX-15 : comment le remplir case par case pour votre NIE",
+    seoTitle: "Formulaire EX-15 : le remplir case par case (NIE, 2026)",
     description:
-      "Quels documents faut-il pour demander un NIE en Espagne ? EX-15, identité, motif et préparation du dossier expliqués en français.",
-    eyebrow: "NIE · Documents",
+      "Le formulaire EX-15 expliqué en français, rubrique par rubrique : identité, représentant, notifications, type de document, motif, lieu de dépôt. Avec les erreurs qui font refuser la demande de NIE.",
+    eyebrow: "NIE · Formulaire EX-15",
     intro:
-      "Le dossier de NIE n’a rien d’insurmontable une fois que l’on sait quoi préparer. Les problèmes commencent surtout lorsqu’un formulaire est mal rempli, qu’un justificatif manque ou que la demande part au mauvais endroit.",
+      "L’EX-15 est le formulaire officiel pour demander un NIE (número de identidad de extranjero). Il tient sur une page, mais il est entièrement en espagnol et une seule case mal cochée peut vous faire perdre votre rendez-vous. Voici comment le remplir rubrique par rubrique, et ce qu’il faut apporter avec.",
     sections: [
       {
-        title: "Le formulaire EX-15",
+        title: "Où trouver le bon formulaire",
         paragraphs: [
-          "Le formulaire EX-15 est utilisé pour la demande de NIE. Il doit refléter votre situation et la raison réelle de votre demande.",
-          "Avant de le remplir, mieux vaut donc savoir pourquoi vous demandez le NIE et où le dossier sera déposé.",
+          "Le formulaire EX-15 est gratuit : il se télécharge en PDF modifiable sur le site du ministère espagnol de l’Inclusion et des Migrations, et les consulats d’Espagne en France en proposent aussi une version. Ne payez jamais un site qui vous le « vend ».",
+          "D’après les instructions officielles, il se remplit en majuscules, à l’ordinateur ou au stylo noir en lettres d’imprimerie, et se présente en original accompagné d’une copie. Les dates s’écrivent au format jj/mm/aaaa.",
         ],
       },
       {
-        title: "Votre pièce d’identité",
+        title: "Rubrique 1 : vos données personnelles",
         paragraphs: [
-          "Une pièce d’identité en cours de validité doit accompagner le dossier. Selon la façon dont vous faites la demande, les règles de présentation de l’original et des copies peuvent différer.",
+          "C’est la partie la plus longue. Recopiez exactement ce qui figure sur votre pièce d’identité : la moindre différence d’orthographe pose problème.",
+        ],
+        bullets: [
+          "PASAPORTE : le numéro de la pièce d’identité que vous présenterez au rendez-vous. Laissez la case N.I.E. vide, puisque vous n’en avez pas encore.",
+          "1er Apellido : votre nom de famille. Les Français n’ont en général qu’un seul nom, la case 2º Apellido reste donc vide.",
+          "Sexo : H pour homme, M pour femme. Estado civil : S (célibataire), C (marié), V (veuf), D (divorcé) ou Sp (séparé).",
+          "Lugar et País : votre ville et votre pays de naissance, Nacionalidad : FRANCESA.",
+          "Nombre del padre / de la madre : uniquement les prénoms.",
+          "Domicilio, Localidad, C.P., Provincia : votre adresse actuelle, en Espagne si vous y vivez déjà, sinon en France.",
+          "Teléfono móvil et E-mail : indiquez-les, c’est souvent par là que l’on vous contacte en cas de problème.",
         ],
       },
       {
-        title: "La raison de votre demande",
+        title: "Rubriques 2 et 3 : représentant et adresse de notification",
         paragraphs: [
-          "Le NIE est attribué lorsqu’il existe des intérêts économiques, professionnels ou sociaux en Espagne. Il faut donc pouvoir expliquer pourquoi vous en avez besoin et fournir, lorsque c’est nécessaire, un document qui le montre.",
+          "La rubrique 2 ne se remplit que si quelqu’un dépose la demande pour vous (un avocat, une gestoría ou un mandataire). Si vous y allez vous-même, laissez-la vide.",
+          "La rubrique 3 sert à indiquer où recevoir les courriers de l’administration. Elle contient une case pour accepter les notifications électroniques : ne la cochez que si vous avez un certificat électronique ou un accès Cl@ve, sinon vous risquez de ne jamais voir un courrier important.",
         ],
       },
       {
-        title: "Et la taxe ?",
+        title: "Rubrique 4 : la partie qui fait tout rater",
         paragraphs: [
-          "Une taxe administrative est liée à la démarche. Le formulaire de paiement et la façon de la régler doivent correspondre à la procédure que vous suivez.",
-          "Mieux vaut vérifier les modalités au moment de préparer le dossier plutôt que de se fier à un ancien montant ou à un formulaire trouvé en ligne plusieurs mois auparavant.",
+          "C’est ici que se jouent la plupart des refus. Prenez le temps de cocher les bonnes cases.",
+        ],
+        bullets: [
+          "4.1 Tipo de documento : cochez NÚMERO DE IDENTIDAD DE EXTRANJERO (NIE). Les cases « Certificado » concernent d’autres demandes.",
+          "4.2 Motivos : le motif réel de votre demande. Por intereses económicos pour un achat immobilier, une succession ou un compte bancaire, Por intereses profesionales pour un contrat de travail ou une activité, Por intereses sociales pour une raison familiale ou d’études. Apportez un justificatif du motif.",
+          "4.3 Lugar de presentación : Comisaría de Policía si vous déposez en Espagne, Oficina Consular si vous passez par un consulat d’Espagne en France.",
+          "4.4 Situación en España : Estancia si vous n’êtes pas résident, Residencia si vous vivez déjà en Espagne.",
+        ],
+      },
+      {
+        title: "Signature, taxe et pièces à apporter",
+        paragraphs: [
+          "Signez en bas du formulaire en indiquant le lieu et la date. Le jour du rendez-vous, prévoyez en général l’EX-15 en original et en copie, votre pièce d’identité en original et en copie, le justificatif du motif et la preuve du paiement de la taxe 790 code 012 (9,84 € pour un NIE selon la Police nationale).",
+          "Les pièces exactes peuvent varier selon le bureau : vérifiez la liste du commissariat ou du consulat où vous déposez le dossier.",
+        ],
+      },
+      {
+        title: "Les erreurs les plus fréquentes",
+        paragraphs: [
+          "Une demande refusée signifie souvent un nouveau rendez-vous, parfois plusieurs semaines plus tard. Ces erreurs reviennent sans cesse :",
+        ],
+        bullets: [
+          "Utiliser l’EX-15 alors que vous vous installez pour plus de trois mois : un citoyen de l’UE qui devient résident demande le certificat d’enregistrement (carte verte) avec le formulaire EX-18.",
+          "Un nom qui ne correspond pas exactement à la pièce d’identité (nom d’usage au lieu du nom de naissance, accent oublié).",
+          "Aucun motif coché, ou un motif sans justificatif.",
+          "Oublier la copie du formulaire ou le reçu de la taxe.",
+          "Cocher la notification électronique sans certificat électronique.",
         ],
       },
     ],
     related: [
-      "obtenir-nie-espagne",
-      "nie-depuis-france",
-      "nie-ou-residence-espagne",
+      "taxe-790-012-nie",
+      "rendez-vous-nie-cita-previa",
+      "certificat-enregistrement-ue-espagne",
     ],
     serviceHref: "/nie-espagne",
-    serviceLabel: "Faire préparer mon dossier",
+    serviceLabel: "Faire vérifier mon EX-15 et mon dossier",
+    sources: [
+      {
+        label: "Ministère de l’Inclusion et des Migrations · Formulaire EX-15 (PDF modifiable)",
+        href: "https://www.inclusion.gob.es/documents/d/migraciones/ex15-formulario-solicitud-numero-de-identidad-de-extranjero-y-certificados-editable.pdf",
+      },
+      {
+        label: "Consulat général d’Espagne à Lyon · Formulaire EX-15",
+        href: "https://www.exteriores.gob.es/Consulados/lyon/fr/ServiciosConsulares/PublishingImages/Paginas/Consular/NIE/EX-15.pdf",
+      },
+      {
+        label: "Police nationale · Taxe 790 code 012",
+        href: "https://sede.policia.gob.es/Tasa790_012/",
+      },
+    ],
   },
 
   {
@@ -292,7 +341,7 @@ export const guides: Guide[] = [
     slug: "taxe-790-012-nie",
     category: "NIE",
     title: "Taxe 790 code 012 : montant, formulaire et paiement pour le NIE",
-    seoTitle: "Taxe 790 012 : montant 2026 et comment la payer (NIE, carte verte)",
+    seoTitle: "Taxe 790 012 en 2026 : 9,84 € pour le NIE, 12 € pour la carte verte",
     description:
       "Combien coûte la taxe 790 code 012 pour un NIE ou un certificat d’enregistrement UE, comment remplir le formulaire, où la payer et les erreurs qui font refuser le dossier.",
     eyebrow: "NIE · Taxe",
@@ -435,7 +484,7 @@ export const guides: Guide[] = [
     slug: "immatriculer-voiture-francaise-espagne",
     category: "Voiture",
     title: "Immatriculer une voiture française en Espagne : le guide complet",
-    seoTitle: "Immatriculer une voiture française en Espagne",
+    seoTitle: "Immatriculer une voiture française en Espagne : les étapes dans l’ordre",
     description:
       "Toutes les étapes pour immatriculer une voiture française en Espagne : documents, ITV, fiscalité, DGT et plaques espagnoles.",
     eyebrow: "Voiture · France → Espagne",
@@ -546,7 +595,7 @@ export const guides: Guide[] = [
     slug: "itv-voiture-francaise-espagne",
     category: "Voiture",
     title: "ITV en Espagne avec une voiture française : comment ça marche ?",
-    seoTitle: "ITV Espagne pour une voiture française : guide",
+    seoTitle: "ITV en Espagne pour une voiture française : documents et étapes",
     description:
       "Votre voiture est immatriculée en France et doit passer l’ITV en Espagne ? Découvrez son rôle dans une immatriculation espagnole.",
     eyebrow: "Voiture · ITV",
@@ -684,7 +733,7 @@ export const guides: Guide[] = [
     slug: "plaque-immatriculation-espagnole",
     category: "Voiture",
     title: "Plaque d’immatriculation espagnole : comment l’obtenir pour une voiture française",
-    seoTitle: "Plaque d’immatriculation espagnole : quand et comment l’obtenir",
+    seoTitle: "Plaque d’immatriculation espagnole : étapes, documents et plaques vertes",
     description: "Format des plaques espagnoles, étapes avant de les commander, où les faire fabriquer, documents demandés et plaques vertes temporaires. Le guide pour une voiture française.",
     eyebrow: "Voiture · Plaques",
     intro: "Vous vous installez en Espagne avec votre voiture française et vous vous demandez quand vous pourrez poser des plaques espagnoles ? Les plaques sont la toute dernière étape : elles arrivent une fois l’immatriculation espagnole obtenue. Voici comment tout s’enchaîne, et ce qu’il faut apporter le jour où vous les faites fabriquer.",
@@ -871,7 +920,7 @@ export const guides: Guide[] = [
     slug: "empadronamiento-espagne",
     category: "Installation",
     title: "Empadronamiento en Espagne : à quoi sert-il et comment l’obtenir ?",
-    seoTitle: "Empadronamiento Espagne : guide pour les Français",
+    seoTitle: "Empadronamiento en Espagne : où, comment et quels documents",
     description:
       "Qu’est-ce que l’empadronamiento en Espagne ? À quoi sert le padrón municipal, où s’inscrire et quels documents préparer.",
     eyebrow: "Installation · Padrón",
@@ -918,7 +967,7 @@ export const guides: Guide[] = [
     slug: "vivre-espagne-plus-trois-mois",
     category: "Installation",
     title: "Vivre en Espagne plus de 3 mois : quelles démarches ?",
-    seoTitle: "Vivre en Espagne plus de 3 mois : démarches",
+    seoTitle: "Vivre en Espagne plus de 3 mois : carte verte, padrón et santé",
     description:
       "Vous êtes Français et souhaitez vivre en Espagne plus de trois mois ? Résidence, NIE, ressources, santé et empadronamiento.",
     eyebrow: "Installation · + de 3 mois",
@@ -1168,6 +1217,88 @@ export const guides: Guide[] = [
     ],
     serviceHref: "/installation-espagne",
     serviceLabel: "Préparer mon dossier de résidence",
+  },
+
+  {
+    slug: "demarches-administratives-espagne",
+    category: "Installation",
+    title: "Démarches administratives en Espagne : la liste complète, dans l’ordre",
+    seoTitle: "Démarches administratives en Espagne : la liste dans l’ordre (2026)",
+    description:
+      "NIE, padrón, carte verte, santé, banque, voiture, diplôme : toutes les démarches administratives d’un Français qui s’installe en Espagne, dans le bon ordre, avec ce qui se fait depuis la France.",
+    eyebrow: "Installation · Check-list",
+    intro:
+      "S’installer en Espagne, c’est une dizaine de démarches qui dépendent les unes des autres : sans adresse pas de padrón, sans padrón pas de carte verte, sans carte verte pas d’immatriculation de la voiture… Le plus important n’est pas chaque démarche prise seule, mais l’ordre. Voici la liste complète, étape par étape.",
+    sections: [
+      {
+        title: "Avant de partir : ce qui se prépare depuis la France",
+        paragraphs: [
+          "Plusieurs choses s’anticipent avant le déménagement et vous feront gagner des semaines une fois sur place.",
+        ],
+        bullets: [
+          "Le NIE, si vous en avez besoin avant d’arriver (achat immobilier, contrat de travail) : il peut se demander auprès d’un consulat d’Espagne en France.",
+          "Une pièce d’identité valide, et une copie récente de votre acte de naissance si vous êtes marié ou avez des enfants.",
+          "Les documents de votre voiture si elle part avec vous : carte grise, certificat de conformité, factures.",
+          "Pour les retraités : le formulaire S1 auprès de votre caisse, qui ouvre les droits à la santé en Espagne.",
+        ],
+      },
+      {
+        title: "Étape 1 : trouver un logement et s’inscrire au padrón",
+        paragraphs: [
+          "Tout commence par une adresse. Avec votre contrat de location ou votre acte d’achat, vous vous inscrivez au padrón municipal de votre commune (l’empadronamiento). Le certificat de padrón vous sera demandé pour presque toutes les démarches suivantes.",
+        ],
+      },
+      {
+        title: "Étape 2 : la carte verte si vous restez plus de 3 mois",
+        paragraphs: [
+          "Un citoyen de l’Union européenne qui vit en Espagne plus de trois mois doit s’inscrire au registre central des étrangers et obtenir le certificat d’enregistrement, la fameuse carte verte. Elle se demande avec le formulaire EX-18 et la taxe 790 code 012 (12 € selon la Police nationale). Le numéro qui figure dessus est votre NIE.",
+          "Il faut prouver que vous avez des ressources et une couverture santé, ou un emploi en Espagne.",
+        ],
+      },
+      {
+        title: "Étape 3 : la santé et la sécurité sociale",
+        paragraphs: [
+          "Si vous travaillez en Espagne, vous êtes affilié à la sécurité sociale espagnole. Si vous êtes retraité d’un régime français, c’est le formulaire S1 qui vous ouvre l’accès au système de santé. Dans les deux cas, vous obtenez ensuite votre carte sanitaire auprès du centre de santé de votre quartier.",
+        ],
+      },
+      {
+        title: "Étape 4 : banque, fiscalité et déclarations",
+        paragraphs: [
+          "Avec votre NIE, vous pouvez ouvrir un compte bancaire de résident. Côté impôts, si vous passez plus de 183 jours par an en Espagne ou y avez le centre de vos intérêts, vous devenez en principe résident fiscal espagnol : il faut alors prévenir l’administration française et vérifier ce que la convention fiscale France–Espagne prévoit pour vos revenus.",
+        ],
+      },
+      {
+        title: "Étape 5 : la voiture française",
+        paragraphs: [
+          "Une fois résident, une voiture immatriculée en France doit passer à une immatriculation espagnole. L’ordre est toujours le même : contrôle à l’ITV, impôt d’immatriculation (ou exonération), taxe de circulation à la mairie, puis demande à la DGT et pose des plaques espagnoles.",
+        ],
+      },
+      {
+        title: "Selon votre situation : diplôme, activité, permis",
+        paragraphs: [
+          "Certaines démarches ne concernent que certains profils, mais prennent du temps : faire reconnaître un diplôme pour exercer une profession réglementée, créer votre activité d’autónomo ou de société, ou échanger votre permis de conduire. Mieux vaut les lancer tôt.",
+        ],
+      },
+      {
+        title: "Ce qu’il faut retenir",
+        paragraphs: [
+          "Adresse, padrón, carte verte, santé, puis tout le reste. Respecter cet ordre évite la plupart des allers-retours et des rendez-vous perdus. Si vous voulez la liste sous forme de check-list imprimable, téléchargez notre checklist gratuite.",
+        ],
+      },
+    ],
+    related: [
+      "empadronamiento-espagne",
+      "certificat-enregistrement-ue-espagne",
+      "immatriculer-voiture-francaise-espagne",
+    ],
+    serviceHref: "/installation-espagne",
+    serviceLabel: "Me faire accompagner pour mon installation",
+    sources: [
+      {
+        label: "Police nationale · Taxe 790 code 012",
+        href: "https://sede.policia.gob.es/Tasa790_012/",
+      },
+    ],
   },
 
   {
