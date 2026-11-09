@@ -45,7 +45,7 @@ const etapes = [
   {
     titre: "Recours si nécessaire",
     texte:
-      "Si les allégations sont rejetées, nous préparons le recours de reposición. Pour aller au tribunal, nous vous orientons vers un avocat.",
+      "Si les allégations sont rejetées, nous préparons le recours de reposición, sans supplément. Pour aller au tribunal, nous vous orientons vers un avocat.",
   },
 ];
 
@@ -133,8 +133,8 @@ const jsonLd = {
       url: "https://www.holaespagne.fr/amende-espagne",
       offers: [
         { "@type": "Offer", name: "Analyse de l’amende", price: "0", priceCurrency: "EUR" },
-        { "@type": "Offer", name: "Rédaction et dépôt des allégations", price: "79", priceCurrency: "EUR" },
-        { "@type": "Offer", name: "Recours de reposición", price: "99", priceCurrency: "EUR" },
+        { "@type": "Offer", name: "Allégations, amende jusqu’à 200 €", price: "39", priceCurrency: "EUR" },
+        { "@type": "Offer", name: "Allégations, amende de plus de 200 €", price: "69", priceCurrency: "EUR" },
       ],
     },
     {
@@ -307,8 +307,8 @@ export default function AmendeEspagne() {
           <div className="mt-10 grid gap-px bg-navy/15 md:grid-cols-3">
             {[
               ["Analyse", "Gratuit", "Lecture de l’amende, vérification des délais et des motifs, conseil : payer ou contester."],
-              ["Allégations", "79 €", "Rédaction en espagnol, autorisation de représentation, dépôt et suivi de la réponse."],
-              ["Recours de reposición", "99 €", "Si les allégations sont rejetées : nouveau recours dans le délai d’un mois."],
+              ["Amende jusqu’à 200 €", "39 €", "Allégations rédigées en espagnol, autorisation de représentation, dépôt et suivi de la réponse."],
+              ["Amende de plus de 200 €", "69 €", "Même accompagnement, pour les infractions très graves, les ZBE ou les amendes multiples."],
             ].map(([titre, prix, texte]) => (
               <div key={titre} className="bg-ivory p-8">
                 <p className="text-sm uppercase tracking-[0.15em] text-navy/60">{titre}</p>
@@ -318,7 +318,7 @@ export default function AmendeEspagne() {
             ))}
           </div>
           <p className="mt-6 text-sm text-navy/55">
-            Sans abonnement ni renouvellement automatique. Vous payez uniquement le dossier que vous nous confiez.
+            Recours de reposición inclus si les allégations sont rejetées. Sans abonnement ni renouvellement automatique : vous payez uniquement le dossier que vous nous confiez.
           </p>
         </div>
       </section>
