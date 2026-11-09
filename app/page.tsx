@@ -63,6 +63,13 @@ const services = [
   },
   {
     number: "07",
+    title: "Contester une amende reçue d’Espagne",
+    description:
+      "Radar, DGT, ZBE ou voiture de location : analyse gratuite, puis allégations rédigées et déposées en votre nom.",
+    href: "/amende-espagne",
+  },
+  {
+    number: "08",
     title: "J’ai une autre démarche",
     description:
       "Un courrier, un dossier bloqué ou une situation qui ne rentre dans aucune case.",
