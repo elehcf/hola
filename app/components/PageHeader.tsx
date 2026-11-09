@@ -12,6 +12,7 @@ const services = [
   ["Faire reconnaître mon diplôme", "/reconnaissance-diplome-espagne"],
   ["Créer mon activité", "/creer-activite-espagne"],
   ["Fiscalité France–Espagne", "/fiscalite-residence-france-espagne"],
+  ["Amende en Espagne", "/amende-espagne"],
   ["Autre démarche", "/autre-demarche"],
 ];
 
