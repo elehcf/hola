@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Notre réseau en Espagne | holÀ!",
     description:
-      "Avocats, déménagement, rénovation, conseil aux entreprises : un seul point d’entrée pour poursuivre votre projet en Espagne.",
+      "Avocats, fiscalité, déménagement, rénovation, conseil aux entreprises : un seul point d’entrée pour poursuivre votre projet en Espagne.",
     url: "/collaborateurs",
   },
 };
@@ -63,6 +63,17 @@ const collaborators = [
   },
   {
     number: "05",
+    name: "Multax",
+    logo: "https://mul.tax/assets/multax-logo.svg",
+    logoWidth: 240,
+    logoHeight: 80,
+    area: "Fiscalité & comptabilité",
+    text: "Cabinet de conseil fiscal, comptable et social qui accompagne à distance, en français, les indépendants, les PME et les propriétaires non résidents, dans la plupart des régions d’Espagne.",
+    when: "Déclaration de revenus en Espagne, impôt des non-résidents propriétaires (modèle 210), comptabilité d’une activité d’indépendant ou d’une société.",
+    href: "https://mul.tax/",
+  },
+  {
+    number: "06",
     name: "Mathis",
     logo: "/logo-mathis-md.webp",
     logoWidth: 315,
