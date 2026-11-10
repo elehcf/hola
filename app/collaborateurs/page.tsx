@@ -6,12 +6,12 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Notre réseau en Espagne",
   description:
-    "Un seul point d’entrée pour aller plus loin en Espagne : démarches administratives, accompagnement juridique, rénovation et stratégie d’entreprise.",
+    "Un seul point d’entrée pour aller plus loin en Espagne : démarches administratives, accompagnement juridique, déménagement, rénovation et stratégie d’entreprise.",
   alternates: { canonical: "/collaborateurs" },
   openGraph: {
     title: "Notre réseau en Espagne | holÀ!",
     description:
-      "Avocats, rénovation, conseil aux entreprises : un seul point d’entrée pour poursuivre votre projet en Espagne.",
+      "Avocats, déménagement, rénovation, conseil aux entreprises : un seul point d’entrée pour poursuivre votre projet en Espagne.",
     url: "/collaborateurs",
   },
 };
@@ -52,6 +52,17 @@ const collaborators = [
   },
   {
     number: "04",
+    name: "MTN Déménagement",
+    logo: "https://www.mtn-demenagement.com/logo.png",
+    logoWidth: 500,
+    logoHeight: 500,
+    area: "Déménagement international",
+    text: "Déménagement de la France vers l’Espagne (Madrid, Barcelone et toute l’Espagne) et vers plus de 60 pays : porte-à-porte, groupage, conteneur complet et transport de véhicule.",
+    when: "Avant votre installation en Espagne : le transport de vos meubles et de votre voiture, avant son immatriculation espagnole.",
+    href: "https://www.mtn-demenagement.com/",
+  },
+  {
+    number: "05",
     name: "Mathis",
     logo: "/logo-mathis-md.webp",
     logoWidth: 315,
@@ -108,14 +119,26 @@ export default function Collaborateurs() {
                 <span className="text-sm text-blood">{collaborator.number}</span>
                 <div>
                   <div className="mb-6 flex h-28 w-44 items-center justify-center bg-white p-3">
-                    <Image
-                      src={collaborator.logo}
-                      alt={`Logo de ${collaborator.name}`}
-                      width={collaborator.logoWidth}
-                      height={collaborator.logoHeight}
-                      sizes="176px"
-                      className="max-h-full max-w-full object-contain"
-                    />
+                    {collaborator.logo.startsWith("http") ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={collaborator.logo}
+                        alt={`Logo de ${collaborator.name}`}
+                        width={collaborator.logoWidth}
+                        height={collaborator.logoHeight}
+                        loading="lazy"
+                        className="max-h-full max-w-full object-contain"
+                      />
+                    ) : (
+                      <Image
+                        src={collaborator.logo}
+                        alt={`Logo de ${collaborator.name}`}
+                        width={collaborator.logoWidth}
+                        height={collaborator.logoHeight}
+                        sizes="176px"
+                        className="max-h-full max-w-full object-contain"
+                      />
+                    )}
                   </div>
                   <p className="text-xs uppercase tracking-[0.2em] text-ivory/45">
                     {collaborator.area}
