@@ -465,6 +465,13 @@ export default function ImmatriculationVoiture() {
   en supplément. Nous confirmons le périmètre de l’accompagnement
   après examen de votre situation.
 </p>
+              <p className="mt-4 text-ivory/70">
+                Combien d’impôt d’immatriculation pour votre voiture ?{" "}
+                <a href="/calcul-immatriculation-espagne" className="border-b border-ivory/50 text-ivory">
+                  Faites le calcul en 1 minute
+                </a>
+                .
+              </p>
             </div>
 
             <a
