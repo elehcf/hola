@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
+import { lireOrigine } from "./RefCapture";
 
 const steps = [
   {
@@ -133,6 +134,7 @@ export default function IntakeForm() {
         prenom: form.prenom,
         email: form.email,
         website: form.website,
+        origine: lireOrigine(),
       }),
       keepalive: true,
     })
@@ -206,6 +208,7 @@ export default function IntakeForm() {
           etape: "complet",
           leadId: leadId.current,
           relanceId,
+          origine: lireOrigine(),
         }),
       });
 
