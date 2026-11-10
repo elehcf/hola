@@ -343,7 +343,7 @@ export const guides: Guide[] = [
     title: "Taxe 790 code 012 : montant, formulaire et paiement pour le NIE",
     seoTitle: "Taxe 790 012 en 2026 : 9,84 € pour le NIE, 12 € pour la carte verte",
     description:
-      "Combien coûte la taxe 790 code 012 pour un NIE ou un certificat d’enregistrement UE, comment remplir le formulaire, où la payer et les erreurs qui font refuser le dossier.",
+      "Taxe 790 012 en 2026 : 9,84 € pour le NIE (EX-15), 12 € pour la carte verte (EX-18). Formulaire officiel, paiement en banque ou en ligne, erreurs qui font refuser le dossier.",
     eyebrow: "NIE · Taxe",
     intro:
       "Pour votre NIE ou votre carte verte, l’administration espagnole vous demandera le justificatif de paiement de la « tasa 790 código 012 ». Un petit montant, mais une vraie source de rendez-vous ratés : mauvaise case, code-barres illisible, paiement introuvable. Voici comment la régler du premier coup.",
