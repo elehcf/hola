@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { guides } from "./guides/guides-data";
+import { villes } from "./nie-espagne/villes";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.holaespagne.fr";
@@ -78,5 +79,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...mainPages, ...guidePages];
+  const localPages: MetadataRoute.Sitemap = [
+    ...villes.map((ville) => ({
+      url: `${baseUrl}/nie-espagne/${ville.slug}`,
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
+    })),
+    {
+      url: `${baseUrl}/glossaire-demarches-espagne`,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+  ];
+
+  return [...mainPages, ...guidePages, ...localPages];
 }
