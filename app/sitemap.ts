@@ -21,6 +21,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/calcul-immatriculation-espagne`,
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
       url: `${baseUrl}/installation-espagne`,
       changeFrequency: "monthly",
       priority: 0.9,
@@ -44,6 +49,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/amende-espagne`,
       changeFrequency: "monthly",
       priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/collaborateurs`,
+      changeFrequency: "monthly",
+      priority: 0.5,
     },
     {
       url: `${baseUrl}/autre-demarche`,
