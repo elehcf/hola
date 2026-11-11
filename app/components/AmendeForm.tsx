@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { lireOrigine } from "./RefCapture";
 
 const MAX_BYTES = 4 * 1024 * 1024;
 
@@ -27,6 +28,7 @@ export default function AmendeForm() {
   async function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
+    data.set("origine", lireOrigine());
 
     const email = String(data.get("email") ?? "").trim();
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {

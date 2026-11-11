@@ -4,6 +4,7 @@ import { Caveat, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
+import RefCapture from "./components/RefCapture";
 
 const caveat = Caveat({
   variable: "--font-hand",
@@ -101,6 +102,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <WhatsAppButton />
+        <RefCapture />
 
         {/* Vercel Web Analytics (sans cookies) : à activer dans Vercel > Analytics */}
         <Script src="/_vercel/insights/script.js" strategy="afterInteractive" />

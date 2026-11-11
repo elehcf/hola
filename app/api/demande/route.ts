@@ -1,5 +1,5 @@
 import { Resend } from "resend";
-import { accuseReception, envoiChecklist, relancePartiel } from "./emails";
+import { accuseReception, envoiChecklist, relancePartiel, sequenceChecklist } from "./emails";
 
 const FROM = "holÀ! <bonjour@holaespagne.fr>";
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
@@ -44,6 +44,7 @@ export async function POST(request: Request) {
     }
 
     const emailNettoye = String(email || "").trim();
+    const origine = String(form.origine ?? "").slice(0, 40);
     const emailValide = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailNettoye);
 
     if (!emailValide) {
@@ -71,11 +72,12 @@ export async function POST(request: Request) {
             ${infoRow("Démarche", demarche)}
             ${infoRow("Prénom", prenom)}
             ${infoRow("E-mail", emailNettoye)}
+            ${origine ? infoRow("Origine", origine) : ""}
             ${infoRow("Référence", form.leadId)}
             <p style="margin-top: 24px; font-size: 14px; color: #15223899;">
               ${
                 isChecklist
-                  ? "La checklist lui a été envoyée automatiquement par e-mail."
+                  ? "La checklist lui a été envoyée automatiquement par e-mail, suivie de 3 e-mails de suivi (J+2, J+5, J+10)."
                   : "Une relance automatique partira dans 24 h si la demande n’est pas terminée d’ici là."
               }
             </p>
@@ -99,6 +101,19 @@ export async function POST(request: Request) {
           html: mail.html,
         });
         if (checklistError) console.error(checklistError);
+
+        // Séquence de suivi : 3 e-mails programmés à J+2, J+5 et J+10.
+        for (const etape of sequenceChecklist(prenom)) {
+          const { error: sequenceError } = await resend.emails.send({
+            from: FROM,
+            to: [emailNettoye],
+            replyTo: "bonjour@holaespagne.fr",
+            subject: etape.subject,
+            html: etape.html,
+            scheduledAt: new Date(Date.now() + etape.jours * 24 * 60 * 60 * 1000).toISOString(),
+          });
+          if (sequenceError) console.error(sequenceError);
+        }
       } else {
         const mail = relancePartiel(prenom, demarche);
         const { data, error: relanceError } = await resend.emails.send({
@@ -368,6 +383,7 @@ export async function POST(request: Request) {
 
             ${infoRow("Démarche", demarche)}
             ${infoRow("Localisation", localisation)}
+            ${origine ? infoRow("Origine", origine) : ""}
           </div>
 
 

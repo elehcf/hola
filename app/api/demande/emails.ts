@@ -147,3 +147,54 @@ export function envoiChecklist(prenom: unknown) {
     `),
   };
 }
+
+// Séquence envoyée après le téléchargement de la checklist (J+2, J+5, J+10).
+export function sequenceChecklist(prenom: unknown) {
+  const bonjour = String(prenom ?? "").trim() ? `Bonjour ${esc(prenom)},` : "Bonjour,";
+  const p = (texte: string) => `<p style="margin:0 0 16px;">${texte}</p>`;
+  const stop = `<p style="margin:22px 0 0;font-size:13px;color:#15223899;">Vous ne souhaitez plus recevoir ces conseils ? Répondez STOP, c’est noté.</p>`;
+  const rdv = bookingUrl();
+
+  return [
+    {
+      jours: 2,
+      subject: "Par où commencer votre installation en Espagne",
+      html: layout(`
+        ${p(bonjour)}
+        ${p("Vous avez téléchargé notre checklist il y a deux jours. Si vous ne deviez retenir qu’une chose : <strong>tout commence par le NIE</strong>, le numéro d’identification des étrangers.")}
+        ${p("Sans lui, pas de compte bancaire, pas de bail, pas d’achat de voiture ni de logement. Et c’est souvent l’étape qui prend le plus de temps, car les rendez-vous sont rares dans les grandes villes.")}
+        ${p("Notre guide explique les documents à préparer et où le demander (en Espagne ou, dans certains cas, au consulat en France).")}
+        ${bouton(`${SITE}/guides/obtenir-nie-espagne`, "Lire le guide du NIE →")}
+        ${p("<br>Vous préférez qu’on s’en charge ? Nous préparons et vérifions votre dossier NIE pour 149 €, frais administratifs précisés avant de commencer.")}
+        ${bouton(`${SITE}/nie-espagne`, "Voir le service NIE →", false)}
+        ${stop}
+      `),
+    },
+    {
+      jours: 5,
+      subject: "Votre voiture française en Espagne : ce qu’il faut savoir",
+      html: layout(`
+        ${p(bonjour)}
+        ${p("Vous venez en Espagne avec votre voiture ? Une fois votre résidence établie, elle doit passer aux plaques espagnoles. C’est la démarche qui surprend le plus les Français qui s’installent.")}
+        ${p("Trois étapes : le contrôle technique espagnol (ITV), l’impôt d’immatriculation (souvent exonéré en cas de changement de résidence) puis l’immatriculation auprès de la DGT.")}
+        ${bouton(`${SITE}/guides/immatriculer-voiture-francaise-espagne`, "Lire le guide →")}
+        ${p("<br>Nous préparons et suivons tout le dossier pour 449 €, taxes en sus, en français du début à la fin.")}
+        ${bouton(`${SITE}/immatriculation-voiture-espagne`, "Voir le service →", false)}
+        ${stop}
+      `),
+    },
+    {
+      jours: 10,
+      subject: "On en parle 15 minutes ?",
+      html: layout(`
+        ${p(bonjour)}
+        ${p("Votre projet d’installation avance ? Chaque situation est différente : la région, le statut (salarié, indépendant, retraité), la famille, le véhicule.")}
+        ${p("Je vous propose un appel de 15 minutes, gratuit et sans engagement, pour faire le point sur vos démarches et l’ordre dans lequel les faire.")}
+        ${bouton(rdv || `${WHATSAPP}?text=${encodeURIComponent("Bonjour, j’ai téléchargé la checklist et j’aimerais faire le point sur mon installation.")}`, rdv ? "Réserver mon appel de 15 min →" : "Nous écrire sur WhatsApp →")}
+        ${p("<br>Si vous préférez qu’on prenne tout en charge, notre accompagnement installation commence à 490 €.")}
+        ${bouton(`${SITE}/demande?service=installation`, "Expliquer ma situation →", false)}
+        ${stop}
+      `),
+    },
+  ];
+}

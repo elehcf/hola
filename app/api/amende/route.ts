@@ -32,6 +32,7 @@ export async function POST(request: Request) {
     const conducteur = champ("conducteur").slice(0, 80);
     const message = champ("message").slice(0, 3000);
     const consentement = champ("consentement");
+    const origine = champ("origine").slice(0, 40);
 
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return Response.json({ error: "Adresse e-mail invalide." }, { status: 400 });
@@ -88,6 +89,7 @@ export async function POST(request: Request) {
           ${row("Conducteur", conducteur || "Non précisé")}
           ${message ? row("Message", message) : ""}
           ${row("Pièce jointe", attachments.length ? attachments[0].filename : "Aucune (à demander)")}
+          ${origine ? row("Origine", origine) : ""}
           ${row("Référence", reference)}
         </div>
       `,

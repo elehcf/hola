@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { lireOrigine } from "./RefCapture";
 
 type Props = {
   source?: string;
@@ -38,6 +39,7 @@ export default function ChecklistForm({ source = "guide", tone = "light" }: Prop
           prenom: prenom.trim(),
           email: email.trim(),
           website: "",
+          origine: lireOrigine(),
         }),
       });
     } catch {
