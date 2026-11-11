@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Notre réseau en Espagne | holÀ!",
     description:
-      "Avocats, déménagement, rénovation, conseil aux entreprises : un seul point d’entrée pour poursuivre votre projet en Espagne.",
+      "Avocats, fiscalité, déménagement, rénovation, conseil aux entreprises : un seul point d’entrée pour poursuivre votre projet en Espagne.",
     url: "/collaborateurs",
   },
 };
@@ -63,6 +63,17 @@ const collaborators = [
   },
   {
     number: "05",
+    name: "mul.tax",
+    logo: "https://mul.tax/assets/multax-logo.svg",
+    logoWidth: 240,
+    logoHeight: 80,
+    area: "Fiscalité & comptabilité",
+    text: "Conseil fiscal et comptable en Espagne, en français. Déclarations des non-résidents (modèle 210), impôt sur le revenu, indépendants et sociétés, Verifactu. mul.tax travaille en coordination avec holÀ! pour les démarches administratives.",
+    when: "Déclaration de revenus en Espagne, impôt des non-résidents propriétaires (modèle 210), comptabilité d’un indépendant ou d’une société, mise en conformité Verifactu.",
+    href: "https://mul.tax/?lang=fr",
+  },
+  {
+    number: "06",
     name: "Mathis",
     logo: "/logo-mathis-md.webp",
     logoWidth: 315,
