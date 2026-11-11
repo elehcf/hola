@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import LifestylePhoto from "../components/LifestylePhoto";
 import PageHeader from "../components/PageHeader";
+import { villes } from "./villes";
 
 export const metadata: Metadata = {
   title: "NIE Espagne : obtenir votre NIE simplement",
@@ -398,6 +399,34 @@ inadaptés et les déplacements inutiles.
             </a>
 
           </div>
+        </div>
+      </section>
+
+      {/* VILLES */}
+      <section className="px-6 pb-20 sm:px-8 md:px-16 md:pb-28">
+        <div className="mx-auto max-w-6xl">
+          <p className="text-xs uppercase tracking-[0.25em] text-blood">NIE par ville</p>
+          <p className="mt-4 max-w-2xl text-navy/70">
+            Bureau compétent, rendez-vous et délais près de chez vous :
+          </p>
+          <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3">
+            {villes.map((ville) => (
+              <Link
+                key={ville.slug}
+                href={`/nie-espagne/${ville.slug}`}
+                className="border-b border-navy/30 pb-1 text-lg transition-colors hover:text-blood"
+                style={{ fontFamily: "var(--font-editorial)" }}
+              >
+                NIE à {ville.nom}
+              </Link>
+            ))}
+          </div>
+          <p className="mt-8 text-navy/60">
+            Un mot espagnol vous bloque ?{" "}
+            <Link href="/glossaire-demarches-espagne" className="border-b border-navy/30 pb-1 hover:text-blood">
+              Le glossaire des démarches en Espagne
+            </Link>
+          </p>
         </div>
       </section>
 
