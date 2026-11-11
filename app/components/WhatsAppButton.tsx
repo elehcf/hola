@@ -1,11 +1,19 @@
-const whatsappMessage = encodeURIComponent(
-  "Bonjour holÀ!, j’ai une question au sujet d’une démarche en Espagne."
-);
+"use client";
+
+import { usePathname } from "next/navigation";
+import { contextePour, lienWhatsapp } from "./contexte";
 
 export default function WhatsAppButton() {
+  const chemin = usePathname() ?? "/";
+
+  // Sur les guides, la barre d’action en bas de page contient déjà WhatsApp.
+  if (chemin.startsWith("/guides/")) return null;
+
+  const contexte = contextePour(chemin);
+
   return (
     <a
-      href={`https://wa.me/34681803938?text=${whatsappMessage}`}
+      href={lienWhatsapp(contexte.message)}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Écrire à holÀ! sur WhatsApp"
@@ -18,7 +26,7 @@ export default function WhatsAppButton() {
         W
       </span>
       <span className="hidden sm:inline">Une question ? WhatsApp</span>
-      <span className="sm:hidden">WhatsApp</span>
+      <span className="sm:hidden">Une question ? WhatsApp</span>
     </a>
   );
 }

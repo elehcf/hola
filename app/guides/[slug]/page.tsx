@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import LifestylePhoto from "../../components/LifestylePhoto";
 import ChecklistForm from "../../components/ChecklistForm";
+import GuideCtaBar from "../../components/GuideCtaBar";
 import {
   getGuide,
   getRelatedGuides,
@@ -340,6 +341,7 @@ export default async function GuidePage({ params }: Props) {
         </section>
       )}
 
+      <GuideCtaBar slug={guide.slug} categorie={guide.category} />
     </main>
   );
 }
