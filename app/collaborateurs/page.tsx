@@ -63,14 +63,14 @@ const collaborators = [
   },
   {
     number: "05",
-    name: "Multax",
+    name: "mul.tax",
     logo: "https://mul.tax/assets/multax-logo.svg",
     logoWidth: 240,
     logoHeight: 80,
     area: "Fiscalité & comptabilité",
-    text: "Cabinet de conseil fiscal, comptable et social qui accompagne à distance, en français, les indépendants, les PME et les propriétaires non résidents, dans la plupart des régions d’Espagne.",
-    when: "Déclaration de revenus en Espagne, impôt des non-résidents propriétaires (modèle 210), comptabilité d’une activité d’indépendant ou d’une société.",
-    href: "https://mul.tax/",
+    text: "Conseil fiscal et comptable en Espagne, en français. Déclarations des non-résidents (modèle 210), impôt sur le revenu, indépendants et sociétés, Verifactu. mul.tax travaille en coordination avec holÀ! pour les démarches administratives.",
+    when: "Déclaration de revenus en Espagne, impôt des non-résidents propriétaires (modèle 210), comptabilité d’un indépendant ou d’une société, mise en conformité Verifactu.",
+    href: "https://mul.tax/?lang=fr",
   },
   {
     number: "06",
