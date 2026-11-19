@@ -1,3 +1,5 @@
+import { nouveauxGuides } from "./guides-nouveaux";
+
 export type GuideSection = {
   title: string;
   paragraphs: string[];
@@ -20,6 +22,7 @@ export type Guide = {
 };
 
 export const guides: Guide[] = [
+  ...nouveauxGuides,
   // ─────────────────────────────────────────────
   // NIE
   // ─────────────────────────────────────────────
